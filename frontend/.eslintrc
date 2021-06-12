@@ -1,0 +1,22 @@
+{
+  // Stop ESLint from looking for a configuration file in parent folders
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "semi": 1,
+    "quotes": [1, "single"],
+    "react/prop-types": 2,
+    "react/display-name": 0,
+    "no-console": 1
+  }
+}

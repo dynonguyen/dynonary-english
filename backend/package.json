@@ -1,0 +1,27 @@
+{
+	"name": "dynonary-apis",
+	"version": "1.0.0",
+	"description": "Dynonary - Free web app to learn english",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "node index.js --inspect"
+	},
+	"author": "Tuan Nguyen",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"cloudinary": "^1.26.0",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.12.13",
+		"morgan": "^1.10.0",
+		"nodemailer": "^6.6.1",
+		"passport": "^0.4.1",
+		"passport-google-token": "^0.1.2",
+		"path": "^0.12.7"
+	}
+}
