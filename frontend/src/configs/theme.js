@@ -3,7 +3,8 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   breakpoints: {
     values: {
-      xs: 375,
+      xxs: 375,
+      xs: 480,
       sm: 576,
       md: 768,
       lg: 992,

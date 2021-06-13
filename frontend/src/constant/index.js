@@ -11,7 +11,10 @@ export const THEME_KEYS = {
   DARK: 'dark',
 };
 
+export const MAX_LEN_SEARCH = 50;
+
 export default {
+  MAX_LEN_SEARCH,
   ROUTES,
   THEME_KEYS,
 };

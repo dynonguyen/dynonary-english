@@ -19,6 +19,10 @@ export default makeStyles((theme) => ({
     left: 0,
   },
 
+  logo: {
+    marginRight: '0.8rem',
+  },
+
   imgSize: {
     height: imgSize,
     width: imgSize,
@@ -30,6 +34,16 @@ export default makeStyles((theme) => ({
   },
 
   control: {
-    gap: '1.2rem',
+    gap: '0.8rem',
+    marginLeft: 'auto',
+
+    [theme.breakpoints.up('md')]: {
+      gap: '1.2rem',
+    },
+  },
+
+  searchIcon: {
+    fontSize: iconSize,
+    color: 'var(--text-color)',
   },
 }));

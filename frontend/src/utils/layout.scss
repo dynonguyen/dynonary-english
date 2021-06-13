@@ -152,56 +152,56 @@
   }
 }
 
-// spacing 2 -> 20 px
+// spacing 0.2rem -> 2 rem
 @for $i from 1 to 11 {
   .m {
     &-#{$i} {
-      margin: #{$i * 2}px !important;
+      margin: #{$i * 0.2}rem !important;
     }
     &t-#{$i} {
-      margin-top: #{$i * 2}px !important;
+      margin-top: #{$i * 0.2}rem !important;
     }
     &b-#{$i} {
-      margin-bottom: #{$i * 2}px !important;
+      margin-bottom: #{$i * 0.2}rem !important;
     }
     &l-#{$i} {
-      margin-left: #{$i * 2}px !important;
+      margin-left: #{$i * 0.2}rem !important;
     }
     &r-#{$i} {
-      margin-right: #{$i * 2}px !important;
+      margin-right: #{$i * 0.2}rem !important;
     }
     &x-#{$i} {
-      margin-left: #{$i * 2}px !important;
-      margin-right: #{$i * 2}px !important;
+      margin-left: #{$i * 0.2}rem !important;
+      margin-right: #{$i * 0.2}rem !important;
     }
     &y-#{$i} {
-      margin-top: #{$i * 2}px !important;
-      margin-bottom: #{$i * 2}px !important;
+      margin-top: #{$i * 0.2}rem !important;
+      margin-bottom: #{$i * 0.2}rem !important;
     }
   }
   .p {
     &-#{$i} {
-      padding: #{$i * 2}px !important;
+      padding: #{$i * 0.2}rem !important;
     }
     &t-#{$i} {
-      padding-top: #{$i * 2}px !important;
+      padding-top: #{$i * 0.2}rem !important;
     }
     &b-#{$i} {
-      padding-bottom: #{$i * 2}px !important;
+      padding-bottom: #{$i * 0.2}rem !important;
     }
     &l-#{$i} {
-      padding-left: #{$i * 2}px !important;
+      padding-left: #{$i * 0.2}rem !important;
     }
     &r-#{$i} {
-      padding-right: #{$i * 2}px !important;
+      padding-right: #{$i * 0.2}rem !important;
     }
     &x-#{$i} {
-      padding-left: #{$i * 2}px !important;
-      padding-right: #{$i * 2}px !important;
+      padding-left: #{$i * 0.2}rem !important;
+      padding-right: #{$i * 0.2}rem !important;
     }
     &y-#{$i} {
-      padding-top: #{$i * 2}px !important;
-      padding-bottom: #{$i * 2}px !important;
+      padding-top: #{$i * 0.2}rem !important;
+      padding-bottom: #{$i * 0.2}rem !important;
     }
   }
 }

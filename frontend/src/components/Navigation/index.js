@@ -1,26 +1,55 @@
 import Avatar from '@material-ui/core/Avatar';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import Search from '@material-ui/icons/Search';
 import logoUrl from 'assets/images/logo.png';
 import NativeInput from 'components/UI/NativeInput';
 import ThemeButton from 'components/UI/ThemeButton';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useStyle from './style';
 
 function Navigation() {
   const classes = useStyle();
+  const theme = useTheme();
+  const isXsDevice = useMediaQuery(theme.breakpoints.up('xxs'));
+  const [showInput, setShowInput] = useState(isXsDevice);
 
   return (
     <div className={`${classes.navWrapper} w-100vw`}>
       <div className={`${classes.nav} w-100`}>
-        <div className="container h-100 flex-center-between">
+        <div className="container h-100 flex-center--ver">
           {/* Logo */}
-          <Link to="/">
-            <img className={classes.imgSize} src={logoUrl} alt="Logo" />
-          </Link>
+          {(isXsDevice || !showInput) && (
+            <Link to="/">
+              <img
+                className={`${classes.imgSize} ${classes.logo}`}
+                src={logoUrl}
+                alt="Logo"
+              />
+            </Link>
+          )}
 
           {/* control, user */}
           <div className={`${classes.control} flex-center--ver`}>
-            <NativeInput />
+            {showInput && !isXsDevice && (
+              <ArrowBackIosIcon
+                className={`${classes.iconSize} mr-4 cur-pointer`}
+                onClick={() => setShowInput(!showInput)}
+              />
+            )}
+
+            <NativeInput
+              placeholder="Nhập từ khoá ..."
+              showInput={isXsDevice || showInput}
+              prefixIcon={
+                <Search
+                  className={classes.searchIcon}
+                  onClick={() => setShowInput(true)}
+                />
+              }
+            />
 
             <ThemeButton classes={classes.iconSize} />
 

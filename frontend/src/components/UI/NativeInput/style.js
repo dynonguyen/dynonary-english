@@ -1,29 +1,21 @@
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
-  search: {
+  nativeInput: {
     position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
-    },
+    borderRadius: 'var(--border-radius)',
     marginLeft: 0,
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-      width: 'auto',
-    },
   },
 
-  searchIcon: {
-    padding: theme.spacing(0, 2),
+  icon: {
+    '&.show-input': {
+      padding: '0 1.2rem',
+      position: 'absolute',
+      pointerEvents: 'none',
+    },
+
     height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
     color: 'var(--text-color)',
   },
 
@@ -32,14 +24,15 @@ export default makeStyles((theme) => ({
   },
 
   inputInput: {
-    border: 'solid 1px rgba(0, 0, 0, 0.15)',
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    border: 'solid 1px var(--input-border-color)',
+    padding: '0.8rem 0.8rem 0.8rem 0',
+    paddingLeft: 'calc(1em + 3.2rem)',
     transition: theme.transitions.create('width'),
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
+    fontSize: '1.6rem',
+
+    [theme.breakpoints.up('xs')]: {
+      width: '16ch',
       '&:focus': {
         width: '20ch',
       },

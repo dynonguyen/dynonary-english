@@ -1,25 +1,57 @@
-import React from 'react';
 import InputBase from '@material-ui/core/InputBase';
-import SearchIcon from '@material-ui/icons/Search';
+import { MAX_LEN_SEARCH } from 'constant';
+import PropTypes from 'prop-types';
+import React from 'react';
 import useStyle from './style';
 
-function NativeInput() {
+function NativeInput({ placeholder, showInput, prefixIcon }) {
   const classes = useStyle();
+
+  const onSearch = (value) => {
+    console.log(`Searching for the word "${value}"`);
+  };
+
+  const onPressEnter = (e) => {
+    const { key, target } = e;
+    if (key === 'Enter') {
+      onSearch(target.value);
+    }
+  };
+
   return (
-    <div className={classes.search}>
-      <div className={classes.searchIcon}>
-        <SearchIcon />
+    <div className={classes.nativeInput}>
+      <div
+        className={`${classes.icon} flex-center ${
+          showInput ? 'show-input' : 'cur-pointer'
+        }`}>
+        {prefixIcon}
       </div>
-      <InputBase
-        placeholder="Search…"
-        classes={{
-          root: classes.inputRoot,
-          input: classes.inputInput,
-        }}
-        inputProps={{ 'aria-label': 'search' }}
-      />
+      {showInput && (
+        <InputBase
+          onKeyPress={onPressEnter}
+          autoFocus
+          placeholder={placeholder}
+          classes={{
+            root: classes.inputRoot,
+            input: classes.inputInput,
+          }}
+          inputProps={{ 'aria-label': 'search', maxLength: MAX_LEN_SEARCH }}
+        />
+      )}
     </div>
   );
 }
+
+NativeInput.propTypes = {
+  placeholder: PropTypes.string,
+  prefixIcon: PropTypes.any,
+  showInput: PropTypes.bool,
+};
+
+NativeInput.defaultProps = {
+  placeholder: '',
+  prefixIcon: null,
+  showInput: false,
+};
 
 export default NativeInput;
