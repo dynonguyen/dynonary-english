@@ -9,14 +9,13 @@ export default makeStyles((theme) => ({
   },
 
   icon: {
+    height: '100%',
+
     '&.show-input': {
       padding: '0 1.2rem',
       position: 'absolute',
       pointerEvents: 'none',
     },
-
-    height: '100%',
-    color: 'var(--text-color)',
   },
 
   inputRoot: {

@@ -1,20 +1,63 @@
 import Avatar from '@material-ui/core/Avatar';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import HelpIcon from '@material-ui/icons/Help';
+import NotificationsIcon from '@material-ui/icons/Notifications';
 import Search from '@material-ui/icons/Search';
+import SettingsIcon from '@material-ui/icons/Settings';
 import logoUrl from 'assets/images/logo.png';
 import NativeInput from 'components/UI/NativeInput';
 import ThemeButton from 'components/UI/ThemeButton';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SettingMenu from './SettingMenu';
 import useStyle from './style';
+
+// @fake data
+const isAuth = true,
+  avtUrl =
+    'https://scontent.fhph1-2.fna.fbcdn.net/v/t1.6435-9/113736806_2750904441808448_2237668902459956508_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=QzFOO9kmvMAAX_q5n1s&_nc_ht=scontent.fhph1-2.fna&oh=820230f945b3af2035761d8df202cbae&oe=60C9782B';
+
+const MENU_LIST = [
+  {
+    title: 'Thông báo',
+    icon: NotificationsIcon,
+    to: '/',
+  },
+  {
+    title: 'Thông tin cá nhân',
+    icon: AccountCircleIcon,
+    to: '/',
+  },
+  {
+    title: 'Cài đặt',
+    icon: SettingsIcon,
+    to: '/',
+  },
+  {
+    title: 'Giúp đỡ',
+    icon: HelpIcon,
+    to: '/',
+  },
+  {
+    title: 'Đăng xuất',
+    icon: ExitToAppIcon,
+    to: '/',
+  },
+];
 
 function Navigation() {
   const classes = useStyle();
   const theme = useTheme();
   const isXsDevice = useMediaQuery(theme.breakpoints.up('xxs'));
   const [showInput, setShowInput] = useState(isXsDevice);
+  const [anchorMenu, setAnchorMenu] = useState(null);
+
+  const onOpenMenu = (e) => setAnchorMenu(e.currentTarget);
+  const onCloseMenu = () => setAnchorMenu(null);
 
   return (
     <div className={`${classes.navWrapper} w-100vw`}>
@@ -31,7 +74,7 @@ function Navigation() {
             </Link>
           )}
 
-          {/* control, user */}
+          {/* control, setting */}
           <div className={`${classes.control} flex-center--ver`}>
             {showInput && !isXsDevice && (
               <ArrowBackIosIcon
@@ -40,6 +83,7 @@ function Navigation() {
               />
             )}
 
+            {/* Search bar */}
             <NativeInput
               placeholder="Nhập từ khoá ..."
               showInput={isXsDevice || showInput}
@@ -54,9 +98,17 @@ function Navigation() {
             <ThemeButton classes={classes.iconSize} />
 
             <Avatar
-              className={`${classes.imgSize} cur-pointer`}
+              onClick={onOpenMenu}
+              onMouseEnter={onOpenMenu}
+              className={`${classes.imgSize} ${classes.avt} cur-pointer`}
               alt="Username"
-              src="https://scontent.fhph1-2.fna.fbcdn.net/v/t1.6435-9/113736806_2750904441808448_2237668902459956508_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=QzFOO9kmvMAAX_q5n1s&_nc_ht=scontent.fhph1-2.fna&oh=820230f945b3af2035761d8df202cbae&oe=60C9782B"
+              src={avtUrl}
+            />
+
+            <SettingMenu
+              anchorEl={anchorMenu}
+              onClose={onCloseMenu}
+              menuList={MENU_LIST}
             />
           </div>
         </div>
