@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@material-ui/core/styles';
+import GlobalLoading from 'components/UI/GlobalLoading';
 import routerConfig from 'configs/routerConfig';
 import theme from 'configs/theme';
 import useTheme from 'hooks/useTheme';
@@ -21,7 +22,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <div className="dynonary-app">
-          <Suspense fallback={<>Loading ... </>}>
+          <Suspense fallback={<GlobalLoading />}>
             <Switch>
               {renderRoutes(routes, isAuth)}
               <Route>
@@ -29,6 +30,9 @@ function App() {
               </Route>
             </Switch>
           </Suspense>
+
+          {/* overlay */}
+          <div id="_overlay"></div>
         </div>
       </Router>
     </ThemeProvider>
