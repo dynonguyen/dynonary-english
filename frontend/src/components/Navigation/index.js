@@ -20,7 +20,7 @@ import SettingMenu from './SettingMenu';
 import useStyle from './style';
 
 // @fake data
-const isAuth = Math.random() > 0.2 ? true : false,
+const isAuth = false,
   avtUrl = null;
 const MENU_LIST = [
   {
@@ -53,7 +53,7 @@ const MENU_LIST = [
 function Navigation() {
   const classes = useStyle();
   const theme = useTheme();
-  const isXsDevice = useMediaQuery(theme.breakpoints.up('xxs'));
+  const isXsDevice = useMediaQuery(theme.breakpoints.up('xs'));
   const [showInput, setShowInput] = useState(isXsDevice);
   const [anchorMenu, setAnchorMenu] = useState(null);
 

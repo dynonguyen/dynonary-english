@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
   },
 
   nav: {
-    backgroundColor: 'var(--nav-bg-color)',
+    backgroundColor: 'var(--bg-color-sec)',
     height: 'var(--nav-height)',
     boxShadow: 'var(--box-shadow)',
 
@@ -29,12 +29,16 @@ export default makeStyles((theme) => ({
 
   iconSize: {
     fontSize: `${iconSize} !important`,
-    color: 'var(--text-color)',
+    color: 'var(--label-color)',
   },
 
   control: {
-    gap: '0.8rem',
+    gap: '0.2rem',
     marginLeft: 'auto',
+
+    [theme.breakpoints.up('xs')]: {
+      gap: '0.8rem',
+    },
 
     [theme.breakpoints.up('md')]: {
       gap: '1.2rem',
@@ -50,11 +54,12 @@ export default makeStyles((theme) => ({
 
   searchIcon: {
     fontSize: iconSize,
-    color: 'var(--text-color)',
+    color: 'var(--label-color)',
   },
 
   loginBtn: {
     height: '3.7rem',
+    minWidth: '12rem',
   },
 
   loginLabel: {

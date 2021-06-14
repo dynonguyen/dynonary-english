@@ -22,3 +22,30 @@
     background-color: var(--accent-color) !important;
   }
 }
+
+// -------- or sign up - login -------
+.or-option {
+  position: relative;
+  margin: 0 auto;
+  color: var(--text-color);
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 35%;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    background-color: var(--input-border-color);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 35%;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: var(--input-border-color);
+  }
+}

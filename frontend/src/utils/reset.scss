@@ -1,14 +1,15 @@
 :root {
   /* color palettes */
-  --primary-color: #4d7752;
-  --secondary-color: #9bc98e;
-  --accent-color: #f1b348;
+  --primary-color: #018c4c;
+  --secondary-color: #2ac07c;
+  --accent-color: #ca3600;
 
-  --body-bg-color: #fcfcfc;
-  --nav-bg-color: #fff;
+  --bg-color-main: #fcfcfc;
+  --bg-color-sec: #fff;
+  --bg-color-accent: #f8f8f8;
 
   --title-color: #f1b348;
-  --text-color: #3b4948;
+  --text-color: #2e2e2e;
 
   --label-color: #6e6e6e;
   --input-border-color: rgba(0, 0, 0, 0.15);
@@ -25,17 +26,17 @@
   --nav-height: 7.2rem;
   --sm-border-radius: 4px;
   --border-radius: 6px;
-  --lg-border-radius: 8px;
-  --box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 18%), 0px 1px 10px 1px rgb(0 0 0 / 12%), 0px 1px 12px 2px rgb(0 0 0 / 8%);
+  --box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 10%), 0px 1px 10px 3px rgb(0 0 0 / 8%), 0px 1px 12px 4px rgb(0 0 0 / 4%);
 }
 
 [data-theme='dark'] {
-  --primary-color: #5a8a5f;
-  --secondary-color: #a4d198;
-  --accent-color: #ecba62;
+  --primary-color: #02b262;
+  --secondary-color: #38d990;
+  --accent-color: #ff4703;
 
-  --body-bg-color: #22272e;
-  --nav-bg-color: #2d333b;
+  --bg-color-main: #22272e;
+  --bg-color-sec: #2d333b;
+  --bg-color-accent: #373e46;
 
   --title-color: #ecba62;
   --text-color: #fff;
@@ -62,7 +63,7 @@ html {
 
 body {
   position: relative;
-  background-color: var(--body-bg-color);
+  background-color: var(--bg-color-main);
   overflow: auto;
 }
 
@@ -77,7 +78,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--body-bg-color);
+  background-color: var(--bg-color-main);
 }
 
 ::-webkit-scrollbar-thumb {

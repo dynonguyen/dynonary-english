@@ -2,6 +2,8 @@ import { ROUTES } from 'constant';
 import HomePage from 'pages/Home';
 import React from 'react';
 import { Route } from 'react-router';
+const RegisterPage = React.lazy(() => import('pages/Register'));
+const LoginPage = React.lazy(() => import('pages/Login'));
 
 // routes for app
 const routes = [
@@ -10,6 +12,18 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <HomePage />,
+  },
+  {
+    path: ROUTES.LOGIN,
+    exact: true,
+    isProtect: false,
+    component: () => <LoginPage />,
+  },
+  {
+    path: ROUTES.REGISTER,
+    exact: true,
+    isProtect: false,
+    component: () => <RegisterPage />,
   },
 ];
 
