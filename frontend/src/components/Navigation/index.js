@@ -1,4 +1,5 @@
 import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
@@ -8,19 +9,19 @@ import HelpIcon from '@material-ui/icons/Help';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Search from '@material-ui/icons/Search';
 import SettingsIcon from '@material-ui/icons/Settings';
+import defaultUserImg from 'assets/images/default-user.png';
 import logoUrl from 'assets/images/logo.png';
 import NativeInput from 'components/UI/NativeInput';
 import ThemeButton from 'components/UI/ThemeButton';
+import { ROUTES } from 'constant';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SettingMenu from './SettingMenu';
 import useStyle from './style';
 
 // @fake data
-const isAuth = true,
-  avtUrl =
-    'https://scontent.fhph1-2.fna.fbcdn.net/v/t1.6435-9/113736806_2750904441808448_2237668902459956508_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=QzFOO9kmvMAAX_q5n1s&_nc_ht=scontent.fhph1-2.fna&oh=820230f945b3af2035761d8df202cbae&oe=60C9782B';
-
+const isAuth = Math.random() > 0.2 ? true : false,
+  avtUrl = null;
 const MENU_LIST = [
   {
     title: 'Thông báo',
@@ -97,13 +98,29 @@ function Navigation() {
 
             <ThemeButton classes={classes.iconSize} />
 
-            <Avatar
-              onClick={onOpenMenu}
-              onMouseEnter={onOpenMenu}
-              className={`${classes.imgSize} ${classes.avt} cur-pointer`}
-              alt="Username"
-              src={avtUrl}
-            />
+            {isAuth ? (
+              <Avatar
+                onClick={onOpenMenu}
+                onMouseEnter={onOpenMenu}
+                className={`${classes.imgSize} ${classes.avt} cur-pointer`}
+                alt="Username"
+                src={avtUrl || defaultUserImg}
+              />
+            ) : (
+              <Link to={ROUTES.LOGIN}>
+                <Button
+                  className="_btn _btn-primary"
+                  classes={{
+                    root: classes.loginBtn,
+                    label: classes.loginLabel,
+                  }}
+                  variant="contained"
+                  color="primary"
+                  size="small">
+                  Đăng nhập
+                </Button>
+              </Link>
+            )}
 
             <SettingMenu
               anchorEl={anchorMenu}

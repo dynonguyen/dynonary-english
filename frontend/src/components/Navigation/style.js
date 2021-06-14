@@ -52,4 +52,12 @@ export default makeStyles((theme) => ({
     fontSize: iconSize,
     color: 'var(--text-color)',
   },
+
+  loginBtn: {
+    height: '3.7rem',
+  },
+
+  loginLabel: {
+    fontSize: '1.4rem',
+  },
 }));

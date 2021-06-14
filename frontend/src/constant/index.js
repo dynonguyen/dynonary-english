@@ -1,6 +1,7 @@
 // routes
 export const ROUTES = {
   HOME: '/',
+  LOGIN: '/login',
 };
 
 // theme key

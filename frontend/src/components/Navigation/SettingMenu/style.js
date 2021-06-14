@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
     maxWidth: '100%',
 
     '&:hover, &:active': {
-      backgroundColor: 'var(--hover-color)',
+      backgroundColor: 'var(--hover-color) !important',
     },
   },
 

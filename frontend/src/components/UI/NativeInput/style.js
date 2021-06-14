@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     position: 'relative',
     borderRadius: 'var(--border-radius)',
     marginLeft: 0,
-    width: '100%',
+    // width: '100%',
   },
 
   icon: {
