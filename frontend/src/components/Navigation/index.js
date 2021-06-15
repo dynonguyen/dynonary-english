@@ -15,13 +15,11 @@ import NativeInput from 'components/UI/NativeInput';
 import ThemeButton from 'components/UI/ThemeButton';
 import { ROUTES } from 'constant';
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SettingMenu from './SettingMenu';
 import useStyle from './style';
 
-// @fake data
-const isAuth = false,
-  avtUrl = null;
 const MENU_LIST = [
   {
     title: 'Thông báo',
@@ -54,6 +52,8 @@ function Navigation() {
   const classes = useStyle();
   const theme = useTheme();
   const isXsDevice = useMediaQuery(theme.breakpoints.up('xs'));
+
+  const { avt, isAuth } = useSelector((state) => state.userInfo);
   const [showInput, setShowInput] = useState(isXsDevice);
   const [anchorMenu, setAnchorMenu] = useState(null);
 
@@ -104,7 +104,7 @@ function Navigation() {
                 onMouseEnter={onOpenMenu}
                 className={`${classes.imgSize} ${classes.avt} cur-pointer`}
                 alt="Username"
-                src={avtUrl || defaultUserImg}
+                src={avt || defaultUserImg}
               />
             ) : (
               <Link to={ROUTES.LOGIN}>

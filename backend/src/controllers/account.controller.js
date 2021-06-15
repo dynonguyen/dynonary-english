@@ -77,3 +77,16 @@ exports.postLogin = async (req, res, next) => {
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };
+
+exports.getUserInfo = async (req, res, next) => {
+  try {
+    const { isAuth = false } = res.locals;
+    if (!isAuth) {
+      return res.status(401).json({ message: 'Failed' });
+    }
+    return res.status(200).json({ user: req.user });
+  } catch (error) {
+    console.error('GET USER INFO ERROR: ', error);
+    return res.status(401).json({ message: 'Failed' });
+  }
+};

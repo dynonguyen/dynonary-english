@@ -10,6 +10,10 @@ const accountApi = {
   postLogin: (email, password) => {
     return axiosClient.post(`${URL}/login`, { email, password });
   },
+
+  getUserInfo: () => {
+    return axiosClient.get(`${URL}/user-info`);
+  },
 };
 
 export default accountApi;

@@ -5,40 +5,55 @@ import routerConfig from 'configs/routerConfig';
 import theme from 'configs/theme';
 import useTheme from 'hooks/useTheme';
 import NotFoundPage from 'pages/NotFound';
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { getUserInfo } from 'redux/slices/userInfo.slice';
 
 const { routes, renderRoutes } = routerConfig;
 
-// @fake-data
-const isAuth = true;
-
 function App() {
+  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { isAuth } = useSelector((state) => state.userInfo);
+
   // get and set theme
   useTheme();
 
+  useEffect(() => {
+    dispatch(getUserInfo());
+    setLoading(false);
+    return () => {};
+  }, []);
+
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <div className="dynonary-app">
-          {/* routes */}
-          <Suspense fallback={<GlobalLoading />}>
-            <Switch>
-              {renderRoutes(routes, isAuth)}
-              <Route>
-                <NotFoundPage />
-              </Route>
-            </Switch>
-          </Suspense>
+    <>
+      {loading ? (
+        <GlobalLoading />
+      ) : (
+        <ThemeProvider theme={theme}>
+          <Router>
+            <div className="dynonary-app">
+              {/* routes */}
+              <Suspense fallback={<GlobalLoading />}>
+                <Switch>
+                  {renderRoutes(routes, isAuth)}
+                  <Route>
+                    <NotFoundPage />
+                  </Route>
+                </Switch>
+              </Suspense>
 
-          {/* overlay */}
-          <div id="_overlay"></div>
+              {/* overlay */}
+              <div id="_overlay"></div>
 
-          {/* message */}
-          <Message />
-        </div>
-      </Router>
-    </ThemeProvider>
+              {/* message */}
+              <Message />
+            </div>
+          </Router>
+        </ThemeProvider>
+      )}
+    </>
   );
 }
 

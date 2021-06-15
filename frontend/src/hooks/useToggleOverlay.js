@@ -2,9 +2,14 @@ import React, { useEffect } from 'react';
 
 function useToggleOverlay() {
   useEffect(() => {
-    document.getElementById('_overlay').style.display = 'block';
+    const overplayEl = document.getElementById('_overlay');
+    if (overplayEl) {
+      overplayEl.style.display = 'block';
+    }
     return () => {
-      document.getElementById('_overlay').style.display = 'none';
+      if (overplayEl) {
+        overplayEl.style.display = 'none';
+      }
     };
   }, []);
 

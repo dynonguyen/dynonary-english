@@ -12,6 +12,7 @@ const userSchema = new Schema({
     unique: true,
     maxLength: MAX.USER_NAME,
   },
+  avt: { type: String, trim: true, default: '' },
 });
 
 const UserModel = mongoose.model('user', userSchema, 'users');

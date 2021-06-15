@@ -2,13 +2,11 @@ import accountApi from 'apis/accountApi';
 import { UX } from 'constant';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import { setMessage } from 'redux/slices/message.slice';
 import Login from './index';
 
 function LoginData() {
   const [loading, setLoading] = useState(false);
-  const history = useHistory();
   const dispatch = useDispatch();
 
   const handleLogin = async (account) => {
@@ -21,10 +19,9 @@ function LoginData() {
         dispatch(
           setMessage({ message: 'Đăng nhập thành công', type: 'success' }),
         );
-        setLoading(false);
 
         setTimeout(() => {
-          history.push('/');
+          window.location.href = '/';
         }, UX.DELAY_TIME);
       }
     } catch (error) {
