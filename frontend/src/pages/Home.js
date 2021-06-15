@@ -10,6 +10,7 @@ import toeicIcon from 'assets/icons/toeic.png';
 import translateIcon from 'assets/icons/translate.png';
 import FeatureBox from 'components/FeatureBox';
 import Navigation from 'components/Navigation';
+import SpeedDials from 'components/UI/SpeedDial';
 import React from 'react';
 
 const FEATURE_LIST = [
@@ -90,6 +91,7 @@ function HomePage() {
           ))}
         </Grid>
       </div>
+      <SpeedDials />
     </>
   );
 }
