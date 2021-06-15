@@ -1,12 +1,14 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
 import LockIcon from '@material-ui/icons/Lock';
+import LoopIcon from '@material-ui/icons/Loop';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import fbIcon from 'assets/icons/fb-icon.png';
 import ggIcon from 'assets/icons/gg-icon.png';
 import InputCustom from 'components/UI/InputCustom';
 import { MAX, ROUTES } from 'constant';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
@@ -27,7 +29,7 @@ const schema = yup.object().shape({
     .max(MAX.PASSWORD_LEN, `Mật khẩu tối đa ${MAX.PASSWORD_LEN}`),
 });
 
-function Login() {
+function Login({ onLogin, loading }) {
   const classes = useStyle();
   const [visiblePw, setVisiblePw] = useState(false);
   const {
@@ -38,14 +40,10 @@ function Login() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
-
   return (
     <form
       className={`${classes.root} flex-col`}
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onLogin)}
       autoComplete="off">
       <div className="flex-col">
         <h1 className={`${classes.title} t-center`}>Đăng nhập</h1>
@@ -110,6 +108,8 @@ function Login() {
         type="submit"
         variant="contained"
         color="primary"
+        disabled={loading}
+        endIcon={loading && <LoopIcon className="ani-spin" />}
         size="large">
         Đăng nhập
       </Button>
@@ -128,5 +128,15 @@ function Login() {
     </form>
   );
 }
+
+Login.propTypes = {
+  loading: PropTypes.bool,
+  onLogin: PropTypes.func,
+};
+
+Login.defaultProps = {
+  loading: false,
+  onLogin: function () {},
+};
 
 export default Login;

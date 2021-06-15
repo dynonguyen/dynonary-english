@@ -10,6 +10,14 @@ exports.isExistAccount = async (email) => {
   }
 };
 
+exports.findAccount = async (email) => {
+  try {
+    return await AccountModel.findOne({ email });
+  } catch (error) {
+    throw error;
+  }
+};
+
 exports.createAccount = async (email, password) => {
   try {
     const newAccount = await AccountModel.create({

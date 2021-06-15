@@ -13,6 +13,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import useStyle from './style';
+
 const schema = yup.object().shape({
   email: yup
     .string()

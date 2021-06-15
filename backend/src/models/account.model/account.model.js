@@ -34,14 +34,6 @@ const accountSchema = new Schema({
     enum: accountTypeEnum,
     default: ACCOUNT_TYPES.LOCAL,
   },
-  failedLoginTimes: {
-    type: Number,
-    default: 0,
-  },
-  refreshToken: {
-    type: String,
-    default: null,
-  },
 });
 
 // hash password with bcrypt

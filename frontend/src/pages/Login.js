@@ -1,4 +1,4 @@
-import Login from 'components/Login';
+import LoginData from 'components/Login/data';
 import HomeLinkButton from 'components/UI/HomeLinkButton';
 import { ROUTES } from 'constant';
 import React from 'react';
@@ -9,7 +9,7 @@ function LoginPage() {
   return (
     <div className="pos-rel w-100vw h-100vh">
       <div className="transform-center">
-        <Login />
+        <LoginData />
 
         <div className="has-account">
           Bạn chưa có tài khoản?&nbsp;
