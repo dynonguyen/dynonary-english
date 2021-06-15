@@ -1,18 +1,16 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
-import LockIcon from '@material-ui/icons/Lock';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import fbIcon from 'assets/icons/fb-icon.png';
 import ggIcon from 'assets/icons/gg-icon.png';
 import InputCustom from 'components/UI/InputCustom';
-import { MAX, ROUTES } from 'constant';
+import { MAX, REGEX } from 'constant';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import useStyle from './style';
-
 const schema = yup.object().shape({
   email: yup
     .string()
@@ -20,6 +18,12 @@ const schema = yup.object().shape({
     .required('Nhập email')
     .email('Email không hợp lệ')
     .max(MAX.EMAIL_LEN, `Email tối đa ${MAX.EMAIL_LEN}`),
+  name: yup
+    .string()
+    .trim()
+    .required('Nhập họ tên')
+    .max(MAX.NAME_LEN, `Họ tên tối đa ${MAX.NAME_LEN} ký tự`)
+    .matches(REGEX.NAME, 'Họ tên không chứ số và ký tự đặc biệt'),
   password: yup
     .string()
     .trim()
@@ -27,7 +31,7 @@ const schema = yup.object().shape({
     .max(MAX.PASSWORD_LEN, `Mật khẩu tối đa ${MAX.PASSWORD_LEN}`),
 });
 
-function Login() {
+function Register() {
   const classes = useStyle();
   const [visiblePw, setVisiblePw] = useState(false);
   const {
@@ -48,9 +52,9 @@ function Login() {
       onSubmit={handleSubmit(onSubmit)}
       autoComplete="off">
       <div className="flex-col">
-        <h1 className={`${classes.title} t-center`}>Đăng nhập</h1>
+        <h1 className={`${classes.title} t-center`}>Tạo tài khoản</h1>
         <div className="t-center mt-5">
-          <LockIcon className={classes.lockIcon} />
+          <AccountCircleIcon className={classes.accountIcon} />
         </div>
       </div>
 
@@ -68,6 +72,21 @@ function Login() {
           }}
         />
         {errors.email && <p className="text-error">{errors.email?.message}</p>}
+      </div>
+
+      <div className="flex-col">
+        <InputCustom
+          label="Họ tên"
+          size="small"
+          placeholder="Nhập họ tên"
+          error={Boolean(errors.name)}
+          inputProps={{
+            name: 'name',
+            maxLength: MAX.NAME_LEN,
+            ...register('name'),
+          }}
+        />
+        {errors.name && <p className="text-error">{errors.name?.message}</p>}
       </div>
 
       <div className="flex-col">
@@ -101,17 +120,13 @@ function Login() {
         )}
       </div>
 
-      <Link className={classes.forgotPw} to={ROUTES.FORGOT_PASSWORD}>
-        Quên mật khẩu ?
-      </Link>
-
       <Button
         className="_btn _btn-primary"
         type="submit"
         variant="contained"
         color="primary"
         size="large">
-        Đăng nhập
+        Đăng ký
       </Button>
 
       <div className="or-option w-100 t-center">HOẶC</div>
@@ -129,4 +144,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

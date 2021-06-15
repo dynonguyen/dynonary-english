@@ -9,9 +9,15 @@ export const ROUTES = {
 export const MAX = {
   EMAIL_LEN: 100,
   PASSWORD_LEN: 40,
+  NAME_LEN: 50,
+  SEARCH_LEN: 50,
 };
 
 export const MIN = {};
+
+export const REGEX = {
+  NAME: /^[^\d~`!@#$%^&*\(\)\\\|\.,\?\/\-\+\=\_]+$/gi,
+};
 
 // theme key
 export const THEME_KEYS = {
@@ -21,12 +27,10 @@ export const THEME_KEYS = {
   DARK: 'dark',
 };
 
-export const MAX_LEN_SEARCH = 50;
-
 export default {
-  MAX_LEN_SEARCH,
   ROUTES,
   THEME_KEYS,
   MAX,
   MIN,
+  REGEX,
 };
