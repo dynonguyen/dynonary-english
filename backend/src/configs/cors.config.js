@@ -1,6 +1,18 @@
+const whiteList = [
+  process.env.CORS_ORIGIN_1,
+  process.env.CORS_ORIGIN_2,
+  process.env.CORS_ORIGIN_3,
+];
+
 const corsConfig = {
   // Configures the Access-Control-Allow-Origin
-  origin: process.env.CORS_ORIGIN,
+  origin: function (origin, callback) {
+    if (whiteList.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
 
   // Configures the Access-Control-Allow-Methods
   methods: 'GET, POST, OPTIONS, PUT, PATCH, DELETE',

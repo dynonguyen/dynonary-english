@@ -22,7 +22,8 @@
 		"start": "set PORT=8888 && react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"deploy": "bash ./deploy-surge.cmd"
 	},
 	"eslintConfig": {
 		"extends": [
