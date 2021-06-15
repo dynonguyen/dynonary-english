@@ -10,7 +10,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import Search from '@material-ui/icons/Search';
 import SettingsIcon from '@material-ui/icons/Settings';
 import defaultUserImg from 'assets/images/default-user.png';
-import logoUrl from 'assets/images/logo.png';
+import logoUrl from 'assets/images/sm-logo.png';
 import NativeInput from 'components/UI/NativeInput';
 import ThemeButton from 'components/UI/ThemeButton';
 import { ROUTES } from 'constant';

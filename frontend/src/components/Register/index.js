@@ -4,8 +4,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LoopIcon from '@material-ui/icons/Loop';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-import fbIcon from 'assets/icons/fb-icon.png';
-import ggIcon from 'assets/icons/gg-icon.png';
+import SocialNetworkLogin from 'components/SocialNetworkLogin';
 import InputCustom from 'components/UI/InputCustom';
 import { MAX, MIN, REGEX } from 'constant';
 import PropTypes from 'prop-types';
@@ -133,14 +132,7 @@ function Register({ onRegister, loading }) {
 
       <div className="or-option w-100 t-center">HOẶC</div>
       <div className="d-flex" style={{ gap: '0.8rem' }}>
-        <div className={classes.socialBtn}>
-          <img className={classes.socialImg} src={fbIcon} alt="FB" />
-          <span className={classes.socialName}>Facebook</span>
-        </div>
-        <div className={classes.socialBtn}>
-          <img className={classes.socialImg} src={ggIcon} alt="GG" />
-          <span className={classes.socialName}>Google</span>
-        </div>
+        <SocialNetworkLogin />
       </div>
     </form>
   );
