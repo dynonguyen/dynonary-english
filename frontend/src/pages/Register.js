@@ -1,4 +1,4 @@
-import Register from 'components/Register';
+import RegisterData from 'components/Register/data';
 import HomeLinkButton from 'components/UI/HomeLinkButton';
 import { ROUTES } from 'constant';
 import React from 'react';
@@ -9,7 +9,7 @@ function RegisterPage() {
   return (
     <div className="pos-rel w-100vw h-100vh">
       <div className="transform-center">
-        <Register />
+        <RegisterData />
 
         <div className="has-account">
           Bạn đã có tài khoản?&nbsp;
