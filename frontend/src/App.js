@@ -3,17 +3,15 @@ import GlobalLoading from 'components/UI/GlobalLoading';
 import routerConfig from 'configs/routerConfig';
 import theme from 'configs/theme';
 import useTheme from 'hooks/useTheme';
+import NotFoundPage from 'pages/NotFound';
 import React, { Suspense } from 'react';
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const { routes, renderRoutes } = routerConfig;
 
+// @fake-data
 const isAuth = true;
+
 function App() {
   // get and set theme
   useTheme();
@@ -26,7 +24,7 @@ function App() {
             <Switch>
               {renderRoutes(routes, isAuth)}
               <Route>
-                <Redirect to="/" />
+                <NotFoundPage />
               </Route>
             </Switch>
           </Suspense>
