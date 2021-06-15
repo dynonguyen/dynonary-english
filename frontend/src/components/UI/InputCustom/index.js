@@ -4,12 +4,13 @@ import React from 'react';
 import useStyle from './style';
 
 function InputCustom(props) {
-  const { endAdornment, ...propRest } = props;
+  const { endAdornment, error, ...propRest } = props;
   const classes = useStyle();
 
   return (
     <TextField
       classes={classes}
+      error={error}
       InputProps={{
         disableUnderline: true,
         endAdornment,
@@ -25,6 +26,12 @@ function InputCustom(props) {
 
 InputCustom.propTypes = {
   endAdornment: PropTypes.any,
+  error: PropTypes.bool,
+};
+
+InputCustom.defaultProps = {
+  endAdornment: null,
+  error: false,
 };
 
 export default InputCustom;

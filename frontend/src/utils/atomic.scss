@@ -2,6 +2,7 @@
   cursor: pointer;
 }
 
+// button
 ._btn {
   color: var(--text-color);
   transition: all 0.25s !important;
@@ -23,7 +24,7 @@
   }
 }
 
-// -------- or sign up - login -------
+//  or sign up - login
 .or-option {
   position: relative;
   margin: 0 auto;
@@ -50,6 +51,7 @@
   }
 }
 
+// overlay
 #_overlay {
   position: fixed;
   top: 0;

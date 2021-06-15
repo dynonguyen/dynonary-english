@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   root: {
+    // input
     '& .MuiInputBase-root': {
       backgroundColor: 'var(--bg-color-accent)',
       borderRadius: 'var(--border-radius)',
@@ -18,6 +19,7 @@ export default makeStyles((theme) => ({
       borderColor: 'var(--secondary-color)',
     },
 
+    // label
     '& .MuiFormLabel-root': {
       color: 'var(--grey)',
       fontSize: '1.5rem',
@@ -25,6 +27,15 @@ export default makeStyles((theme) => ({
 
     '& label.Mui-focused': {
       color: 'var(--secondary-color)',
+    },
+
+    // error
+    '& .MuiFormLabel-root.Mui-error': {
+      color: 'var(--error-color)',
+    },
+
+    '& .MuiInputBase-root.Mui-error': {
+      borderColor: 'var(--error-color)',
     },
   },
 }));
