@@ -33,16 +33,7 @@ export default makeStyles((theme) => ({
   },
 
   control: {
-    gap: '0.2rem',
     marginLeft: 'auto',
-
-    [theme.breakpoints.up('xs')]: {
-      gap: '0.8rem',
-    },
-
-    [theme.breakpoints.up('md')]: {
-      gap: '1.2rem',
-    },
   },
 
   avt: {

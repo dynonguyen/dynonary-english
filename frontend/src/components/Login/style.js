@@ -6,8 +6,12 @@ export default makeStyles((theme) => ({
     boxShadow: 'var(--box-shadow)',
     borderRadius: 'var(--border-radius)',
     width: '35rem',
-    gap: '2.4rem',
     backgroundColor: 'var(--bg-color-sec)',
+
+    '& > *': {
+      marginTop: '1.2rem',
+      marginBottom: '1.2rem',
+    },
   },
 
   title: {

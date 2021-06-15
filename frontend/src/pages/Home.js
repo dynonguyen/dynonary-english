@@ -7,6 +7,9 @@ import flashcardIcon from 'assets/icons/flashcard.png';
 import gameIcon from 'assets/icons/game.png';
 import grammarIcon from 'assets/icons/grammar.png';
 import toeicIcon from 'assets/icons/toeic.png';
+import ipaIcon from 'assets/icons/ipa.png';
+import donateIcon from 'assets/icons/donate.png';
+import verbIcon from 'assets/icons/verb.png';
 import translateIcon from 'assets/icons/translate.png';
 import FeatureBox from 'components/FeatureBox';
 import Navigation from 'components/Navigation';
@@ -14,6 +17,13 @@ import SpeedDials from 'components/UI/SpeedDial';
 import React from 'react';
 
 const FEATURE_LIST = [
+  {
+    title: 'Bảng phiên âm (IPA)',
+    subTitle:
+      'Luyện nghe, phát âm chuẩn với 44 âm trong bảng phiên âm quốc tế IPA',
+    imgUrl: ipaIcon,
+    to: '/',
+  },
   {
     title: 'Dịch văn bản',
     subTitle:
@@ -59,6 +69,12 @@ const FEATURE_LIST = [
     to: '/',
   },
   {
+    title: 'Động từ bất quy tắc',
+    imgUrl: verbIcon,
+    subTitle: 'Tất cả những động từ bất quy tắc trong tiếng Anh',
+    to: '/',
+  },
+  {
     title: 'Play game',
     imgUrl: gameIcon,
     subTitle: 'Chơi game cùng Dyno để ôn tập lại tất cả kiến thức đã học nhé',
@@ -68,7 +84,14 @@ const FEATURE_LIST = [
     title: 'Đóng góp',
     imgUrl: editIcon,
     subTitle:
-      'Dyno rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai, ...',
+      'Dyno rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
+    to: '/',
+  },
+  {
+    title: 'Donate',
+    imgUrl: donateIcon,
+    subTitle:
+      'Ủng hộ cho Dyno để ứng dụng được duy trì, cải thiện và thêm nhiều tính năng hơn. Cảm ơn bạn ❤',
     to: '/',
   },
 ];

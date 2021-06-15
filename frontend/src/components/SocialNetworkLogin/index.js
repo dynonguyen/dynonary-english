@@ -20,7 +20,7 @@ function SocialNetworkLogin() {
   };
 
   return (
-    <>
+    <div className="d-flex" style={{ margin: '0 -0.8rem' }}>
       <div className={classes.socialBtn} onClick={handleClick}>
         <img className={classes.socialImg} src={fbIcon} alt="FB" />
         <span className={classes.socialName}>Facebook</span>
@@ -29,7 +29,7 @@ function SocialNetworkLogin() {
         <img className={classes.socialImg} src={ggIcon} alt="GG" />
         <span className={classes.socialName}>Google</span>
       </div>
-    </>
+    </div>
   );
 }
 

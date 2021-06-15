@@ -114,9 +114,8 @@ function Login({ onLogin, loading }) {
       </Button>
 
       <div className="or-option w-100 t-center">HOẶC</div>
-      <div className="d-flex" style={{ gap: '0.8rem' }}>
-        <SocialNetworkLogin />
-      </div>
+
+      <SocialNetworkLogin />
     </form>
   );
 }

@@ -96,7 +96,9 @@ function Navigation() {
               }
             />
 
-            <ThemeButton classes={classes.iconSize} />
+            <div className="mx-5">
+              <ThemeButton classes={classes.iconSize} />
+            </div>
 
             {isAuth ? (
               <Avatar

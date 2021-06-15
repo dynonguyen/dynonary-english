@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     padding: '0.8rem 1.2rem',
+    margin: '0 0.8rem',
 
     border: 'solid 1px var(--input-border-color)',
     backgroundColor: 'var(--bg-color-accent)',

@@ -9,7 +9,6 @@ export default makeStyles((theme) => ({
 
   menuItem: {
     display: 'flex',
-    gap: 12,
     padding: '0.8rem 1.8rem',
     maxWidth: '100%',
 
@@ -20,6 +19,7 @@ export default makeStyles((theme) => ({
 
   icon: {
     color: 'var(--grey)',
+    marginRight: '1.2rem',
   },
 
   text: {

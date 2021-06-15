@@ -1,8 +1,8 @@
 import FacebookIcon from '@material-ui/icons/Facebook';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import DollarIcon from '@material-ui/icons/MonetizationOn';
 import UpIcon from '@material-ui/icons/Publish';
 import ShareIcon from '@material-ui/icons/Share';
+import StarsIcon from '@material-ui/icons/Stars';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
@@ -12,9 +12,9 @@ import useStyle from './style';
 const actions = [
   { icon: <FacebookIcon />, name: 'Liên hệ Dyno' },
   { icon: <UpIcon />, name: 'Nâng cấp' },
-  { icon: <DollarIcon />, name: 'Ủng hộ Dyno' },
+  { icon: <DollarIcon />, name: 'Donate' },
   { icon: <ShareIcon />, name: 'Chia sẻ' },
-  { icon: <FavoriteIcon />, name: 'Yêu thích' },
+  { icon: <StarsIcon />, name: 'Góp ý, đánh giá' },
 ];
 
 function SpeedDials() {
