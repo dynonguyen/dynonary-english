@@ -5,8 +5,9 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import fbIcon from 'assets/icons/fb-icon.png';
 import ggIcon from 'assets/icons/gg-icon.png';
 import InputCustom from 'components/UI/InputCustom';
-import { MAX } from 'constant';
+import { MAX, ROUTES } from 'constant';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useStyle from './style';
 
 function Login() {
@@ -48,6 +49,10 @@ function Login() {
           )
         }
       />
+
+      <Link className={classes.forgotPw} to={ROUTES.FORGOT_PASSWORD}>
+        Quên mật khẩu ?
+      </Link>
 
       <Button
         className="_btn _btn-primary"

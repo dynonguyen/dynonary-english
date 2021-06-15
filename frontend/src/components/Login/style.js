@@ -20,6 +20,18 @@ export default makeStyles((theme) => ({
     color: 'var(--text-color)',
   },
 
+  forgotPw: {
+    color: 'var(--title-color)',
+    opacity: 0.65,
+    fontWeight: 500,
+    fontSize: '1.4rem',
+    textAlign: 'right',
+
+    '&:hover': {
+      opacity: 1,
+    },
+  },
+
   icon: {
     fontSize: '1.8rem',
     color: 'var(--grey)',
