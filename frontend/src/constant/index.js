@@ -1,3 +1,7 @@
+export const LINKS = {
+  FB: 'https://fb.com/TuanNguyen250400',
+};
+
 export const MAX = {
   EMAIL_LEN: 100,
   PASSWORD_LEN: 40,

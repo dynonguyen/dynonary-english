@@ -18,8 +18,6 @@ function RegisterPage() {
           </Link>
         </div>
       </div>
-
-      <HomeLinkButton />
     </div>
   );
 }

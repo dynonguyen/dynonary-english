@@ -114,7 +114,6 @@ function HomePage() {
           ))}
         </Grid>
       </div>
-      <SpeedDials />
     </>
   );
 }

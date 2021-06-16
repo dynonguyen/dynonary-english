@@ -1,6 +1,7 @@
 import { ThemeProvider } from '@material-ui/core/styles';
 import GlobalLoading from 'components/UI/GlobalLoading';
 import Message from 'components/UI/Message';
+import SpeedDials from 'components/UI/SpeedDial';
 import routerConfig from 'configs/routerConfig';
 import theme from 'configs/theme';
 import useTheme from 'hooks/useTheme';
@@ -44,11 +45,10 @@ function App() {
                 </Switch>
               </Suspense>
 
-              {/* overlay */}
+              {/* global component */}
               <div id="_overlay"></div>
-
-              {/* message */}
               <Message />
+              <SpeedDials />
             </div>
           </Router>
         </ThemeProvider>

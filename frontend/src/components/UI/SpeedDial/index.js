@@ -1,28 +1,40 @@
 import FacebookIcon from '@material-ui/icons/Facebook';
+import HomeIcon from '@material-ui/icons/Home';
 import DollarIcon from '@material-ui/icons/MonetizationOn';
 import UpIcon from '@material-ui/icons/Publish';
 import ShareIcon from '@material-ui/icons/Share';
-import StarsIcon from '@material-ui/icons/Stars';
+import StarIcon from '@material-ui/icons/Star';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
+import { LINKS } from 'constant';
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import useStyle from './style';
 
 const actions = [
-  { icon: <FacebookIcon />, name: 'Liên hệ Dyno' },
-  { icon: <UpIcon />, name: 'Nâng cấp' },
-  { icon: <DollarIcon />, name: 'Donate' },
-  { icon: <ShareIcon />, name: 'Chia sẻ' },
-  { icon: <StarsIcon />, name: 'Góp ý, đánh giá' },
+  { icon: <HomeIcon />, name: 'Trang chủ', to: '/', isBlank: false },
+  { icon: <FacebookIcon />, name: 'Liên hệ Dyno', to: LINKS.FB, isBlank: true },
+  { icon: <UpIcon />, name: 'Nâng cấp', to: '', isBlank: false },
+  { icon: <DollarIcon />, name: 'Donate', to: '', isBlank: false },
+  { icon: <ShareIcon />, name: 'Chia sẻ', to: '', isBlank: false },
+  { icon: <StarIcon />, name: 'Góp ý, đánh giá', to: '', isBlank: false },
 ];
 
 function SpeedDials() {
   const classes = useStyle();
   const [open, setOpen] = useState(false);
+  const history = useHistory();
 
-  const handleClose = () => {
+  const handleClose = (to, isBlank = false) => {
     setOpen(false);
+    if (to && to !== '') {
+      if (isBlank) {
+        window.open(to);
+      } else {
+        history.push(to);
+      }
+    }
   };
 
   const handleOpen = () => {
@@ -39,16 +51,16 @@ function SpeedDials() {
       hidden={false}
       ariaLabel="Speed Dial"
       icon={<SpeedDialIcon />}
-      onClose={handleClose}
       onOpen={handleOpen}
+      onClose={() => setOpen(false)}
       open={open}
       direction="up">
-      {actions.map((action) => (
+      {actions.map((action, index) => (
         <SpeedDialAction
-          key={action.name}
+          key={index}
           icon={action.icon}
           tooltipTitle={action.name}
-          onClick={handleClose}
+          onClick={() => handleClose(action.to, action.isBlank)}
         />
       ))}
     </SpeedDial>

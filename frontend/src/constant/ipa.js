@@ -1,19 +1,33 @@
-import eMS from 'assets/images/ipa/e.jpg';
-import iMS from 'assets/images/ipa/i.jpg';
-import uMS from 'assets/images/ipa/u.jpg';
-
-import iShortAu from 'assets/audios/ipa/vowels/i-short.mp3';
+// audios
+import aLongAu from 'assets/audios/ipa/vowels/a-long.mp3';
+import aaAu from 'assets/audios/ipa/vowels/aa.mp3';
+import aeAu from 'assets/audios/ipa/vowels/ae.mp3';
+import eAu from 'assets/audios/ipa/vowels/e.mp3';
 import iLongAu from 'assets/audios/ipa/vowels/i-long.mp3';
+import iShortAu from 'assets/audios/ipa/vowels/i-short.mp3';
+import oUkAu from 'assets/audios/ipa/vowels/o-uk.mp3';
+import oAu from 'assets/audios/ipa/vowels/o.mp3';
+import owLongAu from 'assets/audios/ipa/vowels/ow-long.mp3';
+import owAu from 'assets/audios/ipa/vowels/ow.mp3';
+import uLongAu from 'assets/audios/ipa/vowels/u-long.mp3';
+import uShortAu from 'assets/audios/ipa/vowels/u-short.mp3';
+import aMS from 'assets/images/ipa/a.jpg';
+// images
+import eMS from 'assets/images/ipa/e.jpg';
+import eiMS from 'assets/images/ipa/ei.jpg';
+import iMS from 'assets/images/ipa/i.jpg';
+import ouMS from 'assets/images/ipa/ou.jpg';
+import uMS from 'assets/images/ipa/u.jpg';
 
 export const VOWELS = [
   {
-    title: '😊 Nhóm âm cười',
+    title: '😁 Nhóm âm cười',
     list: [
       {
         phonetic: 'ɪ',
         audioSrc: iShortAu,
-        desc: 'i ngắn, đọc dứt khoát như đang kêu ai đó, miệng không căng',
         mouthShape: eMS,
+        desc: 'i ngắn, đọc dứt khoát như đang kêu ai đó, miệng không căng',
         examples: [
           {
             word: 'ship',
@@ -28,8 +42,8 @@ export const VOWELS = [
       {
         phonetic: 'i:',
         audioSrc: iLongAu,
-        desc: 'i dài, miệng cười, nhấn mạnh, nặng và căng',
         mouthShape: iMS,
+        desc: 'i dài, miệng cười, nhấn mạnh, nặng và căng',
         examples: [
           {
             word: 'sheep',
@@ -48,9 +62,9 @@ export const VOWELS = [
     list: [
       {
         phonetic: 'ʊ',
-        audioSrc: null,
-        desc: 'u ngắn, tròn môi nhẹ, dứt khoác, không căng',
+        audioSrc: uShortAu,
         mouthShape: uMS,
+        desc: 'u ngắn, tròn môi nhẹ, dứt khoát, không căng',
         examples: [
           {
             word: 'foot',
@@ -63,18 +77,161 @@ export const VOWELS = [
         ],
       },
       {
-        phonetic: 'i:',
-        audioSrc: null,
-        desc: 'Miệng cười, nhấn mạnh, nặng và căng',
-        mouthShape: iMS,
+        phonetic: 'u:',
+        audioSrc: uLongAu,
+        mouthShape: ouMS,
+        desc: 'u dài, chu và tròn môi, căng và mạnh',
         examples: [
           {
-            word: 'sheep',
-            phonetic: '/ʃi:p/',
+            word: 'blue',
+            phonetic: '/blu:/',
           },
           {
-            word: 'bee',
-            phonetic: '/bi:/',
+            word: 'group',
+            phonetic: '/gru:p/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '😱 Nhóm âm shock',
+    list: [
+      {
+        phonetic: 'ɔ:',
+        audioSrc: oAu,
+        mouthShape: aMS,
+        desc: 'Như o dài, nặng và nhấn mạnh',
+        examples: [
+          {
+            word: 'law',
+            phonetic: '/lɔ:/',
+          },
+          {
+            word: 'thought',
+            phonetic: '/θɔ:t/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ɒ',
+        audioSrc: oUkAu,
+        mouthShape: aMS,
+        desc: 'Đọc như o ngắn, dứt khoát. Âm này trong UK như ɔ: còn US như ɑ:',
+        examples: [
+          {
+            word: 'got',
+            phonetic: '/ɡɒt/',
+          },
+          {
+            word: 'shot',
+            phonetic: '/ʃɒt/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '😮 Nhóm âm mở',
+    list: [
+      {
+        phonetic: 'e',
+        audioSrc: eAu,
+        mouthShape: eMS,
+        desc: 'Mở miệng vừa, đọc như e. Giữ trọng tâm',
+        examples: [
+          {
+            word: 'ten',
+            phonetic: '/ten/',
+          },
+          {
+            word: 'medal',
+            phonetic: "/'medəl/",
+          },
+        ],
+      },
+      {
+        phonetic: 'æ',
+        audioSrc: aeAu,
+        mouthShape: eiMS,
+        desc: 'Mở miệng đọc nhẹ e nối liền a, bắt đầu với e và kết thúc a. Giữ trọng tâm',
+        examples: [
+          {
+            word: 'back',
+            phonetic: '/bæk/',
+          },
+          {
+            word: 'trap',
+            phonetic: '/træp/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ɑ:',
+        audioSrc: aLongAu,
+        mouthShape: aMS,
+        desc: 'Đọc là a nhưng dài, nặng, nhấn mạnh. Giữ trọng tâm',
+        examples: [
+          {
+            word: 'fast',
+            phonetic: '/fɑ:st/',
+          },
+          {
+            word: 'arm',
+            phonetic: '/ɑ:m/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ʌ',
+        audioSrc: aaAu,
+        mouthShape: aMS,
+        desc: 'Đọc như â. Giữ trọng tâm',
+        examples: [
+          {
+            word: 'cup',
+            phonetic: '/kʌp/',
+          },
+          {
+            word: 'drum',
+            phonetic: '/drʌm/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '😝 Nhóm âm ơ',
+    list: [
+      {
+        phonetic: 'ə',
+        audioSrc: owAu,
+        mouthShape: uMS,
+        desc: 'Đọc như ơ, cong nhẹ lưỡi nếu có r, dứt khoát',
+        examples: [
+          {
+            word: 'ago',
+            phonetic: '/əˈɡəʊ/',
+          },
+          {
+            word: 'Never',
+            phonetic: '/ˈnevə(r)/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ɜ:',
+        audioSrc: owLongAu,
+        mouthShape: uMS,
+        desc: 'Đọc như ơ dài, cong lưỡi, nhấn mạnh',
+        examples: [
+          {
+            word: 'bird',
+            phonetic: '/bɜ:d/',
+          },
+          {
+            word: 'nurse',
+            phonetic: '/nɜ:s/',
           },
         ],
       },

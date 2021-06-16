@@ -18,8 +18,6 @@ function LoginPage() {
           </Link>
         </div>
       </div>
-
-      <HomeLinkButton />
     </div>
   );
 }

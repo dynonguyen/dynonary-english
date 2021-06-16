@@ -10,7 +10,7 @@ import useStyle from './style';
 
 // expected result: '/I/, /i:/'
 function collectPhonetics(list = []) {
-  const phoneticArr = list.map((item) => `/${item.phonetic}/`);
+  const phoneticArr = list.map((item) => `/ ${item.phonetic} /`);
   return phoneticArr.join(', ');
 }
 
@@ -30,7 +30,12 @@ function IPAGroupCollapse({ title, phoneticList }) {
         <Grid container spacing={3}>
           {phoneticList &&
             phoneticList.map((item, key) => (
-              <Grid item className="flex-center--ver" xs={12} lg={6} key={key}>
+              <Grid
+                item
+                className="flex-center-between"
+                xs={12}
+                lg={6}
+                key={key}>
                 <div>
                   <div className="flex-center--ver">
                     <b className={classes.word}>/ {item.phonetic} /</b>
