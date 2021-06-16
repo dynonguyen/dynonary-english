@@ -2,6 +2,8 @@ import SpeakerIcon from '@material-ui/icons/Speaker';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+const voice = window.speechSynthesis.getVoices()[0];
+
 const onPlayAudio = (audioSrc) => {
   const audio = new Audio(audioSrc);
   audio.play();
@@ -12,8 +14,7 @@ const onTextToSpeech = (text = '') => {
   speech.lang = 'en';
   speech.text = text;
   speech.volume = 1;
-  const voices = window.speechSynthesis.getVoices();
-  speech.voice = voices[1];
+  speech.voice = voice;
   window.speechSynthesis.speak(speech);
 };
 

@@ -1,4 +1,11 @@
 // audios
+import aiAu from 'assets/audios/ipa/diphthongs/ai.mp3';
+import eiAu from 'assets/audios/ipa/diphthongs/ei.mp3';
+import eowAu from 'assets/audios/ipa/diphthongs/eow.mp3';
+import iowAu from 'assets/audios/ipa/diphthongs/iow.mp3';
+import oiAu from 'assets/audios/ipa/diphthongs/oi.mp3';
+import owuAu from 'assets/audios/ipa/diphthongs/owu.mp3';
+import uowAu from 'assets/audios/ipa/diphthongs/uow.mp3';
 import aLongAu from 'assets/audios/ipa/vowels/a-long.mp3';
 import aaAu from 'assets/audios/ipa/vowels/aa.mp3';
 import aeAu from 'assets/audios/ipa/vowels/ae.mp3';
@@ -11,8 +18,9 @@ import owLongAu from 'assets/audios/ipa/vowels/ow-long.mp3';
 import owAu from 'assets/audios/ipa/vowels/ow.mp3';
 import uLongAu from 'assets/audios/ipa/vowels/u-long.mp3';
 import uShortAu from 'assets/audios/ipa/vowels/u-short.mp3';
-import aMS from 'assets/images/ipa/a.jpg';
+import auAu from 'assets/audios/ipa/diphthongs/au.mp3';
 // images
+import aMS from 'assets/images/ipa/a.jpg';
 import eMS from 'assets/images/ipa/e.jpg';
 import eiMS from 'assets/images/ipa/ei.jpg';
 import iMS from 'assets/images/ipa/i.jpg';
@@ -238,3 +246,151 @@ export const VOWELS = [
     ],
   },
 ];
+
+export const DIPHTHONGS = [
+  {
+    title: '😯 Nhóm âm ơ',
+    list: [
+      {
+        phonetic: 'iə',
+        audioSrc: iowAu,
+        mouthShape: eMS,
+        desc: 'Đọc là iơ hoặc ia, cong lưỡi nếu có r',
+        examples: [
+          {
+            word: 'here',
+            phonetic: '/hiə(r)/',
+          },
+          {
+            word: 'near',
+            phonetic: '/niə(r)/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ʊə',
+        audioSrc: uowAu,
+        mouthShape: uMS,
+        desc: 'Đọc là uơ hoặc ua, cong lưỡi nếu có r',
+        examples: [
+          {
+            word: 'pure',
+            phonetic: '/pjʊə(r)/',
+          },
+          {
+            word: 'tour',
+            phonetic: '/tʊə(r)/',
+          },
+        ],
+      },
+      {
+        phonetic: 'eə',
+        audioSrc: eowAu,
+        mouthShape: eMS,
+        desc: 'Đọc là eơ liền nhau, nhanh, ơ hơi câm',
+        examples: [
+          {
+            word: 'care',
+            phonetic: '/keə(r)/',
+          },
+          {
+            word: 'hair',
+            phonetic: '/heə(r)/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '😄 Nhóm âm ɪ',
+    list: [
+      {
+        phonetic: 'eɪ',
+        audioSrc: eiAu,
+        mouthShape: eiMS,
+        desc: 'Đọc là êi hoặc ây',
+        examples: [
+          {
+            word: 'page',
+            phonetic: '/peɪdʒ/',
+          },
+          {
+            word: 'say',
+            phonetic: '/seɪ/',
+          },
+        ],
+      },
+      {
+        phonetic: 'aɪ',
+        audioSrc: aiAu,
+        mouthShape: aMS,
+        desc: 'Đọc là ai',
+        examples: [
+          {
+            word: 'five',
+            phonetic: '/faɪv/',
+          },
+          {
+            word: 'sky',
+            phonetic: '/skaɪ/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ɔi',
+        audioSrc: oiAu,
+        mouthShape: uMS,
+        desc: 'Đọc là oi',
+        examples: [
+          {
+            word: 'boy',
+            phonetic: '/bɔi/',
+          },
+          {
+            word: 'join',
+            phonetic: '/dʒɔin/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '🤯 Nhóm âm ơ',
+    list: [
+      {
+        phonetic: 'əʊ',
+        audioSrc: owuAu,
+        mouthShape: uMS,
+        desc: 'Đọc là âu, chu môi',
+        examples: [
+          {
+            word: 'home',
+            phonetic: '/həʊm/',
+          },
+          {
+            word: 'low',
+            phonetic: '/ləʊ/',
+          },
+        ],
+      },
+      {
+        phonetic: 'aʊ',
+        audioSrc: auAu,
+        mouthShape: uMS,
+        desc: 'Đọc như ao',
+        examples: [
+          {
+            word: 'house',
+            phonetic: '/haʊs/',
+          },
+          {
+            word: 'flower',
+            phonetic: '/ˈflaʊə(r)/',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const CONSONANTS = [];
