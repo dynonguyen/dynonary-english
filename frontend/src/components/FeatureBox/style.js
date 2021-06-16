@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   root: {
     padding: '1.8rem 1.2rem',
-    boxShadow:
-      '0px 2px 1px -1px rgb(0 0 0 / 18%), 0px 1px 6px 0px rgb(0 0 0 / 12%), 0px 1px 4px 0px rgb(0 0 0 / 8%)',
+    boxShadow: 'var(--box-shadow-2)',
     borderRadius: 'var(--sm-border-radius)',
     cursor: 'pointer',
     backgroundColor: 'var(--bg-color-accent)',

@@ -4,8 +4,8 @@
   --secondary-color: #2ac07c;
   --accent-color: #ca3600;
 
-  --bg-color-main: #fcfcfc;
-  --bg-color-sec: #fff;
+  --bg-color-main: #fff;
+  --bg-color-sec: #fcfcfc;
   --bg-color-accent: #f8f8f8;
 
   --title-color: #e69e21;
@@ -14,6 +14,8 @@
   --label-color: #6e6e6e;
   --input-border-color: rgba(0, 0, 0, 0.15);
   --hover-color: #e5e5e5;
+
+  --phonetic-color: #6200ee;
 
   /* common color */
   --light-grey: #e5e5e5;
@@ -28,6 +30,7 @@
   --sm-border-radius: 4px;
   --border-radius: 6px;
   --box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 10%), 0px 1px 12px 4px rgb(0 0 0 / 8%);
+  --box-shadow-2: 0px 2px 1px -1px rgb(0 0 0 / 18%), 0px 1px 6px 0px rgb(0 0 0 / 12%), 0px 1px 4px 0px rgb(0 0 0 / 8%);
 }
 
 [data-theme='dark'] {
@@ -45,6 +48,7 @@
 
   --label-color: #dedede;
   --input-border-color: rgba(255, 255, 255, 0.15);
+  --phonetic-color: #c090fa;
 }
 
 * {

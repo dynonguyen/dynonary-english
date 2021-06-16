@@ -4,6 +4,7 @@ import React from 'react';
 import { Route } from 'react-router';
 const RegisterPage = React.lazy(() => import('pages/Register'));
 const LoginPage = React.lazy(() => import('pages/Login'));
+const IPAPage = React.lazy(() => import('pages/IPA'));
 
 // routes for app
 const routes = [
@@ -24,6 +25,12 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <RegisterPage />,
+  },
+  {
+    path: ROUTES.IPA,
+    exact: true,
+    isProtect: false,
+    component: () => <IPAPage />,
   },
 ];
 

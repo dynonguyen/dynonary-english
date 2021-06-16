@@ -62,3 +62,37 @@
   opacity: 0.35;
   display: none;
 }
+
+// title
+.dyno-title {
+  color: var(--title-color);
+  font-size: 2.4rem;
+  margin: 1rem auto;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+}
+
+.dyno-sub-title {
+  color: var(--label-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 0.8rem auto;
+}
+
+.dyno-box {
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+// phonetic IPA
+.phonetic {
+  color: var(--phonetic-color);
+  padding: 0 4px;
+  letter-spacing: 1px;
+}
+
+.dyno-speaker {
+  font-size: 2.2rem !important;
+  color: var(--label-color);
+  cursor: pointer;
+}
