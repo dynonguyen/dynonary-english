@@ -96,3 +96,13 @@
   color: var(--label-color);
   cursor: pointer;
 }
+
+.dyno-link {
+  font-size: 1.6rem;
+  color: var(--text-color);
+
+  &:hover,
+  &:active {
+    color: var(--secondary-color);
+  }
+}
