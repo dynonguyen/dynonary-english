@@ -14,7 +14,7 @@ function collectPhonetics(list = []) {
   return phoneticArr.join(', ');
 }
 
-function IPAGroupCollapse({ title, phoneticList }) {
+function IPAGroupCollapse({ title, phoneticList, isNoVoice }) {
   const classes = useStyle();
 
   return (
@@ -39,7 +39,9 @@ function IPAGroupCollapse({ title, phoneticList }) {
                 <div>
                   <div className="flex-center--ver">
                     <b className={classes.word}>/ {item.phonetic} /</b>
-                    <Speaker type={false} audioSrc={item.audioSrc} />
+                    {!isNoVoice && (
+                      <Speaker type={false} audioSrc={item.audioSrc} />
+                    )}
                   </div>
 
                   <p className={classes.gcDesc}>{item.desc}</p>
@@ -75,6 +77,13 @@ function IPAGroupCollapse({ title, phoneticList }) {
 IPAGroupCollapse.propTypes = {
   phoneticList: PropTypes.array,
   title: PropTypes.string,
+  isNoVoice: PropTypes.bool,
+};
+
+IPAGroupCollapse.defaultProps = {
+  phoneticList: [],
+  title: '',
+  isNoVoice: false,
 };
 
 export default IPAGroupCollapse;

@@ -5,10 +5,13 @@ import IPAGroupCollapse from './GroupCollapse';
 function Consonants() {
   return (
     <>
-      <h1 className="dyno-title">2. Nguyên âm đôi (Diphthongs)</h1>
+      <h1 className="dyno-title">3. Phụ âm (Consonants)</h1>
       <h3 className="dyno-sub-title">
-        Chúng ta có 8 nguyên âm đôi, mình chia làm 3 nhóm, phát âm theo nguyên
-        tắc 7/3, 7 phần cho âm đầu và 3 phần âm sau:
+        Chúng ta có 24 phụ âm, mình chia làm 8 nhóm. Lưu ý về các dạng phụ âm
+        như âm vô thanh thì không phát ra âm thanh, luồng hơi không làm rung dây
+        thanh quản. Âm hữu thanh phát ra âm thanh, hơi thở đi từ họng, qua lưỡi,
+        răng sau đó ra ngoài là cách phát âm của các âm này, dây thanh quản bị
+        rung.
       </h3>
 
       {CONSONANTS.map((item, key) => (
@@ -16,6 +19,7 @@ function Consonants() {
           title={item.title}
           phoneticList={item.list}
           key={key}
+          isNoVoice={true}
         />
       ))}
     </>

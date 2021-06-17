@@ -1,19 +1,21 @@
 import Grid from '@material-ui/core/Grid';
 import communicateIcon from 'assets/icons/communicate.png';
 import dictionaryIcon from 'assets/icons/dictionary.png';
+import donateIcon from 'assets/icons/donate.png';
 import editIcon from 'assets/icons/edit.png';
 import favoriteIcon from 'assets/icons/favorite.png';
 import flashcardIcon from 'assets/icons/flashcard.png';
+import friendsIcon from 'assets/icons/friends.png';
 import gameIcon from 'assets/icons/game.png';
 import grammarIcon from 'assets/icons/grammar.png';
-import toeicIcon from 'assets/icons/toeic.png';
 import ipaIcon from 'assets/icons/ipa.png';
-import donateIcon from 'assets/icons/donate.png';
-import verbIcon from 'assets/icons/verb.png';
+import jobIcon from 'assets/icons/job.png';
+import toeicIcon from 'assets/icons/toeic.png';
 import translateIcon from 'assets/icons/translate.png';
+import verbIcon from 'assets/icons/verb.png';
+import voiceIcon from 'assets/icons/voice.png';
 import FeatureBox from 'components/FeatureBox';
 import Navigation from 'components/Navigation';
-import SpeedDials from 'components/UI/SpeedDial';
 import React from 'react';
 
 const FEATURE_LIST = [
@@ -63,9 +65,15 @@ const FEATURE_LIST = [
     to: '/',
   },
   {
-    title: 'Cấu trúc câu',
+    title: 'Ngữ pháp',
     imgUrl: grammarIcon,
-    subTitle: 'Danh sách những cấu trúc câu trong tiếng Anh',
+    subTitle: 'Danh sách tổng hợp những cấu trúc câu trong tiếng Anh',
+    to: '/',
+  },
+  {
+    title: 'Phát âm',
+    imgUrl: voiceIcon,
+    subTitle: 'Nghe và phân biệt cách phát âm es, s, z, t, d ed',
     to: '/',
   },
   {
@@ -75,9 +83,23 @@ const FEATURE_LIST = [
     to: '/',
   },
   {
-    title: 'Play game',
+    title: 'Play Games',
     imgUrl: gameIcon,
-    subTitle: 'Chơi game cùng Dyno để ôn tập lại tất cả kiến thức đã học nhé',
+    subTitle:
+      'Ôn luyện kiến thức hiệu quả và đỡ nhàm chán hơn qua việc chơi game cùng Dyno nhé',
+    to: '/',
+  },
+  {
+    title: 'Học cùng bạn bè',
+    imgUrl: friendsIcon,
+    subTitle:
+      'Học và thi đầu cùng bạn bè của mình để cùng nhau tiến bộ hơn nhé',
+    to: '/',
+  },
+  {
+    title: 'Tiếng Anh chuyên ngành',
+    imgUrl: jobIcon,
+    subTitle: 'Tổng hợp từ vựng dành cho các chuyên ngành nhé.',
     to: '/',
   },
   {

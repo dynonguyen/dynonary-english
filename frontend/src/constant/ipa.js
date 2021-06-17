@@ -1,5 +1,6 @@
 // audios
 import aiAu from 'assets/audios/ipa/diphthongs/ai.mp3';
+import auAu from 'assets/audios/ipa/diphthongs/au.mp3';
 import eiAu from 'assets/audios/ipa/diphthongs/ei.mp3';
 import eowAu from 'assets/audios/ipa/diphthongs/eow.mp3';
 import iowAu from 'assets/audios/ipa/diphthongs/iow.mp3';
@@ -18,13 +19,17 @@ import owLongAu from 'assets/audios/ipa/vowels/ow-long.mp3';
 import owAu from 'assets/audios/ipa/vowels/ow.mp3';
 import uLongAu from 'assets/audios/ipa/vowels/u-long.mp3';
 import uShortAu from 'assets/audios/ipa/vowels/u-short.mp3';
-import auAu from 'assets/audios/ipa/diphthongs/au.mp3';
 // images
 import aMS from 'assets/images/ipa/a.jpg';
+import bMS from 'assets/images/ipa/b.jpg';
+import dMS from 'assets/images/ipa/d.jpg';
 import eMS from 'assets/images/ipa/e.jpg';
 import eiMS from 'assets/images/ipa/ei.jpg';
+import fMS from 'assets/images/ipa/f.jpg';
 import iMS from 'assets/images/ipa/i.jpg';
+import lMS from 'assets/images/ipa/l.jpg';
 import ouMS from 'assets/images/ipa/ou.jpg';
+import tMS from 'assets/images/ipa/t.jpg';
 import uMS from 'assets/images/ipa/u.jpg';
 
 export const VOWELS = [
@@ -109,7 +114,7 @@ export const VOWELS = [
         phonetic: 'ɔ:',
         audioSrc: oAu,
         mouthShape: aMS,
-        desc: 'Như o dài, nặng và nhấn mạnh',
+        desc: 'Như o dài hoặc ô, nặng và nhấn mạnh',
         examples: [
           {
             word: 'law',
@@ -393,4 +398,429 @@ export const DIPHTHONGS = [
   },
 ];
 
-export const CONSONANTS = [];
+export const CONSONANTS = [
+  {
+    title: '💋 Nhóm 2 môi',
+    list: [
+      {
+        phonetic: 'm',
+        audioSrc: null,
+        mouthShape: bMS,
+        desc: 'Mím 2 môi, phát âm là m. Hữu thanh',
+        examples: [
+          {
+            word: 'man',
+            phonetic: '/mæn/',
+          },
+          {
+            word: 'some',
+            phonetic: '/sʌm/',
+          },
+        ],
+      },
+      {
+        phonetic: 'p',
+        audioSrc: null,
+        mouthShape: bMS,
+        desc: 'Mím 2 môi, phát âm là p dứt khoát, bật hơi. Vô thanh',
+        examples: [
+          {
+            word: 'park',
+            phonetic: '/pɑːk/',
+          },
+          {
+            word: 'soup',
+            phonetic: '/suːp/',
+          },
+        ],
+      },
+      {
+        phonetic: 'b',
+        audioSrc: null,
+        mouthShape: bMS,
+        desc: 'Mím 2 môi, phát âm là b dứt khoát, KHÔNG bật hơi. Hữu thanh',
+        examples: [
+          {
+            word: 'bad',
+            phonetic: '/bæd/',
+          },
+          {
+            word: 'web',
+            phonetic: '/web/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '👄 Nhóm môi răng',
+    list: [
+      {
+        phonetic: 'f',
+        audioSrc: null,
+        mouthShape: fMS,
+        desc: 'Răng trên chạm nhẹ môi dưới, thổi hơi nhẹ. Vô thanh',
+        examples: [
+          {
+            word: 'fall',
+            phonetic: '/fɔ:l/',
+          },
+          {
+            word: 'safe',
+            phonetic: '/seɪf/',
+          },
+        ],
+      },
+      {
+        phonetic: 'v',
+        audioSrc: null,
+        mouthShape: fMS,
+        desc: 'Răng trên chạm nhẹ môi dưới, phát âm v. Hữu thanh',
+        examples: [
+          {
+            word: 'voice',
+            phonetic: '/vɔɪs/',
+          },
+          {
+            word: 'save',
+            phonetic: '/seɪv/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '🦷 Nhóm răng',
+    list: [
+      {
+        phonetic: 'θ',
+        audioSrc: null,
+        mouthShape: lMS,
+        desc: 'Lưỡi đặt giữ 2 răng, cắn nhẹ đầu lưỡi (nhẹ thôi nhé 🙂), thổi hơi, thụt lưỡi vào và đọc "th". Vô thanh',
+        examples: [
+          {
+            word: 'think',
+            phonetic: '/θɪŋk/',
+          },
+          {
+            word: 'thank',
+            phonetic: '/θæŋk/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ð',
+        audioSrc: null,
+        mouthShape: lMS,
+        desc: 'Lưỡi đặt giữ 2 răng, cắn nhẹ đầu lưỡi, rung dây thanh, thụt lưỡi vào và đọc "đ". Hữu thanh',
+        examples: [
+          {
+            word: 'there',
+            phonetic: '/ðeə(r)/',
+          },
+          {
+            word: 'then',
+            phonetic: '/ðen/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '😀 Nhóm ổ răng',
+    list: [
+      {
+        phonetic: 't',
+        audioSrc: null,
+        mouthShape: tMS,
+        desc: 'Âm tắc, chặn hơi, phát âm như t nhưng không rung dây thanh. Vô thanh',
+        examples: [
+          {
+            word: 'tea',
+            phonetic: '/tiː/',
+          },
+          {
+            word: 'sent',
+            phonetic: '/sent/',
+          },
+        ],
+      },
+      {
+        phonetic: 'd',
+        audioSrc: null,
+        mouthShape: dMS,
+        desc: 'Âm tắc, chặn hơi, phát âm như d. Hữu thanh',
+        examples: [
+          {
+            word: 'stand',
+            phonetic: '/stænd/',
+          },
+          {
+            word: 'sand',
+            phonetic: '/sænd/',
+          },
+        ],
+      },
+      {
+        phonetic: 's',
+        audioSrc: null,
+        mouthShape: iMS,
+        desc: 'Đọc là s nhanh, nhẹ, phát âm gió "xì xì", không rung. Vô thanh',
+        examples: [
+          {
+            word: 'say',
+            phonetic: '/seɪ/',
+          },
+          {
+            word: 'rice',
+            phonetic: '/raɪs/',
+          },
+        ],
+      },
+      {
+        phonetic: 'z',
+        audioSrc: null,
+        mouthShape: iMS,
+        desc: 'Đọc là s nhanh, nhẹ, phát âm gió như con ruồi kêu, rung. Hữu thanh',
+        examples: [
+          {
+            word: 'zoo',
+            phonetic: '/zuː/',
+          },
+          {
+            word: 'rose',
+            phonetic: '/rəʊz/',
+          },
+        ],
+      },
+      {
+        phonetic: 'n',
+        audioSrc: null,
+        mouthShape: dMS,
+        desc: 'Đọc như n nhưng hơi nghẹn lại. Hữu thanh',
+        examples: [
+          {
+            word: 'no',
+            phonetic: '/nəʊ/',
+          },
+          {
+            word: 'button',
+            phonetic: '/ˈbʌtn/',
+          },
+        ],
+      },
+      {
+        phonetic: 'l',
+        audioSrc: null,
+        mouthShape: lMS,
+        desc: 'Đọc là l. Hữu thanh',
+        examples: [
+          {
+            word: 'leg',
+            phonetic: '/leɡ/',
+          },
+          {
+            word: 'call',
+            phonetic: '/kɔːl/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '😗 Nhóm âm sau ổ răng',
+    list: [
+      {
+        phonetic: 'ʃ',
+        audioSrc: null,
+        mouthShape: iMS,
+        desc: 'Đọc là s nhẹ (uốn lưỡi), chu môi, hơi gió. Vô thanh',
+        examples: [
+          {
+            word: 'She',
+            phonetic: '/ʃiː/',
+          },
+          {
+            word: 'wash',
+            phonetic: '/wɒʃ/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ʒ',
+        audioSrc: null,
+        mouthShape: iMS,
+        desc: 'Đọc là giơ nhẹ, phát âm ngắn. Hữu thanh',
+        examples: [
+          {
+            word: 'casual',
+            phonetic: '/ˈkæʒuəl/',
+          },
+          {
+            word: 'vision',
+            phonetic: '/ˈvɪʒn/',
+          },
+        ],
+      },
+      {
+        phonetic: 'tʃ',
+        audioSrc: null,
+        mouthShape: tMS,
+        desc: 'Đọc là ch. Vô thanh',
+        examples: [
+          {
+            word: 'chuck',
+            phonetic: '/tʃʌk/',
+          },
+          {
+            word: 'match',
+            phonetic: '/mætʃ/',
+          },
+        ],
+      },
+      {
+        phonetic: 'dʒ',
+        audioSrc: null,
+        mouthShape: dMS,
+        desc: 'Đọc là jơ (uốn lưỡi) ngắn và dứt khoát. Hữu thanh',
+        examples: [
+          {
+            word: 'june',
+            phonetic: '/dʒuːn/',
+          },
+          {
+            word: 'page',
+            phonetic: '/peɪdʒ/',
+          },
+        ],
+      },
+      {
+        phonetic: 'r',
+        audioSrc: null,
+        mouthShape: uMS,
+        desc: 'Đọc là r, cong lưỡi. Hữu thanh',
+        examples: [
+          {
+            word: 'red',
+            phonetic: '/red/',
+          },
+          {
+            word: 'per',
+            phonetic: '/pə(r)/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '💪 Nhóm âm ngạc cứng',
+    list: [
+      {
+        phonetic: 'j',
+        audioSrc: null,
+        mouthShape: iMS,
+        desc: 'Đọc như chữ z (nhấn mạnh). Khẩu hình như nhóm âm cười nhưng mạnh hơn. Hữu thanh',
+        examples: [
+          {
+            word: 'yes',
+            phonetic: '/jes/',
+          },
+          {
+            word: 'menu',
+            phonetic: '/ˈmenjuː/',
+          },
+        ],
+      },
+      {
+        phonetic: 'w',
+        audioSrc: null,
+        mouthShape: ouMS,
+        desc: 'Đọc như qu. Hữu thanh',
+        examples: [
+          {
+            word: 'why',
+            phonetic: '/waɪ/',
+          },
+          {
+            word: 'question',
+            phonetic: '/ˈkwestʃən/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '🍦 Nhóm âm mềm',
+    list: [
+      {
+        phonetic: 'k',
+        audioSrc: null,
+        mouthShape: dMS,
+        desc: 'Đọc như c nhưng nghẹn lại, không rung. Vô thanh',
+        examples: [
+          {
+            word: 'cat',
+            phonetic: '/kæt/',
+          },
+          {
+            word: 'dark',
+            phonetic: '/dɑːk/',
+          },
+        ],
+      },
+      {
+        phonetic: 'g',
+        audioSrc: null,
+        mouthShape: dMS,
+        desc: 'Đọc như g. Hữu thanh',
+        examples: [
+          {
+            word: 'go',
+            phonetic: '/ɡəʊ/',
+          },
+          {
+            word: 'bag',
+            phonetic: '/bæg/',
+          },
+        ],
+      },
+      {
+        phonetic: 'ŋ',
+        audioSrc: null,
+        mouthShape: dMS,
+        desc: 'Đọc như ng, nhẹ và dứt khoát. Hữu thanh',
+        examples: [
+          {
+            word: 'singer',
+            phonetic: '/ˈsɪŋə(r)/',
+          },
+          {
+            word: 'tongue',
+            phonetic: '/tʌŋ/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '😶 âm thanh môn',
+    list: [
+      {
+        phonetic: 'h',
+        audioSrc: null,
+        mouthShape: aMS,
+        desc: 'Đọc như h nhẹ nhàng, thở phào nhẹ nhõm. Vô thanh',
+        examples: [
+          {
+            word: 'her',
+            phonetic: '/hə(r)/',
+          },
+          {
+            word: 'who',
+            phonetic: '/huː/',
+          },
+        ],
+      },
+    ],
+  },
+];
