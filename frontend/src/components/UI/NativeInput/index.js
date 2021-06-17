@@ -1,3 +1,4 @@
+import { Grow } from '@material-ui/core';
 import InputBase from '@material-ui/core/InputBase';
 import { MAX } from 'constant';
 import PropTypes from 'prop-types';
@@ -27,16 +28,18 @@ function NativeInput({ placeholder, showInput, prefixIcon }) {
         {prefixIcon}
       </div>
       {showInput && (
-        <InputBase
-          onKeyPress={onPressEnter}
-          autoFocus
-          placeholder={placeholder}
-          classes={{
-            root: classes.inputRoot,
-            input: classes.inputInput,
-          }}
-          inputProps={{ 'aria-label': 'search', maxLength: MAX.SEARCH_LEN }}
-        />
+        <Grow in={true}>
+          <InputBase
+            onKeyPress={onPressEnter}
+            autoFocus
+            placeholder={placeholder}
+            classes={{
+              root: classes.inputRoot,
+              input: classes.inputInput,
+            }}
+            inputProps={{ 'aria-label': 'search', maxLength: MAX.SEARCH_LEN }}
+          />
+        </Grow>
       )}
     </div>
   );

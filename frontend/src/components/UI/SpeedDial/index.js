@@ -2,7 +2,6 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import HomeIcon from '@material-ui/icons/Home';
 import DollarIcon from '@material-ui/icons/MonetizationOn';
 import UpIcon from '@material-ui/icons/Publish';
-import SettingsIcon from '@material-ui/icons/Settings';
 import ShareIcon from '@material-ui/icons/Share';
 import StarIcon from '@material-ui/icons/Star';
 import SpeedDial from '@material-ui/lab/SpeedDial';
@@ -11,11 +10,12 @@ import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import { LINKS } from 'constant';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import SettingButton from './SettingButton';
 import useStyle from './style';
 
 const actions = [
   { icon: <HomeIcon />, name: 'Trang chủ', to: '/', isBlank: false },
-  { icon: <SettingsIcon />, name: 'Cài đặt', to: '', isBlank: false },
+  { icon: <SettingButton />, name: 'Cài đặt', to: null, isBlank: false },
   { icon: <FacebookIcon />, name: 'Liên hệ Dyno', to: LINKS.FB, isBlank: true },
   { icon: <UpIcon />, name: 'Nâng cấp', to: '', isBlank: false },
   { icon: <DollarIcon />, name: 'Donate', to: '', isBlank: false },

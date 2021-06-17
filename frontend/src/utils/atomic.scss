@@ -4,7 +4,7 @@
 
 // button
 ._btn {
-  color: var(--text-color);
+  color: #fff !important;
   transition: all 0.25s !important;
   &:hover {
     -webkit-filter: brightness(0.85);

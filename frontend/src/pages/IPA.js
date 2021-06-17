@@ -26,7 +26,6 @@ function IPAPage() {
             className="dyno-link"
             href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet"
             target="_blank"
-            without
             rel="noreferrer">
             Nguồn: Wikipedia
           </a>
@@ -44,7 +43,6 @@ function IPAPage() {
             className="dyno-link"
             href="https://google.com"
             target="_blank"
-            without
             rel="noreferrer">
             Nguồn: Internet
           </a>
