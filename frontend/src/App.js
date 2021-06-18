@@ -1,10 +1,11 @@
 import { ThemeProvider } from '@material-ui/core/styles';
+import SpeedDials from 'components/SpeedDial';
 import GlobalLoading from 'components/UI/GlobalLoading';
 import Message from 'components/UI/Message';
-import SpeedDials from 'components/UI/SpeedDial';
 import routerConfig from 'configs/routerConfig';
 import theme from 'configs/theme';
 import useTheme from 'hooks/useTheme';
+import useVoice from 'hooks/useVoice';
 import NotFoundPage from 'pages/NotFound';
 import React, { Suspense, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,6 +22,10 @@ function App() {
   // get and set theme
   useTheme();
 
+  // get window voice and set custom voice
+  useVoice();
+
+  // get user info
   useEffect(() => {
     dispatch(getUserInfo());
     setLoading(false);

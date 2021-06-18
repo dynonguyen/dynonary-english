@@ -3,9 +3,10 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import CloseIcon from '@material-ui/icons/Close';
-import ThemeSetting from 'components/UI/ThemeSetting';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ThemeSetting from '../Theme';
+import VoiceSetting from '../Voice';
 import useStyle from './style';
 
 function SettingModal({ open, onClose }) {
@@ -28,8 +29,13 @@ function SettingModal({ open, onClose }) {
 
       <DialogContent classes={{ root: classes.content }}>
         <div className={classes.contentItem}>
-          <h1 className={classes.contentLabel}>Thay đổi chủ đề</h1>
+          <h1 className={classes.contentLabel}>Chủ đề</h1>
           <ThemeSetting />
+        </div>
+
+        <div className={classes.contentItem}>
+          <h1 className={classes.contentLabel}>Giọng đọc</h1>
+          <VoiceSetting />
         </div>
       </DialogContent>
 

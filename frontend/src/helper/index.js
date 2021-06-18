@@ -1,4 +1,4 @@
-import { COLOR_VAR_KEYS, THEME_KEYS } from 'constant';
+import { COLOR_VAR_KEYS, DEFAULTS, THEME_KEYS, VOICE_KEYS } from 'constant';
 const htmlRoot = document.querySelector(':root');
 
 // prevent execute continuously a function
@@ -42,4 +42,39 @@ export const getCustomPalettes = () => {
 export const setRootPalettes = () => {
   const palettes = getCustomPalettes();
   palettes?.forEach((item) => htmlRoot.style.setProperty(item.key, item.color));
+};
+
+// get window voice list
+export const getSpeechSynthesis = () => {
+  return new Promise((resolve) => {
+    let synth = window.speechSynthesis;
+    let intervalId;
+
+    intervalId = setInterval(() => {
+      if (synth.getVoices().length !== 0) {
+        clearInterval(intervalId);
+        resolve(synth.getVoices());
+      }
+    }, 20);
+  });
+};
+
+// update or add custom voice in local storage
+export const updateLSVoice = (key, value) => {
+  let current = localStorage.getItem(VOICE_KEYS.LS_KEY);
+  let newLSVoice = {};
+
+  if (current) {
+    newLSVoice = JSON.parse(current);
+    newLSVoice[key] = value;
+  } else {
+    newLSVoice = {
+      voiceURI: DEFAULTS.VOICE_URI,
+      speed: DEFAULTS.VOICE_SPEED,
+      volume: DEFAULTS.VOICE_VOLUME,
+    };
+    newLSVoice[key] = value;
+  }
+
+  localStorage.setItem(VOICE_KEYS.LS_KEY, JSON.stringify(newLSVoice));
 };

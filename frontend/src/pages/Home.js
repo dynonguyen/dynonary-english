@@ -16,6 +16,7 @@ import verbIcon from 'assets/icons/verb.png';
 import voiceIcon from 'assets/icons/voice.png';
 import FeatureBox from 'components/FeatureBox';
 import Navigation from 'components/Navigation';
+import useScrollTop from 'hooks/useScrollTop';
 import React from 'react';
 
 const FEATURE_LIST = [
@@ -119,6 +120,8 @@ const FEATURE_LIST = [
 ];
 
 function HomePage() {
+  useScrollTop();
+
   return (
     <>
       <Navigation />

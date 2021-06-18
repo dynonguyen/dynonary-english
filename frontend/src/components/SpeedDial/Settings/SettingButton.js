@@ -1,9 +1,9 @@
 import SettingsIcon from '@material-ui/icons/Settings';
-import SettingModal from 'components/SettingModal';
 import React, { useState } from 'react';
+import SettingModal from './Modal';
 
 function SettingButton() {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
 
   return (
     <>

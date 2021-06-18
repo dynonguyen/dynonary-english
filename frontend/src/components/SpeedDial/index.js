@@ -10,7 +10,7 @@ import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import { LINKS } from 'constant';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import SettingButton from './SettingButton';
+import SettingButton from './Settings/SettingButton';
 import useStyle from './style';
 
 const actions = [
