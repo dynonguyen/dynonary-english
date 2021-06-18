@@ -31,7 +31,7 @@ function AccentSelect() {
     <>
       {voiceList.length > 0 && (
         <TextField
-          className={`${classes.selectRoot} w-100`}
+          className={`${classes.selectRoot}`}
           select
           SelectProps={{
             className: classes.select,

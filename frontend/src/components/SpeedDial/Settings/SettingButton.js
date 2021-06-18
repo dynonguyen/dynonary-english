@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import SettingModal from './Modal';
 
 function SettingButton() {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <>

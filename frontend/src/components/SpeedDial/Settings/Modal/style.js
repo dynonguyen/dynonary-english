@@ -23,7 +23,7 @@ export default makeStyles((theme) => ({
 
   contentItem: {
     padding: '1.6rem',
-    margin: '0.8rem 0',
+    margin: '1.6rem 0',
     borderRadius: 'var(--sm-border-radius)',
     border: 'solid 1px var(--input-border-color)',
   },

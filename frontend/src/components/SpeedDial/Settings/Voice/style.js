@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   root: {
     display: 'grid',
-    gridTemplateColumns: '1fr',
+    gridTemplateColumns: '100%',
     gridGap: '1.6rem',
 
     [theme.breakpoints.up('sm')]: {
@@ -19,8 +19,11 @@ export default makeStyles((theme) => ({
   },
 
   selectRoot: {
+    maxWidth: '100%',
+    width: '100%',
+
     '& .MuiSelect-root': {
-      color: '#fff',
+      color: 'var(--label-color)',
     },
 
     '& .MuiInputLabel-root': {
@@ -80,7 +83,7 @@ export default makeStyles((theme) => ({
     backgroundColor: 'var(--primary-color)',
   },
 
-  input: {
+  valueText: {
     color: 'var(--text-color)',
     fontSize: '1.4rem',
   },
