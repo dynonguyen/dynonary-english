@@ -3,6 +3,7 @@ import React from 'react';
 import useStyle from './style';
 
 const IPA_CHARS = [
+  "'",
   'ɪ',
   'iː',
   'ʊ',

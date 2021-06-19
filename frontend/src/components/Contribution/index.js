@@ -1,35 +1,83 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import ResetIcon from '@material-ui/icons/RotateLeft';
 import SaveIcon from '@material-ui/icons/Save';
 import InputCustom from 'components/UI/InputCustom';
 import SelectCustom from 'components/UI/SelectCustom';
-import { WORD_LEVELS, WORD_SPECIALTY, WORD_TOPICS, WORD_TYPES } from 'constant';
+import {
+  MAX,
+  WORD_LEVELS,
+  WORD_SPECIALTY,
+  WORD_TOPICS,
+  WORD_TYPES,
+} from 'constant';
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 import InformationTooltip from './InformationTooltip';
 import PhoneticInput from './PhoneticInput';
 import useStyle from './style';
 
+const schema = yup.object().shape({
+  word: yup
+    .string()
+    .trim()
+    .required('Hãy nhập một từ vào đây')
+    .max(MAX.WORD_LEN, `Từ dài tối đã ${MAX.WORD_LEN} ký tự`),
+  mean: yup
+    .string()
+    .trim()
+    .required('Hãy nhập ý nghĩa từ')
+    .max(MAX.MEAN_WORD_LEN, `Từ dài tối đã ${MAX.MEAN_WORD_LEN} ký tự`),
+  phonetic: yup
+    .string()
+    .trim()
+    .required('Hãy nhập ký âm của từ')
+    .max(MAX.PHONETIC_LEN, `Từ dài tối đã ${MAX.PHONETIC_LEN} ký tự`),
+});
+
 function Contribution() {
   const classes = useStyle();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="container">
       <div className={classes.root}>
         <h1 className={classes.title}>Thêm từ mới của bạn vào Dynonary</h1>
         <div className="dyno-break"></div>
 
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <Grid className={classes.grid} container spacing={3}>
             {/* new word */}
             <Grid item xs={12} md={6} lg={4}>
               <InputCustom
                 className="w-100"
                 label="Từ mới (*)"
-                inputProps={{ autoFocus: true }}
+                error={Boolean(errors.word)}
+                inputProps={{
+                  autoFocus: true,
+                  maxLength: MAX.WORD_LEN,
+                  name: 'word',
+                  ...register('word'),
+                }}
                 endAdornment={
                   <InformationTooltip title="Nhập từ vựng mới mà bạn cần thêm" />
                 }
               />
+              {errors.word && (
+                <p className="text-error">{errors.word?.message}</p>
+              )}
             </Grid>
 
             {/* mean */}
@@ -37,14 +85,31 @@ function Contribution() {
               <InputCustom
                 className="w-100"
                 label="Nghĩa của từ (*)"
+                error={Boolean(errors.mean)}
+                inputProps={{
+                  maxLength: MAX.MEAN_WORD_LEN,
+                  name: 'mean',
+                  ...register('mean'),
+                }}
                 endAdornment={
                   <InformationTooltip title="Nhập nghĩa bằng tiếng Việt của từ mới" />
                 }
               />
+              {errors.mean && (
+                <p className="text-error">{errors.mean?.message}</p>
+              )}
             </Grid>
 
             {/* phonetic */}
-            <PhoneticInput />
+            <PhoneticInput
+              errorMessage={errors.phonetic?.message}
+              error={Boolean(errors.phonetic)}
+              inputProps={{
+                maxLength: MAX.PHONETIC_LEN,
+                name: 'phonetic',
+              }}
+              register={register('phonetic')}
+            />
 
             {/* word type */}
             <Grid item xs={12} md={6} lg={4}>
@@ -140,6 +205,7 @@ function Contribution() {
               Reset
             </Button>
             <Button
+              type="submit"
               className={`${classes.btn} _btn _btn-primary`}
               endIcon={<SaveIcon />}
               variant="contained">

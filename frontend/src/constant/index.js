@@ -26,6 +26,9 @@ export const MAX = {
   PASSWORD_LEN: 40,
   NAME_LEN: 50,
   SEARCH_LEN: 50,
+  WORD_LEN: 50,
+  PHONETIC_LEN: 50,
+  MEAN_WORD_LEN: 100,
 };
 
 export const MIN = {
