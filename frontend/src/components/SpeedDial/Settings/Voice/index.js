@@ -1,6 +1,3 @@
-import Input from '@material-ui/core/Input';
-import Slider from '@material-ui/core/Slider';
-import SpeedIcon from '@material-ui/icons/Speed';
 import React from 'react';
 import AccentSelect from './Accent';
 import VoiceSpeed from './Speed';

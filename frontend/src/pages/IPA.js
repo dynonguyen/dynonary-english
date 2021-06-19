@@ -5,9 +5,12 @@ import Consonants from 'components/IPA/Consonants';
 import Diphthongs from 'components/IPA/Diphthongs';
 import Vowels from 'components/IPA/Vowels';
 import Navigation from 'components/Navigation';
+import useTitle from 'hooks/useTitle';
 import React from 'react';
 
 function IPAPage() {
+  useTitle('IPA');
+
   return (
     <div>
       <Navigation />

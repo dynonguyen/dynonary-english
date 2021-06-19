@@ -16,6 +16,7 @@ import verbIcon from 'assets/icons/verb.png';
 import voiceIcon from 'assets/icons/voice.png';
 import FeatureBox from 'components/FeatureBox';
 import Navigation from 'components/Navigation';
+import { ROUTES } from 'constant';
 import useScrollTop from 'hooks/useScrollTop';
 import React from 'react';
 
@@ -25,7 +26,7 @@ const FEATURE_LIST = [
     subTitle:
       'Luyện nghe, phát âm chuẩn với 44 âm trong bảng phiên âm quốc tế IPA',
     imgUrl: ipaIcon,
-    to: '/IPA',
+    to: ROUTES.IPA,
   },
   {
     title: 'Dịch văn bản',
@@ -108,7 +109,7 @@ const FEATURE_LIST = [
     imgUrl: editIcon,
     subTitle:
       'Dyno rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
-    to: '/',
+    to: ROUTES.CONTRIBUTION,
   },
   {
     title: 'Donate',

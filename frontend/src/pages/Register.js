@@ -1,11 +1,13 @@
 import RegisterData from 'components/Register/data';
-import HomeLinkButton from 'components/UI/HomeLinkButton';
 import { ROUTES } from 'constant';
+import useTitle from 'hooks/useTitle';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/login-signup.scss';
 
 function RegisterPage() {
+  useTitle('Đăng ký');
+
   return (
     <div className="pos-rel w-100vw h-100vh">
       <div className="transform-center">

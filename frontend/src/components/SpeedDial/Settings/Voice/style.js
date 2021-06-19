@@ -50,7 +50,7 @@ export default makeStyles((theme) => ({
 
   menu: {
     backgroundColor: 'var(--bg-color-accent)',
-    maxHeight: '18rem',
+    maxHeight: '25rem',
 
     '& .MuiMenuItem-root': {
       fontSize: '1.5rem',

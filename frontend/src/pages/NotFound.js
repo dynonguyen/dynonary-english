@@ -1,8 +1,10 @@
+import useTitle from 'hooks/useTitle';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/not-found.scss';
 
 function NotFoundPage() {
+  useTitle('Không tìm thấy trang');
   const arrBubble = new Array(5).fill(0);
 
   return (

@@ -21,7 +21,7 @@ export default makeStyles((theme) => ({
 
     // label
     '& .MuiFormLabel-root': {
-      color: 'var(--grey)',
+      color: 'var(--label-color)',
       fontSize: '1.5rem',
     },
 

@@ -38,14 +38,11 @@ export const ROUTES = {
   REGISTER: '/register',
   FORGOT_PASSWORD: '/forgot-password',
   IPA: '/IPA',
+  CONTRIBUTION: '/contribution',
 };
 
 export const REGEX = {
   NAME: /^[^\d~`!@#$%^&*\(\)\\\|\.,\?\/\-\+\=\_]+$/gi,
-};
-
-export const UX = {
-  DELAY_TIME: 1500,
 };
 
 export const THEME_KEYS = {
@@ -55,6 +52,10 @@ export const THEME_KEYS = {
   LIGHT: 'light',
   DARK: 'dark',
   CUSTOM: 'custom',
+};
+
+export const UX = {
+  DELAY_TIME: 1500,
 };
 
 export const VOICE_KEYS = {
