@@ -18,6 +18,7 @@ import * as yup from 'yup';
 import InformationTooltip from './InformationTooltip';
 import PhoneticInput from './PhoneticInput';
 import useStyle from './style';
+import TopicSelect from './TopicSelect';
 
 const schema = yup.object().shape({
   word: yup
@@ -35,6 +36,14 @@ const schema = yup.object().shape({
     .trim()
     .required('Hãy nhập ký âm của từ')
     .max(MAX.PHONETIC_LEN, `Từ dài tối đã ${MAX.PHONETIC_LEN} ký tự`),
+  type: yup
+    .string()
+    .required('Chọn loại của từ')
+    .oneOf(WORD_TYPES.map((i) => i.value)),
+  level: yup
+    .string()
+    .required('Chọn cấp bậc của từ')
+    .oneOf(WORD_LEVELS.map((i) => i.value)),
 });
 
 function Contribution() {
@@ -57,7 +66,7 @@ function Contribution() {
         <h1 className={classes.title}>Thêm từ mới của bạn vào Dynonary</h1>
         <div className="dyno-break"></div>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <Grid className={classes.grid} container spacing={3}>
             {/* new word */}
             <Grid item xs={12} md={6} lg={4}>
@@ -117,7 +126,14 @@ function Contribution() {
                 className="w-100"
                 label="Loại từ (*)"
                 options={WORD_TYPES}
+                inputProps={{
+                  name: 'type',
+                  ...register('type'),
+                }}
               />
+              {errors.type && (
+                <p className="text-error">{errors.type?.message}</p>
+              )}
             </Grid>
 
             {/* word level */}
@@ -126,16 +142,21 @@ function Contribution() {
                 className="w-100"
                 label="Cấp bậc của từ (*)"
                 options={WORD_LEVELS}
+                inputProps={{ name: 'level', ...register('level') }}
               />
+              {errors.level && (
+                <p className="text-error">{errors.level?.message}</p>
+              )}
             </Grid>
 
             {/* word topic */}
             <Grid item xs={12} md={6} lg={4}>
-              <SelectCustom
+              {/* <SelectCustom
                 className="w-100"
                 label="Chủ đề (*)"
                 options={WORD_TOPICS}
-              />
+              /> */}
+              <TopicSelect />
             </Grid>
 
             {/* word specialty */}

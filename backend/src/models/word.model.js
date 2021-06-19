@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
-const {
-  SPECIALTY_TYPES,
-  TOPIC_TYPES,
-  NUM_OF_SPECIALTY,
-  NUM_OF_TOPICS,
-} = require('../constant');
+const { NUM_OF_SPECIALTY, NUM_OF_TOPICS } = require('../constant');
 const Schema = mongoose.Schema;
 
 const wordSchema = new Schema({
