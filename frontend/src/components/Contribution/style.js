@@ -2,12 +2,15 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   root: {
-    marginTop: '2.4rem',
-    marginBottom: '2.4rem',
-    padding: '4.8rem 2.4rem',
+    margin: '2.4rem 0',
+    padding: '2.8rem 3.6rem',
     boxShadow: 'var(--box-shadow)',
     borderRadius: 'var(--border-radius)',
     backgroundColor: 'var(--bg-color-sec)',
+
+    [theme.breakpoints.up('md')]: {
+      margin: '6.4rem 0',
+    },
   },
 
   title: {
@@ -19,5 +22,26 @@ export default makeStyles((theme) => ({
 
   grid: {
     marginTop: '2.4rem',
+    marginBottom: '2.4rem',
+  },
+
+  tooltipIcon: {
+    fontSize: '1.6rem',
+    color: 'var(--label-color)',
+  },
+
+  btn: {
+    marginLeft: '1rem',
+    textTransform: 'none',
+    minWidth: '14rem',
+  },
+
+  btnReset: {
+    borderColor: 'var(--accent-color) !important',
+    color: 'var(--accent-color) !important',
+
+    '&:hover, &:active': {
+      filter: 'brightness(0.85)',
+    },
   },
 }));

@@ -2,10 +2,15 @@
   cursor: pointer;
 }
 
+.cur-help {
+  cursor: help;
+}
+
 // button
 ._btn {
   color: #fff !important;
   transition: all 0.25s !important;
+
   &:hover {
     -webkit-filter: brightness(0.85);
     filter: brightness(0.85);

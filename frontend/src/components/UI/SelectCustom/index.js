@@ -24,6 +24,7 @@ function SelectCustom(props) {
           }}
           MenuProps={{ classes: { paper: classes.selectMenu } }}
           disableUnderline
+          defaultValue={options[0]?.value}
           error={error}
           labelId={label}
           label={label}

@@ -24,56 +24,6 @@ exports.MIN = {
   PASSWORD_LEN: 6,
 };
 
-exports.SPECIALTY_TYPES = [
-  {
-    type: '0',
-    name: 'Không',
-  },
-  {
-    type: '1',
-    name: 'Công nghệ thông tin',
-  },
-  {
-    type: '2',
-    name: 'Du lịch',
-  },
-];
+exports.NUM_OF_TOPICS = 10;
 
-exports.TOPIC_TYPES = [
-  {
-    type: '0',
-    name: 'Bất kỳ',
-  },
-  {
-    type: '1',
-    name: 'Từ vựng TOEIC',
-  },
-  {
-    type: '2',
-    name: 'Từ vựng IELTS',
-  },
-  {
-    type: '3',
-    name: 'Tiếng anh giao tiếp',
-  },
-  {
-    type: '4',
-    name: 'Nghề nghiệp',
-  },
-  {
-    type: '5',
-    name: 'Con vật',
-  },
-  {
-    type: '6',
-    name: 'Rau củ',
-  },
-  {
-    type: '7',
-    name: 'Cơ thể con người',
-  },
-  {
-    type: '8',
-    name: 'Đồ ăn',
-  },
-];
+exports.NUM_OF_SPECIALTY = 10;

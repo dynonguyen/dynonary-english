@@ -61,3 +61,143 @@ export const UX = {
 export const VOICE_KEYS = {
   LS_KEY: 'voice',
 };
+
+export const WORD_TYPES = [
+  {
+    value: 'n',
+    label: 'Noun - Danh từ',
+  },
+  {
+    value: 'adj',
+    label: 'Adjective - Tính từ',
+  },
+  {
+    value: 'adv',
+    label: 'Adverb - Trạng từ',
+  },
+  {
+    value: 'v',
+    label: 'Verb - Động từ',
+  },
+  {
+    value: 'pro',
+    label: 'Pronoun - Đại từ',
+  },
+  {
+    value: 'con',
+    label: 'Conjunction - Liên từ',
+  },
+  {
+    value: 'pre',
+    label: 'Preposition - Giới từ',
+  },
+  {
+    value: 'det',
+    label: 'Determiners - Hạn định từ',
+  },
+];
+
+export const WORD_LEVELS = [
+  {
+    value: 'A0',
+    label: 'A0',
+  },
+  {
+    value: 'A1',
+    label: 'A1',
+  },
+  {
+    value: 'A2',
+    label: 'A2',
+  },
+  {
+    value: 'B1',
+    label: 'B1',
+  },
+  {
+    value: 'B2',
+    label: 'B2',
+  },
+  {
+    value: 'C1',
+    label: 'C1',
+  },
+  {
+    value: 'C2',
+    label: 'C2',
+  },
+];
+
+export const WORD_TOPICS = [
+  {
+    value: '0',
+    label: 'Bất kỳ',
+  },
+  {
+    value: '1',
+    label: 'Từ vựng TOEIC',
+  },
+  {
+    value: '2',
+    label: 'Từ vựng IELTS',
+  },
+  {
+    value: '3',
+    label: 'Giao tiếp',
+  },
+  {
+    value: '4',
+    label: 'Đồ ăn',
+  },
+  {
+    value: '5',
+    label: 'Du lịch',
+  },
+  {
+    value: '6',
+    label: 'Nghề nghiệp',
+  },
+  {
+    value: '7',
+    label: 'Thể thao',
+  },
+  {
+    value: '8',
+    label: 'Cảm xúc',
+  },
+  {
+    value: '9',
+    label: 'Nghệ thuật',
+  },
+];
+
+export const WORD_SPECIALTY = [
+  {
+    value: '0',
+    label: 'Không',
+  },
+  {
+    value: '1',
+    label: 'Công nghệ sinh học (Biotechnology)',
+  },
+  {
+    value: '2',
+    label: 'Kế toán (Accounting)',
+  },
+  {
+    value: '3',
+    label: 'Kinh tế học (Economics)',
+  },
+  {
+    value: '4',
+    label: 'Thương mại quốc tế (International Trade)',
+  },
+  {
+    value: '5',
+    label: 'Quản trị nhân lực (Human Resource Management)',
+  },
+  {
+    value: '6',
+    label: 'Công nghệ thông tin (Information Technology)',
+  },
+];

@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
-const { SPECIALTY_TYPES, TOPIC_TYPES } = require('../constant');
+const {
+  SPECIALTY_TYPES,
+  TOPIC_TYPES,
+  NUM_OF_SPECIALTY,
+  NUM_OF_TOPICS,
+} = require('../constant');
 const Schema = mongoose.Schema;
 
 const wordSchema = new Schema({
@@ -19,12 +24,12 @@ const wordSchema = new Schema({
   },
 
   type: {
-    // type is String because a string = 32 bit + (n char * 8) + 8 => max = 72 bit = 9 B
+    // type is String because a string = 32 bit + (n char * 8) + 8 => max = 64 bit = 8 B
     // If type is number => 1 word = 64 bit = 8 B
     // However, the quantity of conj, prep is much less than the quantity of the other types.
     type: String,
     required: true,
-    enum: ['n', 'adj', 'adv', 'v', 'conj', 'prep', 'pro', 'det'],
+    enum: ['n', 'adj', 'adv', 'v', 'con', 'pre', 'pro', 'det'],
   },
 
   level: {
@@ -56,14 +61,14 @@ const wordSchema = new Schema({
 
   specialty: {
     type: String,
-    enum: SPECIALTY_TYPES.map((i) => i.type),
+    enum: Array.from({ length: NUM_OF_SPECIALTY }, (_, key) => key.toString()),
     default: '0',
   },
 
   topics: [
     {
       type: String,
-      enum: TOPIC_TYPES.map((i) => i.type),
+      enum: Array.from({ length: NUM_OF_TOPICS }, (_, key) => key.toString()),
     },
   ],
 
