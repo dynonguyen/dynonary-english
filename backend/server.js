@@ -8,9 +8,10 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 // ! import local file
-const corsConfig = require('./src/configs/cors.config');
 const { MAX } = require('./src/constant');
+const corsConfig = require('./src/configs/cors.config');
 const accountApi = require('./src/apis/account.api');
+const wordApi = require('./src/apis/word.api');
 
 // ! ================== set port ==================
 const app = express();
@@ -50,3 +51,4 @@ app.listen(PORT, () => {
 // ! ================== Apis ==================
 const BASE_URL = '/apis';
 app.use(`${BASE_URL}/account`, accountApi);
+app.use(`${BASE_URL}/word`, wordApi);

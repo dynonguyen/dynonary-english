@@ -24,6 +24,6 @@ exports.MIN = {
   PASSWORD_LEN: 6,
 };
 
-exports.NUM_OF_TOPICS = 10;
+exports.NUM_OF_TOPICS = 30;
 
-exports.NUM_OF_SPECIALTY = 10;
+exports.NUM_OF_SPECIALTY = 30;
