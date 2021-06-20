@@ -106,10 +106,6 @@ export const WORD_TYPES = [
 
 export const WORD_LEVELS = [
   {
-    value: 'A0',
-    label: 'A0',
-  },
-  {
     value: 'A1',
     label: 'A1',
   },
@@ -135,76 +131,26 @@ export const WORD_LEVELS = [
   },
 ];
 
-export const WORD_TOPICS = [
-  {
-    value: '0',
-    label: 'Bất kỳ',
-  },
-  {
-    value: '1',
-    label: 'Từ vựng TOEIC',
-  },
-  {
-    value: '2',
-    label: 'Từ vựng IELTS',
-  },
-  {
-    value: '3',
-    label: 'Giao tiếp',
-  },
-  {
-    value: '4',
-    label: 'Đồ ăn',
-  },
-  {
-    value: '5',
-    label: 'Du lịch',
-  },
-  {
-    value: '6',
-    label: 'Nghề nghiệp',
-  },
-  {
-    value: '7',
-    label: 'Thể thao',
-  },
-  {
-    value: '8',
-    label: 'Cảm xúc',
-  },
-  {
-    value: '9',
-    label: 'Nghệ thuật',
-  },
-];
-
 export const WORD_SPECIALTY = [
-  {
-    value: '0',
-    label: 'Không',
-  },
-  {
-    value: '1',
-    label: 'Công nghệ sinh học (Biotechnology)',
-  },
-  {
-    value: '2',
-    label: 'Kế toán (Accounting)',
-  },
-  {
-    value: '3',
-    label: 'Kinh tế học (Economics)',
-  },
-  {
-    value: '4',
-    label: 'Thương mại quốc tế (International Trade)',
-  },
-  {
-    value: '5',
-    label: 'Quản trị nhân lực (Human Resource Management)',
-  },
-  {
-    value: '6',
-    label: 'Công nghệ thông tin (Information Technology)',
-  },
+  { value: '0', label: 'Không' },
+  { value: '1', label: 'Công nghệ sinh học (Biotechnology)' },
+  { value: '6', label: 'Công nghệ thông tin (Information Technology)' },
+  { value: '14', label: 'Công nghệ thực phẩm (Food Technology)' },
+  { value: '20', label: 'Giải trí (Entertainment)' },
+  { value: '3', label: 'Kinh tế học (Economics)' },
+  { value: '2', label: 'Kế toán (Accounting)' },
+  { value: '8', label: 'Kỹ thuật hoá học (Chemical Engineering)' },
+  { value: '19', label: 'Mỹ thuật (Fine Arts Industry)' },
+  { value: '12', label: 'Ngành Marketing' },
+  { value: '18', label: 'Quản trị khách sạn (Hotel Management)' },
+  { value: '7', label: 'Quản trị kinh doanh (Business Adminstration)' },
+  { value: '5', label: 'Quản trị nhân lực (Human Resource Management)' },
+  { value: '13', label: 'Thiết kế (Design UI/UX)' },
+  { value: '4', label: 'Thương mại quốc tế (International Trade)' },
+  { value: '10', label: 'Thương mại điện tử (E-Commerce)' },
+  { value: '9', label: 'Tiếng Anh thương mại (Business English)' },
+  { value: '11', label: 'Tài chính ngân hàng (Finance & Banking)' },
+  { value: '16', label: 'Văn hoá học (Culturology)' },
+  { value: '17', label: 'Xây dựng (Construction Industry)' },
+  { value: '15', label: 'Xã hội học (Sociology)' },
 ];
