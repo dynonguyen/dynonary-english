@@ -29,6 +29,9 @@ export const MAX = {
   WORD_LEN: 50,
   PHONETIC_LEN: 50,
   MEAN_WORD_LEN: 100,
+  EXAMPLE_WORD_LEN: 250,
+  SYNONYMS_WORD_LEN: 100,
+  NOTE_WORD_LEN: 100,
 };
 
 export const MIN = {

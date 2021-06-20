@@ -2,11 +2,11 @@ import Grid from '@material-ui/core/Grid';
 import InputCustom from 'components/UI/InputCustom';
 import PhoneticKeyboard from 'components/UI/PhoneticKeyboard';
 import PropTypes from 'prop-types';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import InformationTooltip from './InformationTooltip';
 
 function PhoneticInput(props) {
-  const { errorMessage, error, register, ...restProps } = props;
+  const { errorMessage, error, register, resetFlag, ...restProps } = props;
   const { inputProps } = restProps;
   const { ref, ...rest } = register;
   const inputRef = useRef(null);
@@ -15,10 +15,17 @@ function PhoneticInput(props) {
   const [value, setValue] = useState('');
 
   const onCloseKeyboard = () => setOpenKeyboard(false);
+
   const onInput = (c) => {
     setValue(value + c);
     inputRef.current.focus();
   };
+
+  useEffect(() => {
+    if (!resetFlag) return;
+    // reset value if parent component reset, except first render
+    setValue('');
+  }, [resetFlag]);
 
   return (
     <>
@@ -58,11 +65,13 @@ PhoneticInput.propTypes = {
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   register: PropTypes.any,
+  resetFlag: PropTypes.number,
 };
 
 PhoneticInput.defaultProps = {
   error: false,
   errorMessage: null,
+  resetFlag: 0,
 };
 
 export default PhoneticInput;

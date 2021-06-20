@@ -15,10 +15,10 @@ function InputCustom(props) {
         disableUnderline: true,
         endAdornment,
       }}
-      variant="filled"
       InputLabelProps={{
         shrink: true,
       }}
+      variant="filled"
       {...propRest}
     />
   );

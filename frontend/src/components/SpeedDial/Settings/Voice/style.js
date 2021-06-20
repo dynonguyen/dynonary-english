@@ -76,11 +76,11 @@ export default makeStyles((theme) => ({
   },
 
   railSlider: {
-    backgroundColor: 'var(--secondary-color)',
+    backgroundColor: 'var(--secondary-color) !important',
   },
 
   trackSlider: {
-    backgroundColor: 'var(--primary-color)',
+    backgroundColor: 'var(--primary-color) !important',
   },
 
   valueText: {

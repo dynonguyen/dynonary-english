@@ -5,14 +5,8 @@ import ResetIcon from '@material-ui/icons/RotateLeft';
 import SaveIcon from '@material-ui/icons/Save';
 import InputCustom from 'components/UI/InputCustom';
 import SelectCustom from 'components/UI/SelectCustom';
-import {
-  MAX,
-  WORD_LEVELS,
-  WORD_SPECIALTY,
-  WORD_TOPICS,
-  WORD_TYPES,
-} from 'constant';
-import React from 'react';
+import { MAX, WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
+import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import InformationTooltip from './InformationTooltip';
@@ -44,20 +38,66 @@ const schema = yup.object().shape({
     .string()
     .required('Chọn cấp bậc của từ')
     .oneOf(WORD_LEVELS.map((i) => i.value)),
+  specialty: yup
+    .string()
+    .required('Chọn cấp bậc của từ')
+    .oneOf(WORD_SPECIALTY.map((i) => i.value)),
+  examples: yup
+    .string()
+    .max(MAX.EXAMPLE_WORD_LEN, `Ví dụ tối đa ${MAX.EXAMPLE_WORD_LEN} ký tự`),
+  synonyms: yup
+    .string()
+    .max(
+      MAX.SYNONYMS_WORD_LEN,
+      `Từ đồng nghĩa tối đa ${MAX.SYNONYMS_WORD_LEN} ký tự`,
+    ),
+  note: yup
+    .string()
+    .max(MAX.NOTE_WORD_LEN, `Ghi chú tối đa ${MAX.NOTE_WORD_LEN} ký tự`),
 });
 
 function Contribution() {
   const classes = useStyle();
+  const [resetFlag, setResetFlag] = useState(0);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
+  const topics = useRef([]);
+
   const onSubmit = (data) => {
     console.log(data);
+    console.log(topics.current);
+  };
+
+  const onTopicChange = (id, isActive) => {
+    if (isActive) {
+      topics.current.push(id);
+    } else {
+      topics.current = topics.current.filter((i) => i !== id);
+    }
+  };
+
+  const onResetForm = () => {
+    const initialValues = {
+      word: '',
+      mean: '',
+      phonetic: '',
+      type: 'n',
+      level: 'A0',
+      specialty: '0',
+      examples: '',
+      synonyms: '',
+      note: '',
+    };
+    topics.current = [];
+    reset(initialValues);
+    setResetFlag(Math.random() + 1);
   };
 
   return (
@@ -113,6 +153,7 @@ function Contribution() {
             <PhoneticInput
               errorMessage={errors.phonetic?.message}
               error={Boolean(errors.phonetic)}
+              resetFlag={resetFlag}
               inputProps={{
                 maxLength: MAX.PHONETIC_LEN,
                 name: 'phonetic',
@@ -126,6 +167,8 @@ function Contribution() {
                 className="w-100"
                 label="Loại từ (*)"
                 options={WORD_TYPES}
+                error={Boolean(errors.type)}
+                resetFlag={resetFlag}
                 inputProps={{
                   name: 'type',
                   ...register('type'),
@@ -142,6 +185,8 @@ function Contribution() {
                 className="w-100"
                 label="Cấp bậc của từ (*)"
                 options={WORD_LEVELS}
+                error={Boolean(errors.level)}
+                resetFlag={resetFlag}
                 inputProps={{ name: 'level', ...register('level') }}
               />
               {errors.level && (
@@ -149,15 +194,8 @@ function Contribution() {
               )}
             </Grid>
 
-            {/* word topic */}
-            <Grid item xs={12} md={6} lg={4}>
-              {/* <SelectCustom
-                className="w-100"
-                label="Chủ đề (*)"
-                options={WORD_TOPICS}
-              /> */}
-              <TopicSelect />
-            </Grid>
+            {/* word topics */}
+            <TopicSelect onChange={onTopicChange} resetFlag={resetFlag} />
 
             {/* word specialty */}
             <Grid item xs={12} md={6} lg={4}>
@@ -165,7 +203,16 @@ function Contribution() {
                 className="w-100"
                 label="Thuộc chuyên ngành"
                 options={WORD_SPECIALTY}
+                error={Boolean(errors.specialty)}
+                resetFlag={resetFlag}
+                inputProps={{
+                  name: 'specialty',
+                  ...register('specialty'),
+                }}
               />
+              {errors.specialty && (
+                <p className="text-error">{errors.specialty?.message}</p>
+              )}
             </Grid>
 
             {/* examples */}
@@ -177,7 +224,16 @@ function Contribution() {
                 endAdornment={
                   <InformationTooltip title="Thêm các câu ví dụ cho từ trên. Đảm bảo có sự xuất hiện của từ đó trong câu. Bạn có thể thêm nhiều câu bằng cách xuống dòng." />
                 }
+                error={Boolean(errors.examples)}
+                inputProps={{
+                  name: 'examples',
+                  ...register('examples'),
+                }}
               />
+
+              {errors.examples && (
+                <p className="text-error">{errors.examples?.message}</p>
+              )}
             </Grid>
 
             {/* picture */}
@@ -200,7 +256,15 @@ function Contribution() {
                 endAdornment={
                   <InformationTooltip title="Nhập các từ đồng nghĩa với từ này. Thêm nhiêu từ bằng cách xuống hàng." />
                 }
+                error={Boolean(errors.synonyms)}
+                inputProps={{
+                  name: 'synonyms',
+                  ...register('synonyms'),
+                }}
               />
+              {errors.synonyms && (
+                <p className="text-error">{errors.synonyms?.message}</p>
+              )}
             </Grid>
 
             {/* note */}
@@ -211,7 +275,15 @@ function Contribution() {
                 endAdornment={
                   <InformationTooltip title="Nhập thêm ghi chú mà bạn muốn cho từ" />
                 }
+                error={Boolean(errors.note)}
+                inputProps={{
+                  name: 'note',
+                  ...register('note'),
+                }}
               />
+              {errors.note && (
+                <p className="text-error">{errors.note?.message}</p>
+              )}
             </Grid>
           </Grid>
 
@@ -222,7 +294,8 @@ function Contribution() {
               className={`${classes.btn} ${classes.btnReset}`}
               color="secondary"
               endIcon={<ResetIcon />}
-              variant="outlined">
+              variant="outlined"
+              onClick={onResetForm}>
               Reset
             </Button>
             <Button

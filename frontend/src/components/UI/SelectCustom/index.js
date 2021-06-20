@@ -3,12 +3,20 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useStyle from './style';
 
 function SelectCustom(props) {
-  const { label, options, className, onChange, error, ...selectProps } = props;
+  const { label, options, className, error, resetFlag, ...selectProps } = props;
+  const [value, setValue] = useState(options[0]?.value);
   const classes = useStyle();
+
+  useEffect(() => {
+    if (!resetFlag) return;
+    // reset value if parent component reset, except first render
+    setValue(options[0]?.value);
+  }, [resetFlag]);
+
   return (
     <>
       <FormControl className={`${classes.root} ${className}`} variant="filled">
@@ -24,12 +32,12 @@ function SelectCustom(props) {
           }}
           MenuProps={{ classes: { paper: classes.selectMenu } }}
           disableUnderline
-          defaultValue={options[0]?.value}
           error={error}
           labelId={label}
           label={label}
-          {...selectProps}
-          onChange={onChange}>
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          {...selectProps}>
           {options &&
             options.map((option, index) => (
               <MenuItem key={index} value={option.value}>
@@ -46,16 +54,16 @@ SelectCustom.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   options: PropTypes.array,
-  onChange: PropTypes.func,
   error: PropTypes.bool,
+  resetFlag: PropTypes.number,
 };
 
 SelectCustom.defaultProps = {
   className: '',
   label: 'Label',
   options: [],
-  onChange: function () {},
   error: false,
+  resetFlag: 0,
 };
 
 export default SelectCustom;
