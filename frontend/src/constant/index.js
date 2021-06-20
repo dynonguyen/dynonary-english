@@ -32,6 +32,7 @@ export const MAX = {
   EXAMPLE_WORD_LEN: 250,
   SYNONYMS_WORD_LEN: 100,
   NOTE_WORD_LEN: 100,
+  IMG_SIZE: 2, // 2 MB
 };
 
 export const MIN = {

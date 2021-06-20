@@ -25,7 +25,6 @@ export default makeStyles((theme) => ({
 
   imgSize: {
     height: imgSize,
-    width: imgSize,
   },
 
   iconSize: {

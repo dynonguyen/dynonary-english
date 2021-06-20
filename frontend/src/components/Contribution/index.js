@@ -5,6 +5,7 @@ import ResetIcon from '@material-ui/icons/RotateLeft';
 import SaveIcon from '@material-ui/icons/Save';
 import InputCustom from 'components/UI/InputCustom';
 import SelectCustom from 'components/UI/SelectCustom';
+import UploadButton from 'components/UI/UploadButton';
 import { MAX, WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
 import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -69,10 +70,12 @@ function Contribution() {
   });
 
   const topics = useRef([]);
+  const picture = useRef(null);
 
   const onSubmit = (data) => {
     console.log(data);
     console.log(topics.current);
+    console.log(picture.current);
   };
 
   const onTopicChange = (id, isActive) => {
@@ -96,6 +99,7 @@ function Contribution() {
       note: '',
     };
     topics.current = [];
+    picture.current = null;
     reset(initialValues);
     setResetFlag(Math.random() + 1);
   };
@@ -194,9 +198,6 @@ function Contribution() {
               )}
             </Grid>
 
-            {/* word topics */}
-            <TopicSelect onChange={onTopicChange} resetFlag={resetFlag} />
-
             {/* word specialty */}
             <Grid item xs={12} md={6} lg={4}>
               <SelectCustom
@@ -234,17 +235,6 @@ function Contribution() {
               {errors.examples && (
                 <p className="text-error">{errors.examples?.message}</p>
               )}
-            </Grid>
-
-            {/* picture */}
-            <Grid item xs={12} md={6} lg={4}>
-              <InputCustom
-                className="w-100"
-                label="Ảnh mô tả"
-                endAdornment={
-                  <InformationTooltip title="Nhập ký âm (ngữ âm) của từ mới. Ví dụ: fəˈnetɪk" />
-                }
-              />
             </Grid>
 
             {/* synonyms */}
@@ -285,6 +275,18 @@ function Contribution() {
                 <p className="text-error">{errors.note?.message}</p>
               )}
             </Grid>
+
+            {/* picture */}
+            <Grid item xs={12} md={6} lg={4}>
+              <UploadButton
+                className="w-100 h-100"
+                resetFlag={resetFlag}
+                onChange={(imgSrc) => (picture.current = imgSrc)}
+              />
+            </Grid>
+
+            {/* word topics */}
+            <TopicSelect onChange={onTopicChange} resetFlag={resetFlag} />
           </Grid>
 
           <div className="dyno-break"></div>
