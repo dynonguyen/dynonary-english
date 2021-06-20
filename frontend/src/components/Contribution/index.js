@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -14,21 +15,25 @@ import InformationTooltip from './InformationTooltip';
 import PhoneticInput from './PhoneticInput';
 import useStyle from './style';
 import TopicSelect from './TopicSelect';
+import LoopIcon from '@material-ui/icons/Loop';
 
 const schema = yup.object().shape({
   word: yup
     .string()
     .trim()
     .required('Hãy nhập một từ vào đây')
+    .lowercase()
     .max(MAX.WORD_LEN, `Từ dài tối đã ${MAX.WORD_LEN} ký tự`),
   mean: yup
     .string()
     .trim()
+    .lowercase()
     .required('Hãy nhập ý nghĩa từ')
     .max(MAX.MEAN_WORD_LEN, `Từ dài tối đã ${MAX.MEAN_WORD_LEN} ký tự`),
   phonetic: yup
     .string()
     .trim()
+    .lowercase()
     .required('Hãy nhập ký âm của từ')
     .max(MAX.PHONETIC_LEN, `Từ dài tối đã ${MAX.PHONETIC_LEN} ký tự`),
   type: yup
@@ -57,7 +62,7 @@ const schema = yup.object().shape({
     .max(MAX.NOTE_WORD_LEN, `Ghi chú tối đa ${MAX.NOTE_WORD_LEN} ký tự`),
 });
 
-function Contribution() {
+function Contribution({ onSubmitForm, submitting }) {
   const classes = useStyle();
   const [resetFlag, setResetFlag] = useState(0);
   const {
@@ -73,9 +78,7 @@ function Contribution() {
   const picture = useRef(null);
 
   const onSubmit = (data) => {
-    console.log(data);
-    console.log(topics.current);
-    console.log(picture.current);
+    onSubmitForm({ ...data, topics: topics.current, picture: picture.current });
   };
 
   const onTopicChange = (id, isActive) => {
@@ -92,7 +95,7 @@ function Contribution() {
       mean: '',
       phonetic: '',
       type: 'n',
-      level: 'A0',
+      level: 'A1',
       specialty: '0',
       examples: '',
       synonyms: '',
@@ -297,13 +300,17 @@ function Contribution() {
               color="secondary"
               endIcon={<ResetIcon />}
               variant="outlined"
+              disabled={submitting}
               onClick={onResetForm}>
               Reset
             </Button>
             <Button
               type="submit"
               className={`${classes.btn} _btn _btn-primary`}
-              endIcon={<SaveIcon />}
+              disabled={submitting}
+              endIcon={
+                submitting ? <LoopIcon className="ani-spin" /> : <SaveIcon />
+              }
               variant="contained">
               Thêm từ
             </Button>
@@ -313,5 +320,15 @@ function Contribution() {
     </div>
   );
 }
+
+Contribution.propTypes = {
+  onSubmitForm: PropTypes.func,
+  submitting: PropTypes.bool,
+};
+
+Contribution.defaultProps = {
+  onSubmitForm: function () {},
+  submitting: false,
+};
 
 export default Contribution;
