@@ -15,7 +15,6 @@ import translateIcon from 'assets/icons/translate.png';
 import verbIcon from 'assets/icons/verb.png';
 import voiceIcon from 'assets/icons/voice.png';
 import FeatureBox from 'components/FeatureBox';
-import Navigation from 'components/Navigation';
 import { ROUTES } from 'constant';
 import useScrollTop from 'hooks/useScrollTop';
 import React from 'react';
@@ -124,23 +123,20 @@ function HomePage() {
   useScrollTop();
 
   return (
-    <>
-      <Navigation />
-      <div className="container my-10">
-        <Grid container spacing={3}>
-          {FEATURE_LIST.map((box, index) => (
-            <Grid item xs={12} md={6} lg={4} key={index}>
-              <FeatureBox
-                imgUrl={box.imgUrl}
-                title={box.title}
-                to={box.to}
-                subTitle={box.subTitle}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </div>
-    </>
+    <div className="container my-10">
+      <Grid container spacing={3}>
+        {FEATURE_LIST.map((box, index) => (
+          <Grid item xs={12} md={6} lg={4} key={index}>
+            <FeatureBox
+              imgUrl={box.imgUrl}
+              title={box.title}
+              to={box.to}
+              subTitle={box.subTitle}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
   );
 }
 

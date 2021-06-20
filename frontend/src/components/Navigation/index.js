@@ -60,7 +60,7 @@ function Navigation() {
   const onCloseMenu = () => setAnchorMenu(null);
 
   return (
-    <div className={`${classes.navWrapper} w-100vw`}>
+    <div className={`${classes.navWrapper} w-100vw`} id="dynoNav">
       <div className={`${classes.nav} w-100`}>
         <div className="container h-100 flex-center--ver">
           {/* Logo */}
