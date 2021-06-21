@@ -10,6 +10,7 @@ export default makeStyles((theme) => ({
     backgroundColor: 'var(--bg-color-accent) !important',
     boxShadow: 'none !important',
     border: 'solid 1px var(--input-border-color)',
+    color: 'var(--label-color)',
 
     textTransform: 'capitalize',
     '&:hover, &:active': {

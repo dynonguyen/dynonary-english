@@ -21,10 +21,12 @@ export default makeStyles((theme) => ({
 
   logo: {
     marginRight: '0.8rem',
+    width: 'auto !important',
   },
 
   imgSize: {
     height: imgSize,
+    width: imgSize,
   },
 
   iconSize: {

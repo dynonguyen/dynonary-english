@@ -17,6 +17,7 @@ import voiceIcon from 'assets/icons/voice.png';
 import FeatureBox from 'components/FeatureBox';
 import { ROUTES } from 'constant';
 import useScrollTop from 'hooks/useScrollTop';
+import useTitle from 'hooks/useTitle';
 import React from 'react';
 
 const FEATURE_LIST = [
@@ -120,6 +121,7 @@ const FEATURE_LIST = [
 ];
 
 function HomePage() {
+  useTitle('Dynonary');
   useScrollTop();
 
   return (

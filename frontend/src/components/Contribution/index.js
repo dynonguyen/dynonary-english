@@ -282,6 +282,7 @@ function Contribution({ onSubmitForm, submitting }) {
             {/* picture */}
             <Grid item xs={12} md={6} lg={4}>
               <UploadButton
+                title="Thêm ảnh minh hoạ"
                 className="w-100 h-100"
                 resetFlag={resetFlag}
                 onChange={(imgSrc) => (picture.current = imgSrc)}
