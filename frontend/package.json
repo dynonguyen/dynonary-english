@@ -20,11 +20,11 @@
 		"yup": "^0.32.9"
 	},
 	"scripts": {
-		"start": "set PORT=8888 && react-scripts start",
+		"start": "SET PORT=8888 && react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"deploy": "bash ./deploy-surge.cmd"
+		"deploy": "bash ./auto-deploy.cmd"
 	},
 	"eslintConfig": {
 		"extends": [

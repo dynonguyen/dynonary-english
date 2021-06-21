@@ -8,6 +8,8 @@ const {
 } = require('../services/account.service');
 const { COOKIE_EXPIRES_TIME, KEYS } = require('../constant');
 const jwtConfig = require('../configs/jwt.config');
+const express = require('express');
+const app = express();
 
 exports.postRegisterAccount = async (req, res, next) => {
   try {
@@ -71,7 +73,12 @@ exports.postLogin = async (req, res, next) => {
       expires: new Date(Date.now() + COOKIE_EXPIRES_TIME),
     });
 
-    return res.status(200).json({ message: 'success' });
+    return res.status(200).json({
+      message: 'success',
+      key: KEYS.JWT_TOKEN,
+      token,
+      expires: new Date(Date.now() + COOKIE_EXPIRES_TIME),
+    });
   } catch (error) {
     console.error('POST REGISTER ACCOUNT ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });

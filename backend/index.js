@@ -6,6 +6,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const morgan = require('morgan');
+const path = require('path');
 
 // ! import local file
 const { MAX } = require('./src/constant');
@@ -19,10 +20,15 @@ const normalizePort = (port) => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 3000);
 
 // ! ================== setup logging ==================
+app.use(express.static(path.join(__dirname, '/src/build')));
+
 const dev = app.get('env') !== 'production';
 if (!dev) {
   app.disable('x-powered-by');
   app.use(morgan('common'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/src/build', 'index.html'));
+  });
 } else {
   app.use(morgan('dev'));
 }
@@ -52,3 +58,7 @@ app.listen(PORT, () => {
 const BASE_URL = '/apis';
 app.use(`${BASE_URL}/account`, accountApi);
 app.use(`${BASE_URL}/word`, wordApi);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/src/build', 'index.html'));
+});

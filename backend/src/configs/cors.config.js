@@ -1,18 +1,13 @@
-const whiteList = [
-  process.env.CORS_ORIGIN_1,
-  process.env.CORS_ORIGIN_2,
-  process.env.CORS_ORIGIN_3,
-];
+require('dotenv').config();
+const express = require('express');
+const app = express();
 
 const corsConfig = {
   // Configures the Access-Control-Allow-Origin
-  origin: function (origin, callback) {
-    if (whiteList.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin:
+    app.get('env') !== 'production'
+      ? 'http://localhost:8888'
+      : process.env.CORS_ORIGIN,
 
   // Configures the Access-Control-Allow-Methods
   methods: 'GET, POST, OPTIONS, PUT, PATCH, DELETE',

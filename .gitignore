@@ -24,3 +24,5 @@ yarn-error.log*
 yarn.lock
 .vscode
 note.txt
+.vercel
+backend/.gitignore
