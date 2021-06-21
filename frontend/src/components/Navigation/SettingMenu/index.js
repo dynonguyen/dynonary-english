@@ -13,14 +13,14 @@ function SettingMenu({ anchorEl, onClose, menuList }) {
       <Menu
         classes={{ paper: classes.root }}
         anchorEl={anchorEl}
-        keepMounted
+        disableScrollLock={true}
         getContentAnchorEl={null}
         onClose={onClose}
+        open={Boolean(anchorEl)}
         anchorOrigin={{
           horizontal: 'right',
           vertical: 'bottom',
-        }}
-        open={Boolean(anchorEl)}>
+        }}>
         {menuList.map((item, index) => (
           <Link key={index} to={item.to}>
             <MenuItem className={classes.menuItem}>

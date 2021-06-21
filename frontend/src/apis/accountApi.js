@@ -11,6 +11,10 @@ const accountApi = {
     return axiosClient.post(`${URL}/login`, { email, password });
   },
 
+  postLogout: () => {
+    return axiosClient.post(`${URL}/logout`);
+  },
+
   getUserInfo: () => {
     return axiosClient.get(`${URL}/user-info`);
   },

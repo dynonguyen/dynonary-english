@@ -1,3 +1,4 @@
+import Logout from 'components/Logout';
 import { ROUTES } from 'constant';
 import HomePage from 'pages/Home';
 import React from 'react';
@@ -38,6 +39,12 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <ContributionPage />,
+  },
+  {
+    path: ROUTES.LOGOUT,
+    exact: true,
+    isProtect: false,
+    component: () => <Logout />,
   },
 ];
 

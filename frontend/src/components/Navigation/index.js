@@ -43,7 +43,7 @@ const MENU_LIST = [
   {
     title: 'Đăng xuất',
     icon: ExitToAppIcon,
-    to: '/',
+    to: ROUTES.LOGOUT,
   },
 ];
 

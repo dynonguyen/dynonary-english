@@ -46,6 +46,7 @@ export const ROUTES = {
   FORGOT_PASSWORD: '/forgot-password',
   IPA: '/IPA',
   CONTRIBUTION: '/contribution',
+  LOGOUT: '/logout',
 };
 
 export const REGEX = {

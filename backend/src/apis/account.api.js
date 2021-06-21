@@ -4,6 +4,7 @@ const { jwtAuthentication } = require('../middlewares/passport.middleware');
 
 accountApi.post('/register', accountController.postRegisterAccount);
 accountApi.post('/login', accountController.postLogin);
+accountApi.post('/logout', accountController.postLogout);
 
 accountApi.get('/user-info', jwtAuthentication, accountController.getUserInfo);
 

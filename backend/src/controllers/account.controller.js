@@ -85,6 +85,16 @@ exports.postLogin = async (req, res, next) => {
   }
 };
 
+exports.postLogout = async (req, res, next) => {
+  try {
+    res.clearCookie(KEYS.JWT_TOKEN);
+    return res.status(200).json({ message: 'success' });
+  } catch (error) {
+    console.error('POST LOG OUT ERROR: ', error);
+    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
 exports.getUserInfo = async (req, res, next) => {
   try {
     const { isAuth = false } = res.locals;

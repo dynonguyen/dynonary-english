@@ -4,9 +4,9 @@ exports.ACCOUNT_TYPES = {
   FACEBOOK: 'fb',
 };
 
-exports.COOKIE_EXPIRES_TIME = 7 * 24 * 3600; // 7 days (by sec)
+exports.COOKIE_EXPIRES_TIME = 7 * 24 * 3600 * 1000; // 7 days (by sec)
 
-exports.JWT_EXPIRES_TIME = 7 * 24 * 3600; // 7 days (by sec)
+exports.JWT_EXPIRES_TIME = 7 * 24 * 3600 * 1000; // 7 days (by sec)
 
 exports.KEYS = {
   JWT_TOKEN: 'token',
