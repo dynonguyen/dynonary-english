@@ -140,8 +140,8 @@ function CorrectWord() {
   };
 
   return (
-    <div className="container">
-      <div className={`${classes.root} dyno-game-box`}>
+    <div className="flex-center-col h-100vh container">
+      <div className={`${classes.root} container dyno-game-box`}>
         {/* title */}
         <div className="dyno-game-title">
           <img src={logoGame} alt="game photo" />
@@ -168,9 +168,12 @@ function CorrectWord() {
             </div>
 
             {/* body */}
-            <div className={status !== 0 ? 'disabled' : 'ani-fade'}>
+            <div
+              className={`${classes.mainContent} ${
+                status !== 0 ? 'disabled' : 'ani-fade'
+              }`}>
               {/* question */}
-              <div className={classes.questionBox}>
+              <div className="flex-center-col">
                 <p
                   style={{ visibility: status === 0 ? 'hidden' : 'visible' }}
                   className={`${classes.result} ${
@@ -178,7 +181,6 @@ function CorrectWord() {
                   }`}>
                   {status === 1 ? 'Chính xác' : 'Sai rồi'}
                 </p>
-
                 <span className={classes.question}>{mean}</span>
               </div>
 

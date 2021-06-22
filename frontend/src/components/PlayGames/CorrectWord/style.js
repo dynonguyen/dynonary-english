@@ -2,13 +2,24 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   root: {
+    height: '100%',
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: '2fr 1fr 17fr',
+    gridRowGap: '0.8rem',
+
+    [theme.breakpoints.up('sm')]: {
+      height: '85%',
+      gridRowGap: '1.2rem',
+    },
+
     '& .disabled': {
       pointerEvents: 'none',
     },
   },
 
   summary: {
-    margin: '1.4rem 0',
+    // margin: '1.4rem 0',
     '& > *': {
       fontSize: '1.6rem',
       fontWeight: 400,
@@ -26,13 +37,10 @@ export default makeStyles((theme) => ({
     margin: '0 0.4rem',
   },
 
-  questionBox: {
-    textAlign: 'center',
-    padding: '6rem 1.2rem',
-
-    [theme.breakpoints.up('md')]: {
-      padding: '8rem 1.2rem',
-    },
+  mainContent: {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: '3fr 7fr',
   },
 
   question: {
@@ -50,17 +58,18 @@ export default makeStyles((theme) => ({
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows: '1fr 1fr',
     gridGap: '1.2rem',
+    padding: '2.4rem 0',
 
     [theme.breakpoints.up('md')]: {
+      width: '100%',
+      margin: '0 auto',
       maxWidth: '50%',
       minWidth: '40rem',
       gridGap: '2.4rem',
-      margin: 'auto',
     },
   },
 
   answerItem: {
-    height: '17rem',
     backgroundColor: 'var(--bg-color-accent)',
     borderRadius: 'var(--border-radius)',
 
@@ -77,7 +86,6 @@ export default makeStyles((theme) => ({
       opacity: 0.8,
       fontSize: '1.6rem',
     },
-
     '&.right': {
       border: 'solid 1px var(--right-color)',
     },

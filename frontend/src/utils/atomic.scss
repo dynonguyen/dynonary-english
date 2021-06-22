@@ -138,15 +138,12 @@
 .dyno-game {
   &-box {
     padding: 0 0.8rem;
-    margin-top: 1.2rem;
   }
 
   &-title {
     display: flex;
     align-items: center;
     padding: 1.2rem 0;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
     border-bottom: solid 1px var(--input-border-color);
 
     h1 {
@@ -168,8 +165,6 @@
       background-color: var(--bg-color-sec);
       padding: 2.4rem 3.6rem;
       box-shadow: 0px 5px 18px 1px rgb(17 17 17 / 10%);
-      margin-top: 4.8rem;
-      margin-bottom: 2.4rem;
       border-radius: 8px;
     }
 
