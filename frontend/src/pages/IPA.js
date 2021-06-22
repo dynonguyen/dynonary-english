@@ -17,7 +17,7 @@ function IPAPage() {
       <Consonants />
 
       {/* ipa chart */}
-      <h1 className="dyno-title">4. Biểu đồ IPA (IPA Chart)</h1>
+      <h2 className="dyno-title">4. Biểu đồ IPA (IPA Chart)</h2>
       <div
         className="w-100 my-10 t-center"
         style={{ maxWidth: 450, margin: 'auto' }}>
@@ -32,7 +32,7 @@ function IPAPage() {
       </div>
 
       {/* summary */}
-      <h1 className="dyno-title">5. Tóm lượt (Summary)</h1>
+      <h2 className="dyno-title">5. Tóm lượt (Summary)</h2>
 
       <img src={ipaTableSrc} alt="IPA Table" className="w-100 mb-4" />
       <div

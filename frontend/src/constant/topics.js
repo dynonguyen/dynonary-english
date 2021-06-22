@@ -127,3 +127,8 @@ export const TOPICS = [
     icon: othersIcon,
   },
 ];
+
+export const TOPIC_OPTIONS = TOPICS.map((topic) => ({
+  value: topic.key,
+  label: topic.title,
+}));

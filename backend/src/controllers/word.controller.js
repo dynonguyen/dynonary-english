@@ -19,7 +19,6 @@ exports.postContributeWord = async (req, res, next) => {
     if (picture) {
       pictureUrl = await uploadImage(picture, 'dynonary/words');
     }
-    console.log(pictureUrl);
 
     // create the new word
     const isCreateSuccess = await createNewWord({

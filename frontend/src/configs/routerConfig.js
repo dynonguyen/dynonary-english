@@ -8,6 +8,7 @@ const LoginPage = React.lazy(() => import('pages/Login'));
 const IPAPage = React.lazy(() => import('pages/IPA'));
 const ContributionPage = React.lazy(() => import('pages/Contribution'));
 const PlayGamesPage = React.lazy(() => import('pages/PlayGames'));
+const CorrectWordPage = React.lazy(() => import('pages/PlayGames/CorrectWord'));
 
 // routes for app
 const routes = [
@@ -52,6 +53,12 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <PlayGamesPage />,
+  },
+  {
+    path: ROUTES.GAMES.CORRECT_WORD,
+    exact: true,
+    isProtect: false,
+    component: () => <CorrectWordPage />,
   },
 ];
 

@@ -10,6 +10,7 @@
 ._btn {
   color: #fff !important;
   transition: all 0.25s !important;
+  text-transform: capitalize !important;
 
   &:hover {
     -webkit-filter: brightness(0.85);

@@ -69,6 +69,8 @@ const wordSchema = new Schema({
 
   synonyms: [{ type: String, maxLength: 50 }],
 
+  antonyms: [{ type: String, maxLength: 50 }],
+
   note: {
     type: String,
     trim: true,

@@ -5,7 +5,7 @@ import IPAGroupCollapse from './GroupCollapse';
 function Consonants() {
   return (
     <>
-      <h1 className="dyno-title">3. Phụ âm (Consonants)</h1>
+      <h2 className="dyno-title">3. Phụ âm (Consonants)</h2>
       <h3 className="dyno-sub-title">
         Chúng ta có 24 phụ âm, mình chia làm 8 nhóm. Lưu ý về các dạng phụ âm
         như âm vô thanh thì không phát ra âm thanh, luồng hơi không làm rung dây

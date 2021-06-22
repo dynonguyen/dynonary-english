@@ -26,7 +26,7 @@ function ContributionData() {
   const handleSubmit = async (data) => {
     try {
       setSubmitting(true);
-      const { examples, synonyms, word, ...rest } = data;
+      const { examples, synonyms, antonyms, word, ...rest } = data;
 
       // check examples validation
       const exampleArr = analysisExample(examples, word);
@@ -44,11 +44,15 @@ function ContributionData() {
       // split synonyms string to an array synonyms
       const synonymArr = synonyms !== '' ? synonyms.split('\n') : [];
 
+      // split antonyms string to an array synonyms
+      const antonymArr = antonyms !== '' ? antonyms.split('\n') : [];
+
       // call API
       const dataSend = {
         ...rest,
         examples: exampleArr,
         synonyms: synonymArr,
+        antonyms: antonymArr,
         word,
       };
       const apiRes = await wordApi.postContributeWord(dataSend);

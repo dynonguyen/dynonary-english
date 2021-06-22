@@ -9,7 +9,7 @@ function FeatureBox({ to, imgUrl, title, subTitle }) {
     <Link to={to} className={`${classes.root} flex-center--ver w-100`}>
       <img className={classes.icon} src={imgUrl} alt="Icon" />
       <div>
-        <h1 className={classes.title}>{title}</h1>
+        <h2 className={classes.title}>{title}</h2>
         <p className={classes.subTitle}>{subTitle}</p>
       </div>
     </Link>

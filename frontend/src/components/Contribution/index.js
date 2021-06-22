@@ -57,6 +57,12 @@ const schema = yup.object().shape({
       MAX.SYNONYMS_WORD_LEN,
       `Từ đồng nghĩa tối đa ${MAX.SYNONYMS_WORD_LEN} ký tự`,
     ),
+  antonyms: yup
+    .string()
+    .max(
+      MAX.SYNONYMS_WORD_LEN,
+      `Từ trái nghĩa tối đa ${MAX.SYNONYMS_WORD_LEN} ký tự`,
+    ),
   note: yup
     .string()
     .max(MAX.NOTE_WORD_LEN, `Ghi chú tối đa ${MAX.NOTE_WORD_LEN} ký tự`),
@@ -99,6 +105,7 @@ function Contribution({ onSubmitForm, submitting }) {
       specialty: '0',
       examples: '',
       synonyms: '',
+      antonyms: '',
       note: '',
     };
     topics.current = [];
@@ -247,7 +254,7 @@ function Contribution({ onSubmitForm, submitting }) {
                 label="Từ đồng nghĩa"
                 multiline
                 endAdornment={
-                  <InformationTooltip title="Nhập các từ đồng nghĩa với từ này. Thêm nhiêu từ bằng cách xuống hàng." />
+                  <InformationTooltip title="Nhập các từ đồng nghĩa với từ này. Thêm nhiều từ bằng cách xuống hàng." />
                 }
                 error={Boolean(errors.synonyms)}
                 inputProps={{
@@ -257,6 +264,26 @@ function Contribution({ onSubmitForm, submitting }) {
               />
               {errors.synonyms && (
                 <p className="text-error">{errors.synonyms?.message}</p>
+              )}
+            </Grid>
+
+            {/* antonyms */}
+            <Grid item xs={12} md={6} lg={4}>
+              <InputCustom
+                className="w-100"
+                label="Từ trái nghĩa"
+                multiline
+                endAdornment={
+                  <InformationTooltip title="Nhập các từ trái nghĩa với từ này. Thêm nhiều từ bằng cách xuống hàng." />
+                }
+                error={Boolean(errors.antonyms)}
+                inputProps={{
+                  name: 'antonyms',
+                  ...register('antonyms'),
+                }}
+              />
+              {errors.antonyms && (
+                <p className="text-error">{errors.antonyms?.message}</p>
               )}
             </Grid>
 
