@@ -89,7 +89,7 @@ const FEATURE_LIST = [
     imgUrl: gameIcon,
     subTitle:
       'Ôn luyện kiến thức hiệu quả và đỡ nhàm chán hơn qua việc chơi game cùng Dyno nhé',
-    to: '/',
+    to: ROUTES.GAMES.HOME,
   },
   {
     title: 'Học cùng bạn bè',

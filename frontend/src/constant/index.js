@@ -47,6 +47,17 @@ export const ROUTES = {
   IPA: '/IPA',
   CONTRIBUTION: '/contribution',
   LOGOUT: '/logout',
+  GAMES: {
+    HOME: '/games',
+    CORRECT_WORD: '/games/correct-word',
+    CORRECT_WORD_ADV: '/games/correct-word-advance',
+    MILLIONAIRE: '/games/who-is-a-millionaire',
+    JIGSAW: '/games/jigsaw-puzzle',
+    QUIZ: '/games/quiz',
+    WORD_MATCHING: '/games/word-matching',
+    GRAMMARLY: '/games/grammarly',
+    VIP: '/games/vip',
+  },
 };
 
 export const REGEX = {

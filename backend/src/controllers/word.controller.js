@@ -25,6 +25,7 @@ exports.postContributeWord = async (req, res, next) => {
     const isCreateSuccess = await createNewWord({
       word,
       picture: pictureUrl,
+      isChecked: false,
       ...rest,
     });
 

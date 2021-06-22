@@ -74,6 +74,11 @@ const wordSchema = new Schema({
     trim: true,
     maxLength: 150,
   },
+
+  isChecked: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const WordModel = mongoose.model('word', wordSchema, 'words');
