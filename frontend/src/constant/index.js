@@ -75,6 +75,7 @@ export const THEME_KEYS = {
 
 export const UX = {
   DELAY_TIME: 1500,
+  DELAY_ANSWER: 3000,
 };
 
 export const VOICE_KEYS = {

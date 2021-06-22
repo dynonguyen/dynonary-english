@@ -56,6 +56,10 @@ export default makeStyles((theme) => ({
     gridTemplateRows: '1fr 1fr',
     gridGap: '1.2rem',
 
+    '&.disabled': {
+      pointerEvents: 'none',
+    },
+
     [theme.breakpoints.up('md')]: {
       maxWidth: '50%',
       minWidth: '40rem',
@@ -80,7 +84,7 @@ export default makeStyles((theme) => ({
 
     '& .phonetic': {
       opacity: 0.8,
-      fontSize: '1.8rem',
+      fontSize: '1.6rem',
     },
 
     '&.right': {

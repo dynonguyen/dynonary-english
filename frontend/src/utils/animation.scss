@@ -26,3 +26,26 @@
     transform: rotate(360deg);
   }
 }
+
+.ani-fade {
+  -webkit-animation: fadeAni 1.2s ease-in-out;
+  animation: fadeAni 1.2s ease-in-out;
+}
+
+@-webkit-keyframes fadeAni {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeAni {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

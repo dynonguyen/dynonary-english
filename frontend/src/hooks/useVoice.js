@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setVoice } from 'redux/slices/voice.slice';
 
+// get custom voice to store into redux
 function useVoice() {
   const dispatch = useDispatch();
 
