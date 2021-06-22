@@ -1,7 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
-  root: {},
+  root: {
+    '& .disabled': {
+      pointerEvents: 'none',
+    },
+  },
 
   summary: {
     margin: '1.4rem 0',
@@ -20,19 +24,15 @@ export default makeStyles((theme) => ({
   summaryIcon: {
     fontSize: '2.4rem',
     margin: '0 0.4rem',
-
-    '&.right': {
-      color: 'var(--right-color)',
-    },
-
-    '&.wrong': {
-      color: 'var(--error-color)',
-    },
   },
 
   questionBox: {
     textAlign: 'center',
-    padding: '7rem 1.2rem',
+    padding: '6rem 1.2rem',
+
+    [theme.breakpoints.up('md')]: {
+      padding: '8rem 1.2rem',
+    },
   },
 
   question: {
@@ -43,11 +43,6 @@ export default makeStyles((theme) => ({
 
   result: {
     fontSize: '1.5rem',
-    color: 'var(--right-color)',
-
-    '&.wrong': {
-      color: 'var(--error-color)',
-    },
   },
 
   answers: {
@@ -55,10 +50,6 @@ export default makeStyles((theme) => ({
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows: '1fr 1fr',
     gridGap: '1.2rem',
-
-    '&.disabled': {
-      pointerEvents: 'none',
-    },
 
     [theme.breakpoints.up('md')]: {
       maxWidth: '50%',
@@ -93,5 +84,31 @@ export default makeStyles((theme) => ({
     '&.wrong': {
       border: 'solid 1px var(--error-color)',
     },
+  },
+}));
+
+export const cwResultStyle = makeStyles(() => ({
+  root: {
+    minHeight: '65vh',
+  },
+
+  img: {
+    height: '8rem',
+    marginBottom: '2.4rem',
+  },
+
+  result: {
+    color: 'var(--label-color)',
+    fontSize: '1.6rem',
+
+    '& b': {
+      color: 'var(--text-color)',
+      fontSize: '2.4rem',
+      padding: '0 0.4rem',
+    },
+  },
+
+  icon: {
+    margin: '0 0.6rem',
   },
 }));

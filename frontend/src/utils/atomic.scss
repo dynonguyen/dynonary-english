@@ -9,12 +9,17 @@
 // button
 ._btn {
   color: #fff !important;
+  padding: 0.6rem 2.4rem !important;
   transition: all 0.25s !important;
   text-transform: capitalize !important;
 
   &:hover {
     -webkit-filter: brightness(0.85);
     filter: brightness(0.85);
+  }
+
+  &-stand {
+    background-color: var(--grey) !important;
   }
 
   &-primary {
@@ -27,6 +32,11 @@
 
   &-accent {
     background-color: var(--accent-color) !important;
+  }
+
+  &-outlined-stand {
+    border: solid 1px var(--label-color) !important;
+    color: var(--label-color) !important;
   }
 
   &-outlined-primary {
@@ -173,4 +183,12 @@
       }
     }
   }
+}
+
+// answer
+.right {
+  color: var(--right-color);
+}
+.wrong {
+  color: var(--error-color);
 }
