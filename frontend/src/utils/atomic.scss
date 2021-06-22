@@ -28,9 +28,17 @@
   &-accent {
     background-color: var(--accent-color) !important;
   }
+
+  &-outlined-primary {
+    border-color: var(--primary-color) !important;
+  }
+
+  &-outlined-accent {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+  }
 }
 
-//  or sign up - login
 .or-option {
   position: relative;
   margin: 0 auto;
@@ -57,7 +65,6 @@
   }
 }
 
-// overlay
 #_overlay {
   position: fixed;
   top: 0;
@@ -69,7 +76,12 @@
   display: none;
 }
 
-// title
+.phonetic {
+  color: var(--phonetic-color);
+  padding: 0 6px;
+  letter-spacing: 1px;
+}
+
 .dyno-title {
   color: var(--title-color);
   font-size: 2.4rem;
@@ -88,13 +100,6 @@
 .dyno-box {
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
-}
-
-// phonetic IPA
-.phonetic {
-  color: var(--phonetic-color);
-  padding: 0 6px;
-  letter-spacing: 1px;
 }
 
 .dyno-speaker {
@@ -118,4 +123,54 @@
   height: 1px;
   margin: 0.8rem 0;
   background-color: var(--input-border-color);
+}
+
+.dyno-game {
+  &-box {
+    padding: 0 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 0;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: solid 1px var(--input-border-color);
+
+    h1 {
+      color: var(--title-color);
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-left: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 576px) {
+    &-box {
+      background-color: var(--bg-color-sec);
+      padding: 2.4rem 3.6rem;
+      box-shadow: 0px 5px 18px 1px rgb(17 17 17 / 10%);
+      margin-top: 4.8rem;
+      margin-bottom: 2.4rem;
+      border-radius: 8px;
+    }
+
+    &-title {
+      font-size: 2.8rem;
+      margin-top: 0;
+
+      img {
+        width: 5.6rem;
+        height: 5.6rem;
+      }
+    }
+  }
 }

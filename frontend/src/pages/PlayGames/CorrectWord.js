@@ -3,7 +3,7 @@ import useTitle from 'hooks/useTitle';
 import React from 'react';
 
 function CorrectWordPage() {
-  useTitle('Hãy chọn từ đúng');
+  useTitle("Game hãy chọn từ đúng (Let's choose the correct word)");
   return <CorrectWord />;
 }
 

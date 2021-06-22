@@ -19,6 +19,8 @@ import sportIcon from 'assets/icons/topics/sport.png';
 import technologyIcon from 'assets/icons/topics/technology.png';
 import travelIcon from 'assets/icons/topics/travel.png';
 import treeIcon from 'assets/icons/topics/tree.png';
+import toeicIcon from 'assets/icons/topics/toeic.png';
+import ieltsIcon from 'assets/icons/topics/ielts.png';
 
 export const TOPICS = [
   {
@@ -123,6 +125,16 @@ export const TOPICS = [
   },
   {
     key: '20',
+    title: 'TOEIC',
+    icon: toeicIcon,
+  },
+  {
+    key: '21',
+    title: 'IELTS',
+    icon: ieltsIcon,
+  },
+  {
+    key: '22',
     title: 'Khác',
     icon: othersIcon,
   },

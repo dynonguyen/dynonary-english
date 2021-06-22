@@ -9,7 +9,10 @@ import { WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
 import { TOPIC_OPTIONS } from 'constant/topics';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import useStyle from './style';
+
+const formId = 'wordPackForm';
 
 function addAllOption(optionList = []) {
   return [{ value: '-1', label: 'Tất cả' }, ...optionList];
@@ -18,7 +21,7 @@ function addAllOption(optionList = []) {
 function WordPack({ onChoose }) {
   const classes = useStyle();
   const [open, setOpen] = useState(true);
-
+  const history = useHistory();
   const handleClose = () => {
     setOpen(false);
   };
@@ -35,19 +38,24 @@ function WordPack({ onChoose }) {
     handleClose();
   };
 
+  const handleGoBack = () => {
+    history.goBack();
+  };
+
   return (
     <Dialog
       classes={{ paper: classes.dialogPaper }}
       onClose={handleClose}
       maxWidth="md"
       fullWidth
+      disableBackdropClick
       open={open}>
       <DialogTitle classes={{ root: classes.title }}>
         Lựa chọn gói từ vựng
       </DialogTitle>
 
       <DialogContent dividers classes={{ dividers: classes.breakLine }}>
-        <form id="wordPackForm" onSubmit={handleSubmit}>
+        <form id={formId} onSubmit={handleSubmit}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <SelectCustom
@@ -87,14 +95,21 @@ function WordPack({ onChoose }) {
 
       <DialogActions>
         <Button
+          onClick={handleGoBack}
+          className="_btn _btn-outlined-accent"
+          variant="outlined">
+          Quay lại
+        </Button>
+        <Button
+          autoFocus
+          disableFocusRipple
           component="button"
           type="submit"
-          form="wordPackForm"
+          form={formId}
           onClick={handleClose}
-          className="_btn _btn-accent"
-          variant="contained"
-          color="primary">
-          Lưu
+          className="_btn _btn-primary"
+          variant="contained">
+          Bắt đầu
         </Button>
       </DialogActions>
     </Dialog>
