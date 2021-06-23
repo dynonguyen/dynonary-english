@@ -18,10 +18,12 @@ exports.MAX = {
   PASSWORD_LEN: 40,
   NAME_LEN: 50,
   USER_NAME: 110,
+  LEN_WORD_PACK: 100,
 };
 
 exports.MIN = {
   PASSWORD_LEN: 6,
+  CONFUSING_LIST: 20,
 };
 
 exports.NUM_OF_TOPICS = 30;

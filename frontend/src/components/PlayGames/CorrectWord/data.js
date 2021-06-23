@@ -14,6 +14,7 @@ function CorrectWordData() {
 
   const getWordPackage = async ({ type, topic, level, specialty }) => {
     try {
+      setState(1);
       const apiRes = await gameApi.getWordPackCWG({
         type,
         topic,
@@ -39,7 +40,13 @@ function CorrectWordData() {
         return;
       }
 
-      setState(1);
+      dispatch(
+        setMessage({
+          type: 'warning',
+          message: 'Lấy gói từ vựng thất bại, thử lại !',
+        }),
+      );
+      setState(0);
     } catch (error) {
       const message =
         error.response?.data?.message || 'Lấy gói từ vựng thất bại, thử lại !';

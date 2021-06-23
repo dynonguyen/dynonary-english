@@ -13,7 +13,7 @@ exports.getWordPack = async (packInfo = {}) => {
 
     const packList = await WordModel.find(query)
       .limit(1000)
-      .select('-_id word mean phonetic');
+      .select('-_id word mean phonetic synonyms');
 
     return packList;
   } catch (error) {
