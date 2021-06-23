@@ -1,22 +1,26 @@
-import PropTypes from 'prop-types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import LoopIcon from '@material-ui/icons/Loop';
 import ResetIcon from '@material-ui/icons/RotateLeft';
 import SaveIcon from '@material-ui/icons/Save';
+import wordApi from 'apis/wordApi';
 import InputCustom from 'components/UI/InputCustom';
 import SelectCustom from 'components/UI/SelectCustom';
 import UploadButton from 'components/UI/UploadButton';
 import { MAX, WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
+import { debounce } from 'helper';
+import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { setMessage } from 'redux/slices/message.slice';
 import * as yup from 'yup';
 import InformationTooltip from './InformationTooltip';
 import PhoneticInput from './PhoneticInput';
 import useStyle from './style';
 import TopicSelect from './TopicSelect';
-import LoopIcon from '@material-ui/icons/Loop';
-
+let delayTimer = null;
 const schema = yup.object().shape({
   word: yup
     .string()
@@ -71,11 +75,13 @@ const schema = yup.object().shape({
 function Contribution({ onSubmitForm, submitting }) {
   const classes = useStyle();
   const [resetFlag, setResetFlag] = useState(0);
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    getValues,
   } = useForm({
     resolver: yupResolver(schema),
   });
@@ -114,6 +120,33 @@ function Contribution({ onSubmitForm, submitting }) {
     setResetFlag(Math.random() + 1);
   };
 
+  const handleCheckWordExistence = (e) => {
+    delayTimer = debounce(
+      delayTimer,
+      async () => {
+        try {
+          const word = e.target.value,
+            type = getValues('type');
+
+          const apiRes = await wordApi.getCheckWordExistence(word, type);
+          if (apiRes.status === 200) {
+            const { isExist = false } = apiRes.data;
+            if (isExist) {
+              dispatch(
+                setMessage({
+                  type: 'warning',
+                  message: `Từ ${word} (${type}) đã tồn tại trong Dynonary !`,
+                  duration: 2000,
+                }),
+              );
+            }
+          }
+        } catch (error) {}
+      },
+      500,
+    );
+  };
+
   return (
     <div className="container">
       <div className={classes.root}>
@@ -134,6 +167,7 @@ function Contribution({ onSubmitForm, submitting }) {
                   name: 'word',
                   ...register('word'),
                 }}
+                onChange={handleCheckWordExistence}
                 endAdornment={
                   <InformationTooltip title="Nhập từ vựng mới mà bạn cần thêm" />
                 }

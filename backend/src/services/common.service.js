@@ -14,13 +14,13 @@ exports.uploadImage = async (imgSrc, folderName = '', config = {}) => {
   }
 };
 
-exports.isExistWord = async (word = '') => {
+exports.isExistWord = async (word = '', type = '') => {
   try {
-    if (word === '') {
+    if (word === '' || type === '') {
       return false;
     }
 
-    return await WordModel.exists({ word });
+    return await WordModel.exists({ word, type });
   } catch (error) {
     throw error;
   }
