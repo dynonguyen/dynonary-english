@@ -4,35 +4,10 @@ import logoGame from 'assets/icons/games/correct-word.png';
 import { UX } from 'constant';
 import { playSoundAnswer } from 'helper/speaker.helper';
 import useSpeaker from 'hooks/useSpeaker';
+import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import CorrectWordResult from './Result';
 import useStyle from './style';
-
-const list = (function () {
-  let res = [];
-  for (let i = 0; i < 4; ++i) {
-    res.push({
-      word: `${i}.Happy`,
-      mean: 'Vui vẻ',
-      phonetic: 'happy',
-      wrongList: [
-        {
-          word: `Wrong-${i}`,
-          phonetic: `phonetic-${i}`,
-        },
-        {
-          word: `Wrong-${i + 1}`,
-          phonetic: `phonetic-${i + 1}`,
-        },
-        {
-          word: `Wrong-${i + 2}`,
-          phonetic: `phonetic-${i + 2}`,
-        },
-      ],
-    });
-  }
-  return res;
-})();
 
 function shuffleAnswers(word, phonetic, wrongList) {
   let mergeList = [...wrongList, { word, phonetic }];
@@ -47,7 +22,7 @@ function addClassAnswerItem(status, answerIndex, index, word, answer) {
   return '';
 }
 
-function CorrectWord() {
+function CorrectWord({ list }) {
   const classes = useStyle();
   const { voice, speed, volume } = useSpeaker();
 
@@ -217,5 +192,13 @@ function CorrectWord() {
     </div>
   );
 }
+
+CorrectWord.propTypes = {
+  list: PropTypes.array,
+};
+
+CorrectWord.defaultProps = {
+  list: [],
+};
 
 export default CorrectWord;

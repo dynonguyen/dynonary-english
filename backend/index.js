@@ -14,6 +14,7 @@ const { MAX } = require('./src/constant');
 const corsConfig = require('./src/configs/cors.config');
 const accountApi = require('./src/apis/account.api');
 const wordApi = require('./src/apis/word.api');
+const gameApi = require('./src/apis/game.api');
 
 // ================== set port ==================
 const app = express();
@@ -66,6 +67,7 @@ app.listen(PORT, () => {
 const BASE_URL = '/apis';
 app.use(`${BASE_URL}/account`, accountApi);
 app.use(`${BASE_URL}/word`, wordApi);
+app.use(`${BASE_URL}/games`, gameApi);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/src/build', 'index.html'));

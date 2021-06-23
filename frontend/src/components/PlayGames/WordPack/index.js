@@ -4,6 +4,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Grid from '@material-ui/core/Grid';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import PlayIcon from '@material-ui/icons/PlayCircleFilledWhite';
 import SelectCustom from 'components/UI/SelectCustom';
 import { WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
 import { TOPIC_OPTIONS } from 'constant/topics';
@@ -18,13 +20,9 @@ function addAllOption(optionList = []) {
   return [{ value: '-1', label: 'Tất cả' }, ...optionList];
 }
 
-function WordPack({ onChoose }) {
+function WordPack({ onChoose, open }) {
   const classes = useStyle();
-  const [open, setOpen] = useState(true);
   const history = useHistory();
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +33,6 @@ function WordPack({ onChoose }) {
       level = target.level?.value || '-1';
 
     onChoose({ type, specialty, level, topic });
-    handleClose();
   };
 
   const handleGoBack = () => {
@@ -45,7 +42,6 @@ function WordPack({ onChoose }) {
   return (
     <Dialog
       classes={{ paper: classes.dialogPaper }}
-      onClose={handleClose}
       maxWidth="md"
       fullWidth
       disableBackdropClick
@@ -96,7 +92,8 @@ function WordPack({ onChoose }) {
       <DialogActions>
         <Button
           onClick={handleGoBack}
-          className="_btn _btn-outlined-accent"
+          className="_btn _btn-outlined-stand"
+          startIcon={<ArrowBackIcon />}
           variant="outlined">
           Quay lại
         </Button>
@@ -106,8 +103,8 @@ function WordPack({ onChoose }) {
           component="button"
           type="submit"
           form={formId}
-          onClick={handleClose}
           className="_btn _btn-primary"
+          endIcon={<PlayIcon />}
           variant="contained">
           Bắt đầu
         </Button>
@@ -118,10 +115,12 @@ function WordPack({ onChoose }) {
 
 WordPack.propTypes = {
   onChoose: PropTypes.func,
+  open: PropTypes.bool,
 };
 
 WordPack.defaultProps = {
   onChoose: function () {},
+  open: true,
 };
 
 export default WordPack;
