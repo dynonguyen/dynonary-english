@@ -8,10 +8,10 @@ const gameApi = {
     type = '-1',
     level = '-1',
     specialty = '-1',
-    topic = '-1',
+    topics = [],
   ) => {
     return axiosClient.get(`${URL}/correct-word/pack`, {
-      params: { type, level, specialty, topic },
+      params: { type, level, specialty, topics: JSON.stringify(topics) },
     });
   },
 };

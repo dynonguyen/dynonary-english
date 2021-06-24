@@ -40,7 +40,12 @@ function WordPack({
       topic = target.topic?.value || '-1',
       level = target.level?.value || '-1';
 
-    onChoose({ type, specialty, level, topic, topics: topics.current });
+    onChoose({
+      type,
+      specialty,
+      level,
+      topics: topicMultiples ? topics.current : topic === '-1' ? [] : [topic],
+    });
   };
 
   return (

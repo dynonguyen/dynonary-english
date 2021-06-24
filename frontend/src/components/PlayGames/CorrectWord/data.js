@@ -16,14 +16,14 @@ function CorrectWordData() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const getWordPackage = async ({ type, topic, level, specialty }) => {
+  const getWordPackage = async ({ type, topics, level, specialty }) => {
     try {
       setState(1);
       const apiRes = await gameApi.getWordPackCWG(
         type,
         level,
         specialty,
-        topic,
+        topics,
       );
       if (apiRes.status === 200) {
         const { wordPack = [] } = apiRes.data;
@@ -33,6 +33,7 @@ function CorrectWordData() {
               type: 'warning',
               message:
                 'Rất xin lỗi, gói từ vựng hiện tại không đủ. Vui lòng thử lại sao',
+              duration: 3000,
             }),
           );
           setState(0);
@@ -66,7 +67,7 @@ function CorrectWordData() {
           open={true}
           onChoose={getWordPackage}
           onCancel={() => history.goBack()}
-          topicMultiples={false}
+          topicMultiples={true}
           title="Lựa chọn gói từ vựng"
           okBtnText="Bắt đầu"
           cancelBtnText="Quay lại"
