@@ -120,13 +120,13 @@ function Contribution({ onSubmitForm, submitting }) {
     setResetFlag(Math.random() + 1);
   };
 
-  const handleCheckWordExistence = (e) => {
+  const handleCheckWordExistence = (eWord, eType) => {
     delayTimer = debounce(
       delayTimer,
       async () => {
         try {
-          const word = e.target.value,
-            type = getValues('type');
+          const word = eWord ? eWord.target?.value : getValues('word'),
+            type = eType ? eType.target?.value : getValues('type');
 
           const apiRes = await wordApi.getCheckWordExistence(word, type);
           if (apiRes.status === 200) {
@@ -143,7 +143,7 @@ function Contribution({ onSubmitForm, submitting }) {
           }
         } catch (error) {}
       },
-      500,
+      1000,
     );
   };
 
@@ -167,7 +167,7 @@ function Contribution({ onSubmitForm, submitting }) {
                   name: 'word',
                   ...register('word'),
                 }}
-                onChange={handleCheckWordExistence}
+                onChange={(e) => handleCheckWordExistence(e, null)}
                 endAdornment={
                   <InformationTooltip title="Nhập từ vựng mới mà bạn cần thêm" />
                 }
@@ -221,6 +221,7 @@ function Contribution({ onSubmitForm, submitting }) {
                   name: 'type',
                   ...register('type'),
                 }}
+                onChange={(e) => handleCheckWordExistence(null, e)}
               />
               {errors.type && (
                 <p className="text-error">{errors.type?.message}</p>

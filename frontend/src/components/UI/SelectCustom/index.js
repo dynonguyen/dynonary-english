@@ -7,7 +7,15 @@ import React, { useEffect, useState } from 'react';
 import useStyle from './style';
 
 function SelectCustom(props) {
-  const { label, options, className, error, resetFlag, ...selectProps } = props;
+  const {
+    label,
+    options,
+    className,
+    error,
+    resetFlag,
+    onChange,
+    ...selectProps
+  } = props;
   const [value, setValue] = useState(options[0]?.value);
   const classes = useStyle();
 
@@ -36,7 +44,10 @@ function SelectCustom(props) {
           labelId={label}
           label={label}
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => {
+            setValue(e.target.value);
+            onChange(e);
+          }}
           {...selectProps}>
           {options &&
             options.map((option, index) => (
@@ -56,6 +67,7 @@ SelectCustom.propTypes = {
   options: PropTypes.array,
   error: PropTypes.bool,
   resetFlag: PropTypes.number,
+  onChange: PropTypes.func,
 };
 
 SelectCustom.defaultProps = {
@@ -64,6 +76,7 @@ SelectCustom.defaultProps = {
   options: [],
   error: false,
   resetFlag: 0,
+  onChange: function () {},
 };
 
 export default SelectCustom;
