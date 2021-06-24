@@ -9,7 +9,6 @@ import { WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
 import { TOPIC_OPTIONS } from 'constant/topics';
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
-import { useHistory } from 'react-router-dom';
 import TopicSelect from '../TopicSelect';
 import useStyle from './style';
 
@@ -21,6 +20,7 @@ function addAllOption(optionList = []) {
 
 function WordPack({
   onChoose,
+  onCancel,
   open,
   topicMultiples,
   title,
@@ -30,7 +30,6 @@ function WordPack({
   cancelBtnProps,
 }) {
   const classes = useStyle();
-  const history = useHistory();
   const topics = useRef([]);
 
   const handleSubmit = (e) => {
@@ -42,10 +41,6 @@ function WordPack({
       level = target.level?.value || '-1';
 
     onChoose({ type, specialty, level, topic, topics: topics.current });
-  };
-
-  const handleGoBack = () => {
-    history.goBack();
   };
 
   return (
@@ -109,7 +104,7 @@ function WordPack({
 
       <DialogActions>
         <Button
-          onClick={handleGoBack}
+          onClick={onCancel}
           className="_btn _btn-outlined-stand"
           variant="outlined"
           {...cancelBtnProps}>
@@ -133,6 +128,7 @@ function WordPack({
 
 WordPack.propTypes = {
   onChoose: PropTypes.func,
+  onCancel: PropTypes.func,
   open: PropTypes.bool,
   topicMultiples: PropTypes.bool,
   title: PropTypes.string,

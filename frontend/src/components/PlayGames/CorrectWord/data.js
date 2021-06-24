@@ -4,6 +4,7 @@ import gameApi from 'apis/gameApi';
 import GlobalLoading from 'components/UI/GlobalLoading';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { setMessage } from 'redux/slices/message.slice';
 import CorrectWord from '.';
 import WordPack from '../../UI/WordPack';
@@ -13,6 +14,7 @@ function CorrectWordData() {
   const [state, setState] = useState(0);
   const [wordPack, setWordPack] = useState([]);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const getWordPackage = async ({ type, topic, level, specialty }) => {
     try {
@@ -63,6 +65,7 @@ function CorrectWordData() {
         <WordPack
           open={true}
           onChoose={getWordPackage}
+          onCancel={() => history.goBack()}
           topicMultiples={false}
           title="Lựa chọn gói từ vựng"
           okBtnText="Bắt đầu"
