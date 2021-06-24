@@ -6,6 +6,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ThemeSetting from '../Theme';
+import ToggleNavButton from '../ToggleNavButton';
 import VoiceSetting from '../Voice';
 import useStyle from './style';
 
@@ -29,13 +30,21 @@ function SettingModal({ open, onClose }) {
 
       <DialogContent classes={{ root: classes.content }}>
         <div className={classes.contentItem}>
-          <h1 className={classes.contentLabel}>Chủ đề</h1>
+          <h2 className={classes.contentLabel}>Chủ đề</h2>
           <ThemeSetting />
         </div>
 
         <div className={classes.contentItem}>
-          <h1 className={classes.contentLabel}>Giọng đọc</h1>
+          <h2 className={classes.contentLabel}>Giọng đọc</h2>
           <VoiceSetting />
+        </div>
+
+        <div className={classes.contentItem}>
+          <h2 className={classes.contentLabel}>Cài đặt khác</h2>
+          <div>
+            <h3 className="dyno-label my-5">Hiện/Ẩn thanh điều hướng</h3>
+            <ToggleNavButton />
+          </div>
         </div>
       </DialogContent>
 

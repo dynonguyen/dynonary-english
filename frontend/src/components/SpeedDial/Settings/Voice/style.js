@@ -11,13 +11,6 @@ export default makeStyles((theme) => ({
     },
   },
 
-  title: {
-    fontSize: '1.6rem',
-    color: 'var(--label-color)',
-    margin: '0.8rem 0',
-    fontWeight: 400,
-  },
-
   selectRoot: {
     maxWidth: '100%',
     width: '100%',
