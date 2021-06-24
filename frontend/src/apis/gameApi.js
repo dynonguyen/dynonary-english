@@ -4,8 +4,15 @@ const URL = '/games';
 
 const gameApi = {
   // correct word game
-  getWordPackCWG: (packInfo) => {
-    return axiosClient.get(`${URL}/correct-word/pack`, { params: packInfo });
+  getWordPackCWG: (
+    type = '-1',
+    level = '-1',
+    specialty = '-1',
+    topic = '-1',
+  ) => {
+    return axiosClient.get(`${URL}/correct-word/pack`, {
+      params: { type, level, specialty, topic },
+    });
   },
 };
 

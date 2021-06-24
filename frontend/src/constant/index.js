@@ -44,9 +44,10 @@ export const ROUTES = {
   LOGIN: '/login',
   REGISTER: '/register',
   FORGOT_PASSWORD: '/forgot-password',
+  LOGOUT: '/logout',
   IPA: '/IPA',
   CONTRIBUTION: '/contribution',
-  LOGOUT: '/logout',
+  FLASHCARD: '/flashcard',
   GAMES: {
     HOME: '/games',
     CORRECT_WORD: '/games/correct-word',

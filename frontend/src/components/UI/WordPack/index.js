@@ -4,14 +4,13 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Grid from '@material-ui/core/Grid';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import PlayIcon from '@material-ui/icons/PlayCircleFilledWhite';
 import SelectCustom from 'components/UI/SelectCustom';
 import { WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
 import { TOPIC_OPTIONS } from 'constant/topics';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
+import TopicSelect from '../TopicSelect';
 import useStyle from './style';
 
 const formId = 'wordPackForm';
@@ -20,9 +19,19 @@ function addAllOption(optionList = []) {
   return [{ value: '-1', label: 'Tất cả' }, ...optionList];
 }
 
-function WordPack({ onChoose, open }) {
+function WordPack({
+  onChoose,
+  open,
+  topicMultiples,
+  title,
+  okBtnText,
+  cancelBtnText,
+  okBtnProps,
+  cancelBtnProps,
+}) {
   const classes = useStyle();
   const history = useHistory();
+  const topics = useRef([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +41,7 @@ function WordPack({ onChoose, open }) {
       topic = target.topic?.value || '-1',
       level = target.level?.value || '-1';
 
-    onChoose({ type, specialty, level, topic });
+    onChoose({ type, specialty, level, topic, topics: topics.current });
   };
 
   const handleGoBack = () => {
@@ -46,9 +55,7 @@ function WordPack({ onChoose, open }) {
       fullWidth
       disableBackdropClick
       open={open}>
-      <DialogTitle classes={{ root: classes.title }}>
-        Lựa chọn gói từ vựng
-      </DialogTitle>
+      <DialogTitle classes={{ root: classes.title }}>{title}</DialogTitle>
 
       <DialogContent dividers classes={{ dividers: classes.breakLine }}>
         <form id={formId} onSubmit={handleSubmit}>
@@ -77,14 +84,25 @@ function WordPack({ onChoose, open }) {
                 inputProps={{ name: 'specialty' }}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
-              <SelectCustom
-                label="Chủ đề"
-                className="w-100"
-                options={addAllOption(TOPIC_OPTIONS)}
-                inputProps={{ name: 'topic' }}
+
+            {topicMultiples ? (
+              <TopicSelect
+                onChange={(topicList) => (topics.current = topicList)}
+                buttonWrapper={(props) => (
+                  <Grid {...props} item xs={12} md={6} />
+                )}
+                tagsWrapper={(props) => <Grid {...props} item xs={12} />}
               />
-            </Grid>
+            ) : (
+              <Grid item xs={12} md={6}>
+                <SelectCustom
+                  label="Chủ đề"
+                  className="w-100"
+                  options={addAllOption(TOPIC_OPTIONS)}
+                  inputProps={{ name: 'topic' }}
+                />
+              </Grid>
+            )}
           </Grid>
         </form>
       </DialogContent>
@@ -93,9 +111,9 @@ function WordPack({ onChoose, open }) {
         <Button
           onClick={handleGoBack}
           className="_btn _btn-outlined-stand"
-          startIcon={<ArrowBackIcon />}
-          variant="outlined">
-          Quay lại
+          variant="outlined"
+          {...cancelBtnProps}>
+          {cancelBtnText}
         </Button>
         <Button
           autoFocus
@@ -104,9 +122,9 @@ function WordPack({ onChoose, open }) {
           type="submit"
           form={formId}
           className="_btn _btn-primary"
-          endIcon={<PlayIcon />}
-          variant="contained">
-          Bắt đầu
+          variant="contained"
+          {...okBtnProps}>
+          {okBtnText}
         </Button>
       </DialogActions>
     </Dialog>
@@ -116,11 +134,23 @@ function WordPack({ onChoose, open }) {
 WordPack.propTypes = {
   onChoose: PropTypes.func,
   open: PropTypes.bool,
+  topicMultiples: PropTypes.bool,
+  title: PropTypes.string,
+  okBtnText: PropTypes.string,
+  cancelBtnText: PropTypes.string,
+  okBtnProps: PropTypes.object,
+  cancelBtnProps: PropTypes.object,
 };
 
 WordPack.defaultProps = {
   onChoose: function () {},
   open: true,
+  topicMultiples: true,
+  title: 'Gói từ vựng',
+  okBtnText: 'Ok',
+  cancelBtnText: 'Đóng',
+  okBtnProps: {},
+  cancelBtnProps: {},
 };
 
 export default WordPack;

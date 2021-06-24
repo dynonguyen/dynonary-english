@@ -11,7 +11,7 @@ import Search from '@material-ui/icons/Search';
 import SettingsIcon from '@material-ui/icons/Settings';
 import defaultUserImg from 'assets/images/default-user.png';
 import logoUrl from 'assets/images/logo.png';
-import NativeInput from 'components/UI/NativeInput';
+import SearchInputCustom from 'components/UI/SearchInputCustom';
 import { ROUTES } from 'constant';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -85,7 +85,7 @@ function Navigation() {
 
             {/* Search bar */}
             <div className="mr-5">
-              <NativeInput
+              <SearchInputCustom
                 placeholder="Nhập từ khoá ..."
                 showInput={isXsDevice || showInput}
                 prefixIcon={

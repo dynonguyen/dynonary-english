@@ -46,7 +46,7 @@ const FEATURE_LIST = [
     subTitle:
       'Flashcard phương pháp học từ vựng nổi tiếng. Nay hoàn toàn miễn phí trên Dynonary',
     imgUrl: flashcardIcon,
-    to: '/',
+    to: ROUTES.FLASHCARD,
   },
   {
     title: 'Từ điển trong Dynonary',

@@ -1,10 +1,12 @@
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import PlayIcon from '@material-ui/icons/PlayCircleFilledWhite';
 import gameApi from 'apis/gameApi';
 import GlobalLoading from 'components/UI/GlobalLoading';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setMessage } from 'redux/slices/message.slice';
 import CorrectWord from '.';
-import WordPack from '../WordPack';
+import WordPack from '../../UI/WordPack';
 
 function CorrectWordData() {
   // 0 - choose word pack, 1 - get pack, 2 - done
@@ -15,12 +17,12 @@ function CorrectWordData() {
   const getWordPackage = async ({ type, topic, level, specialty }) => {
     try {
       setState(1);
-      const apiRes = await gameApi.getWordPackCWG({
+      const apiRes = await gameApi.getWordPackCWG(
         type,
-        topic,
         level,
         specialty,
-      });
+        topic,
+      );
       if (apiRes.status === 200) {
         const { wordPack = [] } = apiRes.data;
         if (wordPack.length === 0) {
@@ -58,7 +60,16 @@ function CorrectWordData() {
   return (
     <>
       {state === 0 ? (
-        <WordPack open={true} onChoose={getWordPackage} />
+        <WordPack
+          open={true}
+          onChoose={getWordPackage}
+          topicMultiples={false}
+          title="Lựa chọn gói từ vựng"
+          okBtnText="Bắt đầu"
+          cancelBtnText="Quay lại"
+          cancelBtnProps={{ startIcon: <ArrowBackIcon /> }}
+          okBtnProps={{ startIcon: <PlayIcon /> }}
+        />
       ) : state === 1 ? (
         <GlobalLoading title="Đang tải gói câu hỏi ..." />
       ) : (

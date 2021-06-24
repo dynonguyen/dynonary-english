@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import useStyle from './style';
 
-function NativeInput({ placeholder, showInput, prefixIcon }) {
+function SearchInputCustom({ placeholder, showInput, prefixIcon }) {
   const classes = useStyle();
 
   const onSearch = (value) => {
@@ -45,16 +45,16 @@ function NativeInput({ placeholder, showInput, prefixIcon }) {
   );
 }
 
-NativeInput.propTypes = {
+SearchInputCustom.propTypes = {
   placeholder: PropTypes.string,
   prefixIcon: PropTypes.any,
   showInput: PropTypes.bool,
 };
 
-NativeInput.defaultProps = {
+SearchInputCustom.defaultProps = {
   placeholder: '',
   prefixIcon: null,
   showInput: false,
 };
 
-export default NativeInput;
+export default SearchInputCustom;

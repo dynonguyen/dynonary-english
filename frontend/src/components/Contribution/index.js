@@ -7,6 +7,7 @@ import SaveIcon from '@material-ui/icons/Save';
 import wordApi from 'apis/wordApi';
 import InputCustom from 'components/UI/InputCustom';
 import SelectCustom from 'components/UI/SelectCustom';
+import TopicSelect from 'components/UI/TopicSelect';
 import UploadButton from 'components/UI/UploadButton';
 import { MAX, WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
 import { debounce } from 'helper';
@@ -19,8 +20,9 @@ import * as yup from 'yup';
 import InformationTooltip from './InformationTooltip';
 import PhoneticInput from './PhoneticInput';
 import useStyle from './style';
-import TopicSelect from './TopicSelect';
+
 let delayTimer = null;
+
 const schema = yup.object().shape({
   word: yup
     .string()
@@ -91,14 +93,6 @@ function Contribution({ onSubmitForm, submitting }) {
 
   const onSubmit = (data) => {
     onSubmitForm({ ...data, topics: topics.current, picture: picture.current });
-  };
-
-  const onTopicChange = (id, isActive) => {
-    if (isActive) {
-      topics.current.push(id);
-    } else {
-      topics.current = topics.current.filter((i) => i !== id);
-    }
   };
 
   const onResetForm = () => {
@@ -352,7 +346,13 @@ function Contribution({ onSubmitForm, submitting }) {
             </Grid>
 
             {/* word topics */}
-            <TopicSelect onChange={onTopicChange} resetFlag={resetFlag} />
+            <TopicSelect
+              onChange={(topicList) => (topics.current = topicList)}
+              resetFlag={resetFlag}
+              buttonTitle="Thêm chủ đề"
+              buttonWrapper={(props) => <Grid {...props} item xs={12} md={4} />}
+              tagsWrapper={(props) => <Grid {...props} item xs={12} />}
+            />
           </Grid>
 
           <div className="dyno-break"></div>
