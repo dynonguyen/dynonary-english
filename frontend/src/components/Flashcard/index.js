@@ -1,3 +1,4 @@
+import Grow from '@material-ui/core/Grow';
 import Tooltip from '@material-ui/core/Tooltip';
 import CollectionsIcon from '@material-ui/icons/Collections';
 import SettingsIcon from '@material-ui/icons/Settings';
@@ -8,19 +9,20 @@ import React, { useState } from 'react';
 import GalleryList from './GalleryList';
 import useStyle from './style';
 
-function Flashcard({ list, wordPackTotal }) {
+function Flashcard({
+  list,
+  wordPackTotal,
+  currentPage,
+  onNextPage,
+  onPrevPage,
+}) {
   const classes = useStyle();
   const [mode, setMode] = useState(0); // 0 - gallery, 1 - slide show
   const [openWordPack, setOpenWordPack] = useState(false);
-  const [galleryPage, setGalleryPage] = useState(1);
 
   const onChangeWordPack = (packInfo) => {
     console.log(packInfo);
   };
-
-  const handleGalleryPrev = () => {};
-
-  const handleGalleryNext = () => {};
 
   return (
     <div className="container my-10">
@@ -62,10 +64,10 @@ function Flashcard({ list, wordPackTotal }) {
       {mode === 0 ? (
         <GalleryList
           list={list}
-          onPrev={handleGalleryPrev}
-          onNext={handleGalleryNext}
+          onPrev={onPrevPage}
+          onNext={onNextPage}
           total={wordPackTotal}
-          current={galleryPage}
+          current={currentPage}
         />
       ) : (
         <>Slide carousel</>
@@ -77,11 +79,15 @@ function Flashcard({ list, wordPackTotal }) {
 Flashcard.propTypes = {
   list: PropTypes.array,
   wordPackTotal: PropTypes.number,
+  currentPage: PropTypes.number,
+  onNextPage: PropTypes.func,
+  onPrevPage: PropTypes.func,
 };
 
 Flashcard.defaultProps = {
   list: [],
   wordPackTotal: 0,
+  currentPage: 0,
 };
 
 export default Flashcard;

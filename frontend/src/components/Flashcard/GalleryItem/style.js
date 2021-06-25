@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { cloudinaryImgOptimize } from 'helper';
 
 export default makeStyles((theme) => ({
   root: {
@@ -16,7 +17,8 @@ export default makeStyles((theme) => ({
     },
 
     '& .bg': {
-      backgroundImage: (props) => `url("${props.picture}")`,
+      backgroundImage: (props) =>
+        `url("${cloudinaryImgOptimize(props.picture, -1, 288)}")`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
