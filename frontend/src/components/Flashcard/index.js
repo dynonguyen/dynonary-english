@@ -1,13 +1,20 @@
 import Tooltip from '@material-ui/core/Tooltip';
-import CollectionsIcon from '@material-ui/icons/Collections';
+import HelpIcon from '@material-ui/icons/Help';
 import SettingsIcon from '@material-ui/icons/Settings';
 import CarouselIcon from '@material-ui/icons/ViewCarousel';
+import CollectionsIcon from '@material-ui/icons/ViewQuilt';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import TooltipCustom from 'components/UI/TooltipCustom';
 import WordPack from 'components/UI/WordPack';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import CardItem from './CardItem';
 import GalleryList from './GalleryList';
+import SlideShow from './SlideShow';
 import useStyle from './style';
+
+const perPage = 7;
+const tutorial =
+  'Có 2 chế độ xem là gallery và slide. Bấm nút mũi tên hoặc sử dụng phím mũi tên bàn phím để chuyển trang.';
 
 function Flashcard({
   list,
@@ -33,11 +40,15 @@ function Flashcard({
             />
           </Tooltip>
 
-          <Tooltip title="Chế độ slide show" placement="bottom">
+          <Tooltip title="Chế độ thẻ đơn" placement="bottom">
             <CarouselIcon
               onClick={() => setMode(1)}
               className={`${classes.icon} ${mode === 1 ? 'active' : ''}`}
             />
+          </Tooltip>
+
+          <Tooltip title="Xem nghĩa của từ" placement="bottom">
+            <VisibilityIcon className={classes.icon} />
           </Tooltip>
 
           <Tooltip title="Cài đặt gói từ vựng" placement="bottom">
@@ -46,6 +57,10 @@ function Flashcard({
               onClick={() => setOpenWordPack(true)}
             />
           </Tooltip>
+
+          <TooltipCustom title={tutorial} placement="bottom">
+            <HelpIcon className={classes.icon} />
+          </TooltipCustom>
         </div>
       </div>
       <div className="dyno-break" />
@@ -73,7 +88,12 @@ function Flashcard({
         />
       ) : (
         <>
-          <CardItem />
+          <SlideShow
+            list={list}
+            total={wordPackTotal * perPage}
+            onGetNewList={onNextPage}
+            onGetOldList={onPrevPage}
+          />
         </>
       )}
     </div>

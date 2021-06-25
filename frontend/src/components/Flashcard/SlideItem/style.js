@@ -2,10 +2,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { cloudinaryImgOptimize } from 'helper';
 
 export default makeStyles((theme) => ({
-  wrapper: {
-    height: 'calc(100vh - 20rem)',
-  },
-
   root: {
     display: 'grid',
     gridTemplateColumns: '1fr',

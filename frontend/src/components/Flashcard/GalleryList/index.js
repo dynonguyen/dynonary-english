@@ -1,6 +1,4 @@
 import Tooltip from '@material-ui/core/Tooltip';
-import PrevIcon from '@material-ui/icons/ArrowBackIos';
-import NextIcon from '@material-ui/icons/ArrowForwardIos';
 import Skeleton from '@material-ui/lab/Skeleton';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -22,18 +20,12 @@ function GalleryList({ list, onPrev, onNext, total, current }) {
           {/* navigation arrow */}
           {current > 1 && (
             <Tooltip title="Lùi trang cũ">
-              <PrevIcon
-                className={`${classes.arrowIcon} prev`}
-                onClick={onPrev}
-              />
+              <span className="nav-arrow prev" onClick={onPrev} />
             </Tooltip>
           )}
           {current < total && (
             <Tooltip title="Trang kế tiếp">
-              <NextIcon
-                className={`${classes.arrowIcon} next`}
-                onClick={onNext}
-              />
+              <span className="nav-arrow next" onClick={onNext} />
             </Tooltip>
           )}
         </>

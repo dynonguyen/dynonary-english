@@ -242,3 +242,36 @@
     }
   }
 }
+
+// arrow navigation
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  opacity: 0.2;
+  z-index: 99;
+  cursor: pointer;
+
+  width: 0;
+  height: 0;
+
+  border-top: 1.8rem solid transparent;
+  border-bottom: 1.8rem solid transparent;
+
+  transition: all 0.25s;
+  &:hover,
+  &:active {
+    opacity: 0.8;
+  }
+
+  &.prev {
+    left: 0;
+    border-right: 1.8rem solid var(--primary-color);
+  }
+
+  &.next {
+    right: 0;
+    border-left: 1.8rem solid var(--primary-color);
+  }
+}

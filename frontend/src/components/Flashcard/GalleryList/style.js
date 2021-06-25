@@ -41,24 +41,4 @@ export default makeStyles((theme) => ({
       },
     },
   },
-
-  arrowIcon: {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    color: 'var(--secondary-color)',
-    opacity: 0.3,
-    fontSize: '4rem',
-    zIndex: 3,
-    cursor: 'pointer',
-
-    '&.prev': {
-      left: 0,
-    },
-
-    '&.next': {
-      right: 0,
-      transform: 'translate(1rem,-50%)',
-    },
-  },
 }));

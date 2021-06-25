@@ -1,23 +1,16 @@
-import React, { useState } from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
 import InfoIcon from '@material-ui/icons/Info';
+import TooltipCustom from 'components/UI/TooltipCustom';
 import PropTypes from 'prop-types';
+import React from 'react';
 import useStyle from './style';
 
 function InformationTooltip({ title }) {
   const classes = useStyle();
-  // Fix issue show tooltip when use mobile
-  const [openTooltip, setOpenTooltip] = useState(false);
 
   return (
-    <Tooltip title={title} open={openTooltip} className="cur-help">
-      <InfoIcon
-        className={classes.tooltipIcon}
-        onMouseEnter={() => setOpenTooltip(true)}
-        onMouseLeave={() => setOpenTooltip(false)}
-        onClick={() => setOpenTooltip(!openTooltip)}
-      />
-    </Tooltip>
+    <TooltipCustom title={title} className="cur-help">
+      <InfoIcon className={classes.tooltipIcon} />
+    </TooltipCustom>
   );
 }
 
