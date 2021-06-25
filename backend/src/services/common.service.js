@@ -1,4 +1,5 @@
 const { cloudinary } = require('../configs/cloudinary.config');
+const { convertPackInfoToQueryStr } = require('../helper/word-pack.helper');
 const WordModel = require('../models/word.model');
 
 exports.uploadImage = async (imgSrc, folderName = '', config = {}) => {
@@ -31,26 +32,14 @@ exports.getWordPack = async (
   skip = 0,
   limit = 500,
   select = '',
+  expandQuery = null,
 ) => {
   try {
-    const { topics, ...restPackInfo } = packInfo;
-    const topicList = typeof topics === 'string' ? JSON.parse(topics) : topics;
+    let query = convertPackInfoToQueryStr(packInfo);
 
-    // generate query string
-    let query = {};
-    for (let key in restPackInfo) {
-      if (packInfo[key] !== '-1') {
-        query[key] = packInfo[key];
-      }
-    }
-
-    if (topicList.length > 0) {
-      let orList = [];
-      topicList.forEach((topic) =>
-        orList.push({ topics: { $elemMatch: { $eq: topic } } }),
-      );
-      console.log(orList);
-      query['$or'] = orList;
+    // add expand query
+    if (expandQuery && typeof expandQuery === 'object') {
+      Object.assign(query, expandQuery);
     }
 
     const packList = await WordModel.find(query)
@@ -59,6 +48,15 @@ exports.getWordPack = async (
       .select(select);
 
     return packList;
+  } catch (error) {
+    throw error;
+  }
+};
+
+exports.countWordPack = async (packInfo = {}) => {
+  try {
+    let query = convertPackInfoToQueryStr(packInfo);
+    return await WordModel.countDocuments(query);
   } catch (error) {
     throw error;
   }

@@ -52,6 +52,7 @@ const wordSchema = new Schema({
   picture: {
     type: String,
     trim: true,
+    default: null,
   },
 
   specialty: {

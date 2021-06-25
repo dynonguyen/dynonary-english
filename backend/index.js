@@ -15,6 +15,8 @@ const corsConfig = require('./src/configs/cors.config');
 const accountApi = require('./src/apis/account.api');
 const wordApi = require('./src/apis/word.api');
 const gameApi = require('./src/apis/game.api');
+const flashcardApi = require('./src/apis/flashcard.api');
+const commonApi = require('./src/apis/common.api');
 
 // ================== set port ==================
 const app = express();
@@ -68,6 +70,8 @@ const BASE_URL = '/apis';
 app.use(`${BASE_URL}/account`, accountApi);
 app.use(`${BASE_URL}/word`, wordApi);
 app.use(`${BASE_URL}/games`, gameApi);
+app.use(`${BASE_URL}/flashcard`, flashcardApi);
+app.use(`${BASE_URL}/common`, commonApi);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/src/build', 'index.html'));

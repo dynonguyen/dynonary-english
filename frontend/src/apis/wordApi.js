@@ -10,12 +10,6 @@ const wordApi = {
   getCheckWordExistence: (word, type) => {
     return axiosClient.get(`${URL}/exist`, { params: { word, type } });
   },
-
-  getWordPackByPage: (page = 1, perPage = 8, wordInfo) => {
-    return axiosClient.get(`${URL}/word-pack-by-page`, {
-      params: { page, perPage, wordInfo },
-    });
-  },
 };
 
 export default wordApi;
