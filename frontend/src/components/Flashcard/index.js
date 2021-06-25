@@ -5,6 +5,7 @@ import CarouselIcon from '@material-ui/icons/ViewCarousel';
 import WordPack from 'components/UI/WordPack';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import CardItem from './CardItem';
 import GalleryList from './GalleryList';
 import useStyle from './style';
 
@@ -17,7 +18,7 @@ function Flashcard({
   onWordPackChange,
 }) {
   const classes = useStyle();
-  const [mode, setMode] = useState(0); // 0 - gallery, 1 - slide show
+  const [mode, setMode] = useState(1); // 0 - gallery, 1 - slide show
   const [openWordPack, setOpenWordPack] = useState(false);
 
   return (
@@ -71,7 +72,9 @@ function Flashcard({
           current={currentPage}
         />
       ) : (
-        <>Slide carousel</>
+        <>
+          <CardItem />
+        </>
       )}
     </div>
   );

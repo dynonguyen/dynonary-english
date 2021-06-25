@@ -20,11 +20,11 @@ function GalleryItem({ word, mean, phonetic, type, picture }) {
       onClick={handleSpeakWord}>
       <div className="bg" />
       <div className={classes.content}>
+        <h2 className={classes.mean}>{mean}</h2>
         <h2 className={classes.word}>{word}</h2>
         <p className={classes.phonetic}>
           /{phonetic}/ ({type})
         </p>
-        <h2 className={classes.mean}>{mean}</h2>
       </div>
     </div>
   );

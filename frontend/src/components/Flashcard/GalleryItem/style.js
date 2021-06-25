@@ -46,10 +46,20 @@ export default makeStyles((theme) => ({
     },
   },
 
+  mean: {
+    fontSize: '1.8rem',
+    fontWeight: 'bold',
+
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.7rem',
+    },
+  },
+
   word: {
-    fontSize: '1.6rem',
+    fontSize: '1.7rem',
     fontWeight: 500,
     letterSpacing: '1px',
+    margin: '0.2rem 0',
 
     [theme.breakpoints.up('md')]: {
       fontSize: '2.2rem',
@@ -59,20 +69,10 @@ export default makeStyles((theme) => ({
   phonetic: {
     fontSize: '1.4rem',
     letterSpacing: '1px',
-    margin: '0.2rem 0',
     fontStyle: 'italic',
 
     [theme.breakpoints.up('md')]: {
       fontSize: '1.5rem',
-    },
-  },
-
-  mean: {
-    fontSize: '1.5rem',
-    fontWeight: 500,
-
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.7rem',
     },
   },
 }));
