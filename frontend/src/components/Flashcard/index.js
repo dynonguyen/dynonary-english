@@ -26,7 +26,7 @@ function Flashcard({
   onWordPackChange,
 }) {
   const classes = useStyle();
-  const [mode, setMode] = useState(1); // 0 - gallery, 1 - slide show
+  const [mode, setMode] = useState(0); // 0 - gallery, 1 - slide show
   const [isShowMean, setIsShowMean] = useState(false);
   const [openWordPack, setOpenWordPack] = useState(false);
 

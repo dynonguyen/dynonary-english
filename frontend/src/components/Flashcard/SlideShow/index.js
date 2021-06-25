@@ -1,7 +1,7 @@
 import Tooltip from '@material-ui/core/Tooltip';
 import Skeleton from '@material-ui/lab/Skeleton';
 import PropTypes from 'prop-types';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SlideItem from '../SlideItem';
 import useStyle from './style';
 
@@ -9,6 +9,7 @@ function SlideShow({ list, total, onGetNewList, onGetOldList, showMean }) {
   const classes = useStyle();
   const [current, setCurrent] = useState(0);
   const count = useRef(0); // count all item current
+
   const onPrev = () => {
     if (current !== 0) {
       setCurrent(current - 1);
@@ -18,17 +19,28 @@ function SlideShow({ list, total, onGetNewList, onGetOldList, showMean }) {
     }
     count.current--;
   };
+
   const onNext = () => {
     if (current < list.length - 1) {
       setCurrent(current + 1);
-      if (current + 1 === list.length - 1) {
-        onGetNewList();
-      }
     } else {
+      onGetNewList();
       setCurrent(0);
     }
     count.current++;
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      onNext();
+    }, 15000);
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  });
 
   return (
     <div className={`${classes.wrapper} flex-center--ver position-rel`}>
