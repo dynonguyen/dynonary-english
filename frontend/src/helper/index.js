@@ -9,6 +9,16 @@ export const debounce = (timer = null, cbFn, delay = 350) => {
   return setTimeout(cbFn, delay);
 };
 
+// compare 2 arrays
+export const equalArray = (a, b) => {
+  return (
+    Array.isArray(a) &&
+    Array.isArray(b) &&
+    a.length === b.length &&
+    a.every((val, index) => val === b[index])
+  );
+};
+
 // get current root palettes
 function getRootPalettes() {
   let palettes = [];

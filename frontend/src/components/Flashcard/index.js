@@ -1,4 +1,3 @@
-import Grow from '@material-ui/core/Grow';
 import Tooltip from '@material-ui/core/Tooltip';
 import CollectionsIcon from '@material-ui/icons/Collections';
 import SettingsIcon from '@material-ui/icons/Settings';
@@ -15,14 +14,11 @@ function Flashcard({
   currentPage,
   onNextPage,
   onPrevPage,
+  onWordPackChange,
 }) {
   const classes = useStyle();
   const [mode, setMode] = useState(0); // 0 - gallery, 1 - slide show
   const [openWordPack, setOpenWordPack] = useState(false);
-
-  const onChangeWordPack = (packInfo) => {
-    console.log(packInfo);
-  };
 
   return (
     <div className="container my-10">
@@ -53,13 +49,18 @@ function Flashcard({
       </div>
       <div className="dyno-break" />
 
-      <WordPack
-        open={openWordPack}
-        topicMultiples={true}
-        onCancel={() => setOpenWordPack(false)}
-        cancelBtnText="Đóng"
-        onChoose={onChangeWordPack}
-      />
+      {openWordPack && (
+        <WordPack
+          open={true}
+          topicMultiples={true}
+          onCancel={() => setOpenWordPack(false)}
+          cancelBtnText="Đóng"
+          onChoose={(packInfo) => {
+            onWordPackChange(packInfo);
+            setOpenWordPack(false);
+          }}
+        />
+      )}
 
       {mode === 0 ? (
         <GalleryList
@@ -82,6 +83,7 @@ Flashcard.propTypes = {
   currentPage: PropTypes.number,
   onNextPage: PropTypes.func,
   onPrevPage: PropTypes.func,
+  onWordPackChange: PropTypes.func,
 };
 
 Flashcard.defaultProps = {

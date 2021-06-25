@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
       width: '100%',
       height: '100%',
 
-      backgroundColor: 'rgba(0,0,0,0.35)',
+      backgroundColor: 'rgba(0,0,0,0.45)',
       zIndex: 1,
     },
 
