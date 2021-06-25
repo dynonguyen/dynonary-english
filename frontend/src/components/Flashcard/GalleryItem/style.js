@@ -49,9 +49,10 @@ export default makeStyles((theme) => ({
   mean: {
     fontSize: '1.8rem',
     fontWeight: 'bold',
+    textTransform: 'capitalize',
 
     [theme.breakpoints.up('md')]: {
-      fontSize: '1.7rem',
+      fontSize: '2.2rem',
     },
   },
 
@@ -60,9 +61,10 @@ export default makeStyles((theme) => ({
     fontWeight: 500,
     letterSpacing: '1px',
     margin: '0.2rem 0',
+    textTransform: 'capitalize',
 
     [theme.breakpoints.up('md')]: {
-      fontSize: '2.2rem',
+      fontSize: '2rem',
     },
   },
 

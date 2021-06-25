@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import useStyle from './style';
 
-function GalleryItem({ word, mean, phonetic, type, picture }) {
+function GalleryItem({ word, mean, phonetic, type, picture, showMean }) {
   const classes = useStyle({ picture });
   const { voice, speed, volume } = useSpeaker();
 
@@ -20,7 +20,7 @@ function GalleryItem({ word, mean, phonetic, type, picture }) {
       onClick={handleSpeakWord}>
       <div className="bg" />
       <div className={classes.content}>
-        <h2 className={classes.mean}>{mean}</h2>
+        {showMean && <h2 className={classes.mean}>{mean}</h2>}
         <h2 className={classes.word}>{word}</h2>
         <p className={classes.phonetic}>
           /{phonetic}/ ({type})
@@ -33,9 +33,10 @@ function GalleryItem({ word, mean, phonetic, type, picture }) {
 GalleryItem.propTypes = {
   mean: PropTypes.string,
   phonetic: PropTypes.string,
-  word: PropTypes.string,
-  type: PropTypes.string,
   picture: PropTypes.string,
+  showMean: PropTypes.bool,
+  type: PropTypes.string,
+  word: PropTypes.string,
 };
 
 GalleryItem.defaultProps = {

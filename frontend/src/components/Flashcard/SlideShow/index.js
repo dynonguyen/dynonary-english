@@ -5,7 +5,7 @@ import React, { useRef, useState } from 'react';
 import SlideItem from '../SlideItem';
 import useStyle from './style';
 
-function SlideShow({ list, total, onGetNewList, onGetOldList }) {
+function SlideShow({ list, total, onGetNewList, onGetOldList, showMean }) {
   const classes = useStyle();
   const [current, setCurrent] = useState(0);
   const count = useRef(0); // count all item current
@@ -34,7 +34,11 @@ function SlideShow({ list, total, onGetNewList, onGetOldList }) {
     <div className={`${classes.wrapper} flex-center--ver position-rel`}>
       {list && list.length > 0 ? (
         <>
-          <SlideItem {...list[current]} example={list[current]?.examples[0]} />
+          <SlideItem
+            {...list[current]}
+            example={list[current]?.examples[0]}
+            showMean={showMean}
+          />
 
           {/* navigation arrow */}
           {count.current > 0 && (
@@ -64,6 +68,7 @@ SlideShow.propTypes = {
   list: PropTypes.array,
   onGetNewList: PropTypes.func,
   onGetOldList: PropTypes.func,
+  showMean: PropTypes.bool,
   total: PropTypes.number,
 };
 

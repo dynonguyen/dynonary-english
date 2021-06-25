@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     gridTemplateRows: '45% 55%',
 
     height: '100%',
-    maxWidth: '90%',
+    width: '100%',
     margin: '2.2rem auto 0',
 
     boxShadow: 'var(--box-shadow)',
@@ -20,7 +20,6 @@ export default makeStyles((theme) => ({
       gridTemplateColumns: '4fr 6fr',
       gridTemplateRows: '1fr',
 
-      maxWidth: '100%',
       width: '100%',
       margin: '0',
       maxHeight: '576px',

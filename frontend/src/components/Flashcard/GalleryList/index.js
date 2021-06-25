@@ -5,7 +5,7 @@ import React from 'react';
 import GalleryItem from '../GalleryItem';
 import useStyle from './style';
 
-function GalleryList({ list, onPrev, onNext, total, current }) {
+function GalleryList({ list, onPrev, onNext, total, current, showMean }) {
   const classes = useStyle();
 
   return (
@@ -14,7 +14,7 @@ function GalleryList({ list, onPrev, onNext, total, current }) {
         <>
           {/* gallery */}
           {list.slice(0, 7).map((item, index) => (
-            <GalleryItem key={index} {...item} />
+            <GalleryItem key={index} {...item} showMean={showMean} />
           ))}
 
           {/* navigation arrow */}
@@ -47,11 +47,12 @@ function GalleryList({ list, onPrev, onNext, total, current }) {
 }
 
 GalleryList.propTypes = {
-  list: PropTypes.array,
-  onPrev: PropTypes.func,
-  onNext: PropTypes.func,
-  total: PropTypes.number,
   current: PropTypes.number,
+  list: PropTypes.array,
+  onNext: PropTypes.func,
+  onPrev: PropTypes.func,
+  showMean: PropTypes.bool,
+  total: PropTypes.number,
 };
 
 GalleryList.defaultProps = {

@@ -132,15 +132,15 @@ function WordPack({
 }
 
 WordPack.propTypes = {
-  onChoose: PropTypes.func,
-  onCancel: PropTypes.func,
-  open: PropTypes.bool,
-  topicMultiples: PropTypes.bool,
-  title: PropTypes.string,
-  okBtnText: PropTypes.string,
+  cancelBtnProps: PropTypes.object,
   cancelBtnText: PropTypes.string,
   okBtnProps: PropTypes.object,
-  cancelBtnProps: PropTypes.object,
+  okBtnText: PropTypes.string,
+  onCancel: PropTypes.func,
+  onChoose: PropTypes.func,
+  open: PropTypes.bool,
+  title: PropTypes.string,
+  topicMultiples: PropTypes.bool,
 };
 
 WordPack.defaultProps = {

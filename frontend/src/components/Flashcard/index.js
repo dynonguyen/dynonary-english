@@ -4,6 +4,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import CarouselIcon from '@material-ui/icons/ViewCarousel';
 import CollectionsIcon from '@material-ui/icons/ViewQuilt';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import TooltipCustom from 'components/UI/TooltipCustom';
 import WordPack from 'components/UI/WordPack';
 import PropTypes from 'prop-types';
@@ -26,12 +27,13 @@ function Flashcard({
 }) {
   const classes = useStyle();
   const [mode, setMode] = useState(1); // 0 - gallery, 1 - slide show
+  const [isShowMean, setIsShowMean] = useState(false);
   const [openWordPack, setOpenWordPack] = useState(false);
 
   return (
     <div className="container my-10">
       <div className="flex-center-between">
-        <h1 className="dyno-title">Flashcard Gallery</h1>
+        <h1 className="dyno-title">Flashcard</h1>
         <div className={classes.iconWrap}>
           <Tooltip title="Chế độ bộ sưu tập" placement="bottom">
             <CollectionsIcon
@@ -48,7 +50,17 @@ function Flashcard({
           </Tooltip>
 
           <Tooltip title="Xem nghĩa của từ" placement="bottom">
-            <VisibilityIcon className={classes.icon} />
+            {isShowMean ? (
+              <VisibilityOffIcon
+                className={classes.icon}
+                onClick={() => setIsShowMean(false)}
+              />
+            ) : (
+              <VisibilityIcon
+                className={classes.icon}
+                onClick={() => setIsShowMean(true)}
+              />
+            )}
           </Tooltip>
 
           <Tooltip title="Cài đặt gói từ vựng" placement="bottom">
@@ -85,16 +97,16 @@ function Flashcard({
           onNext={onNextPage}
           total={wordPackTotal}
           current={currentPage}
+          showMean={isShowMean}
         />
       ) : (
-        <>
-          <SlideShow
-            list={list}
-            total={wordPackTotal * perPage}
-            onGetNewList={onNextPage}
-            onGetOldList={onPrevPage}
-          />
-        </>
+        <SlideShow
+          list={list}
+          total={wordPackTotal * perPage}
+          onGetNewList={onNextPage}
+          onGetOldList={onPrevPage}
+          showMean={isShowMean}
+        />
       )}
     </div>
   );
