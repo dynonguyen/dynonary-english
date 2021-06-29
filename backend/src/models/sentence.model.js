@@ -23,6 +23,6 @@ const sentenceSchema = new Schema({
   },
 });
 
-const sentenceModel = mongoose.model('sentence', sentenceSchema, 'sentences');
+const SentenceModel = mongoose.model('sentence', sentenceSchema, 'sentences');
 
-module.exports = sentenceModel;
+module.exports = SentenceModel;

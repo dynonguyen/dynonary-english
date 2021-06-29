@@ -5,7 +5,7 @@ import WordContributionData from './Word/data';
 
 function Contribution() {
   const classes = useStyle();
-  const [mode, setMode] = useState(1);
+  const [mode, setMode] = useState(0);
 
   return (
     <div className="container">

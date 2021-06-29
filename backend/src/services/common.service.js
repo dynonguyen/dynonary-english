@@ -1,5 +1,6 @@
 const { cloudinary } = require('../configs/cloudinary.config');
 const { convertPackInfoToQueryStr } = require('../helper/word-pack.helper');
+const SentenceModel = require('../models/sentence.model');
 const WordModel = require('../models/word.model');
 
 exports.uploadImage = async (imgSrc, folderName = '', config = {}) => {
@@ -25,6 +26,12 @@ exports.isExistWord = async (word = '', type = '') => {
   } catch (error) {
     throw error;
   }
+};
+
+exports.isExistSentence = async (sentence = '') => {
+  if (sentence === '') return false;
+  const newRegex = new RegExp(sentence, 'i');
+  return await SentenceModel.exists({ sentence: newRegex });
 };
 
 exports.getWordPack = async (
