@@ -33,6 +33,9 @@ export const MAX = {
   SYNONYMS_WORD_LEN: 100,
   NOTE_WORD_LEN: 100,
   IMG_SIZE: 2, // 2 MB
+  SENTENCE_LEN: 200,
+  SENTENCE_MEAN_LEN: 300,
+  SENTENCE_NOTE_LEN: 100,
 };
 
 export const MIN = {

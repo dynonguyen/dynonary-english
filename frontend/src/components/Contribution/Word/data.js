@@ -2,7 +2,7 @@ import wordApi from 'apis/wordApi';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setMessage } from 'redux/slices/message.slice';
-import Contribution from './index';
+import WordContribution from './index';
 
 const analysisExample = (exampleStr = '', word = '') => {
   if (typeof exampleStr !== 'string' || exampleStr === '') {
@@ -19,7 +19,7 @@ const analysisExample = (exampleStr = '', word = '') => {
   return exampleArr;
 };
 
-function ContributionData() {
+function WordContributionData() {
   const [submitting, setSubmitting] = useState(false);
   const dispatch = useDispatch();
 
@@ -83,7 +83,9 @@ function ContributionData() {
     }
   };
 
-  return <Contribution onSubmitForm={handleSubmit} submitting={submitting} />;
+  return (
+    <WordContribution onSubmitForm={handleSubmit} submitting={submitting} />
+  );
 }
 
-export default ContributionData;
+export default WordContributionData;

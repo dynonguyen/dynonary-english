@@ -30,8 +30,8 @@
 
 // fade
 .ani-fade {
-  -webkit-animation: fadeAni 1s ease-in-out;
-  animation: fadeAni 1s ease-in-out;
+  -webkit-animation: fadeAni 0.45s ease-in-out;
+  animation: fadeAni 0.45s ease-in-out;
 }
 
 @-webkit-keyframes fadeAni {
@@ -49,5 +49,29 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+// collapse
+.ani-zoom {
+  -webkit-animation: zoom 0.35s linear forwards;
+  animation: zoom 0.35s linear forwards;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: none;
   }
 }

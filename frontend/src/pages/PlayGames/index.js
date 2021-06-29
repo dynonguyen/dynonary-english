@@ -9,6 +9,7 @@ import vipIcon from 'assets/icons/games/vip.png';
 import wordMatchingIcon from 'assets/icons/games/word-matching.png';
 import FeatureBox from 'components/FeatureBox';
 import { ROUTES } from 'constant';
+import useScrollTop from 'hooks/useScrollTop';
 import useTitle from 'hooks/useTitle';
 import React from 'react';
 
@@ -74,6 +75,7 @@ const GAME_LIST = [
 
 function PlayGamesPage() {
   useTitle('Game');
+  useScrollTop();
 
   return (
     <div className="container my-10">

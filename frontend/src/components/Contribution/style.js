@@ -2,46 +2,33 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   root: {
-    margin: '2.4rem 0',
-    padding: '2.8rem 3.6rem',
-    boxShadow: 'var(--box-shadow)',
-    borderRadius: 'var(--border-radius)',
-    backgroundColor: 'var(--bg-color-sec)',
-
-    [theme.breakpoints.up('md')]: {
-      margin: '6.4rem 0',
-    },
+    margin: '3.2rem 0',
   },
 
-  title: {
-    color: 'var(--title-color)',
-    textTransform: 'capitalize',
-    fontSize: '2.8rem',
-    marginBottom: '1.2rem',
-  },
-
-  grid: {
+  tabs: {
     marginTop: '2.4rem',
-    marginBottom: '2.4rem',
+    marginBottom: '3.6rem',
+    display: 'flex',
+    borderBottom: 'solid 1px var(--input-border-color)',
   },
 
-  tooltipIcon: {
-    fontSize: '1.6rem',
+  tab: {
+    padding: '1.2rem 2.4rem',
     color: 'var(--label-color)',
-  },
+    cursor: 'pointer',
 
-  btn: {
-    marginLeft: '1rem',
-    textTransform: 'none',
-    minWidth: '14rem',
-  },
+    textAlign: 'center',
+    fontSize: '1.6rem',
+    textTransform: 'uppercase',
+    fontWeight: 700,
 
-  btnReset: {
-    borderColor: 'var(--accent-color) !important',
-    color: 'var(--accent-color) !important',
+    transition: 'all 0.25s',
 
-    '&:hover, &:active': {
-      filter: 'brightness(0.85)',
+    '&.active': {
+      backgroundColor: 'var(--primary-color)',
+      borderTopLeftRadius: 6,
+      borderTopRightRadius: 6,
+      color: '#fff',
     },
   },
 }));
