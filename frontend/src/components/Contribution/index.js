@@ -325,8 +325,9 @@ function Contribution({ onSubmitForm, submitting }) {
               <InputCustom
                 className="w-100"
                 label="Ghi chú"
+                multiline
                 endAdornment={
-                  <InformationTooltip title="Nhập thêm ghi chú mà bạn muốn cho từ" />
+                  <InformationTooltip title="Nhập thêm ghi chú mà bạn muốn cho từ. Thêm nhiều dòng bằng cách xuống dòng." />
                 }
                 error={Boolean(errors.note)}
                 inputProps={{
