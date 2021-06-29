@@ -74,6 +74,10 @@ const schema = yup.object().shape({
     .max(MAX.NOTE_WORD_LEN, `Ghi chú tối đa ${MAX.NOTE_WORD_LEN} ký tự`),
 });
 
+// Prevent unmount component topic select
+const ButtonWrapper = (props) => <Grid {...props} item xs={12} md={4} />;
+const TagsWrapper = (props) => <Grid {...props} item xs={12} />;
+
 function Contribution({ onSubmitForm, submitting }) {
   const classes = useStyle();
   const [resetFlag, setResetFlag] = useState(0);
@@ -350,8 +354,8 @@ function Contribution({ onSubmitForm, submitting }) {
               onChange={(topicList) => (topics.current = topicList)}
               resetFlag={resetFlag}
               buttonTitle="Thêm chủ đề"
-              buttonWrapper={(props) => <Grid {...props} item xs={12} md={4} />}
-              tagsWrapper={(props) => <Grid {...props} item xs={12} />}
+              buttonWrapper={ButtonWrapper}
+              tagsWrapper={TagsWrapper}
             />
           </Grid>
 

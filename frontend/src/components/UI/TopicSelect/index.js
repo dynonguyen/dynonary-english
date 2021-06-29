@@ -5,7 +5,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Tag from 'components/UI/Tag';
 import { TOPICS } from 'constant/topics';
 import PropTypes from 'prop-types';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useStyle from './style';
 
 function TopicSelect({
@@ -32,6 +32,13 @@ function TopicSelect({
 
     onChange(topics.current);
   };
+
+  useEffect(() => {
+    if (!resetFlag) return;
+    // reset value if parent component reset, except first render
+    topics.current = [];
+  }, [resetFlag]);
+
   return (
     <>
       <ButtonWrapper>

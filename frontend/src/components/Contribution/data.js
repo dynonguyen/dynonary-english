@@ -55,6 +55,7 @@ function ContributionData() {
         antonyms: antonymArr,
         word,
       };
+
       const apiRes = await wordApi.postContributeWord(dataSend);
 
       if (apiRes.status === 200) {
