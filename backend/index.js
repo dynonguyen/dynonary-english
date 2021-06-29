@@ -27,6 +27,7 @@ const PORT = normalizePort(process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, '/src/build')));
 
 const dev = app.get('env') !== 'production';
+
 if (!dev) {
   app.disable('x-powered-by');
   app.use(morgan('common'));

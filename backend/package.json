@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js --inspect",
-    "test": "SET NODE_ENV=production && nodemon index.js",
-    "deploy": "vercel --prod"
+    "test": "SET NODE_ENV=production&&node index.js"
   },
   "author": "Tuan Nguyen",
   "license": "ISC",

@@ -46,7 +46,7 @@ function FlashcardData() {
               }),
             );
           }
-          setTotal(Math.ceil(total / perPage));
+          setTotal(total);
         }
       } catch (error) {
         setTotal(0);
@@ -136,7 +136,7 @@ function FlashcardData() {
   return (
     <Flashcard
       list={currentList}
-      wordPackTotal={total}
+      total={total}
       currentPage={pageInfo.page}
       onNextPage={handleNextClick}
       onPrevPage={handlePrevClick}

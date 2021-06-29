@@ -209,9 +209,10 @@
 
   &::before {
     content: '';
-    height: 2.9rem;
-    width: 2.9rem;
+    height: 3rem;
+    width: 3rem;
     background-color: var(--secondary-color);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     transition: transform 0.25s;
 

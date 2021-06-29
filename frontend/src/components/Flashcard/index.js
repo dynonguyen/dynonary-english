@@ -8,7 +8,7 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import TooltipCustom from 'components/UI/TooltipCustom';
 import WordPack from 'components/UI/WordPack';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import GalleryList from './GalleryList';
 import SlideShow from './SlideShow';
 import useStyle from './style';
@@ -19,7 +19,7 @@ const tutorial =
 
 function Flashcard({
   list,
-  wordPackTotal,
+  total,
   currentPage,
   onNextPage,
   onPrevPage,
@@ -29,6 +29,7 @@ function Flashcard({
   const [mode, setMode] = useState(0); // 0 - gallery, 1 - slide show
   const [isShowMean, setIsShowMean] = useState(false);
   const [openWordPack, setOpenWordPack] = useState(false);
+  const currentSlide = useRef(0);
 
   return (
     <div className="container my-10">
@@ -95,17 +96,20 @@ function Flashcard({
           list={list}
           onPrev={onPrevPage}
           onNext={onNextPage}
-          total={wordPackTotal}
+          total={Math.ceil(total / perPage)}
           current={currentPage}
           showMean={isShowMean}
         />
       ) : (
         <SlideShow
           list={list}
-          total={wordPackTotal * perPage}
+          total={total}
           onGetNewList={onNextPage}
           onGetOldList={onPrevPage}
           showMean={isShowMean}
+          currentSlide={currentSlide.current}
+          onSaveCurrentSlide={(v) => (currentSlide.current = v)}
+          totalCurrentSlide={(currentPage - 1) * perPage + currentSlide.current}
         />
       )}
     </div>
@@ -114,7 +118,7 @@ function Flashcard({
 
 Flashcard.propTypes = {
   list: PropTypes.array,
-  wordPackTotal: PropTypes.number,
+  total: PropTypes.number,
   currentPage: PropTypes.number,
   onNextPage: PropTypes.func,
   onPrevPage: PropTypes.func,
@@ -123,7 +127,7 @@ Flashcard.propTypes = {
 
 Flashcard.defaultProps = {
   list: [],
-  wordPackTotal: 0,
+  total: 0,
   currentPage: 0,
 };
 
