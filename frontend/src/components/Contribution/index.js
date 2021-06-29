@@ -75,7 +75,7 @@ const schema = yup.object().shape({
 });
 
 // Prevent unmount component topic select
-const ButtonWrapper = (props) => <Grid {...props} item xs={12} md={4} />;
+const ButtonWrapper = (props) => <Grid {...props} item xs={12} md={6} lg={4} />;
 const TagsWrapper = (props) => <Grid {...props} item xs={12} />;
 
 function Contribution({ onSubmitForm, submitting }) {

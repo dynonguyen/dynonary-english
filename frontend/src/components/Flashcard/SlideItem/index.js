@@ -3,6 +3,24 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import useStyle from './style';
 
+function SliceExample({ word, example }) {
+  const index = example.toLowerCase().indexOf(word.toLowerCase());
+
+  return (
+    <>
+      {index === -1 ? (
+        example
+      ) : (
+        <>
+          {example.slice(0, index)}
+          <b>{word}</b>
+          {example.slice(index + word.length)}
+        </>
+      )}
+    </>
+  );
+}
+
 function SlideItem({ mean, word, type, phonetic, example, picture, showMean }) {
   const classes = useStyle({ picture });
 
@@ -28,7 +46,9 @@ function SlideItem({ mean, word, type, phonetic, example, picture, showMean }) {
             <p className={classes.type}>({type})</p>
             <p className={classes.phonetic}>/{phonetic}/</p>
             {example && example !== '' && (
-              <p className={classes.example}>{example}</p>
+              <p className={classes.example}>
+                <SliceExample word={word} example={example} />
+              </p>
             )}
           </div>
         </>
@@ -44,6 +64,11 @@ SlideItem.propTypes = {
   picture: PropTypes.string,
   showMean: PropTypes.bool,
   type: PropTypes.string,
+  word: PropTypes.string,
+};
+
+SliceExample.propTypes = {
+  example: PropTypes.string,
   word: PropTypes.string,
 };
 

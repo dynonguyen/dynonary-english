@@ -15,7 +15,7 @@ import useStyle from './style';
 
 const perPage = 7;
 const tutorial =
-  'Có 2 chế độ xem là gallery và slide. Bấm nút mũi tên hoặc sử dụng phím mũi tên bàn phím để chuyển trang.';
+  'Có 2 chế độ xem là gallery và slide. Bấm vào biểu tượng mắt để bật tắt nghĩa của từ.';
 
 function Flashcard({
   list,
