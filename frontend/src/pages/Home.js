@@ -52,7 +52,7 @@ const FEATURE_LIST = [
     title: 'Từ điển trong Dynonary',
     subTitle: 'Danh sách từ vựng được phân loại theo cấp độ, loại từ, ...',
     imgUrl: dictionaryIcon,
-    to: '/',
+    to: ROUTES.DYNO_DICTIONARY,
   },
   {
     title: 'Từ vựng TOEIC',

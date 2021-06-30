@@ -9,6 +9,7 @@ const IPAPage = React.lazy(() => import('pages/IPA'));
 const ContributionPage = React.lazy(() => import('pages/Contribution'));
 const PlayGamesPage = React.lazy(() => import('pages/PlayGames'));
 const FlashcardPage = React.lazy(() => import('pages/Flashcard'));
+const DynoDictionaryPage = React.lazy(() => import('pages/DynoDictionary'));
 const CorrectWordPage = React.lazy(() => import('pages/PlayGames/CorrectWord'));
 
 // routes for app
@@ -66,6 +67,12 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <FlashcardPage />,
+  },
+  {
+    path: ROUTES.DYNO_DICTIONARY,
+    exact: true,
+    isProtect: false,
+    component: () => <DynoDictionaryPage />,
   },
 ];
 

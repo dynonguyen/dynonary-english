@@ -9,7 +9,7 @@ function GalleryList({ list, onPrev, onNext, total, current, showMean }) {
   const classes = useStyle();
 
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} dyno-container`}>
       {list && list.length > 0 ? (
         <>
           {/* gallery */}

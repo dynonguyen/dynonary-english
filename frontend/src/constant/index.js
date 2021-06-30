@@ -51,6 +51,7 @@ export const ROUTES = {
   IPA: '/IPA',
   CONTRIBUTION: '/contribution',
   FLASHCARD: '/flashcard',
+  DYNO_DICTIONARY: '/dyno-dictionary',
   GAMES: {
     HOME: '/games',
     CORRECT_WORD: '/games/correct-word',

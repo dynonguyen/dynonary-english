@@ -88,7 +88,6 @@
 
 .phonetic {
   color: var(--phonetic-color);
-  padding: 0 6px;
   letter-spacing: 1px;
 }
 
@@ -118,6 +117,11 @@
 .dyno-box {
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
+}
+
+.dyno-container {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .dyno-speaker {
@@ -274,5 +278,20 @@
   &.next {
     right: 0;
     border-left: 1.8rem solid var(--primary-color);
+  }
+}
+
+.dyno-favorite {
+  color: var(--label-color);
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.35s;
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+  }
+
+  &.active {
+    color: #f14054;
   }
 }

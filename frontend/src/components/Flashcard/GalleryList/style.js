@@ -8,8 +8,6 @@ export default makeStyles((theme) => ({
     height: 'calc(100vh - 18rem)',
     gridGap: '0.8rem',
 
-    maxWidth: '576px',
-    margin: '0 auto',
     position: 'relative',
 
     '& > div': {

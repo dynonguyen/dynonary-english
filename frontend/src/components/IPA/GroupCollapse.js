@@ -53,7 +53,9 @@ function IPAGroupCollapse({ title, phoneticList, isNoVoice }) {
                         <div className="flex-center--ver my-4" key={exKey}>
                           <span className="mr-4">
                             {example.word}
-                            <span className="phonetic">{example.phonetic}</span>
+                            <span className="phonetic px-3">
+                              {example.phonetic}
+                            </span>
                           </span>
                           <Speaker type={true} text={example.word} />
                         </div>
