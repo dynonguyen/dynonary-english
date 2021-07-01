@@ -6,6 +6,11 @@ export default makeStyles((theme) => ({
     borderBottom: 'solid 1px var(--input-border-color)',
   },
 
+  picture: {
+    width: '5rem',
+    height: '5rem',
+  },
+
   word: {
     fontSize: '1.8rem',
     fontWeight: 500,

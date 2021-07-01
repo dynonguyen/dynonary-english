@@ -15,6 +15,8 @@ export const DEFAULTS = {
   VOICE_URI: 'Google US English',
   VOICE_SPEED: 1,
   VOICE_VOLUME: 1,
+  IMAGE_SRC:
+    'https://res.cloudinary.com/dynonary/image/upload/v1625136714/dynonary/default-image.png',
 };
 
 export const LINKS = {

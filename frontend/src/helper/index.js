@@ -98,6 +98,8 @@ export const cloudinaryImgOptimize = (
   qAuto = true,
   others = '',
 ) => {
+  if (!originSrc) return '';
+
   const cloudinaryBaseURL = 'https://res.cloudinary.com/dynonary/image/upload';
   const index = originSrc.indexOf(cloudinaryBaseURL);
 

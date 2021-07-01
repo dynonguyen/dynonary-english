@@ -65,7 +65,7 @@ exports.getWordPack = async (req, res) => {
       JSON.parse(packInfo),
       skip,
       perPageInt,
-      '-_id type word mean phonetic',
+      '-_id type word mean phonetic picture',
       sortType === 'asc' ? '1' : sortType === 'desc' ? '-1' : null,
       null,
     );
@@ -80,7 +80,11 @@ exports.getWordPack = async (req, res) => {
 exports.getSearchWord = async (req, res) => {
   try {
     const { word } = req.query;
-    const list = await searchWord(word, 20, '-_id type word mean phonetic');
+    const list = await searchWord(
+      word,
+      20,
+      '-_id type word mean phonetic picture',
+    );
     return res.status(200).json({ packList: list });
   } catch (error) {
     console.error('GET SEARCH WORD ERROR: ', error);
