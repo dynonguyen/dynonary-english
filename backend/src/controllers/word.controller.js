@@ -1,4 +1,8 @@
-const { isExistWord, uploadImage } = require('../services/common.service');
+const {
+  isExistWord,
+  uploadImage,
+  getWordPack,
+} = require('../services/common.service');
 const { createNewWord } = require('../services/word.service');
 
 exports.postContributeWord = async (req, res, next) => {
@@ -46,5 +50,26 @@ exports.getCheckWordExistence = async (req, res) => {
   } catch (error) {
     console.error('GET CHECK WORD EXIST ERROR: ', error);
     return res.status(200).json({ isExist: false });
+  }
+};
+
+exports.getWordPack = async (req, res) => {
+  try {
+    const { page, perPage, packInfo } = req.query;
+    const pageInt = parseInt(page),
+      perPageInt = parseInt(perPage);
+    const skip = (pageInt - 1) * perPageInt;
+
+    const packList = await getWordPack(
+      JSON.parse(packInfo),
+      skip,
+      perPageInt,
+      '-_id type word mean phonetic',
+    );
+
+    return res.status(200).json({ packList });
+  } catch (error) {
+    console.error('WORD GET WORD PACK ERROR: ', error);
+    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };

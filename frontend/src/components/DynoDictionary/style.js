@@ -5,10 +5,14 @@ export default makeStyles((theme) => ({
     marginTop: '3.2rem',
 
     '& ::-webkit-scrollbar': {
-      width: '3px',
+      width: '2px',
     },
 
     '& ::-webkit-scrollbar-track': {
+      background: 'none',
+    },
+
+    '& ::-webkit-scrollbar-thumb': {
       borderRadius: '25px',
     },
   },
@@ -28,15 +32,33 @@ export default makeStyles((theme) => ({
     marginTop: '2.4rem',
   },
 
-  list: {
-    padding: '1.2rem 2.4rem',
+  listWrap: {
+    padding: '1.2rem 0.4rem',
     backgroundColor: 'var(--bg-color-accent)',
     borderRadius: 'var(--border-radius)',
-    height: 'calc(100vh - 20rem)',
+  },
+
+  list: {
+    padding: '0 2.4rem',
+    height: 'calc(100vh - 24rem)',
     overflow: 'auto',
   },
 
   listItem: {
     margin: '0.6rem 0',
+  },
+
+  notfound: {
+    fontSize: '2em',
+    color: 'var(--label-color)',
+  },
+
+  skeleton: {
+    height: '100%',
+
+    '& > *': {
+      margin: '1.2rem 0',
+      height: 'calc(10% - 1.2rem)',
+    },
   },
 }));

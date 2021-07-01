@@ -3,7 +3,7 @@ import WordPack from 'components/UI/WordPack';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-function SettingWordPack({ classNameIcon, onChoose }) {
+function DDSettingWordPack({ classNameIcon, onChoose }) {
   const [openWordPack, setOpenWordPack] = useState(false);
 
   const onSelect = (v) => {
@@ -28,13 +28,13 @@ function SettingWordPack({ classNameIcon, onChoose }) {
   );
 }
 
-SettingWordPack.propTypes = {
+DDSettingWordPack.propTypes = {
   classNameIcon: PropTypes.string,
   onChoose: PropTypes.func,
 };
 
-SettingWordPack.defaultProps = {
+DDSettingWordPack.defaultProps = {
   onChoose: () => {},
 };
 
-export default SettingWordPack;
+export default DDSettingWordPack;

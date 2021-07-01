@@ -12,6 +12,10 @@ export default makeStyles((theme) => ({
     color: 'var(--primary-color)',
   },
 
+  type: {
+    color: 'var(--label-color)',
+  },
+
   phonetic: {
     fontSize: '1.5rem',
     margin: '0.8rem 0',
