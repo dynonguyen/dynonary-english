@@ -12,9 +12,9 @@ const wordApi = {
   },
 
   // get word, type, phonetic, mean
-  getWordList: (page = 1, perPage = 8, packInfo) => {
+  getWordList: (page = 1, perPage = 8, packInfo, sortType = 'rand') => {
     return axiosClient.get(`${URL}/pack`, {
-      params: { page, perPage, packInfo: JSON.stringify(packInfo) },
+      params: { page, perPage, packInfo: JSON.stringify(packInfo), sortType },
     });
   },
 };

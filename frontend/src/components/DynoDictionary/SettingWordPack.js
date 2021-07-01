@@ -19,11 +19,13 @@ function DDSettingWordPack({ classNameIcon, onChoose }) {
       />
 
       {/* setting modal */}
-      <WordPack
-        open={openWordPack}
-        onCancel={() => setOpenWordPack(false)}
-        onChoose={onSelect}
-      />
+      {openWordPack && (
+        <WordPack
+          open={openWordPack}
+          onCancel={() => setOpenWordPack(false)}
+          onChoose={onSelect}
+        />
+      )}
     </>
   );
 }

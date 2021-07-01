@@ -55,7 +55,8 @@ exports.getCheckWordExistence = async (req, res) => {
 
 exports.getWordPack = async (req, res) => {
   try {
-    const { page, perPage, packInfo } = req.query;
+    const { page, perPage, packInfo, sortType } = req.query;
+    console.log(sortType);
     const pageInt = parseInt(page),
       perPageInt = parseInt(perPage);
     const skip = (pageInt - 1) * perPageInt;

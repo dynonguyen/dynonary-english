@@ -1,5 +1,6 @@
 import commonApi from 'apis/commonApi';
 import wordApi from 'apis/wordApi';
+import { equalArray } from 'helper';
 import React, { useEffect, useRef, useState } from 'react';
 import DynoDictionary from '.';
 
@@ -7,6 +8,7 @@ const perPage = 20;
 
 function DynoDictionaryData() {
   const [page, setPage] = useState(1);
+  const [sortType, setSortType] = useState('rand');
   const [packInfo, setPackInfo] = useState({
     type: '-1',
     level: '-1',
@@ -25,6 +27,23 @@ function DynoDictionaryData() {
     } else {
       setMore(false);
     }
+  };
+
+  const settingWordPack = (info) => {
+    // check old pack vs new pack
+    let isEqual = true;
+    for (let k in packInfo) {
+      if (k !== 'topics' && packInfo[k] !== info[k]) {
+        isEqual = false;
+        break;
+      }
+    }
+    if (isEqual) isEqual = equalArray(packInfo.topics, info.topics);
+
+    totalPage.current = 0;
+    setList([]);
+    setPackInfo(info);
+    setPage(1);
   };
 
   // get total word pack
@@ -51,7 +70,12 @@ function DynoDictionaryData() {
     (async function () {
       try {
         setLoading(true);
-        const apiRes = await wordApi.getWordList(page, perPage, packInfo);
+        const apiRes = await wordApi.getWordList(
+          page,
+          perPage,
+          packInfo,
+          sortType,
+        );
         if (apiRes.status === 200 && isSub) {
           const { packList = [] } = apiRes.data;
           setList([...list, ...packList]);
@@ -66,7 +90,7 @@ function DynoDictionaryData() {
     })();
 
     return () => (isSub = false);
-  }, [page]);
+  }, [page, packInfo]);
 
   return (
     <DynoDictionary
@@ -75,6 +99,7 @@ function DynoDictionaryData() {
       onLoadData={nextPage}
       more={more}
       isFirstLoad={isFirstLoad}
+      onSettingWordPack={settingWordPack}
     />
   );
 }

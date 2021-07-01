@@ -3,13 +3,20 @@ import AutoSearchInput from 'components/UI/AutoSearchInput';
 import InfiniteScroll from 'components/UI/InfiniteScroll';
 import WordSortModal from 'components/UI/WordSortModal';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import DynoDictionaryItem from './Item';
 import DDSettingWordPack from './SettingWordPack';
 import DynoDictionarySkeleton from './Skeleton';
 import useStyle from './style';
 
-function DynoDictionary({ list, loading, onLoadData, more, isFirstLoad }) {
+function DynoDictionary({
+  list,
+  loading,
+  onLoadData,
+  more,
+  isFirstLoad,
+  onSettingWordPack,
+}) {
   const classes = useStyle();
 
   return (
@@ -19,11 +26,11 @@ function DynoDictionary({ list, loading, onLoadData, more, isFirstLoad }) {
         <h1 className="dyno-title">Từ điển Dynonary</h1>
         <div>
           <WordSortModal
-            onSelect={(v) => console.log(v)}
+            // onSelect={sortList}
             classNameIcon={`${classes.icon} mr-5`}
           />
           <DDSettingWordPack
-            onChoose={(v) => console.log(v)}
+            onChoose={onSettingWordPack}
             classNameIcon={classes.icon}
           />
         </div>
@@ -84,12 +91,14 @@ DynoDictionary.propTypes = {
   loading: PropTypes.bool,
   more: PropTypes.bool,
   onLoadData: PropTypes.func,
+  onSettingWordPack: PropTypes.func,
 };
 
 DynoDictionary.defaultProps = {
   list: [],
   loading: false,
   onLoadData: function () {},
+  onSettingWordPack: function () {},
   more: true,
   isFirstLoad: true,
 };
