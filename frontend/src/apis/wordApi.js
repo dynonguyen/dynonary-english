@@ -17,6 +17,10 @@ const wordApi = {
       params: { page, perPage, packInfo: JSON.stringify(packInfo), sortType },
     });
   },
+
+  getSearchWord: (word = '') => {
+    return axiosClient.get(`${URL}/search-word`, { params: { word } });
+  },
 };
 
 export default wordApi;

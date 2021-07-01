@@ -12,3 +12,15 @@ exports.createNewWord = async (wordInfo) => {
     throw error;
   }
 };
+
+exports.searchWord = async (word = '', limit = 20, select = '') => {
+  try {
+    const regex = new RegExp(`^${word}.*`, 'gi');
+    const list = await WordModel.find({ word: regex })
+      .limit(limit)
+      .select(select);
+    return list;
+  } catch (error) {
+    throw error;
+  }
+};

@@ -3,7 +3,7 @@ const {
   uploadImage,
   getWordPack,
 } = require('../services/common.service');
-const { createNewWord } = require('../services/word.service');
+const { createNewWord, searchWord } = require('../services/word.service');
 
 exports.postContributeWord = async (req, res, next) => {
   try {
@@ -73,6 +73,17 @@ exports.getWordPack = async (req, res) => {
     return res.status(200).json({ packList });
   } catch (error) {
     console.error('WORD GET WORD PACK ERROR: ', error);
+    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.getSearchWord = async (req, res) => {
+  try {
+    const { word } = req.query;
+    const list = await searchWord(word, 20, '-_id type word mean phonetic');
+    return res.status(200).json({ packList: list });
+  } catch (error) {
+    console.error('GET SEARCH WORD ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };

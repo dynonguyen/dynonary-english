@@ -20,6 +20,7 @@ function DynoDictionaryData() {
   const [more, setMore] = useState(true); // toggle infinite scrolling
   const [isFirstLoad, setIsFirstLoad] = useState(true);
   const totalPage = useRef(0);
+  const preSearchList = useRef([]);
 
   const nextPage = () => {
     if (page < totalPage.current) {
@@ -41,6 +42,7 @@ function DynoDictionaryData() {
     if (isEqual) isEqual = equalArray(packInfo.topics, info.topics);
 
     totalPage.current = 0;
+    preSearchList.current = [];
     setList([]);
     setPackInfo(info);
     setPage(1);
@@ -48,9 +50,27 @@ function DynoDictionaryData() {
 
   const onSortTypeChange = (type = 'rand') => {
     if (type === sortType) return;
+    preSearchList.current = [];
     setSortType(type);
     setPage(1);
     setList([]);
+  };
+
+  const onSearchWord = async (word) => {
+    try {
+      if (word === '') {
+        setList(preSearchList.current);
+        setMore(true);
+        return;
+      }
+
+      const apiRes = await wordApi.getSearchWord(word);
+      if (apiRes.status === 200) {
+        const { packList = [] } = apiRes.data;
+        setList(packList);
+        setMore(false);
+      }
+    } catch (error) {}
   };
 
   // get total word pack
@@ -85,7 +105,9 @@ function DynoDictionaryData() {
         );
         if (apiRes.status === 200 && isSub) {
           const { packList = [] } = apiRes.data;
-          setList([...list, ...packList]);
+          const newList = [...list, ...packList];
+          preSearchList.current = newList;
+          setList(newList);
         }
       } catch (error) {
       } finally {
@@ -108,6 +130,7 @@ function DynoDictionaryData() {
       isFirstLoad={isFirstLoad}
       onSettingWordPack={settingWordPack}
       onSortTypeChange={onSortTypeChange}
+      onSearchWord={onSearchWord}
     />
   );
 }

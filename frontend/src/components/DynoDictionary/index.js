@@ -3,7 +3,7 @@ import AutoSearchInput from 'components/UI/AutoSearchInput';
 import InfiniteScroll from 'components/UI/InfiniteScroll';
 import WordSortModal from 'components/UI/WordSortModal';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React from 'react';
 import DynoDictionaryItem from './Item';
 import DDSettingWordPack from './SettingWordPack';
 import DynoDictionarySkeleton from './Skeleton';
@@ -17,6 +17,7 @@ function DynoDictionary({
   isFirstLoad,
   onSettingWordPack,
   onSortTypeChange,
+  onSearchWord,
 }) {
   const classes = useStyle();
 
@@ -40,7 +41,7 @@ function DynoDictionary({
 
       {/* list content */}
       <div className={classes.contentWrap}>
-        <AutoSearchInput disabled={loading} />
+        <AutoSearchInput disabled={loading} onSearch={onSearchWord} />
 
         <div className={`${classes.listWrap} w-100`}>
           <ul id="dictionaryId" className={`${classes.list} flex-col w-100`}>
@@ -92,6 +93,7 @@ DynoDictionary.propTypes = {
   loading: PropTypes.bool,
   more: PropTypes.bool,
   onLoadData: PropTypes.func,
+  onSearchWord: PropTypes.func,
   onSettingWordPack: PropTypes.func,
   onSortTypeChange: PropTypes.func,
 };
@@ -102,6 +104,7 @@ DynoDictionary.defaultProps = {
   more: true,
   isFirstLoad: true,
   onLoadData: function () {},
+  onSearchWord: function () {},
   onSettingWordPack: function () {},
   onSortTypeChange: function () {},
 };
