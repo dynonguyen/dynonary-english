@@ -39,6 +39,7 @@ exports.getWordPack = async (
   skip = 0,
   limit = 500,
   select = '',
+  sortType = null,
   expandQuery = null,
 ) => {
   try {
@@ -50,6 +51,7 @@ exports.getWordPack = async (
     }
 
     const packList = await WordModel.find(query)
+      .sort({ word: sortType })
       .skip(skip)
       .limit(limit)
       .select(select);

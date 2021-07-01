@@ -46,6 +46,13 @@ function DynoDictionaryData() {
     setPage(1);
   };
 
+  const onSortTypeChange = (type = 'rand') => {
+    if (type === sortType) return;
+    setSortType(type);
+    setPage(1);
+    setList([]);
+  };
+
   // get total word pack
   useEffect(() => {
     let isSub = true;
@@ -90,7 +97,7 @@ function DynoDictionaryData() {
     })();
 
     return () => (isSub = false);
-  }, [page, packInfo]);
+  }, [page, packInfo, sortType]);
 
   return (
     <DynoDictionary
@@ -100,6 +107,7 @@ function DynoDictionaryData() {
       more={more}
       isFirstLoad={isFirstLoad}
       onSettingWordPack={settingWordPack}
+      onSortTypeChange={onSortTypeChange}
     />
   );
 }

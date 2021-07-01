@@ -16,6 +16,7 @@ function DynoDictionary({
   more,
   isFirstLoad,
   onSettingWordPack,
+  onSortTypeChange,
 }) {
   const classes = useStyle();
 
@@ -26,7 +27,7 @@ function DynoDictionary({
         <h1 className="dyno-title">Từ điển Dynonary</h1>
         <div>
           <WordSortModal
-            // onSelect={sortList}
+            onSelect={onSortTypeChange}
             classNameIcon={`${classes.icon} mr-5`}
           />
           <DDSettingWordPack
@@ -92,15 +93,17 @@ DynoDictionary.propTypes = {
   more: PropTypes.bool,
   onLoadData: PropTypes.func,
   onSettingWordPack: PropTypes.func,
+  onSortTypeChange: PropTypes.func,
 };
 
 DynoDictionary.defaultProps = {
   list: [],
   loading: false,
-  onLoadData: function () {},
-  onSettingWordPack: function () {},
   more: true,
   isFirstLoad: true,
+  onLoadData: function () {},
+  onSettingWordPack: function () {},
+  onSortTypeChange: function () {},
 };
 
 export default DynoDictionary;
