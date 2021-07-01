@@ -23,20 +23,31 @@ const userInfoSlice = createSlice({
     name: '',
     username: '',
     avt: '',
+    favoriteList: [],
   },
-  reducers: {},
+  reducers: {
+    setAddFavorites(state, action) {
+      const { word, isAdd = true } = action.payload;
+
+      if (isAdd) {
+        state.favoriteList.push(word);
+      } else {
+        state.favoriteList = state.favoriteList.filter((i) => i !== word);
+      }
+    },
+  },
   extraReducers: {
     [getUserInfo.fulfilled]: (state, action) => {
-      const { username, name, avt } = action.payload;
+      const { username, name, avt, favoriteList } = action.payload;
       if (!username || username === '') {
         state.isAuth = false;
         return;
       }
-      return { isAuth: true, username, name, avt };
+      return { isAuth: true, username, name, avt, favoriteList };
     },
   },
 });
 
 const { reducer, actions } = userInfoSlice;
-
+export const { setAddFavorites } = actions;
 export default reducer;

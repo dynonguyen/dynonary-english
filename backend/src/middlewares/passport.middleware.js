@@ -19,9 +19,10 @@ exports.jwtAuthentication = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
     if (decoded) {
       const { accountId } = decoded.sub;
-      const user = await UserModel.findOne({ accountId }).select(
-        '-_id username name avt',
-      );
+      const user = await UserModel.findOne({ accountId })
+        .select('-_id username name avt favoriteList')
+        .populate('word');
+
       if (user) {
         res.locals.isAuth = true;
         req.user = user;

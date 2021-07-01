@@ -13,6 +13,7 @@ const userSchema = new Schema({
     maxLength: MAX.USER_NAME,
   },
   avt: { type: String, trim: true, default: '' },
+  favoriteList: [String],
 });
 
 const UserModel = mongoose.model('user', userSchema, 'users');

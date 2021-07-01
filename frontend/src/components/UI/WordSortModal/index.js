@@ -18,7 +18,9 @@ function WordSortModal({ classNameIcon, onSelect }) {
 
   const handleClose = (v) => {
     setAnchorEl(null);
-    onSelect(v);
+    if (typeof v === 'string') {
+      onSelect(v);
+    }
   };
 
   return (

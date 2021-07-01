@@ -19,6 +19,7 @@ exports.MAX = {
   NAME_LEN: 50,
   USER_NAME: 110,
   LEN_WORD_PACK: 100,
+  FAVORITES_LEN: 200,
 };
 
 exports.MIN = {

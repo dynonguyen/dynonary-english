@@ -5,6 +5,10 @@ const {
   createAccount,
   createUser,
   findAccount,
+  checkAddWordIntoFavorites,
+  updateFavoriteList,
+  isExistWordInFavorites,
+  isLimitedFavorites,
 } = require('../services/account.service');
 const { COOKIE_EXPIRES_TIME, KEYS } = require('../constant');
 const jwtConfig = require('../configs/jwt.config');
@@ -91,6 +95,50 @@ exports.postLogout = async (req, res, next) => {
     return res.status(200).json({ message: 'success' });
   } catch (error) {
     console.error('POST LOG OUT ERROR: ', error);
+    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.putToggleFavorite = async (req, res) => {
+  try {
+    const { word, username, isAdd = false } = req.body;
+
+    const isExist = await isExistWordInFavorites(word, username);
+
+    if (isAdd) {
+      const isLimited = await isLimitedFavorites(word, username);
+
+      if (isLimited) {
+        return res.status(409).json({
+          message:
+            'Số từ đã vượt quá số lượng tối đa của danh sách yêu thích. Hãy nâng cấp nó.',
+        });
+      }
+
+      if (isExist) {
+        return res
+          .status(406)
+          .json({ message: `Từ ${word} đã tồn tại trong danh sách` });
+      }
+    } else {
+      if (!isExist) {
+        return res
+          .status(406)
+          .json({ message: `Từ ${word} không tồn tại trong danh sách` });
+      }
+    }
+
+    const updateStatus = await updateFavoriteList(word, username, isAdd);
+
+    if (updateStatus && updateStatus.ok && updateStatus.nModified) {
+      return res.status(200).json({ message: 'success' });
+    } else {
+      return res.status(409).json({ message: 'failed' });
+    }
+
+    console.log(updateStatus);
+  } catch (error) {
+    console.error('PUT TOGGLE FAVORITE ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };

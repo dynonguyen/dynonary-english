@@ -20,7 +20,7 @@ function DynoDictionaryItem({ word, type, phonetic, picture, mean }) {
     <div className={`${classes.root} flex-center-between`}>
       <div className="w-100 flex-center--ver">
         <img className={classes.picture} src={imgSrc} alt="photo" />
-        <div className="ml-8">
+        <div className="ml-8 flex-grow-1">
           <h3 className={classes.word}>
             {word} <span className={classes.type}>( {type} )</span>
           </h3>

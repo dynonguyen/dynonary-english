@@ -15,6 +15,10 @@ const accountApi = {
     return axiosClient.post(`${URL}/logout`);
   },
 
+  putToggleWordFavorite: (username, word, isAdd) => {
+    return axiosClient.put(`${URL}/toggle-favorite`, { username, word, isAdd });
+  },
+
   getUserInfo: () => {
     return axiosClient.get(`${URL}/user-info`);
   },
