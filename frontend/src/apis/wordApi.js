@@ -21,6 +21,10 @@ const wordApi = {
   getSearchWord: (word = '') => {
     return axiosClient.get(`${URL}/search-word`, { params: { word } });
   },
+
+  getWordDetails: (word = '') => {
+    return axiosClient.get(`${URL}/word-details`, { params: { word } });
+  },
 };
 
 export default wordApi;

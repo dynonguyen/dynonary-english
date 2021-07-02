@@ -4,6 +4,12 @@ export default makeStyles((theme) => ({
   root: {
     padding: '1.2rem 0',
     borderBottom: 'solid 1px var(--input-border-color)',
+    cursor: 'pointer',
+    transition: 'all 0.35s',
+
+    '&:hover, &:active': {
+      borderBottom: 'solid 1px var(--accent-color)',
+    },
   },
 
   picture: {

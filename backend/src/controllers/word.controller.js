@@ -3,7 +3,11 @@ const {
   uploadImage,
   getWordPack,
 } = require('../services/common.service');
-const { createNewWord, searchWord } = require('../services/word.service');
+const {
+  createNewWord,
+  searchWord,
+  getWordDetail,
+} = require('../services/word.service');
 
 exports.postContributeWord = async (req, res, next) => {
   try {
@@ -88,6 +92,19 @@ exports.getSearchWord = async (req, res) => {
     return res.status(200).json({ packList: list });
   } catch (error) {
     console.error('GET SEARCH WORD ERROR: ', error);
+    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.getWordDetails = async (req, res, next) => {
+  try {
+    const { word } = req.query;
+    const wordDetail = await getWordDetail(word);
+    if (wordDetail) {
+      return res.status(200).json(wordDetail);
+    }
+  } catch (error) {
+    console.error('GET WORD DETAILS ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };

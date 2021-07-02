@@ -5,6 +5,7 @@ import WordSortModal from 'components/UI/WordSortModal';
 import PropTypes from 'prop-types';
 import React from 'react';
 import DynoDictionaryItem from './Item';
+import DynoDictionaryItemData from './Item/data';
 import DDSettingWordPack from './SettingWordPack';
 import DynoDictionarySkeleton from './Skeleton';
 import useStyle from './style';
@@ -55,7 +56,7 @@ function DynoDictionary({
                       {/* render list */}
                       {list.map((item, index) => (
                         <li className={classes.listItem} key={index}>
-                          <DynoDictionaryItem {...item} />
+                          <DynoDictionaryItemData {...item} />
                         </li>
                       ))}
 

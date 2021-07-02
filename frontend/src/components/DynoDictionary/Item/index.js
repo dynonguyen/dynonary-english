@@ -6,7 +6,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import useStyle from './style';
 
-function DynoDictionaryItem({ word, type, phonetic, picture, mean }) {
+function DynoDictionaryItem({
+  word,
+  type,
+  phonetic,
+  picture,
+  mean,
+  onShowDetail,
+}) {
   const classes = useStyle();
   const imgSrc = cloudinaryImgOptimize(
     picture ? picture : DEFAULTS.IMAGE_SRC,
@@ -18,7 +25,9 @@ function DynoDictionaryItem({ word, type, phonetic, picture, mean }) {
 
   return (
     <div className={`${classes.root} flex-center-between`}>
-      <div className="w-100 flex-center--ver">
+      <div
+        className="w-100 flex-center--ver"
+        onClick={() => onShowDetail(word)}>
         <img className={classes.picture} src={imgSrc} alt="photo" />
         <div className="ml-8 flex-grow-1">
           <h3 className={classes.word}>
@@ -41,10 +50,15 @@ function DynoDictionaryItem({ word, type, phonetic, picture, mean }) {
 
 DynoDictionaryItem.propTypes = {
   mean: PropTypes.string,
+  onShowDetail: PropTypes.func,
   phonetic: PropTypes.string,
+  picture: PropTypes.string,
   type: PropTypes.string,
   word: PropTypes.string,
-  picture: PropTypes.string,
+};
+
+DynoDictionaryItem.defaultProps = {
+  onShowDetail: function () {},
 };
 
 export default DynoDictionaryItem;
