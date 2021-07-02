@@ -1,5 +1,6 @@
 import commonApi from 'apis/commonApi';
 import wordApi from 'apis/wordApi';
+import WordDetailModal from 'components/UI/WordDetailModal';
 import { equalArray } from 'helper';
 import React, { useEffect, useRef, useState } from 'react';
 import DynoDictionary from '.';
@@ -122,16 +123,19 @@ function DynoDictionaryData() {
   }, [page, packInfo, sortType]);
 
   return (
-    <DynoDictionary
-      list={list}
-      loading={loading}
-      onLoadData={nextPage}
-      more={more}
-      isFirstLoad={isFirstLoad}
-      onSettingWordPack={settingWordPack}
-      onSortTypeChange={onSortTypeChange}
-      onSearchWord={onSearchWord}
-    />
+    <>
+      <DynoDictionary
+        list={list}
+        loading={loading}
+        onLoadData={nextPage}
+        more={more}
+        isFirstLoad={isFirstLoad}
+        onSettingWordPack={settingWordPack}
+        onSortTypeChange={onSortTypeChange}
+        onSearchWord={onSearchWord}
+      />
+      <WordDetailModal />
+    </>
   );
 }
 
