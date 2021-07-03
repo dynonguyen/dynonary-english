@@ -9,6 +9,7 @@ const {
   updateFavoriteList,
   isExistWordInFavorites,
   isLimitedFavorites,
+  updateUserCoin,
 } = require('../services/account.service');
 const { COOKIE_EXPIRES_TIME, KEYS } = require('../constant');
 const jwtConfig = require('../configs/jwt.config');
@@ -139,6 +140,27 @@ exports.putToggleFavorite = async (req, res) => {
     console.log(updateStatus);
   } catch (error) {
     console.error('PUT TOGGLE FAVORITE ERROR: ', error);
+    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.putUpdateUserCoin = async (req, res, next) => {
+  try {
+    const { newCoin } = req.body;
+    const username = req.user?.username;
+    if (!username) {
+      return res.status(406).json({ message: 'Not Accept' });
+    }
+
+    const update = await updateUserCoin(newCoin, username);
+
+    if (update) {
+      return res.status(200).json({ message: 'success' });
+    }
+
+    return res.status(406).json({ message: 'Not Accept' });
+  } catch (error) {
+    console.error('PUT UPDATE USER COIN ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };

@@ -18,8 +18,13 @@ exports.MAX = {
   PASSWORD_LEN: 40,
   NAME_LEN: 50,
   USER_NAME: 110,
-  LEN_WORD_PACK: 100,
+  LEN_WORD_PACK: 5,
   FAVORITES_LEN: 200,
+  USER_COIN: 99999,
+};
+
+exports.DEFAULT = {
+  USER_COIN: 100,
 };
 
 exports.MIN = {

@@ -7,6 +7,11 @@ accountApi.post('/login', accountController.postLogin);
 accountApi.post('/logout', accountController.postLogout);
 
 accountApi.put('/toggle-favorite', accountController.putToggleFavorite);
+accountApi.put(
+  '/update-coin',
+  jwtAuthentication,
+  accountController.putUpdateUserCoin,
+);
 
 accountApi.get('/user-info', jwtAuthentication, accountController.getUserInfo);
 

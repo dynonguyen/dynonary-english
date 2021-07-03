@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { MAX } = require('../../constant');
+const { MAX, DEFAULT } = require('../../constant');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -13,6 +13,13 @@ const userSchema = new Schema({
     maxLength: MAX.USER_NAME,
   },
   avt: { type: String, trim: true, default: '' },
+  coin: {
+    type: Number,
+    required: true,
+    default: DEFAULT.USER_COIN,
+    min: 0,
+    max: MAX.USER_COIN,
+  },
   favoriteList: [String],
 });
 

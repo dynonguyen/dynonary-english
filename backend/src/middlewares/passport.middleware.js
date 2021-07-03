@@ -20,7 +20,7 @@ exports.jwtAuthentication = async (req, res, next) => {
     if (decoded) {
       const { accountId } = decoded.sub;
       const user = await UserModel.findOne({ accountId })
-        .select('-_id username name avt favoriteList')
+        .select('-_id username name avt favoriteList coin')
         .populate('word');
 
       if (user) {

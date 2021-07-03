@@ -11,6 +11,10 @@ export const COLOR_VAR_KEYS = [
   { key: '--phonetic-color', label: 'Phonetic' },
 ];
 
+export const COINS = {
+  CORRECT_GAME_PER_QUES: 10,
+};
+
 export const DEFAULTS = {
   VOICE_URI: 'Google US English',
   VOICE_SPEED: 1,
@@ -38,6 +42,7 @@ export const MAX = {
   SENTENCE_LEN: 200,
   SENTENCE_MEAN_LEN: 300,
   SENTENCE_NOTE_LEN: 100,
+  USER_COIN: 99999,
 };
 
 export const MIN = {

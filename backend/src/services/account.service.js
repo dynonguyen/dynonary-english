@@ -94,3 +94,27 @@ exports.updateFavoriteList = async (word, username, isAdd = false) => {
     throw error;
   }
 };
+
+exports.updateUserCoin = async (newCoin = 0, username = '') => {
+  try {
+    if (
+      newCoin < 0 ||
+      newCoin > MAX.USER_COIN ||
+      !username ||
+      username === ''
+    ) {
+      return false;
+    }
+
+    const updateRes = await UserModel.updateOne(
+      { username },
+      { coin: newCoin },
+    );
+
+    if (updateRes.ok) {
+      return true;
+    }
+  } catch (error) {
+    throw error;
+  }
+};

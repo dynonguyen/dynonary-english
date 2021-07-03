@@ -21,6 +21,12 @@ const sentenceSchema = new Schema({
     trim: true,
     maxLength: 100,
   },
+
+  isChecked: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
 });
 
 const SentenceModel = mongoose.model('sentence', sentenceSchema, 'sentences');

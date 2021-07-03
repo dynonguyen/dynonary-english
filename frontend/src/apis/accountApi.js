@@ -19,6 +19,10 @@ const accountApi = {
     return axiosClient.put(`${URL}/toggle-favorite`, { username, word, isAdd });
   },
 
+  putUpdateUserCoin: (newCoin) => {
+    return axiosClient.put(`${URL}/update-coin`, { newCoin });
+  },
+
   getUserInfo: () => {
     return axiosClient.get(`${URL}/user-info`);
   },
