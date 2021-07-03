@@ -66,7 +66,7 @@ export const ROUTES = {
     MILLIONAIRE: '/games/who-is-a-millionaire',
     JIGSAW: '/games/jigsaw-puzzle',
     QUIZ: '/games/quiz',
-    WORD_MATCHING: '/games/word-matching',
+    WORD_MATCHING: '/games/word-match',
     GRAMMARLY: '/games/grammarly',
     VIP: '/games/vip',
   },
@@ -130,6 +130,10 @@ export const WORD_TYPES = [
 ];
 
 export const WORD_LEVELS = [
+  {
+    value: '0',
+    label: 'Chưa xác định',
+  },
   {
     value: 'A1',
     label: 'A1',

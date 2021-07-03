@@ -84,10 +84,12 @@ function WordDetailModal(props) {
             </div>
           </div>
 
-          <p className={classes.level}>
-            <b className={classes.label}>Cấp độ:</b>&nbsp;&nbsp;{level}
-          </p>
-
+          {level !== '0' && (
+            <p className={classes.level}>
+              <b className={classes.label}>Cấp độ:</b>&nbsp;&nbsp;
+              {level}
+            </p>
+          )}
           {examples && examples.length > 0 && (
             <div>
               <b className={classes.label}>Câu ví dụ:</b>
@@ -99,7 +101,7 @@ function WordDetailModal(props) {
             </div>
           )}
 
-          {specialty && (
+          {specialty && specialty !== '0' && (
             <p>
               <b className={classes.label}>Thuộc chuyên ngành:</b>
               &nbsp;&nbsp;
