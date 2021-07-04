@@ -70,4 +70,19 @@ export default makeStyles((theme) => ({
       backgroundColor: 'var(--right-color)',
     },
   },
+
+  '@global @keyframes aniSlide': {
+    '0%': {
+      transform: 'none',
+      opacity: 0,
+    },
+    '50%': {
+      opacity: 0.3,
+    },
+    '100%': {
+      transform: 'translateY(-8rem)',
+      opacity: 0,
+      visibility: 'hidden',
+    },
+  },
 }));
