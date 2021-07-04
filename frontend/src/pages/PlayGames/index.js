@@ -6,7 +6,7 @@ import grammarlyIcon from 'assets/icons/games/grammarly.png';
 import jigsawIcon from 'assets/icons/games/jigsaw.png';
 import millionaireIcon from 'assets/icons/games/millionaire.png';
 import vipIcon from 'assets/icons/games/vip.png';
-import wordMatchingIcon from 'assets/icons/games/word-matching.png';
+import wordMatchingIcon from 'assets/icons/games/word-match.png';
 import FeatureBox from 'components/FeatureBox';
 import { ROUTES } from 'constant';
 import useScrollTop from 'hooks/useScrollTop';
@@ -47,15 +47,15 @@ const GAME_LIST = [
     title: 'Ghép từ',
     subTitle:
       'Ghép các ký tự đã cho thành một chữ có nghĩa đúng với từ đã cho.',
-    imgUrl: jigsawIcon,
-    to: GAMES.JIGSAW,
+    imgUrl: wordMatchingIcon,
+    to: GAMES.WORD_MATCHING,
   },
   {
     title: 'Nối từ',
     subTitle:
       'Cùng bắt trend nối từ đã từ rầm rộ trên mạng xã hội với Dyno nhé. Đặc biệt, bạn có thể chơi cùng bạn bè nhé 😮',
-    imgUrl: wordMatchingIcon,
-    to: GAMES.WORD_MATCHING,
+    imgUrl: jigsawIcon,
+    to: GAMES.JIGSAW,
   },
   {
     title: 'Điền vào chỗ trống',

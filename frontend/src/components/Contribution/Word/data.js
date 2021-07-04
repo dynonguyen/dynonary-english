@@ -26,7 +26,7 @@ function WordContributionData() {
   const handleSubmit = async (data) => {
     try {
       setSubmitting(true);
-      const { examples, synonyms, antonyms, word, ...rest } = data;
+      const { examples, synonyms, antonyms, word, phonetic, ...rest } = data;
 
       // check examples validation
       const exampleArr = analysisExample(examples, word);
@@ -54,6 +54,7 @@ function WordContributionData() {
         synonyms: synonymArr,
         antonyms: antonymArr,
         word,
+        phonetic: phonetic.replaceAll('/', ''),
       };
 
       const apiRes = await wordApi.postContributeWord(dataSend);

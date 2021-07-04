@@ -11,6 +11,7 @@ const PlayGamesPage = React.lazy(() => import('pages/PlayGames'));
 const FlashcardPage = React.lazy(() => import('pages/Flashcard'));
 const DynoDictionaryPage = React.lazy(() => import('pages/DynoDictionary'));
 const CorrectWordPage = React.lazy(() => import('pages/PlayGames/CorrectWord'));
+const WordMatchGamePage = React.lazy(() => import('pages/PlayGames/WordMatch'));
 
 // routes for app
 const routes = [
@@ -61,6 +62,12 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <CorrectWordPage />,
+  },
+  {
+    path: ROUTES.GAMES.WORD_MATCHING,
+    exact: true,
+    isProtect: false,
+    component: () => <WordMatchGamePage />,
   },
   {
     path: ROUTES.FLASHCARD,
