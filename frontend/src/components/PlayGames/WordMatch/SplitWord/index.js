@@ -1,7 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import HelpIcon from '@material-ui/icons/LiveHelp';
+import wordApi from 'apis/wordApi';
 import Speaker from 'components/UI/Speaker';
+import WordDetailModal from 'components/UI/WordDetailModal';
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import useStyle from './style';
@@ -35,6 +37,11 @@ function SplitWord({ word, mean, onCorrect, onWrong, resetFlag }) {
   const [userSplit, setUserSplit] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
   const [isCheck, setIsCheck] = useState(false);
+  const [modal, setModal] = useState({
+    show: false,
+    loading: false,
+    data: null,
+  });
   const classes = useStyle();
 
   // animation for select a character
@@ -150,6 +157,26 @@ function SplitWord({ word, mean, onCorrect, onWrong, resetFlag }) {
     return () => (isSub = false);
   }, [resetFlag]);
 
+  // get word detail
+  useEffect(() => {
+    let isSub = true;
+
+    if (modal.show && modal.loading) {
+      (async function () {
+        try {
+          const apiRes = await wordApi.getWordDetails(word);
+          if (apiRes.status === 200 && isSub) {
+            setModal({ show: true, loading: false, data: { ...apiRes.data } });
+          }
+        } catch (error) {
+          isSub && setModal({ show: false, loading: false, data: null });
+        }
+      })();
+    }
+
+    return () => (isSub = false);
+  }, [modal]);
+
   // @rendering ...
   return (
     <div className={classes.root}>
@@ -160,7 +187,12 @@ function SplitWord({ word, mean, onCorrect, onWrong, resetFlag }) {
       <div>
         <div className="flex-center-between my-4">
           <Tooltip title="Xem đáp án">
-            <HelpIcon className={`${classes.helpIcon} cur-pointer`} />
+            <HelpIcon
+              className={`${classes.helpIcon} cur-pointer`}
+              onClick={() =>
+                setModal({ loading: true, data: null, show: true })
+              }
+            />
           </Tooltip>
           <p className={classes.mean}>{mean}</p>
           <Speaker className={classes.speaker} text={word} />
@@ -178,6 +210,16 @@ function SplitWord({ word, mean, onCorrect, onWrong, resetFlag }) {
       <div className={`${classes.split} flex-center`}>
         {renderOriginSplit()}
       </div>
+
+      {/* word detail modal */}
+      {modal.show && (
+        <WordDetailModal
+          open={modal.show}
+          loading={modal.loading}
+          onClose={() => setModal({ loading: false, data: null, show: false })}
+          {...modal.data}
+        />
+      )}
     </div>
   );
 }
