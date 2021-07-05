@@ -5,7 +5,6 @@ import Speaker from 'components/UI/Speaker';
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import useStyle from './style';
-
 const userSplitId = 'userSplitId';
 
 function splitWord(word = '') {
@@ -31,7 +30,7 @@ function splitWord(word = '') {
   return splitArr;
 }
 
-function SplitWord({ word, mean }) {
+function SplitWord({ word, mean, onCorrect, onWrong, resetFlag }) {
   const originSplit = useRef(splitWord(word.toLowerCase()));
   const [userSplit, setUserSplit] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -114,19 +113,42 @@ function SplitWord({ word, mean }) {
 
   // check is correct
   useEffect(() => {
+    let isSub = true;
+
     if (!isCheck) {
       return;
     }
 
     const answer = userSplit.map((i) => i.ch).join('');
     if (answer.toLowerCase() === word.toLowerCase()) {
-      setIsCorrect(true);
+      isSub && setIsCorrect(true);
+      onCorrect();
     } else {
-      setIsCorrect(false);
+      isSub && setIsCorrect(false);
+      onWrong();
     }
 
-    return () => {};
+    return () => {
+      isSub = false;
+    };
   }, [isCheck]);
+
+  // reset when next or prev
+  useEffect(() => {
+    let isSub = true;
+    if (resetFlag === -1) {
+      return;
+    }
+
+    if (isSub) {
+      setIsCheck(false);
+      setIsCorrect(false);
+      setUserSplit([]);
+      originSplit.current = splitWord(word.toLowerCase());
+    }
+
+    return () => (isSub = false);
+  }, [resetFlag]);
 
   // @rendering ...
   return (
@@ -162,12 +184,18 @@ function SplitWord({ word, mean }) {
 
 SplitWord.propTypes = {
   mean: PropTypes.string,
+  onCorrect: PropTypes.func,
+  onWrong: PropTypes.func,
+  resetFlag: PropTypes.number,
   word: PropTypes.string,
 };
 
 SplitWord.defaultProps = {
   mean: '',
   word: '',
+  onCorrect: function () {},
+  onWrong: function () {},
+  resetFlag: -1,
 };
 
 export default SplitWord;

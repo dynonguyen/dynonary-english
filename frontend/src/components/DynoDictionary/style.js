@@ -48,11 +48,6 @@ export default makeStyles((theme) => ({
     margin: '0.6rem 0',
   },
 
-  notfound: {
-    fontSize: '2em',
-    color: 'var(--label-color)',
-  },
-
   skeleton: {
     height: '100%',
 

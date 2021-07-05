@@ -73,8 +73,7 @@ function DynoDictionary({
                     </>
                   ) : (
                     // empty list
-                    <h3
-                      className={`${classes.notfound} h-100 flex-center t-center`}>
+                    <h3 className="notfound-title h-100 flex-center t-center">
                       Không tìm thấy từ nào trong từ điển
                     </h3>
                   )}

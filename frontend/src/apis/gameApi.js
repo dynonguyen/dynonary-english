@@ -14,6 +14,18 @@ const gameApi = {
       params: { type, level, specialty, topics: JSON.stringify(topics) },
     });
   },
+
+  // word match game
+  getWordPackWordMatch: (
+    type = '-1',
+    level = '-1',
+    specialty = '-1',
+    topics = [],
+  ) => {
+    return axiosClient.get(`${URL}/word-match/pack`, {
+      params: { type, level, specialty, topics: JSON.stringify(topics) },
+    });
+  },
 };
 
 export default gameApi;
