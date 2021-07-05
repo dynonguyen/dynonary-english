@@ -5,9 +5,11 @@ import LoopIcon from '@material-ui/icons/Loop';
 import ResetIcon from '@material-ui/icons/RotateLeft';
 import SaveIcon from '@material-ui/icons/Save';
 import InputCustom from 'components/UI/InputCustom';
+import TopicSelect from 'components/UI/TopicSelect';
 import { MAX } from 'constant';
+import { SENTENCE_TOPICS } from 'constant/topics';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import InformationTooltip from '../Word/InformationTooltip';
@@ -33,9 +35,12 @@ const schema = yup.object().shape({
       `Ghi chú tối đa ${MAX.SENTENCE_NOTE_LEN} ký tự`,
     ),
 });
+const ButtonWrapper = (props) => <Grid {...props} item xs={12} />;
 
 function SentenceContribution({ submitting, onSubmitForm }) {
   const classes = useStyle();
+  const topics = useRef([]);
+  const [resetFlag, setResetFlag] = useState(0);
   const {
     register,
     handleSubmit,
@@ -46,7 +51,13 @@ function SentenceContribution({ submitting, onSubmitForm }) {
   });
 
   const onResetForm = () => {
+    topics.current = [];
+    setResetFlag(Math.random() + 1);
     reset({ sentence: '', mean: '', note: '' });
+  };
+
+  const handleSubmitForm = (formData) => {
+    onSubmitForm({ ...formData, topics: topics.current });
   };
 
   return (
@@ -54,7 +65,7 @@ function SentenceContribution({ submitting, onSubmitForm }) {
       <h1 className={classes.title}>Thêm câu giao tiếp hay mà bạn biết</h1>
       <div className="dyno-break"></div>
 
-      <form onSubmit={handleSubmit(onSubmitForm)} autoComplete="off">
+      <form onSubmit={handleSubmit(handleSubmitForm)} autoComplete="off">
         <Grid className={classes.grid} container spacing={3}>
           {/* new sentence */}
           <Grid item xs={12}>
@@ -123,6 +134,15 @@ function SentenceContribution({ submitting, onSubmitForm }) {
               <p className="text-error">{errors.note?.message}</p>
             )}
           </Grid>
+
+          {/* topics */}
+          <TopicSelect
+            buttonWrapper={ButtonWrapper}
+            tagsWrapper={ButtonWrapper}
+            topicList={SENTENCE_TOPICS}
+            onChange={(v) => (topics.current = v)}
+            resetFlag={resetFlag}
+          />
         </Grid>
 
         <div className="dyno-break"></div>

@@ -23,7 +23,7 @@ function Tag({ title, iconSrc, id, onChange, resetFlag }) {
         isActive ? 'active' : ''
       }`}
       onClick={onClick}>
-      <img className={classes.icon} src={iconSrc} alt="icon" />
+      {iconSrc && <img className={classes.icon} src={iconSrc} alt="icon" />}
       <span className={classes.text}>{title}</span>
     </div>
   );

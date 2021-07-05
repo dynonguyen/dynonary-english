@@ -3,7 +3,7 @@ const { createSentence } = require('../services/sentence.service');
 
 exports.postContributeSentence = async (req, res, next) => {
   try {
-    const { sentence, mean, note } = req.body;
+    const { sentence, mean, note, topics } = req.body;
 
     const isExist = await isExistSentence(sentence);
 
@@ -13,7 +13,7 @@ exports.postContributeSentence = async (req, res, next) => {
         .json({ message: 'Câu đã tồn tại. Vui lòng thêm câu khác. Cảm ơn' });
     }
 
-    const isCreated = await createSentence(sentence, mean, note);
+    const isCreated = await createSentence(sentence, mean, note, topics);
 
     if (isCreated) {
       return res.status(200).json({ message: 'success' });

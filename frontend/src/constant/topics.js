@@ -144,3 +144,66 @@ export const TOPIC_OPTIONS = TOPICS.map((topic) => ({
   value: topic.key,
   label: topic.title,
 }));
+
+export const SENTENCE_TOPICS = [
+  {
+    key: '0',
+    title: 'Giao tiếp thông dụng',
+  },
+  {
+    key: '1',
+    title: 'Chào hỏi',
+  },
+  {
+    key: '2',
+    title: 'Du lịch - phương hướng',
+  },
+  {
+    key: '3',
+    title: 'Con số - tiền bạc',
+  },
+  {
+    key: '4',
+    title: 'Địa điểm',
+  },
+  {
+    key: '5',
+    title: 'Thời gian, ngày tháng',
+  },
+  {
+    key: '6',
+    title: 'Điện thoại - Internet - Thư',
+  },
+  {
+    key: '7',
+    title: 'Chỗ ăn ở',
+  },
+  {
+    key: '8',
+    title: 'Kết bạn',
+  },
+  {
+    key: '9',
+    title: 'Giải trí',
+  },
+  {
+    key: '10',
+    title: 'Mua sắm',
+  },
+  {
+    key: '11',
+    title: 'Sức khoẻ',
+  },
+  {
+    key: '12',
+    title: 'Việc làm',
+  },
+  {
+    key: '13',
+    title: 'Thời tiết',
+  },
+  {
+    key: '14',
+    title: 'Khác',
+  },
+];

@@ -22,6 +22,8 @@ const sentenceSchema = new Schema({
     maxLength: 100,
   },
 
+  topics: [String],
+
   isChecked: {
     type: Boolean,
     required: true,
