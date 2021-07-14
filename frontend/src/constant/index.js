@@ -59,6 +59,7 @@ export const ROUTES = {
   CONTRIBUTION: '/contribution',
   FLASHCARD: '/flashcard',
   DYNO_DICTIONARY: '/dyno-dictionary',
+  COMMUNICATION_PHRASE: '/1000-communication-phrase',
   GAMES: {
     HOME: '/games',
     CORRECT_WORD: '/games/correct-word',

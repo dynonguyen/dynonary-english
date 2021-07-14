@@ -10,6 +10,9 @@ const ContributionPage = React.lazy(() => import('pages/Contribution'));
 const PlayGamesPage = React.lazy(() => import('pages/PlayGames'));
 const FlashcardPage = React.lazy(() => import('pages/Flashcard'));
 const DynoDictionaryPage = React.lazy(() => import('pages/DynoDictionary'));
+const CommunicationPhrasePage = React.lazy(() =>
+  import('pages/CommunicationPhrase'),
+);
 const CorrectWordPage = React.lazy(() => import('pages/PlayGames/CorrectWord'));
 const WordMatchGamePage = React.lazy(() => import('pages/PlayGames/WordMatch'));
 
@@ -80,6 +83,12 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <DynoDictionaryPage />,
+  },
+  {
+    path: ROUTES.COMMUNICATION_PHRASE,
+    exact: true,
+    isProtect: false,
+    component: () => <CommunicationPhrasePage />,
   },
 ];
 

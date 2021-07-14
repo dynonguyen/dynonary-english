@@ -1,48 +1,24 @@
 import LoopIcon from '@material-ui/icons/Loop';
-import AutoSearchInput from 'components/UI/AutoSearchInput';
+import DynoDictionarySkeleton from 'components/DynoDictionary/Skeleton';
+import useStyle from './style';
 import InfiniteScroll from 'components/UI/InfiniteScroll';
-import WordSortModal from 'components/UI/WordSortModal';
 import PropTypes from 'prop-types';
 import React from 'react';
-import DynoDictionaryItemData from './Item/data';
-import DDSettingWordPack from './SettingWordPack';
-import DynoDictionarySkeleton from './Skeleton';
-import useStyle from './style';
+import CommunicationPhraseItem from './Item';
 
-function DynoDictionary({
-  list,
-  loading,
-  onLoadData,
-  more,
-  isFirstLoad,
-  onSettingWordPack,
-  onSortTypeChange,
-  onSearchWord,
-}) {
+function CommunicationPhrase({ isFirstLoad, loading, more, list }) {
   const classes = useStyle();
 
   return (
     <div className={`${classes.root} dyno-container`}>
       {/* title - menu */}
       <div className="flex-center-between">
-        <h1 className="dyno-title">Từ điển Dynonary</h1>
-        <div>
-          <WordSortModal
-            onSelect={onSortTypeChange}
-            classNameIcon={`${classes.icon} mr-5`}
-          />
-          <DDSettingWordPack
-            onChoose={onSettingWordPack}
-            classNameIcon={classes.icon}
-          />
-        </div>
+        <h1 className="dyno-title">1000+ Cụm từ giao tiếp</h1>
       </div>
       <div className="dyno-break"></div>
 
       {/* list content */}
       <div className={classes.contentWrap}>
-        <AutoSearchInput disabled={loading} onSearch={onSearchWord} />
-
         <div className={`${classes.listWrap} w-100`}>
           <ul id="dictionaryId" className={`${classes.list} flex-col w-100`}>
             <>
@@ -55,7 +31,7 @@ function DynoDictionary({
                       {/* render list */}
                       {list.map((item, index) => (
                         <li className={classes.listItem} key={index}>
-                          <DynoDictionaryItemData {...item} />
+                          <CommunicationPhraseItem />
                         </li>
                       ))}
 
@@ -73,7 +49,7 @@ function DynoDictionary({
                   ) : (
                     // empty list
                     <h3 className="notfound-title h-100 flex-center t-center">
-                      Không tìm thấy từ nào trong từ điển
+                      Không tìm thấy cụm từ nào trong từ điển
                     </h3>
                   )}
                 </>
@@ -86,26 +62,18 @@ function DynoDictionary({
   );
 }
 
-DynoDictionary.propTypes = {
+CommunicationPhrase.propTypes = {
   isFirstLoad: PropTypes.bool,
-  list: PropTypes.array,
   loading: PropTypes.bool,
   more: PropTypes.bool,
-  onLoadData: PropTypes.func,
-  onSearchWord: PropTypes.func,
-  onSettingWordPack: PropTypes.func,
-  onSortTypeChange: PropTypes.func,
+  list: PropTypes.array,
 };
 
-DynoDictionary.defaultProps = {
-  list: [],
+CommunicationPhrase.defaultProps = {
+  more: false,
   loading: false,
-  more: true,
-  isFirstLoad: true,
-  onLoadData: function () {},
-  onSearchWord: function () {},
-  onSettingWordPack: function () {},
-  onSortTypeChange: function () {},
+  isFirstLoad: false,
+  list: [],
 };
 
-export default DynoDictionary;
+export default CommunicationPhrase;

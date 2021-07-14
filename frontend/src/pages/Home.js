@@ -39,7 +39,7 @@ const FEATURE_LIST = [
     title: '1000+ câu giao tiếp',
     subTitle: 'Luyện nghe, nói câu tiếng Anh giao tiếp hàng ngày cùng Dyno',
     imgUrl: communicateIcon,
-    to: '/',
+    to: ROUTES.COMMUNICATION_PHRASE,
   },
   {
     title: 'Từ vựng với Flashcard',
