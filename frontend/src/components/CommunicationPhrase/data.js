@@ -23,21 +23,14 @@ function CommunicationPhraseData() {
   };
 
   const onSelectTopic = (topics) => {
-    if (
-      !topics ||
-      !Array.isArray(topics) ||
-      topics.length === 0 ||
-      equalArray(topics, topicList)
-    ) {
+    if (!topics || !Array.isArray(topics) || equalArray(topics, topicList)) {
       return;
     }
-
-    console.log('RUN');
 
     setPage(1);
     setMore(true);
     setList([]);
-    setTopicList(topics);
+    setTopicList([...topics]);
     totalPage.current = 0;
   };
 
@@ -94,7 +87,7 @@ function CommunicationPhraseData() {
       loading={loading}
       more={more}
       onLoadData={nextPage}
-      onSelectTopic={onSelectTopic}
+      onSelectTopic={(v) => onSelectTopic(v)}
     />
   );
 }
