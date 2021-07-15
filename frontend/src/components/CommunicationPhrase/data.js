@@ -30,7 +30,7 @@ function CommunicationPhraseData() {
 
         if (apiRes.status === 200 && isSub) {
           const { total = 0 } = apiRes.data;
-          totalPage.current = total;
+          totalPage.current = Math.ceil(total / perPage);
         }
       } catch (error) {}
     })();
@@ -44,6 +44,7 @@ function CommunicationPhraseData() {
 
     (async function () {
       try {
+        setLoading(true);
         const apiRes = await sentenceApi.getSentenceList(page, perPage);
         if (apiRes.status === 200 && isSub) {
           const { sentenceList = [] } = apiRes.data;

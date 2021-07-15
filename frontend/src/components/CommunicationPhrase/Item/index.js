@@ -7,7 +7,7 @@ function CommunicationPhraseItem({ mean, sentence }) {
   const classes = useStyle();
   return (
     <div className={`${classes.root} flex-center-between`}>
-      <div className="mr-4">
+      <div className="mr-4 w-100">
         <div className={classes.mean}>{mean}</div>
         <div className={classes.phrase}>{sentence}</div>
       </div>
