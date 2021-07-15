@@ -9,7 +9,6 @@ import friendsIcon from 'assets/icons/friends.png';
 import gameIcon from 'assets/icons/game.png';
 import grammarIcon from 'assets/icons/grammar.png';
 import ipaIcon from 'assets/icons/ipa.png';
-import jobIcon from 'assets/icons/job.png';
 import toeicIcon from 'assets/icons/toeic.png';
 import translateIcon from 'assets/icons/translate.png';
 import verbIcon from 'assets/icons/verb.png';
@@ -56,9 +55,9 @@ const FEATURE_LIST = [
   },
   {
     title: 'Từ vựng TOEIC',
-    subTitle: 'Các từ vựng thường gắp trong đề thi Toeic',
+    subTitle: 'Các từ vựng thường gặp trong đề thi Toeic',
     imgUrl: toeicIcon,
-    to: '/',
+    to: ROUTES.TOEIC_DICTIONARY,
   },
   {
     title: 'Từ vựng yêu thích của bạn',
@@ -96,12 +95,6 @@ const FEATURE_LIST = [
     imgUrl: friendsIcon,
     subTitle:
       'Học và thi đầu cùng bạn bè của mình để cùng nhau tiến bộ hơn nhé',
-    to: '/',
-  },
-  {
-    title: 'Tiếng Anh chuyên ngành',
-    imgUrl: jobIcon,
-    subTitle: 'Tổng hợp từ vựng dành cho các chuyên ngành nhé.',
     to: '/',
   },
   {

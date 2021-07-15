@@ -166,7 +166,7 @@ function SentenceContribution({ submitting, onSubmitForm }) {
               submitting ? <LoopIcon className="ani-spin" /> : <SaveIcon />
             }
             variant="contained">
-            Thêm từ
+            Thêm câu
           </Button>
         </div>
       </form>

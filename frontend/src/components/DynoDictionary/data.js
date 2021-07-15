@@ -1,21 +1,23 @@
 import commonApi from 'apis/commonApi';
 import wordApi from 'apis/wordApi';
 import WordDetailModal from 'components/UI/WordDetailModal';
+import { TOEIC_KEY } from 'constant/topics';
 import { equalArray } from 'helper';
+import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import DynoDictionary from '.';
 
 const perPage = 20;
 
-function DynoDictionaryData() {
+function DynoDictionaryData({ isTOEIC }) {
   const [page, setPage] = useState(1);
   const [sortType, setSortType] = useState('rand');
-  const [packInfo, setPackInfo] = useState({
+  const [packInfo, setPackInfo] = useState(() => ({
     type: '-1',
     level: '-1',
     specialty: '-1',
-    topics: [],
-  });
+    topics: isTOEIC ? [TOEIC_KEY] : [],
+  }));
   const [loading, setLoading] = useState(true);
   const [list, setList] = useState([]);
   const [more, setMore] = useState(true); // toggle infinite scrolling
@@ -126,6 +128,7 @@ function DynoDictionaryData() {
   return (
     <>
       <DynoDictionary
+        isTOEIC={isTOEIC}
         list={list}
         loading={loading}
         onLoadData={nextPage}
@@ -139,5 +142,13 @@ function DynoDictionaryData() {
     </>
   );
 }
+
+DynoDictionaryData.propTypes = {
+  isTOEIC: PropTypes.bool,
+};
+
+DynoDictionaryData.defaultProps = {
+  isTOEIC: false,
+};
 
 export default DynoDictionaryData;

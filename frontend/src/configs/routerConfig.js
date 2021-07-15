@@ -80,9 +80,15 @@ const routes = [
   },
   {
     path: ROUTES.DYNO_DICTIONARY,
-    exact: true,
+    exact: false,
     isProtect: false,
-    component: () => <DynoDictionaryPage />,
+    component: () => <DynoDictionaryPage isTOEIC={false} />,
+  },
+  {
+    path: ROUTES.TOEIC_DICTIONARY,
+    exact: false,
+    isProtect: false,
+    component: () => <DynoDictionaryPage isTOEIC={true} />,
   },
   {
     path: ROUTES.COMMUNICATION_PHRASE,

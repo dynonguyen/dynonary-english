@@ -18,6 +18,7 @@ function DynoDictionary({
   onSettingWordPack,
   onSortTypeChange,
   onSearchWord,
+  isTOEIC,
 }) {
   const classes = useStyle();
 
@@ -31,10 +32,12 @@ function DynoDictionary({
             onSelect={onSortTypeChange}
             classNameIcon="dyno-setting-icon mr-5"
           />
-          <DDSettingWordPack
-            onChoose={onSettingWordPack}
-            classNameIcon="dyno-setting-icon"
-          />
+          {!isTOEIC && (
+            <DDSettingWordPack
+              onChoose={onSettingWordPack}
+              classNameIcon="dyno-setting-icon"
+            />
+          )}
         </div>
       </div>
       <div className="dyno-break"></div>
@@ -88,6 +91,7 @@ function DynoDictionary({
 
 DynoDictionary.propTypes = {
   isFirstLoad: PropTypes.bool,
+  isTOEIC: PropTypes.bool,
   list: PropTypes.array,
   loading: PropTypes.bool,
   more: PropTypes.bool,
@@ -102,6 +106,7 @@ DynoDictionary.defaultProps = {
   loading: false,
   more: true,
   isFirstLoad: true,
+  isTOEIC: false,
   onLoadData: function () {},
   onSearchWord: function () {},
   onSettingWordPack: function () {},

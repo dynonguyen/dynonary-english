@@ -22,6 +22,8 @@ import treeIcon from 'assets/icons/topics/tree.png';
 import toeicIcon from 'assets/icons/topics/toeic.png';
 import ieltsIcon from 'assets/icons/topics/ielts.png';
 
+export const TOEIC_KEY = '20';
+
 export const TOPICS = [
   {
     key: '0',
@@ -124,7 +126,7 @@ export const TOPICS = [
     icon: excitingIcon,
   },
   {
-    key: '20',
+    key: TOEIC_KEY,
     title: 'TOEIC',
     icon: toeicIcon,
   },
