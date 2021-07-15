@@ -1,5 +1,9 @@
 const { isExistSentence } = require('../services/common.service');
-const { createSentence } = require('../services/sentence.service');
+const {
+  createSentence,
+  getTotalSentences: getTotalSentencesService,
+  getSentenceList: getSentenceListService,
+} = require('../services/sentence.service');
 
 exports.postContributeSentence = async (req, res, next) => {
   try {
@@ -23,5 +27,28 @@ exports.postContributeSentence = async (req, res, next) => {
   } catch (error) {
     console.error('POST CONTRIBUTE SENTENCE ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.getTotalSentences = async (req, res, next) => {
+  try {
+    const total = await getTotalSentencesService();
+    return res.status(200).json({ total });
+  } catch (error) {
+    console.error('GET TOTAL SENTENCES ERROR: ', error);
+    return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.getSentenceList = async (req, res, next) => {
+  try {
+    const { page = 1, perPage = 20 } = req.query;
+
+    const sentenceList = await getSentenceListService(page, perPage);
+
+    return res.status(200).json({ sentenceList });
+  } catch (error) {
+    console.error(' ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };

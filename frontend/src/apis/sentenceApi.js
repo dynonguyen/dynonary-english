@@ -11,6 +11,14 @@ const sentenceApi = {
       topics,
     });
   },
+
+  getTotalSentences: (topic = '-1') => {
+    return axiosClient.get(`${URL}/total`);
+  },
+
+  getSentenceList: (page = 1, perPage = 20) => {
+    return axiosClient.get(`${URL}/list`);
+  },
 };
 
 export default sentenceApi;

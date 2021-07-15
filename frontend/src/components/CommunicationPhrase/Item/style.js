@@ -16,14 +16,12 @@ export default makeStyles((theme) => ({
     fontSize: '1.8rem',
     marginBottom: '0.8rem',
     color: 'var(--text-color)',
-    maxWidth: '80%',
     textAlign: 'justify',
   },
 
   phrase: {
     fontSize: '1.6rem',
     color: 'var(--primary-color)',
-    maxWidth: '80%',
     textAlign: 'justify',
   },
 }));

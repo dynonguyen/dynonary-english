@@ -1,4 +1,4 @@
-import CommunicationPhrase from 'components/CommunicationPhrase';
+import CommunicationPhraseData from 'components/CommunicationPhrase/data';
 import useTitle from 'hooks/useTitle';
 import React from 'react';
 
@@ -7,7 +7,7 @@ function CommunicationPhrasePage() {
 
   return (
     <div className="container">
-      <CommunicationPhrase />
+      <CommunicationPhraseData />
     </div>
   );
 }

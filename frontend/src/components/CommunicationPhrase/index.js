@@ -1,12 +1,12 @@
 import LoopIcon from '@material-ui/icons/Loop';
 import DynoDictionarySkeleton from 'components/DynoDictionary/Skeleton';
-import useStyle from './style';
 import InfiniteScroll from 'components/UI/InfiniteScroll';
 import PropTypes from 'prop-types';
 import React from 'react';
 import CommunicationPhraseItem from './Item';
+import useStyle from './style';
 
-function CommunicationPhrase({ isFirstLoad, loading, more, list }) {
+function CommunicationPhrase({ isFirstLoad, loading, more, list, onLoadData }) {
   const classes = useStyle();
 
   return (
@@ -31,7 +31,7 @@ function CommunicationPhrase({ isFirstLoad, loading, more, list }) {
                       {/* render list */}
                       {list.map((item, index) => (
                         <li className={classes.listItem} key={index}>
-                          <CommunicationPhraseItem />
+                          <CommunicationPhraseItem {...item} />
                         </li>
                       ))}
 
@@ -64,9 +64,10 @@ function CommunicationPhrase({ isFirstLoad, loading, more, list }) {
 
 CommunicationPhrase.propTypes = {
   isFirstLoad: PropTypes.bool,
+  list: PropTypes.array,
   loading: PropTypes.bool,
   more: PropTypes.bool,
-  list: PropTypes.array,
+  onLoadData: PropTypes.func,
 };
 
 CommunicationPhrase.defaultProps = {
@@ -74,6 +75,7 @@ CommunicationPhrase.defaultProps = {
   loading: false,
   isFirstLoad: false,
   list: [],
+  onLoadData: function () {},
 };
 
 export default CommunicationPhrase;

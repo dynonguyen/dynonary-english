@@ -3,28 +3,28 @@ import Speaker from 'components/UI/Speaker';
 import React from 'react';
 import useStyle from './style';
 
-function CommunicationPhraseItem({ mean, phrase }) {
+function CommunicationPhraseItem({ mean, sentence }) {
   const classes = useStyle();
   return (
     <div className={`${classes.root} flex-center-between`}>
-      <div>
+      <div className="mr-4">
         <div className={classes.mean}>{mean}</div>
-        <div className={classes.phrase}>{phrase}</div>
+        <div className={classes.phrase}>{sentence}</div>
       </div>
 
-      <Speaker text={phrase} />
+      <Speaker text={sentence} />
     </div>
   );
 }
 
 CommunicationPhraseItem.propTypes = {
   mean: PropTypes.string,
-  phrase: PropTypes.string,
+  sentence: PropTypes.string,
 };
 
 CommunicationPhraseItem.defaultProps = {
   mean: '',
-  phrase: '',
+  sentence: '',
 };
 
 export default CommunicationPhraseItem;

@@ -6,4 +6,8 @@ sentenceApi.post(
   sentenceController.postContributeSentence,
 );
 
+sentenceApi.get('/total', sentenceController.getTotalSentences);
+
+sentenceApi.get('/list', sentenceController.getSentenceList);
+
 module.exports = sentenceApi;
