@@ -1,3 +1,16 @@
+exports.addTopicsQuery = (topics, query) => {
+  // query multiple topic
+  if (topics.length > 0) {
+    let orList = [];
+    topics.forEach((topic) =>
+      orList.push({ topics: { $elemMatch: { $eq: topic } } }),
+    );
+    query['$or'] = orList;
+  }
+
+  return query;
+};
+
 exports.convertPackInfoToQueryStr = (packInfo) => {
   const { topics, ...restPackInfo } = packInfo;
   const topicList = typeof topics === 'string' ? JSON.parse(topics) : topics;
@@ -11,13 +24,7 @@ exports.convertPackInfoToQueryStr = (packInfo) => {
   }
 
   // query multiple topic
-  if (topicList.length > 0) {
-    let orList = [];
-    topicList.forEach((topic) =>
-      orList.push({ topics: { $elemMatch: { $eq: topic } } }),
-    );
-    query['$or'] = orList;
-  }
+  this.addTopicsQuery(topicList, query);
 
   return query;
 };

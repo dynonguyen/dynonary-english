@@ -12,12 +12,20 @@ const sentenceApi = {
     });
   },
 
-  getTotalSentences: (topic = '-1') => {
-    return axiosClient.get(`${URL}/total`);
+  getTotalSentences: (topics = []) => {
+    return axiosClient.get(`${URL}/total`, {
+      params: { topics: JSON.stringify(topics) },
+    });
   },
 
-  getSentenceList: (page = 1, perPage = 20) => {
-    return axiosClient.get(`${URL}/list`);
+  getSentenceList: (page = 1, perPage = 20, topics = []) => {
+    return axiosClient.get(`${URL}/list`, {
+      params: {
+        page,
+        perPage,
+        topics: JSON.stringify(topics),
+      },
+    });
   },
 };
 

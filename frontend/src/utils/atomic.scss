@@ -305,3 +305,15 @@
   color: var(--label-color);
   text-align: center;
 }
+
+.dyno-setting-icon {
+  color: var(--label-color);
+  font-size: 2.8rem;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &:hover,
+  &:active {
+    color: var(--primary-color);
+  }
+}

@@ -53,17 +53,6 @@ export const dictionaryRoot = (theme) => ({
     },
   },
 
-  icon: {
-    color: 'var(--label-color)',
-    fontSize: '2.8rem',
-    cursor: 'pointer',
-    transition: 'all 0.25s',
-
-    '&:hover, &:active': {
-      color: 'var(--primary-color)',
-    },
-  },
-
   contentWrap: {
     marginTop: '2.4rem',
   },
@@ -91,5 +80,27 @@ export const dictionaryRoot = (theme) => ({
       margin: '1.2rem 0',
       height: 'calc(10% - 1.2rem)',
     },
+  },
+});
+
+export const dialogMUIRoot = (theme) => ({
+  dialogPaper: {
+    backgroundColor: 'var(--bg-color-sec)',
+  },
+
+  title: {
+    '& > *': {
+      color: 'var(--title-color)',
+    },
+  },
+
+  content: {
+    '& *': {
+      color: 'var(--text-color)',
+    },
+  },
+
+  breakLine: {
+    borderColor: 'var(--input-border-color)',
   },
 });

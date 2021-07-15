@@ -32,7 +32,11 @@ exports.postContributeSentence = async (req, res, next) => {
 
 exports.getTotalSentences = async (req, res, next) => {
   try {
-    const total = await getTotalSentencesService();
+    let { topics } = req.query;
+    topics = typeof topics === 'string' ? JSON.parse(topics) : [];
+
+    const total = await getTotalSentencesService(topics);
+
     return res.status(200).json({ total });
   } catch (error) {
     console.error('GET TOTAL SENTENCES ERROR: ', error);
@@ -42,9 +46,10 @@ exports.getTotalSentences = async (req, res, next) => {
 
 exports.getSentenceList = async (req, res, next) => {
   try {
-    const { page = 1, perPage = 20 } = req.query;
+    let { page = 1, perPage = 20, topics } = req.query;
+    topics = typeof topics === 'string' ? JSON.parse(topics) : [];
 
-    const sentenceList = await getSentenceListService(page, perPage);
+    const sentenceList = await getSentenceListService(page, perPage, topics);
 
     return res.status(200).json({ sentenceList });
   } catch (error) {

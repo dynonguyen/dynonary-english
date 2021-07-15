@@ -4,9 +4,17 @@ import InfiniteScroll from 'components/UI/InfiniteScroll';
 import PropTypes from 'prop-types';
 import React from 'react';
 import CommunicationPhraseItem from './Item';
+import SentenceTopicSettingModal from './SettingModal';
 import useStyle from './style';
 
-function CommunicationPhrase({ isFirstLoad, loading, more, list, onLoadData }) {
+function CommunicationPhrase({
+  isFirstLoad,
+  loading,
+  more,
+  list,
+  onLoadData,
+  onSelectTopic,
+}) {
   const classes = useStyle();
 
   return (
@@ -14,6 +22,7 @@ function CommunicationPhrase({ isFirstLoad, loading, more, list, onLoadData }) {
       {/* title - menu */}
       <div className="flex-center-between">
         <h1 className="dyno-title">1000+ Cụm từ giao tiếp</h1>
+        <SentenceTopicSettingModal onSelectTopic={onSelectTopic} />
       </div>
       <div className="dyno-break"></div>
 
@@ -68,6 +77,7 @@ CommunicationPhrase.propTypes = {
   loading: PropTypes.bool,
   more: PropTypes.bool,
   onLoadData: PropTypes.func,
+  onSelectTopic: PropTypes.func,
 };
 
 CommunicationPhrase.defaultProps = {
@@ -76,6 +86,7 @@ CommunicationPhrase.defaultProps = {
   isFirstLoad: false,
   list: [],
   onLoadData: function () {},
+  onSelectTopic: function () {},
 };
 
 export default CommunicationPhrase;

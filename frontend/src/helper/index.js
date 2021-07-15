@@ -122,3 +122,17 @@ export const cloudinaryImgOptimize = (
     `${cloudinaryBaseURL}/${optimize}`,
   );
 };
+
+export const addOrDelItemInArray = (arr = [], item) => {
+  if (!arr || !Array.isArray(arr)) return arr;
+
+  const index = arr.findIndex((i) => i === item);
+
+  if (index === -1) {
+    arr.push(item);
+    return arr;
+  }
+
+  arr.splice(index, 1);
+  return arr;
+};

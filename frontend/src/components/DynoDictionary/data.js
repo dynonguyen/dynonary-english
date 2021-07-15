@@ -44,6 +44,7 @@ function DynoDictionaryData() {
 
     totalPage.current = 0;
     preSearchList.current = [];
+    setMore(true);
     setList([]);
     setPackInfo(info);
     setPage(1);

@@ -29,11 +29,11 @@ function DynoDictionary({
         <div>
           <WordSortModal
             onSelect={onSortTypeChange}
-            classNameIcon={`${classes.icon} mr-5`}
+            classNameIcon="dyno-setting-icon mr-5"
           />
           <DDSettingWordPack
             onChoose={onSettingWordPack}
-            classNameIcon={classes.icon}
+            classNameIcon="dyno-setting-icon"
           />
         </div>
       </div>

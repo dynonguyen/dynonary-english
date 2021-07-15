@@ -1,4 +1,5 @@
 import sentenceApi from 'apis/sentenceApi';
+import { equalArray } from 'helper';
 import React, { useEffect, useRef, useState } from 'react';
 import CommunicationPhrase from '.';
 
@@ -10,6 +11,7 @@ function CommunicationPhraseData() {
   const [list, setList] = useState([]);
   const [more, setMore] = useState(true); // toggle infinite scrolling
   const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [topicList, setTopicList] = useState([]);
   const totalPage = useRef(0);
 
   const nextPage = () => {
@@ -20,13 +22,32 @@ function CommunicationPhraseData() {
     }
   };
 
-  // get total phrase
+  const onSelectTopic = (topics) => {
+    if (
+      !topics ||
+      !Array.isArray(topics) ||
+      topics.length === 0 ||
+      equalArray(topics, topicList)
+    ) {
+      return;
+    }
+
+    console.log('RUN');
+
+    setPage(1);
+    setMore(true);
+    setList([]);
+    setTopicList(topics);
+    totalPage.current = 0;
+  };
+
+  // get total sentence
   useEffect(() => {
     let isSub = true;
 
     (async function () {
       try {
-        const apiRes = await sentenceApi.getTotalSentences();
+        const apiRes = await sentenceApi.getTotalSentences(topicList);
 
         if (apiRes.status === 200 && isSub) {
           const { total = 0 } = apiRes.data;
@@ -36,16 +57,20 @@ function CommunicationPhraseData() {
     })();
 
     return () => (isSub = false);
-  }, []);
+  }, [topicList]);
 
-  // get phrase list
+  // get sentence list
   useEffect(() => {
     let isSub = true;
 
     (async function () {
       try {
         setLoading(true);
-        const apiRes = await sentenceApi.getSentenceList(page, perPage);
+        const apiRes = await sentenceApi.getSentenceList(
+          page,
+          perPage,
+          topicList,
+        );
         if (apiRes.status === 200 && isSub) {
           const { sentenceList = [] } = apiRes.data;
           setList([...list, ...sentenceList]);
@@ -60,7 +85,7 @@ function CommunicationPhraseData() {
     })();
 
     return () => (isSub = false);
-  }, [page]);
+  }, [page, topicList]);
 
   return (
     <CommunicationPhrase
@@ -69,6 +94,7 @@ function CommunicationPhraseData() {
       loading={loading}
       more={more}
       onLoadData={nextPage}
+      onSelectTopic={onSelectTopic}
     />
   );
 }

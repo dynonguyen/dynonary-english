@@ -110,7 +110,7 @@ function WordPack({
       <DialogActions>
         <Button
           onClick={onCancel}
-          className="_btn _btn-outlined-stand"
+          className="_btn _btn-stand"
           variant="outlined"
           {...cancelBtnProps}>
           {cancelBtnText}
