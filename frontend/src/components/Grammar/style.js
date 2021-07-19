@@ -6,6 +6,9 @@ export default makeStyles((theme) => ({
     margin: '0 auto',
   },
   wrapper: {
-    padding: '3.2rem 0',
+    paddingTop: '3.2rem',
+  },
+  listBox: {
+    marginBottom: '3.2rem',
   },
 }));
