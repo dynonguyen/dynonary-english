@@ -18,6 +18,7 @@ const gameApi = require('./src/apis/game.api');
 const flashcardApi = require('./src/apis/flashcard.api');
 const commonApi = require('./src/apis/common.api');
 const sentenceApi = require('./src/apis/sentence.api');
+const blogApi = require('./src/apis/blog.api');
 
 // ================== set port ==================
 const app = express();
@@ -75,6 +76,7 @@ app.use(`${BASE_URL}/games`, gameApi);
 app.use(`${BASE_URL}/flashcard`, flashcardApi);
 app.use(`${BASE_URL}/common`, commonApi);
 app.use(`${BASE_URL}/sentence`, sentenceApi);
+app.use(`${BASE_URL}/blog`, blogApi);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/src/build', 'index.html'));
