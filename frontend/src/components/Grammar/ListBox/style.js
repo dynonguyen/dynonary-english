@@ -82,9 +82,7 @@ export default makeStyles((theme) => ({
   iframe: {
     marginTop: 8,
     width: '100%',
-    paddingTop: '1.2rem',
-    paddingBottom: '1.2rem',
-    paddingLeft: '2.8rem',
+    padding: '1.6rem',
     backgroundColor: 'var(--bg-color-sec)',
     border: 'solid 1px var(--input-border-color)',
     borderRadius: 'var(--border-radius)',
