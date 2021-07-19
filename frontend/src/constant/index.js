@@ -61,6 +61,7 @@ export const ROUTES = {
   DYNO_DICTIONARY: '/dyno-dictionary',
   TOEIC_DICTIONARY: '/TOEIC-dictionary',
   COMMUNICATION_PHRASE: '/1000-communication-phrase',
+  GRAMMAR: '/grammar',
   GAMES: {
     HOME: '/games',
     CORRECT_WORD: '/games/correct-word',

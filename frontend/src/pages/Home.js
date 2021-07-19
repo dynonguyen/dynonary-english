@@ -1,7 +1,6 @@
 import Grid from '@material-ui/core/Grid';
 import communicateIcon from 'assets/icons/communicate.png';
 import dictionaryIcon from 'assets/icons/dictionary.png';
-import donateIcon from 'assets/icons/donate.png';
 import editIcon from 'assets/icons/edit.png';
 import favoriteIcon from 'assets/icons/favorite.png';
 import flashcardIcon from 'assets/icons/flashcard.png';
@@ -12,7 +11,6 @@ import ipaIcon from 'assets/icons/ipa.png';
 import toeicIcon from 'assets/icons/toeic.png';
 import translateIcon from 'assets/icons/translate.png';
 import verbIcon from 'assets/icons/verb.png';
-import voiceIcon from 'assets/icons/voice.png';
 import FeatureBox from 'components/FeatureBox';
 import { ROUTES } from 'constant';
 import useScrollTop from 'hooks/useScrollTop';
@@ -66,23 +64,23 @@ const FEATURE_LIST = [
     to: '/',
   },
   {
-    title: 'Ngữ pháp',
-    imgUrl: grammarIcon,
-    subTitle: 'Danh sách tổng hợp những cấu trúc câu trong tiếng Anh',
-    to: '/',
-  },
-  {
-    title: 'Phát âm',
-    imgUrl: voiceIcon,
-    subTitle: 'Nghe và phân biệt cách phát âm es, s, z, t, d ed',
-    to: '/',
-  },
-  {
     title: 'Động từ bất quy tắc',
     imgUrl: verbIcon,
     subTitle: 'Tất cả những động từ bất quy tắc trong tiếng Anh',
     to: '/',
   },
+  {
+    title: 'Ngữ pháp',
+    imgUrl: grammarIcon,
+    subTitle: 'Danh sách tổng hợp những cấu trúc câu trong tiếng Anh',
+    to: ROUTES.GRAMMAR,
+  },
+  /*  {
+    title: 'Phát âm',
+    imgUrl: voiceIcon,
+    subTitle: 'Nghe và phân biệt cách phát âm es, s, z, t, d ed',
+    to: '/',
+  }, */
   {
     title: 'Play Games',
     imgUrl: gameIcon,
@@ -104,17 +102,17 @@ const FEATURE_LIST = [
       'Dyno rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
     to: ROUTES.CONTRIBUTION,
   },
-  {
+  /*   {
     title: 'Donate',
     imgUrl: donateIcon,
     subTitle:
       'Ủng hộ cho Dyno để ứng dụng được duy trì, cải thiện và thêm nhiều tính năng hơn. Cảm ơn bạn ❤',
     to: '/',
-  },
+  }, */
 ];
 
 function HomePage() {
-  useTitle('Dynonary');
+  useTitle('Dynonary - Ứng dụng học tiếng Anh miễn phí');
   useScrollTop();
 
   return (

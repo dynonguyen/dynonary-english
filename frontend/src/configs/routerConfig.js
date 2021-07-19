@@ -15,6 +15,7 @@ const CommunicationPhrasePage = React.lazy(() =>
 );
 const CorrectWordPage = React.lazy(() => import('pages/PlayGames/CorrectWord'));
 const WordMatchGamePage = React.lazy(() => import('pages/PlayGames/WordMatch'));
+const GrammarPage = React.lazy(() => import('pages/Grammar'));
 
 // routes for app
 const routes = [
@@ -95,6 +96,12 @@ const routes = [
     exact: true,
     isProtect: false,
     component: () => <CommunicationPhrasePage />,
+  },
+  {
+    path: ROUTES.GRAMMAR,
+    exact: false,
+    isProtect: false,
+    component: () => <GrammarPage />,
   },
 ];
 
