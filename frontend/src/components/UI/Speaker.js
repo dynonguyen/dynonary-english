@@ -4,8 +4,18 @@ import useSpeaker from 'hooks/useSpeaker';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function Speaker({ className, type, text, audioSrc }) {
-  const { voice, speed, volume } = useSpeaker();
+let voiceInfo = null;
+
+function Speaker(props) {
+  const { className, type, text, audioSrc, isWrap } = props;
+
+  // @best performance: reduce render useSpeaker 1115 times in irregular verb
+  const { voice, speed, volume } =
+    voiceInfo === null ? useSpeaker() : voiceInfo;
+
+  if (!voiceInfo) {
+    voiceInfo = { voice, speed, volume };
+  }
 
   const handleClick = () => {
     if (type) {
@@ -16,10 +26,16 @@ function Speaker({ className, type, text, audioSrc }) {
   };
 
   return (
-    <SpeakerIcon
-      className={`dyno-speaker ${className}`}
-      onClick={handleClick}
-    />
+    <>
+      {isWrap ? (
+        <div onClick={handleClick}>{props.children}</div>
+      ) : (
+        <SpeakerIcon
+          className={`dyno-speaker ${className}`}
+          onClick={handleClick}
+        />
+      )}
+    </>
   );
 }
 
@@ -28,6 +44,8 @@ Speaker.propTypes = {
   className: PropTypes.string,
   text: PropTypes.string,
   type: PropTypes.bool, // type = false: play audio, true: play text
+  isWrap: PropTypes.bool,
+  children: PropTypes.any,
 };
 
 Speaker.defaultProps = {
@@ -35,6 +53,7 @@ Speaker.defaultProps = {
   className: '',
   text: '',
   type: true,
+  isWrap: false,
 };
 
 export default Speaker;

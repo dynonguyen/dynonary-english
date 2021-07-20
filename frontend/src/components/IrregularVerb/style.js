@@ -52,6 +52,7 @@ export default makeStyles((theme) => ({
       paddingBottom: '1.6rem',
       paddingLeft: '0.4rem',
       paddingRight: '0.4rem',
+      cursor: 'pointer',
     },
 
     '& tr:nth-child(even)': {

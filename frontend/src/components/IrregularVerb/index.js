@@ -4,6 +4,7 @@ import FilterIcon from '@material-ui/icons/FilterList';
 import AZIcon from '@material-ui/icons/TextRotateUp';
 import ZAIcon from '@material-ui/icons/TextRotationDown';
 import AutoSearchInput from 'components/UI/AutoSearchInput';
+import Speaker from 'components/UI/Speaker';
 import initList from 'constant/irregular-verb.min.js';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
@@ -202,7 +203,7 @@ function IrregularVerb(props) {
       <p className="dyno-sub-title">
         Chúng ta có hơn 600 động từ bất quy tắc, nhưng chỉ có khoảng 360 từ
         thường xuyên xuất hiện nhất. <br /> Bạn hãy tập trung học những từ này
-        trước nhé 😎
+        trước nhé 😎 (Click vào từ để nghe phát âm)
       </p>
       <div className="dyno-break"></div>
 
@@ -233,14 +234,29 @@ function IrregularVerb(props) {
           </thead>
 
           <tbody>
-            {list.map((item, index) => (
-              <tr key={index}>
-                <td>{item.v1}</td>
-                <td>{item.v2}</td>
-                <td>{item.v3}</td>
-                <td>{item.mean}</td>
-              </tr>
-            ))}
+            {list.map((item, index) => {
+              const { v1, v2, v3, mean } = item;
+              return (
+                <tr key={index}>
+                  <td>
+                    <Speaker isWrap={true} text={v1}>
+                      {v1}
+                    </Speaker>
+                  </td>
+                  <td>
+                    <Speaker isWrap={true} text={v2}>
+                      {v2}
+                    </Speaker>
+                  </td>
+                  <td>
+                    <Speaker isWrap={true} text={v3}>
+                      {v3}
+                    </Speaker>
+                  </td>
+                  <td>{mean}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
