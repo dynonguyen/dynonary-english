@@ -67,7 +67,7 @@ const FEATURE_LIST = [
     title: 'Động từ bất quy tắc',
     imgUrl: verbIcon,
     subTitle: 'Tất cả những động từ bất quy tắc trong tiếng Anh',
-    to: '/',
+    to: ROUTES.IRREGULAR,
   },
   {
     title: 'Ngữ pháp',

@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows: 'repeat(5,1fr)',
     height: 'calc(100vh - 18rem)',
-    gridGap: '0.8rem',
+    gap: '0.8rem',
 
     position: 'relative',
 

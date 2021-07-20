@@ -24,7 +24,7 @@ export default makeStyles((theme) => ({
     color: 'var(--text-color)',
     fontSize: '1.6rem',
     borderRadius: 'var(--border-radius) !important',
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
 
     backgroundColor: 'var(--bg-color-accent) !important',
   },

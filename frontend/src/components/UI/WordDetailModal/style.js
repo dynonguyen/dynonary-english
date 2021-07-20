@@ -33,7 +33,7 @@ export default makeStyles((theme) => ({
   content: {
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gridGap: '0.8rem',
+    gap: '0.8rem',
 
     '& *': {
       fontSize: '1.6rem',

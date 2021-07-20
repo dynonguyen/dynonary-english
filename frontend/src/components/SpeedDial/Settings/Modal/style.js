@@ -15,8 +15,8 @@ export default makeStyles((theme) => ({
   },
 
   content: {
-    borderTop: 'solid 1px var(--input-border-color)',
-    borderBottom: 'solid 1px var(--input-border-color)',
+    borderTop: 'solid 1px var(--border-color)',
+    borderBottom: 'solid 1px var(--border-color)',
     backgroundColor: 'var(--bg-color-sec)',
     padding: '1.2rem 2.4rem',
   },
@@ -25,7 +25,7 @@ export default makeStyles((theme) => ({
     padding: '1.6rem',
     margin: '1.6rem 0',
     borderRadius: 'var(--sm-border-radius)',
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
   },
 
   contentLabel: {

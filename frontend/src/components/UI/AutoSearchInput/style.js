@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
       fontSize: '1.8rem',
       color: 'var(--text-color)',
       background: 'none',
-      border: 'solid 1px var(--input-border-color)',
+      border: 'solid 1px var(--border-color)',
       backgroundColor: 'var(--bg-color-accent)',
       borderRadius: 'var(--border-radius)',
 

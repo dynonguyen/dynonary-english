@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns: '1fr',
     gridTemplateRows: '1fr 1fr 1fr',
-    gridGap: '0.8rem',
+    gap: '0.8rem',
   },
 
   helpIcon: {

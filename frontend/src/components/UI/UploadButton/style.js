@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     minHeight: '5.6rem',
     backgroundColor: 'var(--bg-color-accent) !important',
     boxShadow: 'none !important',
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
     color: 'var(--label-color)',
 
     textTransform: 'capitalize',
@@ -25,7 +25,7 @@ export default makeStyles((theme) => ({
 
   review: {
     backgroundColor: 'var(--bg-color-accent)',
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
     padding: '0.6rem 1.2rem',
     borderRadius: 'var(--sm-border-radius)',
 

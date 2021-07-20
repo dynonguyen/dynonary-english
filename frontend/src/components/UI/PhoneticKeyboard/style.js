@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
 
     display: 'grid',
     gridTemplateColumns: 'repeat(6, 1fr)',
-    gridGap: '0.6rem',
+    gap: '0.6rem',
 
     [theme.breakpoints.up('md')]: {
       gridTemplateColumns: 'repeat(10, 1fr)',

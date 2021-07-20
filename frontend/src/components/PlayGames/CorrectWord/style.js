@@ -24,7 +24,7 @@ export default makeStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows: '1fr 1fr',
-    gridGap: '1.2rem',
+    gap: '1.2rem',
     padding: '2.4rem 0',
 
     [theme.breakpoints.up('md')]: {
@@ -32,7 +32,7 @@ export default makeStyles((theme) => ({
       margin: '0 auto',
       maxWidth: '50%',
       minWidth: '40rem',
-      gridGap: '2.4rem',
+      gap: '2.4rem',
     },
   },
 

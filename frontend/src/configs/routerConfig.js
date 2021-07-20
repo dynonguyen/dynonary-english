@@ -19,6 +19,7 @@ const GrammarPage = React.lazy(() => import('pages/Grammar'));
 const FavoriteDictionaryPage = React.lazy(() =>
   import('pages/FavoriteDictionary'),
 );
+const IrregularVerbPage = React.lazy(() => import('pages/IrregularVerb'));
 
 // routes for app
 const routes = [
@@ -111,6 +112,12 @@ const routes = [
     exact: false,
     isProtect: true,
     component: () => <FavoriteDictionaryPage />,
+  },
+  {
+    path: ROUTES.IRREGULAR,
+    exact: false,
+    isProtect: false,
+    component: () => <IrregularVerbPage />,
   },
 ];
 

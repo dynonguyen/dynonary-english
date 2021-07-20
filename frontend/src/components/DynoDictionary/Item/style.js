@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   root: {
     padding: '1.2rem 0',
-    borderBottom: 'solid 1px var(--input-border-color)',
+    borderBottom: 'solid 1px var(--border-color)',
     cursor: 'pointer',
     transition: 'all 0.35s',
 

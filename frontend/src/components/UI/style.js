@@ -101,6 +101,6 @@ export const dialogMUIRoot = (theme) => ({
   },
 
   breakLine: {
-    borderColor: 'var(--input-border-color)',
+    borderColor: 'var(--border-color)',
   },
 });

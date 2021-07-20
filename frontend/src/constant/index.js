@@ -63,6 +63,7 @@ export const ROUTES = {
   COMMUNICATION_PHRASE: '/1000-communication-phrase',
   GRAMMAR: '/grammar',
   FAVORITE: '/favorite-vocab',
+  IRREGULAR: '/irregular-verbs',
   GAMES: {
     HOME: '/games',
     CORRECT_WORD: '/games/correct-word',

@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
     '& .MuiInputBase-root': {
       backgroundColor: 'var(--bg-color-accent)',
       borderRadius: 'var(--border-radius)',
-      border: 'solid 1px var(--input-border-color)',
+      border: 'solid 1px var(--border-color)',
       color: 'var(--text-color)',
 
       '& ::placeholder': {

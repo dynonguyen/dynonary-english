@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
   root: {
     display: 'grid',
     gridTemplateColumns: '100%',
-    gridGap: '1.6rem',
+    gap: '1.6rem',
 
     [theme.breakpoints.up('sm')]: {
       gridTemplateColumns: '1fr 1fr 1fr',
@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     },
 
     '& .MuiOutlinedInput-notchedOutline': {
-      borderColor: 'var(--input-border-color) !important',
+      borderColor: 'var(--border-color) !important',
     },
 
     '& .MuiSelect-icon': {

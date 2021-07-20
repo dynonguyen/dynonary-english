@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     padding: '0.8rem 1.2rem',
     margin: '0 0.8rem',
 
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
     backgroundColor: 'var(--bg-color-accent)',
     borderRadius: 'var(--border-radius)',
     cursor: 'pointer',

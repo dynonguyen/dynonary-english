@@ -61,7 +61,7 @@
     left: 0;
     top: 50%;
     height: 1px;
-    background-color: var(--input-border-color);
+    background-color: var(--border-color);
   }
 
   &::after {
@@ -71,7 +71,7 @@
     right: 0;
     top: 50%;
     height: 1px;
-    background-color: var(--input-border-color);
+    background-color: var(--border-color);
   }
 }
 
@@ -112,6 +112,7 @@
   font-weight: 500;
   font-size: 1.6rem;
   margin: 0.8rem auto;
+  line-height: 1.5;
 }
 
 .dyno-box {
@@ -144,7 +145,7 @@
   width: 100%;
   height: 1px;
   margin: 0.8rem 0;
-  background-color: var(--input-border-color);
+  background-color: var(--border-color);
 }
 
 .dyno-game {
@@ -156,7 +157,7 @@
     display: flex;
     align-items: center;
     padding: 1.2rem 0;
-    border-bottom: solid 1px var(--input-border-color);
+    border-bottom: solid 1px var(--border-color);
 
     h1 {
       color: var(--title-color);
@@ -208,7 +209,7 @@
   position: relative;
 
   background-color: transparent;
-  border: solid 1px var(--input-border-color);
+  border: solid 1px var(--border-color);
   border-radius: 25px;
 
   &::before {

@@ -29,7 +29,7 @@ export default makeStyles((theme) => ({
 
     '&.active': {
       boxShadow: 'none',
-      border: 'solid 1px var(--input-border-color)',
+      border: 'solid 1px var(--border-color)',
 
       '&::before': {
         backgroundColor: 'var(--accent-color) !important',
@@ -84,7 +84,7 @@ export default makeStyles((theme) => ({
     width: '100%',
     padding: '1.6rem',
     backgroundColor: '#fff',
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
     borderRadius: 'var(--border-radius)',
     transition: 'all 0.5s',
     minHeight: '75rem',

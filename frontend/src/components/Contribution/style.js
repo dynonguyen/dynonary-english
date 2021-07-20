@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     marginTop: '2.4rem',
     marginBottom: '3.6rem',
     display: 'flex',
-    borderBottom: 'solid 1px var(--input-border-color)',
+    borderBottom: 'solid 1px var(--border-color)',
   },
 
   tab: {

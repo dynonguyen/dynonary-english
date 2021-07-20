@@ -23,7 +23,7 @@ export default makeStyles((theme) => ({
   },
 
   inputInput: {
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
     padding: '0.8rem 0.8rem 0.8rem 0',
     paddingLeft: 'calc(1em + 3.2rem)',
     transition: theme.transitions.create('width'),

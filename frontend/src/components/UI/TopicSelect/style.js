@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
   button: {
     backgroundColor: 'var(--bg-color-accent) !important',
     boxShadow: 'none !important',
-    border: 'solid 1px var(--input-border-color)',
+    border: 'solid 1px var(--border-color)',
     color: 'var(--label-color)',
     textTransform: 'capitalize',
     minHeight: '5.6rem',
