@@ -3,6 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   root: {
     paddingTop: '3.2rem',
+    paddingBottom: '3.2rem',
+
+    '& .active': {
+      color: 'var(--secondary-color)',
+    },
   },
 
   controlItem: {

@@ -4,17 +4,20 @@ import FilterIcon from '@material-ui/icons/FilterList';
 import AZIcon from '@material-ui/icons/TextRotateUp';
 import ZAIcon from '@material-ui/icons/TextRotationDown';
 import AutoSearchInput from 'components/UI/AutoSearchInput';
+import initList from 'constant/irregular-verb.min.js';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import useStyle from './style';
-import initList from 'constant/irregular-verb.min.js';
 
 function IrregularVerbFilter({ classes, onSort, onFilter }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [sortType, setSortType] = useState(false);
+  const [isFiltered, setIsFiltered] = useState(false);
 
   const handleFilter = (v) => {
+    setIsFiltered(Boolean(v));
     setAnchorEl(null);
+    onFilter(v);
   };
 
   const handleSort = () => {
@@ -33,7 +36,7 @@ function IrregularVerbFilter({ classes, onSort, onFilter }) {
         )}
       </div>
       <div
-        className={classes.controlItem}
+        className={`${classes.controlItem} ${isFiltered ? 'active' : ''}`}
         onClick={(e) => setAnchorEl(e.currentTarget)}>
         <span className="pr-2">Lọc</span>
         <FilterIcon className={classes.controlIcon} />
@@ -48,12 +51,14 @@ function IrregularVerbFilter({ classes, onSort, onFilter }) {
         onClose={() => setAnchorEl(null)}
         keepMounted
         open={Boolean(anchorEl)}>
+        <MenuItem onClick={() => handleFilter(0)}>Không lọc</MenuItem>
         <MenuItem onClick={() => handleFilter(1)}>v1 = v2 = v3</MenuItem>
-        <MenuItem onClick={() => handleFilter(1)}>v2 = v3</MenuItem>
-        <MenuItem onClick={() => handleFilter(1)}>{`ay > aid > aid`}</MenuItem>
-        <MenuItem onClick={() => handleFilter(1)}>{`d > t`}</MenuItem>
-        <MenuItem onClick={() => handleFilter(1)}>{`eed > ed`}</MenuItem>
-        <MenuItem onClick={() => handleFilter(1)}>{`ow > ew > own`}</MenuItem>
+        <MenuItem onClick={() => handleFilter(2)}>v2 = v3</MenuItem>
+        <MenuItem onClick={() => handleFilter(3)}>{`ay > aid > aid`}</MenuItem>
+        <MenuItem onClick={() => handleFilter(4)}>{`d > t`}</MenuItem>
+        <MenuItem onClick={() => handleFilter(5)}>{`eed > ed`}</MenuItem>
+        <MenuItem onClick={() => handleFilter(6)}>{`ow > ew > own`}</MenuItem>
+        <MenuItem onClick={() => handleFilter(7)}>{`ear > ore > orn`}</MenuItem>
       </Menu>
     </div>
   );
@@ -64,6 +69,103 @@ IrregularVerbFilter.propTypes = {
   onSort: PropTypes.func,
   onFilter: PropTypes.func,
 };
+
+function filterIrregularList(list = [], type = 1) {
+  let newList = [];
+
+  switch (type) {
+    case 0:
+      // not filter
+      newList = [...list];
+      break;
+    // v1 = v2 = v3
+    case 1:
+      newList = list.filter((item) => {
+        const { v1, v2, v3 } = item;
+        return (
+          v1.toLowerCase() === v2.toLowerCase() &&
+          v1.toLowerCase() === v3.toLowerCase()
+        );
+      });
+      break;
+
+    // v2 = v3
+    case 2:
+      newList = list.filter((item) => {
+        const { v1, v2, v3 } = item;
+        return (
+          v1.toLowerCase() !== v2.toLowerCase() &&
+          v2.toLowerCase() === v3.toLowerCase()
+        );
+      });
+      break;
+
+    // ay -> aid -> aid
+    case 3:
+      newList = list.filter((item) => {
+        const { v1, v2, v3 } = item;
+
+        return (
+          v1.slice(v1.length - 2).toLowerCase() === 'ay' &&
+          v2.slice(v2.length - 3).toLowerCase() === 'aid' &&
+          v3.slice(v3.length - 3).toLowerCase() === 'aid'
+        );
+      });
+      break;
+    // d -> t
+    case 4:
+      newList = list.filter((item) => {
+        const { v1, v2, v3 } = item;
+
+        return (
+          v1[v1.length - 1].toLowerCase() === 'd' &&
+          v2[v2.length - 1].toLowerCase() === 't' &&
+          v3[v3.length - 1].toLowerCase() === 't'
+        );
+      });
+      break;
+    // eed -> ed
+    case 5:
+      newList = list.filter((item) => {
+        const { v1, v2, v3 } = item;
+
+        return (
+          v1.slice(v1.length - 3).toLowerCase() === 'eed' &&
+          v2.slice(v2.length - 2).toLowerCase() === 'ed' &&
+          v3.slice(v3.length - 2).toLowerCase() === 'ed'
+        );
+      });
+      break;
+    // ow -> ew -> own
+    case 6:
+      newList = list.filter((item) => {
+        const { v1, v2, v3 } = item;
+
+        return (
+          v1.slice(v1.length - 2).toLowerCase() === 'ow' &&
+          v2.slice(v2.length - 2).toLowerCase() === 'ew' &&
+          v3.slice(v3.length - 3).toLowerCase() === 'own'
+        );
+      });
+      break;
+    // ear -> ore -> orne
+    case 7:
+      newList = list.filter((item) => {
+        const { v1, v2, v3 } = item;
+
+        return (
+          v1.slice(v1.length - 3).toLowerCase() === 'ear' &&
+          v2.slice(v2.length - 3).toLowerCase() === 'ore' &&
+          v3.slice(v3.length - 4).toLowerCase() === 'orne'
+        );
+      });
+      break;
+    default:
+      break;
+  }
+
+  return newList;
+}
 
 function IrregularVerb(props) {
   const classes = useStyle();
@@ -88,6 +190,11 @@ function IrregularVerb(props) {
     setList([...foundList]);
   };
 
+  const handleFilter = (type) => {
+    const newList = filterIrregularList(initList, type);
+    setList([...newList]);
+  };
+
   return (
     <div className={`${classes.root} container`}>
       {/* header */}
@@ -106,7 +213,11 @@ function IrregularVerb(props) {
           maxLength={40}
           style={{ padding: '1rem 1.2rem', maxWidth: '45rem' }}
         />
-        <IrregularVerbFilter classes={classes} onSort={handleSort} />
+        <IrregularVerbFilter
+          classes={classes}
+          onSort={handleSort}
+          onFilter={handleFilter}
+        />
       </div>
 
       {/* verb table */}
