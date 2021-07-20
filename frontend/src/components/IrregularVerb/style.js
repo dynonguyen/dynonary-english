@@ -35,14 +35,18 @@ export default makeStyles((theme) => ({
     width: '100%',
     textAlign: 'left',
     color: 'var(--text-color)',
-    fontSize: '1.6rem',
+    fontSize: '1.5rem',
     borderSpacing: '0px',
 
+    '& th': {
+      borderBottom: 'solid 1px var(--border-color)',
+    },
+
     '& td, & th': {
-      paddingTop: '1.2rem',
-      paddingBottom: '1.2rem',
-      paddingLeft: '0.8rem',
-      paddingRight: '0.8rem',
+      paddingTop: '1.6rem',
+      paddingBottom: '1.6rem',
+      paddingLeft: '0.4rem',
+      paddingRight: '0.4rem',
     },
 
     '& tr:nth-child(even)': {
@@ -54,6 +58,15 @@ export default makeStyles((theme) => ({
 
       '&:hover, &:active': {
         backgroundColor: 'var(--hover-color)',
+      },
+    },
+
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.6rem',
+
+      '& td, & th': {
+        paddingLeft: '0.8rem',
+        paddingRight: '0.8rem',
       },
     },
   },

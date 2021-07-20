@@ -7,31 +7,11 @@ import AutoSearchInput from 'components/UI/AutoSearchInput';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import useStyle from './style';
-
-const initList = [
-  {
-    v1: 'be',
-    v2: 'was',
-    v3: 'been',
-    mean: 'thì, là, bị, ở',
-  },
-  {
-    v1: 'write',
-    v2: 'wrote',
-    v3: 'written',
-    mean: 'viết',
-  },
-  {
-    v1: 'withdraw',
-    v2: 'withdrew',
-    v3: 'withdrawn',
-    mean: 'rút lui',
-  },
-];
+import initList from 'constant/irregular-verb.min.js';
 
 function IrregularVerbFilter({ classes, onSort, onFilter }) {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [sortType, setSortType] = useState(true);
+  const [sortType, setSortType] = useState(false);
 
   const handleFilter = (v) => {
     setAnchorEl(null);
