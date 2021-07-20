@@ -61,7 +61,7 @@ const FEATURE_LIST = [
     title: 'Từ vựng yêu thích của bạn',
     imgUrl: favoriteIcon,
     subTitle: 'Danh sách những từ vựng yêu thích mà bạn đã lưu',
-    to: '/',
+    to: ROUTES.FAVORITE,
   },
   {
     title: 'Động từ bất quy tắc',

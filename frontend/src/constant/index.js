@@ -62,6 +62,7 @@ export const ROUTES = {
   TOEIC_DICTIONARY: '/TOEIC-dictionary',
   COMMUNICATION_PHRASE: '/1000-communication-phrase',
   GRAMMAR: '/grammar',
+  FAVORITE: '/favorite-vocab',
   GAMES: {
     HOME: '/games',
     CORRECT_WORD: '/games/correct-word',

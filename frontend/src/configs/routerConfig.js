@@ -16,6 +16,9 @@ const CommunicationPhrasePage = React.lazy(() =>
 const CorrectWordPage = React.lazy(() => import('pages/PlayGames/CorrectWord'));
 const WordMatchGamePage = React.lazy(() => import('pages/PlayGames/WordMatch'));
 const GrammarPage = React.lazy(() => import('pages/Grammar'));
+const FavoriteDictionaryPage = React.lazy(() =>
+  import('pages/FavoriteDictionary'),
+);
 
 // routes for app
 const routes = [
@@ -102,6 +105,12 @@ const routes = [
     exact: false,
     isProtect: false,
     component: () => <GrammarPage />,
+  },
+  {
+    path: ROUTES.FAVORITE,
+    exact: false,
+    isProtect: true,
+    component: () => <FavoriteDictionaryPage />,
   },
 ];
 

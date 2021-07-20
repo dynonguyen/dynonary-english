@@ -83,7 +83,7 @@ export default makeStyles((theme) => ({
     marginTop: 8,
     width: '100%',
     padding: '1.6rem',
-    backgroundColor: 'var(--bg-color-sec)',
+    backgroundColor: '#fff',
     border: 'solid 1px var(--input-border-color)',
     borderRadius: 'var(--border-radius)',
     transition: 'all 0.5s',

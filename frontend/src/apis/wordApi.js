@@ -25,6 +25,12 @@ const wordApi = {
   getWordDetails: (word = '') => {
     return axiosClient.get(`${URL}/word-details`, { params: { word } });
   },
+
+  getUserFavoriteList: (page = 0, perPage = 20, sortType = 'rand') => {
+    return axiosClient.get(`${URL}/favorite-list`, {
+      params: { page, perPage, sortType },
+    });
+  },
 };
 
 export default wordApi;

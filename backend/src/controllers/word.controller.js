@@ -7,6 +7,7 @@ const {
   createNewWord,
   searchWord,
   getWordDetail,
+  getFavoriteList,
 } = require('../services/word.service');
 
 exports.postContributeWord = async (req, res, next) => {
@@ -106,5 +107,38 @@ exports.getWordDetails = async (req, res, next) => {
   } catch (error) {
     console.error('GET WORD DETAILS ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.getUserFavoriteList = async (req, res, next) => {
+  try {
+    const { user } = req;
+    if (!user || !user.favoriteList) {
+      return res.status(400).json({ message: 'failed' });
+    }
+
+    const { favoriteList } = user;
+    if (!Array.isArray(favoriteList) || favoriteList.length === 0) {
+      return res.status(200).json({ list: [] });
+    }
+
+    let { page, perPage, sortType } = req.query;
+    page = parseInt(page);
+    perPage = parseInt(perPage);
+
+    let favoriteSorted = [...favoriteList];
+    if (sortType === 'asc') {
+      favoriteSorted.sort((a, b) => (a > b ? 1 : a < b ? -1 : 0));
+    } else if (sortType === 'desc') {
+      favoriteSorted.sort((a, b) => (a > b ? -1 : a < b ? 1 : 0));
+    }
+    favoriteSorted = favoriteSorted.slice((page - 1) * perPage, page * perPage);
+
+    const packList = await getFavoriteList(favoriteSorted);
+
+    return res.status(200).json({ packList });
+  } catch (error) {
+    console.error(' ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };
