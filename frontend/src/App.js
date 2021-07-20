@@ -11,6 +11,7 @@ import NotFoundPage from 'pages/NotFound';
 import React, { Suspense, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Element } from 'react-scroll';
 import { getUserInfo } from 'redux/slices/userInfo.slice';
 
 const { routes, renderRoutes } = routerConfig;
@@ -41,6 +42,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <Router>
             <div className="dynonary-app">
+              <Element name="scrollTop" />
               <Navigation />
 
               {/* routes */}
