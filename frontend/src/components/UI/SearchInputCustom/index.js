@@ -51,7 +51,7 @@ function SearchInputCustom({ placeholder, showInput, prefixIcon }) {
               `${i.title} ${i.searchKey}`.indexOf(word.toLowerCase()) !== -1,
           ).map((i) => ({ title: i.title, to: i.to })) || [];
 
-        const apiRes = await wordApi.getSearchWord(word);
+        const apiRes = await wordApi.getSearchWord(word, true);
         if (apiRes.data?.packList) {
           navSearchList = [
             ...navSearchList,

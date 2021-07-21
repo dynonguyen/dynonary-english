@@ -88,7 +88,9 @@ exports.getSearchWord = async (req, res) => {
     const list = await searchWord(
       word,
       20,
-      isCompact ? '-_id word' : '-_id type word mean phonetic picture',
+      isCompact == 'true'
+        ? '-_id word'
+        : '-_id type word mean phonetic picture',
     );
     return res.status(200).json({ packList: list });
   } catch (error) {
