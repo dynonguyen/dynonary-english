@@ -84,11 +84,11 @@ exports.getWordPack = async (req, res) => {
 
 exports.getSearchWord = async (req, res) => {
   try {
-    const { word } = req.query;
+    const { word, isCompact = false } = req.query;
     const list = await searchWord(
       word,
       20,
-      '-_id type word mean phonetic picture',
+      isCompact ? '-_id word' : '-_id type word mean phonetic picture',
     );
     return res.status(200).json({ packList: list });
   } catch (error) {

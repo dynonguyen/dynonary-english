@@ -36,6 +36,7 @@ function SettingModal({ open, onClose }) {
 
         <div className={classes.contentItem}>
           <h2 className={classes.contentLabel}>Giọng đọc</h2>
+          <p className="dyno-sub-title">Tải lại trang sau khi thay đổi</p>
           <VoiceSetting />
         </div>
 

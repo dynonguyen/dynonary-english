@@ -5,7 +5,6 @@ export default makeStyles((theme) => ({
     position: 'relative',
     borderRadius: 'var(--border-radius)',
     marginLeft: 0,
-    // width: '100%',
   },
 
   icon: {
@@ -36,5 +35,11 @@ export default makeStyles((theme) => ({
         width: '20ch',
       },
     },
+  },
+
+  resMenu: {
+    width: '28rem',
+    maxWidth: '32rem',
+    backgroundColor: 'var(--bg-color-sec)',
   },
 }));

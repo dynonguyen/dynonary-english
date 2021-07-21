@@ -18,8 +18,10 @@ const wordApi = {
     });
   },
 
-  getSearchWord: (word = '') => {
-    return axiosClient.get(`${URL}/search-word`, { params: { word } });
+  getSearchWord: (word = '', isCompact = false) => {
+    return axiosClient.get(`${URL}/search-word`, {
+      params: { word, isCompact },
+    });
   },
 
   getWordDetails: (word = '') => {
