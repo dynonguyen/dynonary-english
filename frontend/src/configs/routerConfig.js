@@ -124,7 +124,7 @@ const routes = [
 const renderRoutes = (routes, isAuth = false) => {
   return routes.map((route, index) => {
     const { path, exact, component, isProtect } = route;
-    const loginComponent = () => <>Login Page</>;
+    const loginComponent = () => <LoginPage />;
     const componentRender = !isProtect
       ? component
       : isAuth

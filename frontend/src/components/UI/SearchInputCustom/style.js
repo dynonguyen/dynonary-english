@@ -38,8 +38,13 @@ export default makeStyles((theme) => ({
   },
 
   resMenu: {
-    width: '28rem',
-    maxWidth: '32rem',
+    minWidth: '28rem',
+    maxWidth: '34rem',
     backgroundColor: 'var(--bg-color-sec)',
+  },
+
+  resMenuItem: {
+    maxWidth: '100%',
+    whiteSpace: 'break-spaces',
   },
 }));

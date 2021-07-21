@@ -4,9 +4,11 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import wordApi from 'apis/wordApi';
 import { MAX } from 'constant';
+import NAV_SEARCH_DATA from 'constant/nav-search-data';
 import { debounce } from 'helper';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import WordDetailModal from '../WordDetailModal';
 import useStyle from './style';
 let timer = null;
@@ -17,13 +19,20 @@ function SearchInputCustom({ placeholder, showInput, prefixIcon }) {
   const searchBarRef = useRef(null);
   const [resultList, setResultList] = useState([]);
   const [wordDetails, setWordDetails] = useState(null);
+  const history = useHistory();
 
   const handleCloseModal = () => {
     setAnchorEl(null);
   };
 
-  const handleOpenWordDetails = async (word) => {
+  const handleOpenWordDetails = async (word, to) => {
     setAnchorEl(null);
+
+    if (Boolean(to)) {
+      history.push(to);
+      return;
+    }
+
     const apiRes = await wordApi.getWordDetails(word);
     setWordDetails(apiRes?.data);
   };
@@ -36,8 +45,21 @@ function SearchInputCustom({ placeholder, showInput, prefixIcon }) {
         if (!Boolean(word)) {
           return;
         }
+        let navSearchList =
+          NAV_SEARCH_DATA.filter(
+            (i) =>
+              `${i.title} ${i.searchKey}`.indexOf(word.toLowerCase()) !== -1,
+          ).map((i) => ({ title: i.title, to: i.to })) || [];
+
         const apiRes = await wordApi.getSearchWord(word);
-        setResultList(apiRes?.data?.packList || []);
+        if (apiRes.data?.packList) {
+          navSearchList = [
+            ...navSearchList,
+            ...apiRes.data.packList.map((i) => ({ title: i.word, to: null })),
+          ];
+        }
+
+        setResultList(navSearchList?.slice(0, 20) || []);
         setAnchorEl(searchBarRef.current);
       },
       750,
@@ -86,12 +108,12 @@ function SearchInputCustom({ placeholder, showInput, prefixIcon }) {
           resultList.map((item, index) => (
             <MenuItem
               key={index}
-              onClick={() => handleOpenWordDetails(item.word)}>
-              {item.word}
+              onClick={() => handleOpenWordDetails(item.title, item.to)}>
+              {item.title}
             </MenuItem>
           ))
         ) : (
-          <MenuItem onClick={handleCloseModal}>
+          <MenuItem className={classes.resMenuItem} onClick={handleCloseModal}>
             Không tìm thấy kết quả nào
           </MenuItem>
         )}
