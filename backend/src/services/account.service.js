@@ -1,4 +1,5 @@
 const { ACCOUNT_TYPES, MAX } = require('../constant');
+const { hashPassword } = require('../helper');
 const AccountModel = require('../models/account.model/account.model');
 const UserModel = require('../models/account.model/user.model');
 
@@ -118,6 +119,22 @@ exports.updateUserCoin = async (newCoin = 0, username = '') => {
     if (updateRes.ok) {
       return true;
     }
+  } catch (error) {
+    throw error;
+  }
+};
+
+exports.updatePassword = async (email = '', newPassword = '') => {
+  try {
+    const hashPw = await hashPassword(newPassword);
+
+    const res = await AccountModel.updateOne({ email }, { password: hashPw });
+
+    if (res.ok) {
+      return true;
+    }
+
+    return false;
   } catch (error) {
     throw error;
   }

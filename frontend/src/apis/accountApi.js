@@ -23,6 +23,14 @@ const accountApi = {
     return axiosClient.post(`${URL}/logout`);
   },
 
+  postResetPassword: (email, password, verifyCode) => {
+    return axiosClient.post(`${URL}/reset-password`, {
+      email,
+      password,
+      verifyCode,
+    });
+  },
+
   putToggleWordFavorite: (username, word, isAdd) => {
     return axiosClient.put(`${URL}/toggle-favorite`, { username, word, isAdd });
   },
@@ -33,6 +41,12 @@ const accountApi = {
 
   getUserInfo: () => {
     return axiosClient.get(`${URL}/user-info`);
+  },
+
+  getSendVerifyCode: (email) => {
+    return axiosClient.get(`${URL}/send-verify-code`, {
+      params: { email },
+    });
   },
 };
 

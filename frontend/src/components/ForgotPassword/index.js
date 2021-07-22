@@ -8,8 +8,11 @@ import makeStyles from '@material-ui/styles/makeStyles';
 import InputCustom from 'components/UI/InputCustom';
 import { formStyle } from 'components/UI/style';
 import { MAX, MIN } from 'constant';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { setMessage } from 'redux/slices/message.slice';
 import * as yup from 'yup';
 
 const schema = yup.object().shape({
@@ -41,16 +44,37 @@ const schema = yup.object().shape({
     .oneOf([yup.ref('password'), null], 'Mật khẩu không khớp'),
 });
 
-function ForgotPassword({ onSubmit, loading }) {
+function ForgotPassword({ onSubmit, loading, mailSending, onSendVerifyCode }) {
   const classes = makeStyles(formStyle())();
   const [visiblePw, setVisiblePw] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    getValues,
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const dispatch = useDispatch();
+
+  const handleSendCode = async () => {
+    const email = getValues('email');
+
+    const regex =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if (!regex.test(email.toLowerCase())) {
+      dispatch(
+        setMessage({
+          type: 'error',
+          message: 'Email không hợp lệ',
+        }),
+      );
+      return;
+    }
+
+    onSendVerifyCode(email);
+  };
 
   return (
     <form
@@ -86,7 +110,7 @@ function ForgotPassword({ onSubmit, loading }) {
             className="w-50"
             label="Mã xác nhận"
             size="small"
-            placeholder=""
+            placeholder="X X X X X X"
             error={Boolean(errors.verifyCode)}
             inputProps={{
               name: 'verifyCode',
@@ -94,7 +118,13 @@ function ForgotPassword({ onSubmit, loading }) {
               ...register('verifyCode'),
             }}
           />
-          <Button className="_btn _btn-stand w-50">Gửi mã</Button>
+          <Button
+            className="_btn _btn-stand w-50"
+            disabled={mailSending}
+            endIcon={mailSending && <LoopIcon className="ani-spin" />}
+            onClick={handleSendCode}>
+            Gửi mã
+          </Button>
         </div>
         {errors.verifyCode && (
           <p className="text-error">{errors.verifyCode?.message}</p>
@@ -176,5 +206,12 @@ function ForgotPassword({ onSubmit, loading }) {
     </form>
   );
 }
+
+ForgotPassword.propTypes = {
+  loading: PropTypes.bool,
+  mailSending: PropTypes.bool,
+  onSendVerifyCode: PropTypes.func,
+  onSubmit: PropTypes.func,
+};
 
 export default ForgotPassword;

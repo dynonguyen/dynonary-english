@@ -36,7 +36,7 @@ const accountSchema = new Schema({
 // Note: callback should be a normal function -> use 'this'
 accountSchema.pre('save', async function (next) {
   try {
-    if (this.authType === 'local') {
+    if (Boolean(this.password)) {
       const saltRounds = parseInt(process.env.SALT_ROUND);
       //hashing password...
       const hashPassword = await bcrypt.hash(this.password, saltRounds);

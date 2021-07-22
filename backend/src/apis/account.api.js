@@ -16,6 +16,7 @@ accountApi.post(
   passport.authenticate('facebook-token', { session: false }),
   accountController.postLoginSocialNetwork,
 );
+accountApi.post('/reset-password', accountController.postResetPassword);
 
 accountApi.put('/toggle-favorite', accountController.putToggleFavorite);
 accountApi.put(
@@ -29,5 +30,6 @@ accountApi.get(
   passportConfig.jwtAuthentication,
   accountController.getUserInfo,
 );
+accountApi.get('/send-verify-code', accountController.getVerifyCode);
 
 module.exports = accountApi;

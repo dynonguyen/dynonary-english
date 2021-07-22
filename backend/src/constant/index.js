@@ -20,7 +20,9 @@ exports.MAX = {
   USER_NAME: 110,
   LEN_WORD_PACK: 100,
   FAVORITES_LEN: 200,
+  VERIFY_CODE: 6,
   USER_COIN: 999_999_999,
+  VERIFY_TIME: 10 * 60 * 1000, // 10 minutes
 };
 
 exports.DEFAULT = {

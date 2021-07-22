@@ -1,4 +1,4 @@
-const { createUsername } = require('../helper');
+const { createUsername, generateVerifyCode } = require('../helper');
 const bcrypt = require('bcryptjs');
 const {
   isExistAccount,
@@ -9,6 +9,7 @@ const {
   isExistWordInFavorites,
   isLimitedFavorites,
   updateUserCoin,
+  updatePassword,
 } = require('../services/account.service');
 const {
   COOKIE_EXPIRES_TIME,
@@ -19,8 +20,14 @@ const {
 const jwtConfig = require('../configs/jwt.config');
 const express = require('express');
 const app = express();
+const mailConfig = require('../configs/mail.config');
+const {
+  saveVerifyCode,
+  checkVerifyCode,
+  removeVerifyCode,
+} = require('../services/common.service');
 
-exports.postRegisterAccount = async (req, res, next) => {
+exports.postRegisterAccount = async (req, res) => {
   try {
     const { name, password } = req.body;
     const email = req.body.email?.toLowerCase();
@@ -59,7 +66,7 @@ exports.postRegisterAccount = async (req, res, next) => {
   }
 };
 
-exports.postLogin = async (req, res, next) => {
+exports.postLogin = async (req, res) => {
   try {
     const email = req.body.email?.toLowerCase();
     const { password } = req.body;
@@ -98,7 +105,7 @@ exports.postLogin = async (req, res, next) => {
   }
 };
 
-exports.postLoginSocialNetwork = async (req, res, next) => {
+exports.postLoginSocialNetwork = async (req, res) => {
   try {
     const { user } = req;
     if (!Boolean(user)) {
@@ -145,13 +152,37 @@ exports.postLoginSocialNetwork = async (req, res, next) => {
   }
 };
 
-exports.postLogout = async (req, res, next) => {
+exports.postLogout = async (req, res) => {
   try {
     res.clearCookie(KEYS.JWT_TOKEN);
     return res.status(200).json({ message: 'success' });
   } catch (error) {
     console.error('POST LOG OUT ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.postResetPassword = async (req, res) => {
+  try {
+    const { email, verifyCode, password } = req.body;
+
+    const { status, message } = await checkVerifyCode(verifyCode, email);
+    if (!status) {
+      return res.status(400).json({ message });
+    }
+
+    const isUpdated = await updatePassword(email, password);
+
+    removeVerifyCode(email);
+
+    if (isUpdated) {
+      return res.status(200).json({ message: 'success' });
+    }
+
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  } catch (error) {
+    console.error('POST RESET PASSOWORD ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };
 
@@ -199,7 +230,7 @@ exports.putToggleFavorite = async (req, res) => {
   }
 };
 
-exports.putUpdateUserCoin = async (req, res, next) => {
+exports.putUpdateUserCoin = async (req, res) => {
   try {
     const { newCoin } = req.body;
     const username = req.user?.username;
@@ -220,7 +251,7 @@ exports.putUpdateUserCoin = async (req, res, next) => {
   }
 };
 
-exports.getUserInfo = async (req, res, next) => {
+exports.getUserInfo = async (req, res) => {
   try {
     const { isAuth = false } = res.locals;
     if (!isAuth) {
@@ -230,5 +261,37 @@ exports.getUserInfo = async (req, res, next) => {
   } catch (error) {
     console.error('GET USER INFO ERROR: ', error);
     return res.status(401).json({ message: 'Failed' });
+  }
+};
+
+exports.getVerifyCode = async (req, res) => {
+  try {
+    const { email } = req.query;
+    if (!Boolean(email)) {
+      return res.status(400).json({ message: 'Tài khoản không tồn tại' });
+    }
+
+    const isExist = await isExistAccount(email);
+    if (!isExist) {
+      return res.status(400).json({ message: 'Tài khoản không tồn tại' });
+    }
+
+    const verifyCode = generateVerifyCode(MAX.VERIFY_CODE);
+
+    const mail = {
+      to: email,
+      subject: 'Dynonary - Mã xác nhận đổi mật khẩu',
+      html: mailConfig.htmlResetPassword(verifyCode),
+    };
+
+    await mailConfig.sendEmail(mail);
+    saveVerifyCode(verifyCode, email);
+
+    return res
+      .status(200)
+      .json({ message: 'Gửi mã thành công. Hãy kiểm tra Email của bạn' });
+  } catch (error) {
+    console.error('GET VERIFY CODE ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };
