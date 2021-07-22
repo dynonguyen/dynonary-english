@@ -1,9 +1,9 @@
 // @coming soon
 import fbIcon from 'assets/icons/fb-icon.png';
-import ggIcon from 'assets/icons/gg-icon.png';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setMessage } from 'redux/slices/message.slice';
+import LoginGoogle from './Google';
 import useStyle from './style';
 
 function SocialNetworkLogin() {
@@ -25,10 +25,7 @@ function SocialNetworkLogin() {
         <img className={classes.socialImg} src={fbIcon} alt="FB" />
         <span className={classes.socialName}>Facebook</span>
       </div>
-      <div className={classes.socialBtn} onClick={handleClick}>
-        <img className={classes.socialImg} src={ggIcon} alt="GG" />
-        <span className={classes.socialName}>Google</span>
-      </div>
+      <LoginGoogle />
     </div>
   );
 }

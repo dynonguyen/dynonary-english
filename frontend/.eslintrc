@@ -15,7 +15,7 @@
   "rules": {
     "semi": 1,
     "quotes": [1, "single"],
-    "react/prop-types": 1,
+    "react/prop-types": 0,
     "react/display-name": 0,
     "no-console": 1,
     "no-const-assign": 2,

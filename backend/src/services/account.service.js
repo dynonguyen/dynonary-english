@@ -18,12 +18,16 @@ exports.findAccount = async (email) => {
   }
 };
 
-exports.createAccount = async (email, password) => {
+exports.createAccount = async (
+  email,
+  password,
+  authType = ACCOUNT_TYPES.LOCAL,
+) => {
   try {
     const newAccount = await AccountModel.create({
       email,
       password,
-      authType: ACCOUNT_TYPES.LOCAL,
+      authType,
     });
     if (newAccount && newAccount._id) return newAccount._id;
     return null;
@@ -32,9 +36,9 @@ exports.createAccount = async (email, password) => {
   }
 };
 
-exports.createUser = async (accountId, username, name) => {
+exports.createUser = async (accountId, username, name, avt = '') => {
   try {
-    const newUser = await UserModel.create({ accountId, name, username });
+    const newUser = await UserModel.create({ accountId, name, username, avt });
     if (newUser && newUser._id) return newUser;
     return null;
   } catch (error) {

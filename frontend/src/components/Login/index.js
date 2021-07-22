@@ -4,7 +4,7 @@ import LockIcon from '@material-ui/icons/Lock';
 import LoopIcon from '@material-ui/icons/Loop';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-import SocialNetworkLogin from 'components/SocialNetworkLogin';
+import SocialNetworkLogin from 'components/Login/SocialNetwork';
 import InputCustom from 'components/UI/InputCustom';
 import { MAX, ROUTES } from 'constant';
 import PropTypes from 'prop-types';
@@ -28,7 +28,8 @@ const schema = yup.object().shape({
     .max(MAX.PASSWORD_LEN, `Mật khẩu tối đa ${MAX.PASSWORD_LEN}`),
 });
 
-function Login({ onLogin, loading }) {
+function LoginLocalForm(props) {
+  const { onLogin, loading } = props;
   const classes = useStyle();
   const [visiblePw, setVisiblePw] = useState(false);
   const {
@@ -115,8 +116,16 @@ function Login({ onLogin, loading }) {
 
       <div className="or-option w-100 t-center">HOẶC</div>
 
-      <SocialNetworkLogin />
+      {props.children}
     </form>
+  );
+}
+
+function Login(props) {
+  return (
+    <LoginLocalForm {...props}>
+      <SocialNetworkLogin />
+    </LoginLocalForm>
   );
 }
 

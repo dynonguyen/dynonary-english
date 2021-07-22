@@ -22,12 +22,8 @@ const accountSchema = new Schema({
   },
   password: {
     type: String,
-    default: null,
+    default: '',
     maxLength: MAX.PASSWORD_LEN,
-  },
-  googleId: {
-    type: String,
-    default: null,
   },
   authType: {
     type: String,

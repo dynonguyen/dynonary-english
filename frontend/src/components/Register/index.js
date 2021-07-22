@@ -4,7 +4,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LoopIcon from '@material-ui/icons/Loop';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-import SocialNetworkLogin from 'components/SocialNetworkLogin';
+import SocialNetworkLogin from 'components/Login/SocialNetwork';
 import InputCustom from 'components/UI/InputCustom';
 import { MAX, MIN, REGEX } from 'constant';
 import PropTypes from 'prop-types';

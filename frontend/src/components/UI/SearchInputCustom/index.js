@@ -62,7 +62,7 @@ function SearchInputCustom({ placeholder, showInput, prefixIcon }) {
         setResultList(navSearchList?.slice(0, 20) || []);
         setAnchorEl(searchBarRef.current);
       },
-      750,
+      350,
     );
   };
 

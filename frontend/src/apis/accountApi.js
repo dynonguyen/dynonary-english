@@ -11,6 +11,10 @@ const accountApi = {
     return axiosClient.post(`${URL}/login`, { email, password });
   },
 
+  postLoginWithGoogle: (access_token) => {
+    return axiosClient.post(`${URL}/login-gg`, { access_token });
+  },
+
   postLogout: () => {
     return axiosClient.post(`${URL}/logout`);
   },

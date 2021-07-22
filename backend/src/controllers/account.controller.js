@@ -5,13 +5,17 @@ const {
   createAccount,
   createUser,
   findAccount,
-  checkAddWordIntoFavorites,
   updateFavoriteList,
   isExistWordInFavorites,
   isLimitedFavorites,
   updateUserCoin,
 } = require('../services/account.service');
-const { COOKIE_EXPIRES_TIME, KEYS } = require('../constant');
+const {
+  COOKIE_EXPIRES_TIME,
+  KEYS,
+  ACCOUNT_TYPES,
+  MAX,
+} = require('../constant');
 const jwtConfig = require('../configs/jwt.config');
 const express = require('express');
 const app = express();
@@ -28,7 +32,11 @@ exports.postRegisterAccount = async (req, res, next) => {
     }
 
     // create an account
-    const newAccountId = await createAccount(email, password);
+    const newAccountId = await createAccount(
+      email,
+      password,
+      ACCOUNT_TYPES.LOCAL,
+    );
     if (!newAccountId) {
       return res
         .status(409)
@@ -87,6 +95,53 @@ exports.postLogin = async (req, res, next) => {
   } catch (error) {
     console.error('POST REGISTER ACCOUNT ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.postLoginWithGoogle = async (req, res, next) => {
+  try {
+    const { user } = req;
+    if (!Boolean(user)) {
+      return res.status(401).json({ message: 'Đăng nhập thất bại, thử lại' });
+    }
+
+    const { email, name, avt, id } = user;
+    const account = await findAccount(email);
+    let accountId = null;
+
+    // If not exist then create a new account
+    if (!account) {
+      accountId = await createAccount(email, '', ACCOUNT_TYPES.GOOGLE);
+      if (!accountId) {
+        return res.status(401).json({ message: 'Đăng nhập thất bại, thử lại' });
+      }
+
+      const username = `${name}-${id}`.slice(0, MAX.USER_NAME).toLowerCase();
+      await createUser(accountId, username, name, avt);
+    } else {
+      accountId = account._id;
+    }
+
+    // set cookie with jwt
+    const token = await jwtConfig.encodedToken(
+      process.env.JWT_SECRET_KEY || 'dynonary-serect',
+      { accountId },
+    );
+
+    res.cookie(KEYS.JWT_TOKEN, token, {
+      httpOnly: true,
+      expires: new Date(Date.now() + COOKIE_EXPIRES_TIME),
+    });
+
+    return res.status(200).json({
+      message: 'success',
+      key: KEYS.JWT_TOKEN,
+      token,
+      expires: new Date(Date.now() + COOKIE_EXPIRES_TIME),
+    });
+  } catch (error) {
+    console.error('LOGIN WITH GG ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };
 
