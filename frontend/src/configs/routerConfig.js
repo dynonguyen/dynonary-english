@@ -20,6 +20,7 @@ const FavoriteDictionaryPage = React.lazy(() =>
   import('pages/FavoriteDictionary'),
 );
 const IrregularVerbPage = React.lazy(() => import('pages/IrregularVerb'));
+const ForgotPasswordPage = React.lazy(() => import('pages/ForgotPassword'));
 
 // routes for app
 const routes = [
@@ -118,6 +119,12 @@ const routes = [
     exact: false,
     isProtect: false,
     component: () => <IrregularVerbPage />,
+  },
+  {
+    path: ROUTES.FORGOT_PASSWORD,
+    exact: false,
+    isProtect: false,
+    component: () => <ForgotPasswordPage />,
   },
 ];
 

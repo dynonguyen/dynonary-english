@@ -1,18 +1,16 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import LockIcon from '@material-ui/icons/Lock';
 import LoopIcon from '@material-ui/icons/Loop';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-import SocialNetworkLogin from 'components/Login/SocialNetwork';
+import makeStyles from '@material-ui/styles/makeStyles';
 import InputCustom from 'components/UI/InputCustom';
-import { MAX, MIN, REGEX } from 'constant';
-import PropTypes from 'prop-types';
+import { formStyle } from 'components/UI/style';
+import { MAX, MIN } from 'constant';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import { formStyle } from 'components/UI/style';
 
 const schema = yup.object().shape({
   email: yup
@@ -21,23 +19,30 @@ const schema = yup.object().shape({
     .required('Nhập email')
     .email('Email không hợp lệ')
     .max(MAX.EMAIL_LEN, `Email tối đa ${MAX.EMAIL_LEN}`),
-  name: yup
+  verifyCode: yup
     .string()
     .trim()
-    .required('Nhập họ tên')
-    .max(MAX.NAME_LEN, `Họ tên tối đa ${MAX.NAME_LEN} ký tự`)
-    .matches(REGEX.NAME, 'Họ tên không chứ số và ký tự đặc biệt'),
+    .required('Nhập mã xác thực')
+    .length(MAX.VERIFY_CODE, `Mã xác thực có ${MAX.VERIFY_CODE} chữ số`)
+    .matches(
+      new RegExp(`\\d{${MAX.VERIFY_CODE}}`),
+      `Mã xác thực là số có ${MAX.VERIFY_CODE} chữ số`,
+    ),
   password: yup
     .string()
     .trim()
     .required('Nhập mật khẩu')
     .min(MIN.PASSWORD_LEN, `Mật khẩu ít nhất ${MIN.PASSWORD_LEN} ký tự`)
     .max(MAX.PASSWORD_LEN, `Mật khẩu tối đa ${MAX.PASSWORD_LEN}`),
+  confirmPw: yup
+    .string()
+    .trim()
+    .required('Xác nhận lại mật khẩu')
+    .oneOf([yup.ref('password'), null], 'Mật khẩu không khớp'),
 });
 
-function Register({ onRegister, loading }) {
-  const classes = makeStyles(formStyle)();
-
+function ForgotPassword({ onSubmit, loading }) {
+  const classes = makeStyles(formStyle())();
   const [visiblePw, setVisiblePw] = useState(false);
   const {
     register,
@@ -50,12 +55,12 @@ function Register({ onRegister, loading }) {
   return (
     <form
       className={`${classes.root} flex-col`}
-      onSubmit={handleSubmit(onRegister)}
+      onSubmit={handleSubmit(onSubmit)}
       autoComplete="off">
       <div className="flex-col">
-        <h1 className={`${classes.title} t-center`}>Tạo tài khoản</h1>
+        <h1 className={`${classes.title} t-center`}>Lấy lại mật khẩu</h1>
         <div className="t-center mt-5">
-          <AccountCircleIcon className={classes.labelIcon} />
+          <LockIcon className={classes.labelIcon} />
         </div>
       </div>
 
@@ -76,18 +81,24 @@ function Register({ onRegister, loading }) {
       </div>
 
       <div className="flex-col">
-        <InputCustom
-          label="Họ tên"
-          size="small"
-          placeholder="Nhập họ tên"
-          error={Boolean(errors.name)}
-          inputProps={{
-            name: 'name',
-            maxLength: MAX.NAME_LEN,
-            ...register('name'),
-          }}
-        />
-        {errors.name && <p className="text-error">{errors.name?.message}</p>}
+        <div className="d-flex">
+          <InputCustom
+            className="w-50"
+            label="Mã xác nhận"
+            size="small"
+            placeholder=""
+            error={Boolean(errors.verifyCode)}
+            inputProps={{
+              name: 'verifyCode',
+              maxLength: MAX.VERIFY_CODE,
+              ...register('verifyCode'),
+            }}
+          />
+          <Button className="_btn _btn-stand w-50">Gửi mã</Button>
+        </div>
+        {errors.verifyCode && (
+          <p className="text-error">{errors.verifyCode?.message}</p>
+        )}
       </div>
 
       <div className="flex-col">
@@ -121,6 +132,37 @@ function Register({ onRegister, loading }) {
         )}
       </div>
 
+      <div className="flex-col">
+        <InputCustom
+          label="Xác nhận mật khẩu"
+          size="small"
+          placeholder="Nhập lại mật khẩu"
+          error={Boolean(errors.confirmPw)}
+          inputProps={{
+            name: 'confirmPw',
+            maxLength: MAX.PASSWORD_LEN,
+            type: visiblePw ? 'text' : 'password',
+            ...register('confirmPw'),
+          }}
+          endAdornment={
+            visiblePw ? (
+              <VisibilityIcon
+                className={`${classes.icon} ${classes.visiblePw}`}
+                onClick={() => setVisiblePw(false)}
+              />
+            ) : (
+              <VisibilityOffIcon
+                className={classes.icon}
+                onClick={() => setVisiblePw(true)}
+              />
+            )
+          }
+        />
+        {errors.confirmPw && (
+          <p className="text-error">{errors.confirmPw?.message}</p>
+        )}
+      </div>
+
       <Button
         className="_btn _btn-primary"
         type="submit"
@@ -129,23 +171,10 @@ function Register({ onRegister, loading }) {
         disabled={loading}
         endIcon={loading && <LoopIcon className="ani-spin" />}
         size="large">
-        Đăng ký
+        Đổi mật khẩu
       </Button>
-
-      <div className="or-option w-100 t-center">HOẶC</div>
-      <SocialNetworkLogin />
     </form>
   );
 }
 
-Register.propTypes = {
-  onRegister: PropTypes.func,
-  loading: PropTypes.bool,
-};
-
-Register.defaultProps = {
-  onRegister: function () {},
-  loading: false,
-};
-
-export default Register;
+export default ForgotPassword;

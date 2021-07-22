@@ -1,18 +1,19 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import LockIcon from '@material-ui/icons/Lock';
 import LoopIcon from '@material-ui/icons/Loop';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import SocialNetworkLogin from 'components/Login/SocialNetwork';
 import InputCustom from 'components/UI/InputCustom';
+import { formStyle } from 'components/UI/style';
 import { MAX, ROUTES } from 'constant';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import * as yup from 'yup';
-import useStyle from './style';
 
 const schema = yup.object().shape({
   email: yup
@@ -30,7 +31,7 @@ const schema = yup.object().shape({
 
 function LoginLocalForm(props) {
   const { onLogin, loading } = props;
-  const classes = useStyle();
+  const classes = makeStyles(formStyle)();
   const [visiblePw, setVisiblePw] = useState(false);
   const {
     register,
@@ -48,7 +49,7 @@ function LoginLocalForm(props) {
       <div className="flex-col">
         <h1 className={`${classes.title} t-center`}>Đăng nhập</h1>
         <div className="t-center mt-5">
-          <LockIcon className={classes.lockIcon} />
+          <LockIcon className={classes.labelIcon} />
         </div>
       </div>
 
@@ -76,7 +77,7 @@ function LoginLocalForm(props) {
           error={Boolean(errors.password)}
           inputProps={{
             name: 'password',
-            maxLength: MAX.EMAIL_LEN,
+            maxLength: MAX.PASSWORD_LEN,
             type: visiblePw ? 'text' : 'password',
             ...register('password'),
           }}

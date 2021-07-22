@@ -43,6 +43,7 @@ export const MAX = {
   SENTENCE_MEAN_LEN: 300,
   SENTENCE_NOTE_LEN: 100,
   USER_COIN: 99999,
+  VERIFY_CODE: 6,
 };
 
 export const MIN = {
