@@ -9,7 +9,12 @@ accountApi.post('/logout', accountController.postLogout);
 accountApi.post(
   '/login-gg',
   passport.authenticate('google-token', { session: false }),
-  accountController.postLoginWithGoogle,
+  accountController.postLoginSocialNetwork,
+);
+accountApi.post(
+  '/login-fb',
+  passport.authenticate('facebook-token', { session: false }),
+  accountController.postLoginSocialNetwork,
 );
 
 accountApi.put('/toggle-favorite', accountController.putToggleFavorite);

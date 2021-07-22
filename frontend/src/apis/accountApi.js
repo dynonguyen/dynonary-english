@@ -15,6 +15,10 @@ const accountApi = {
     return axiosClient.post(`${URL}/login-gg`, { access_token });
   },
 
+  postLoginWithFacebook: (access_token) => {
+    return axiosClient.post(`${URL}/login-fb`, { access_token });
+  },
+
   postLogout: () => {
     return axiosClient.post(`${URL}/logout`);
   },

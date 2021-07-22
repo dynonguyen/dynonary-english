@@ -98,20 +98,20 @@ exports.postLogin = async (req, res, next) => {
   }
 };
 
-exports.postLoginWithGoogle = async (req, res, next) => {
+exports.postLoginSocialNetwork = async (req, res, next) => {
   try {
     const { user } = req;
     if (!Boolean(user)) {
       return res.status(401).json({ message: 'Đăng nhập thất bại, thử lại' });
     }
 
-    const { email, name, avt, id } = user;
+    const { email, name, avt, id, type } = user;
     const account = await findAccount(email);
     let accountId = null;
 
     // If not exist then create a new account
     if (!account) {
-      accountId = await createAccount(email, '', ACCOUNT_TYPES.GOOGLE);
+      accountId = await createAccount(email, '', type);
       if (!accountId) {
         return res.status(401).json({ message: 'Đăng nhập thất bại, thử lại' });
       }

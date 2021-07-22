@@ -23,6 +23,7 @@
     "morgan": "^1.10.0",
     "nodemailer": "^6.6.1",
     "passport": "^0.4.1",
+    "passport-facebook-token": "^4.0.0",
     "passport-google-token": "^0.1.2",
     "path": "^0.12.7"
   },

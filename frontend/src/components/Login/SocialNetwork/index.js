@@ -1,8 +1,8 @@
 // @coming soon
-import fbIcon from 'assets/icons/fb-icon.png';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setMessage } from 'redux/slices/message.slice';
+import LoginFacebook from './Facebook';
 import LoginGoogle from './Google';
 import useStyle from './style';
 
@@ -21,10 +21,7 @@ function SocialNetworkLogin() {
 
   return (
     <div className="d-flex" style={{ margin: '0 -0.8rem' }}>
-      <div className={classes.socialBtn} onClick={handleClick}>
-        <img className={classes.socialImg} src={fbIcon} alt="FB" />
-        <span className={classes.socialName}>Facebook</span>
-      </div>
+      <LoginFacebook />
       <LoginGoogle />
     </div>
   );

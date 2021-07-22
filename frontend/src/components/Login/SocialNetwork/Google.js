@@ -23,7 +23,7 @@ function LoginGoogle() {
       );
 
       setTimeout(() => {
-        window.history.back();
+        location.href = '/';
       }, UX.DELAY_TIME);
     } catch (error) {}
   };
@@ -40,29 +40,28 @@ function LoginGoogle() {
         onLoginSuccess(data);
       }
     } catch (error) {
-      const message = error.response?.data?.message || 'Thất bại, thử lại !';
+      const message =
+        error.response?.data?.message || 'Đăng nhập thất bại, thử lại !';
       dispatch(setMessage({ type: 'error', message }));
     }
   };
 
   return (
-    <>
-      <GoogleLogin
-        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-        render={(renderProps) => (
-          <div
-            onClick={renderProps.onClick}
-            disabled={renderProps.disabled}
-            className={classes.socialBtn}>
-            <img className={classes.socialImg} src={ggIcon} alt="GG" />
-            <span className={classes.socialName}>Google</span>
-          </div>
-        )}
-        onSuccess={onLoginWithGoogle}
-        onFailure={onLoginWithGoogle}
-        cookiePolicy={'single_host_origin'}
-      />
-    </>
+    <GoogleLogin
+      clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+      render={(renderProps) => (
+        <div
+          onClick={renderProps.onClick}
+          disabled={renderProps.disabled}
+          className={classes.socialBtn}>
+          <img className={classes.socialImg} src={ggIcon} alt="GG" />
+          <span className={classes.socialName}>Google</span>
+        </div>
+      )}
+      onSuccess={onLoginWithGoogle}
+      onFailure={onLoginWithGoogle}
+      cookiePolicy={'single_host_origin'}
+    />
   );
 }
 
