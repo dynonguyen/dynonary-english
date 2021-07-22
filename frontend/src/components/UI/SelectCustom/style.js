@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   root: {
     backgroundColor: 'var(--bg-color-accent)',
     color: 'var(--text-color)',

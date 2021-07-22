@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 // set title for component
 function useTitle(title = 'Dynonary', isOverride = false) {

@@ -55,7 +55,7 @@ function App() {
                 </Switch>
               </Suspense>
 
-              {/* global component */}
+              {/* common component */}
               <div id="_overlay"></div>
               <Message />
               <SpeedDials />

@@ -26,11 +26,11 @@ function TooltipCustom(props) {
         <>
           {isMd ? (
             // mode hover
-            <Tooltip {...rest}>{props.children}</Tooltip>
+            <Tooltip {...rest}>{children}</Tooltip>
           ) : (
             // mode click
             <Tooltip {...rest} open={open} onClick={() => setOpen(!open)}>
-              {props.children}
+              {children}
             </Tooltip>
           )}
         </>

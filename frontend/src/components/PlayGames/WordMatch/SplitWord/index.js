@@ -19,7 +19,7 @@ function splitWord(word = '') {
       break;
     }
 
-    splitArr = word.split('').sort((_) => Math.random() - 0.5);
+    splitArr = word.split('').sort(() => Math.random() - 0.5);
 
     if (splitArr.join('') === word) {
       failFlag++;

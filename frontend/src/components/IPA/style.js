@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   groupCollapse: {
     boxShadow: 'var(--box-shadow-2)',
     backgroundColor: 'var(--bg-color-accent)',

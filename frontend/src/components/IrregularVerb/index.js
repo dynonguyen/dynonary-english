@@ -55,11 +55,11 @@ function IrregularVerbFilter({ classes, onSort, onFilter }) {
         <MenuItem onClick={() => handleFilter(0)}>Không lọc</MenuItem>
         <MenuItem onClick={() => handleFilter(1)}>v1 = v2 = v3</MenuItem>
         <MenuItem onClick={() => handleFilter(2)}>v2 = v3</MenuItem>
-        <MenuItem onClick={() => handleFilter(3)}>{`ay > aid > aid`}</MenuItem>
-        <MenuItem onClick={() => handleFilter(4)}>{`d > t`}</MenuItem>
-        <MenuItem onClick={() => handleFilter(5)}>{`eed > ed`}</MenuItem>
-        <MenuItem onClick={() => handleFilter(6)}>{`ow > ew > own`}</MenuItem>
-        <MenuItem onClick={() => handleFilter(7)}>{`ear > ore > orn`}</MenuItem>
+        <MenuItem onClick={() => handleFilter(3)}>{'ay > aid > aid'}</MenuItem>
+        <MenuItem onClick={() => handleFilter(4)}>{'d > t'}</MenuItem>
+        <MenuItem onClick={() => handleFilter(5)}>{'eed > ed'}</MenuItem>
+        <MenuItem onClick={() => handleFilter(6)}>{'ow > ew > own'}</MenuItem>
+        <MenuItem onClick={() => handleFilter(7)}>{'ear > ore > orn'}</MenuItem>
       </Menu>
     </div>
   );
@@ -168,7 +168,7 @@ function filterIrregularList(list = [], type = 1) {
   return newList;
 }
 
-function IrregularVerb(props) {
+function IrregularVerb() {
   const classes = useStyle();
   const [list, setList] = useState([...initList]);
 

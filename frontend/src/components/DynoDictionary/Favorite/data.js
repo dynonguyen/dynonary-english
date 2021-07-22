@@ -1,4 +1,3 @@
-import commonApi from 'apis/commonApi';
 import wordApi from 'apis/wordApi';
 import WordDetailModal from 'components/UI/WordDetailModal';
 import React, { useEffect, useRef, useState } from 'react';

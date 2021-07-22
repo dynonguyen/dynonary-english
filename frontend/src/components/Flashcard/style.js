@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   iconWrap: {
     margin: '0 -0.8rem',
     display: 'flex',

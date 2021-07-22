@@ -1,5 +1,5 @@
 import { THEME_KEYS } from 'constant';
-import { getCustomPalettes, setRootPalettes } from 'helper';
+import { setRootPalettes } from 'helper';
 import { useEffect, useState } from 'react';
 
 function useTheme() {

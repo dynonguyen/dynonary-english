@@ -36,7 +36,7 @@ export const gameBoxStyle = (theme) => ({
   },
 });
 
-export const dictionaryRoot = (theme) => ({
+export const dictionaryRoot = () => ({
   root: {
     marginTop: '3.2rem',
 
@@ -83,7 +83,7 @@ export const dictionaryRoot = (theme) => ({
   },
 });
 
-export const dialogMUIRoot = (theme) => ({
+export const dialogMUIRoot = () => ({
   dialogPaper: {
     backgroundColor: 'var(--bg-color-sec)',
   },

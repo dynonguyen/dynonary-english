@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   button: {
     backgroundColor: 'var(--bg-color-accent) !important',
     boxShadow: 'none !important',

@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   root: {
     padding: '2.8rem 3.6rem',
     boxShadow: 'var(--box-shadow)',

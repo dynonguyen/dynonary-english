@@ -3,7 +3,7 @@ import useCloseNavigation from 'hooks/useCloseNavigation';
 import useTitle from 'hooks/useTitle';
 import React from 'react';
 
-function FavoriteDictionaryPage(props) {
+function FavoriteDictionaryPage() {
   useTitle('Danh sách từ vựng yêu thích');
   useCloseNavigation();
 

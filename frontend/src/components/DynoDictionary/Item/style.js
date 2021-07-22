@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   root: {
     padding: '1.2rem 0',
     borderBottom: 'solid 1px var(--border-color)',

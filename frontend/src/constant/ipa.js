@@ -159,7 +159,7 @@ export const VOWELS = [
           },
           {
             word: 'medal',
-            phonetic: "/'medəl/",
+            phonetic: '/medəl/',
           },
         ],
       },

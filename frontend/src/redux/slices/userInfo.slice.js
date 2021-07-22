@@ -3,7 +3,7 @@ import accountApi from 'apis/accountApi';
 
 export const getUserInfo = createAsyncThunk(
   'userInfo/getUserInfo',
-  async (params, thunkAPI) => {
+  async () => {
     try {
       const apiRes = await accountApi.getUserInfo();
       if (apiRes && apiRes.status === 200) {
