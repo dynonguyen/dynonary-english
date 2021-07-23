@@ -9,7 +9,6 @@ import gameIcon from 'assets/icons/game.png';
 import grammarIcon from 'assets/icons/grammar.png';
 import ipaIcon from 'assets/icons/ipa.png';
 import toeicIcon from 'assets/icons/toeic.png';
-import translateIcon from 'assets/icons/translate.png';
 import verbIcon from 'assets/icons/verb.png';
 import FeatureBox from 'components/FeatureBox';
 import { ROUTES } from 'constant';
@@ -25,13 +24,13 @@ const FEATURE_LIST = [
     imgUrl: ipaIcon,
     to: ROUTES.IPA,
   },
-  {
+  /*  {
     title: 'Dịch văn bản',
     subTitle:
       'Dịch từ, văn bản (Việt-Anh và Anh-Việt) dễ dàng như với Google Translate',
     imgUrl: translateIcon,
     to: '/',
-  },
+  }, */
   {
     title: '1000+ câu giao tiếp',
     subTitle: 'Luyện nghe, nói câu tiếng Anh giao tiếp hàng ngày cùng Dyno',

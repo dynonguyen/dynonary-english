@@ -23,8 +23,8 @@ const wordSchema = new Schema({
     // If type is number => 1 word = 64 bit = 8 B
     // However, the quantity of conj, prep is much less than the quantity of the other types.
     type: String,
-    required: true,
-    enum: ['n', 'adj', 'adv', 'v', 'con', 'pre', 'pro', 'det'],
+    enum: ['', 'n', 'adj', 'adv', 'v', 'con', 'pre', 'pro', 'det'],
+    default: '',
   },
 
   level: {
@@ -36,9 +36,9 @@ const wordSchema = new Schema({
 
   phonetic: {
     type: String,
-    required: true,
     trim: true,
     maxLength: 50,
+    default: '',
   },
 
   examples: [

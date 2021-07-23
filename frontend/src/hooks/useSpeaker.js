@@ -19,9 +19,11 @@ function useSpeaker() {
         setVoices(voiceList.filter((i) => i.lang.indexOf('en') !== -1));
         clearInterval(intervalId);
       }
-    }, 20);
+    }, 50);
 
-    return () => {};
+    return () => {
+      intervalId && clearInterval(intervalId);
+    };
   }, []);
 
   return { speed, volume, voice };

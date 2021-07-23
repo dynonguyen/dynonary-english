@@ -182,30 +182,42 @@ export const SENTENCE_TOPICS = [
   },
   {
     key: '8',
-    title: 'Kết bạn',
+    title: 'Ăn uống',
   },
   {
     key: '9',
-    title: 'Giải trí',
+    title: 'Kết bạn',
   },
   {
     key: '10',
-    title: 'Mua sắm',
+    title: 'Giải trí',
   },
   {
     key: '11',
-    title: 'Sức khoẻ',
+    title: 'Mua sắm',
   },
   {
     key: '12',
-    title: 'Việc làm',
+    title: 'Khó khăn giao tiếp',
   },
   {
     key: '13',
+    title: 'Khẩn cấp, Sức khoẻ',
+  },
+  {
+    key: '15',
+    title: 'Câu hỏi thông thường',
+  },
+  {
+    key: '16',
+    title: 'Việc làm',
+  },
+  {
+    key: '17',
     title: 'Thời tiết',
   },
   {
-    key: '14',
+    key: '18',
     title: 'Khác',
   },
 ];

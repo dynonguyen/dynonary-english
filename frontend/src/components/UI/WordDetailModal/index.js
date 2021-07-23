@@ -77,10 +77,14 @@ function WordDetailModal(props) {
             <div>
               <p className={classes.word}>
                 {word}&nbsp;
-                <span className={classes.type}>( {type} )</span>
+                {Boolean(type) && (
+                  <span className={classes.type}>( {type} )</span>
+                )}
                 <span className={classes.mean}>{` - ${mean}`}</span>
               </p>
-              <p className={`${classes.phonetic} mt-4`}>/ {phonetic} /</p>
+              {Boolean(phonetic) && (
+                <p className={`${classes.phonetic} mt-4`}>/ {phonetic} /</p>
+              )}
             </div>
           </div>
 

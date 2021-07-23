@@ -4,18 +4,10 @@ import useSpeaker from 'hooks/useSpeaker';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-let voiceInfo = null;
-
 function Speaker(props) {
   const { className, type, text, audioSrc, isWrap } = props;
 
-  // @best performance: reduce render useSpeaker 1115 times in irregular verb
-  const { voice, speed, volume } =
-    voiceInfo === null ? useSpeaker() : voiceInfo;
-
-  if (!voiceInfo) {
-    voiceInfo = { voice, speed, volume };
-  }
+  const { voice, speed, volume } = useSpeaker();
 
   const handleClick = () => {
     if (type) {

@@ -31,9 +31,12 @@ function DynoDictionaryItem({
         <img className={classes.picture} src={imgSrc} alt="photo" />
         <div className="ml-8 flex-grow-1">
           <h3 className={classes.word}>
-            {word} <span className={classes.type}>( {type} )</span>
+            {word}{' '}
+            {Boolean(type) && <span className={classes.type}>( {type} )</span>}
           </h3>
-          <p className={`${classes.phonetic} phonetic`}>/ {phonetic} /</p>
+          {Boolean(phonetic) && (
+            <p className={`${classes.phonetic} phonetic`}>/ {phonetic} /</p>
+          )}
           <p className={classes.mean}>{mean}</p>
         </div>
       </div>
