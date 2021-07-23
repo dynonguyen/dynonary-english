@@ -8,7 +8,6 @@ const wordSchema = new Schema({
     required: true,
     trim: true,
     maxLength: 50,
-    lowercase: true,
   },
 
   mean: {
@@ -44,7 +43,7 @@ const wordSchema = new Schema({
   examples: [
     {
       type: String,
-      maxLength: 150,
+      maxLength: 200,
     },
   ],
 

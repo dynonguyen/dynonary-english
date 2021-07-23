@@ -15,7 +15,7 @@ exports.getWordPack = async (req, res, next) => {
       perPageInt,
       '-_id type word mean level phonetic examples picture',
       null,
-      { picture: { $ne: null } },
+      { $and: [{ picture: { $ne: null } }, { picture: { $ne: '' } }] },
     );
 
     return res.status(200).json({ packList });

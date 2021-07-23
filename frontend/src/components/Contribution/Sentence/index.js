@@ -7,7 +7,7 @@ import SaveIcon from '@material-ui/icons/Save';
 import InputCustom from 'components/UI/InputCustom';
 import TopicSelect from 'components/UI/TopicSelect';
 import { MAX } from 'constant';
-import { SENTENCE_TOPICS } from 'constant/topics';
+import { SENTENCE_TOPICS } from 'constant/sentence-topics';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';

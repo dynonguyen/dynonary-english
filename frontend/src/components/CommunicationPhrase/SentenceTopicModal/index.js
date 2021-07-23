@@ -4,7 +4,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Tag from 'components/UI/Tag';
-import { SENTENCE_TOPICS } from 'constant/topics';
+import { SENTENCE_TOPICS } from 'constant/sentence-topics';
 import { addOrDelItemInArray } from 'helper';
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';

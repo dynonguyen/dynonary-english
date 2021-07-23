@@ -5,7 +5,6 @@ import colorIcon from 'assets/icons/topics/color.png';
 import cultureIcon from 'assets/icons/topics/culture.png';
 import entertainmentIcon from 'assets/icons/topics/entertainment.png';
 import excitingIcon from 'assets/icons/topics/exciting.png';
-import feelIcon from 'assets/icons/topics/feel.png';
 import flagIcon from 'assets/icons/topics/flag.png';
 import foodIcon from 'assets/icons/topics/food.png';
 import healthIcon from 'assets/icons/topics/health.png';
@@ -21,6 +20,9 @@ import travelIcon from 'assets/icons/topics/travel.png';
 import treeIcon from 'assets/icons/topics/tree.png';
 import toeicIcon from 'assets/icons/topics/toeic.png';
 import ieltsIcon from 'assets/icons/topics/ielts.png';
+import natureIcon from 'assets/icons/topics/nature.png';
+import familyIcon from 'assets/icons/topics/family.png';
+import clothesIcon from 'assets/icons/topics/clothes.png';
 
 export const TOEIC_KEY = '20';
 
@@ -47,13 +49,8 @@ export const TOPICS = [
   },
   {
     key: '4',
-    title: 'Văn hoá',
+    title: 'Sự vật',
     icon: cultureIcon,
-  },
-  {
-    key: '5',
-    title: 'Tính cách',
-    icon: feelIcon,
   },
   {
     key: '6',
@@ -64,11 +61,6 @@ export const TOPICS = [
     key: '7',
     title: 'Kỹ năng',
     icon: skillIcon,
-  },
-  {
-    key: '8',
-    title: 'Học thuật',
-    icon: academyIcon,
   },
   {
     key: '9',
@@ -82,7 +74,7 @@ export const TOPICS = [
   },
   {
     key: '11',
-    title: 'Nghề nghiệp',
+    title: 'Công việc',
     icon: jobIcon,
   },
   {
@@ -107,7 +99,7 @@ export const TOPICS = [
   },
   {
     key: '16',
-    title: 'Đất nước',
+    title: 'Quốc gia',
     icon: flagIcon,
   },
   {
@@ -117,7 +109,7 @@ export const TOPICS = [
   },
   {
     key: '18',
-    title: 'Tâm linh',
+    title: 'Tín ngưỡng',
     icon: spiritualityIcon,
   },
   {
@@ -136,6 +128,26 @@ export const TOPICS = [
     icon: ieltsIcon,
   },
   {
+    key: '23',
+    title: 'Thiên nhiên',
+    icon: natureIcon,
+  },
+  {
+    key: '24',
+    title: 'Mối quan hệ',
+    icon: familyIcon,
+  },
+  {
+    key: '25',
+    title: 'Trang phục',
+    icon: clothesIcon,
+  },
+  {
+    key: '26',
+    title: 'Giáo dục',
+    icon: academyIcon,
+  },
+  {
     key: '22',
     title: 'Khác',
     icon: othersIcon,
@@ -146,78 +158,3 @@ export const TOPIC_OPTIONS = TOPICS.map((topic) => ({
   value: topic.key,
   label: topic.title,
 }));
-
-export const SENTENCE_TOPICS = [
-  {
-    key: '0',
-    title: 'Giao tiếp thông dụng',
-  },
-  {
-    key: '1',
-    title: 'Chào hỏi',
-  },
-  {
-    key: '2',
-    title: 'Du lịch - phương hướng',
-  },
-  {
-    key: '3',
-    title: 'Con số - tiền bạc',
-  },
-  {
-    key: '4',
-    title: 'Địa điểm',
-  },
-  {
-    key: '5',
-    title: 'Thời gian, ngày tháng',
-  },
-  {
-    key: '6',
-    title: 'Điện thoại - Internet - Thư',
-  },
-  {
-    key: '7',
-    title: 'Chỗ ăn ở',
-  },
-  {
-    key: '8',
-    title: 'Ăn uống',
-  },
-  {
-    key: '9',
-    title: 'Kết bạn',
-  },
-  {
-    key: '10',
-    title: 'Giải trí',
-  },
-  {
-    key: '11',
-    title: 'Mua sắm',
-  },
-  {
-    key: '12',
-    title: 'Khó khăn giao tiếp',
-  },
-  {
-    key: '13',
-    title: 'Khẩn cấp, Sức khoẻ',
-  },
-  {
-    key: '15',
-    title: 'Câu hỏi thông thường',
-  },
-  {
-    key: '16',
-    title: 'Việc làm',
-  },
-  {
-    key: '17',
-    title: 'Thời tiết',
-  },
-  {
-    key: '18',
-    title: 'Khác',
-  },
-];

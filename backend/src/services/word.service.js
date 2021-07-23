@@ -28,6 +28,7 @@ exports.searchWord = async (word = '', limit = 20, select = '') => {
 exports.getWordDetail = async (word = '') => {
   try {
     const res = await WordModel.findOne({ word });
+
     return res;
   } catch (error) {
     throw error;

@@ -43,8 +43,10 @@ function SlideItem({ mean, word, type, phonetic, example, picture, showMean }) {
             <h3 className={`${classes.word} flex-center--ver`}>
               <span>{word}</span> <Speaker className="ml-4" text={word} />
             </h3>
-            <p className={classes.type}>({type})</p>
-            <p className={classes.phonetic}>/{phonetic}/</p>
+            {Boolean(type) && <p className={classes.type}>({type})</p>}
+            {Boolean(phonetic) && (
+              <p className={classes.phonetic}>/{phonetic}/</p>
+            )}
             {example && example !== '' && (
               <p className={classes.example}>
                 <SliceExample word={word} example={example} />
