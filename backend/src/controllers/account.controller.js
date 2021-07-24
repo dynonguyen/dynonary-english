@@ -10,6 +10,7 @@ const {
   isLimitedFavorites,
   updateUserCoin,
   updatePassword,
+  getProfile,
 } = require('../services/account.service');
 const {
   COOKIE_EXPIRES_TIME,
@@ -292,6 +293,27 @@ exports.getVerifyCode = async (req, res) => {
       .json({ message: 'Gửi mã thành công. Hãy kiểm tra Email của bạn' });
   } catch (error) {
     console.error('GET VERIFY CODE ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.getUserProfile = async (req, res, next) => {
+  try {
+    if (!req.user) {
+      return res.status(403).json({ message: 'failed' });
+    }
+    const { username } = req.user;
+
+    const userInfo = await getProfile(username);
+    if (!userInfo) {
+      return res.status(403).json({ message: 'failed' });
+    }
+
+    return res
+      .status(200)
+      .json({ email: userInfo.email, createdDate: userInfo.createdDate });
+  } catch (error) {
+    console.error('GET USER PROFILE ERROR: ', error);
     return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };

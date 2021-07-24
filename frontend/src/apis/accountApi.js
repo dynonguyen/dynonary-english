@@ -48,6 +48,10 @@ const accountApi = {
       params: { email },
     });
   },
+
+  getUserProfile: () => {
+    return axiosClient.get(`${URL}/user-profile`);
+  },
 };
 
 export default accountApi;

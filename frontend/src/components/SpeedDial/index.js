@@ -1,7 +1,7 @@
+import ArrowUpIcon from '@material-ui/icons/ArrowDropUp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import HomeIcon from '@material-ui/icons/Home';
 import DollarIcon from '@material-ui/icons/MonetizationOn';
-import UpIcon from '@material-ui/icons/Publish';
 import ShareIcon from '@material-ui/icons/Share';
 import StarIcon from '@material-ui/icons/Star';
 import SpeedDial from '@material-ui/lab/SpeedDial';
@@ -13,7 +13,6 @@ import { useHistory } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import SettingButton from './Settings/SettingButton';
 import useStyle from './style';
-import ArrowUpIcon from '@material-ui/icons/ArrowDropUp';
 
 function ScrollTop() {
   return (
@@ -33,7 +32,7 @@ const actions = [
   },
   { icon: <SettingButton />, name: 'Cài đặt', to: null, isBlank: false },
   { icon: <FacebookIcon />, name: 'Liên hệ Dyno', to: LINKS.FB, isBlank: true },
-  { icon: <UpIcon />, name: 'Nâng cấp', to: '', isBlank: false },
+  // { icon: <UpIcon />, name: 'Nâng cấp', to: '', isBlank: false },
   { icon: <DollarIcon />, name: 'Donate', to: '', isBlank: false },
   { icon: <ShareIcon />, name: 'Chia sẻ', to: '', isBlank: false },
   { icon: <StarIcon />, name: 'Góp ý, đánh giá', to: '', isBlank: false },

@@ -136,3 +136,15 @@ export const addOrDelItemInArray = (arr = [], item) => {
   arr.splice(index, 1);
   return arr;
 };
+
+export const formatDate = (date = new Date()) => {
+  try {
+    const d = new Date(date);
+    const day = `0${d.getDate()}`.slice(-2);
+    const m = `0${d.getMonth() + 1}`.slice(-2);
+    const y = d.getFullYear();
+    return `${day}-${m}-${y}`;
+  } catch (error) {
+    return date;
+  }
+};

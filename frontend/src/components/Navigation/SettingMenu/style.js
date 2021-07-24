@@ -9,7 +9,7 @@ export default makeStyles(() => ({
 
   menuItem: {
     display: 'flex',
-    padding: '0.8rem 1.8rem',
+    padding: '1rem 1.8rem',
     maxWidth: '100%',
 
     '&:hover, &:active': {
@@ -19,10 +19,10 @@ export default makeStyles(() => ({
 
   icon: {
     color: 'var(--grey)',
-    marginRight: '1.2rem',
   },
 
   text: {
+    marginLeft: '1.6rem',
     textAlign: 'justify',
     whiteSpace: 'pre-wrap',
     maxWidth: '100%',

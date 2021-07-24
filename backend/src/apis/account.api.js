@@ -31,5 +31,10 @@ accountApi.get(
   accountController.getUserInfo,
 );
 accountApi.get('/send-verify-code', accountController.getVerifyCode);
+accountApi.get(
+  '/user-profile',
+  passportConfig.jwtAuthentication,
+  accountController.getUserProfile,
+);
 
 module.exports = accountApi;

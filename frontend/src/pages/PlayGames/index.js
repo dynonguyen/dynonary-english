@@ -24,11 +24,18 @@ const GAME_LIST = [
     to: GAMES.CORRECT_WORD,
   },
   {
+    title: 'Ghép từ',
+    subTitle:
+      'Ghép các ký tự đã cho thành một chữ có nghĩa đúng với từ đã cho.',
+    imgUrl: wordMatchingIcon,
+    to: GAMES.WORD_MATCHING,
+  },
+  /* {
     title: 'Hãy chọn từ đúng (nâng cao)',
     subTitle: 'Chọn tất cả các từ đồng nghĩa (trái nghĩa) với từ đã cho.',
     imgUrl: correctWordAdvIcon,
     to: GAMES.CORRECT_WORD_ADV,
-  },
+  }, */
   {
     title: 'Tay nhanh hơn não',
     subTitle:
@@ -41,14 +48,7 @@ const GAME_LIST = [
     subTitle:
       'Trải nghiệm game show truyền hình "Ai là triệu phú" phiên bản tiếng Anh ngay với Dynonary',
     imgUrl: millionaireIcon,
-    to: GAMES.CORRECT_WORD_ADV,
-  },
-  {
-    title: 'Ghép từ',
-    subTitle:
-      'Ghép các ký tự đã cho thành một chữ có nghĩa đúng với từ đã cho.',
-    imgUrl: wordMatchingIcon,
-    to: GAMES.WORD_MATCHING,
+    to: GAMES.MILLIONAIRE,
   },
   {
     title: 'Nối từ',
@@ -64,13 +64,13 @@ const GAME_LIST = [
     imgUrl: grammarlyIcon,
     to: GAMES.GRAMMARLY,
   },
-  {
+  /*   {
     title: 'Game VIP',
     subTitle:
       'Tận hưởng một game cực kỳ tuyệt vời của Dyno nhé, nâng cấp tài khoản VIP để chơi.',
     imgUrl: vipIcon,
     to: GAMES.VIP,
-  },
+  }, */
 ];
 
 function PlayGamesPage() {

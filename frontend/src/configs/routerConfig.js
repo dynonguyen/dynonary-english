@@ -21,6 +21,7 @@ const FavoriteDictionaryPage = React.lazy(() =>
 );
 const IrregularVerbPage = React.lazy(() => import('pages/IrregularVerb'));
 const ForgotPasswordPage = React.lazy(() => import('pages/ForgotPassword'));
+const UserAccountPage = React.lazy(() => import('pages/UserAccount'));
 
 // routes for app
 const routes = [
@@ -125,6 +126,12 @@ const routes = [
     exact: false,
     isProtect: false,
     component: () => <ForgotPasswordPage />,
+  },
+  {
+    path: ROUTES.USER_ACCOUNT,
+    exact: false,
+    isProtect: true,
+    component: () => <UserAccountPage />,
   },
 ];
 

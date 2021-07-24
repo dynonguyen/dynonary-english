@@ -30,6 +30,11 @@ const accountSchema = new Schema({
     enum: accountTypeEnum,
     default: ACCOUNT_TYPES.LOCAL,
   },
+  createdDate: {
+    type: Date,
+    required: true,
+    default: new Date(),
+  },
 });
 
 // hash password with bcrypt

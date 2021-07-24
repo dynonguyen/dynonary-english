@@ -29,6 +29,7 @@ exports.createAccount = async (
       email,
       password,
       authType,
+      createdDate: new Date(),
     });
     if (newAccount && newAccount._id) return newAccount._id;
     return null;
@@ -135,6 +136,20 @@ exports.updatePassword = async (email = '', newPassword = '') => {
     }
 
     return false;
+  } catch (error) {
+    throw error;
+  }
+};
+
+exports.getProfile = async (username = '') => {
+  try {
+    const user = await UserModel.findOne({ username })
+      .select('_id name')
+      .populate({
+        path: 'accountId',
+        select: 'email createdDate',
+      });
+    return user?.accountId;
   } catch (error) {
     throw error;
   }

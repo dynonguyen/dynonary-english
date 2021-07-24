@@ -2,13 +2,8 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import HelpIcon from '@material-ui/icons/Help';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import Search from '@material-ui/icons/Search';
-import SettingsIcon from '@material-ui/icons/Settings';
 import defaultUserImg from 'assets/images/default-user.png';
 import logoUrl from 'assets/images/logo.png';
 import SearchInputCustom from 'components/UI/SearchInputCustom';
@@ -18,34 +13,6 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SettingMenu from './SettingMenu';
 import useStyle from './style';
-
-const MENU_LIST = [
-  {
-    title: 'Thông báo',
-    icon: NotificationsIcon,
-    to: '/',
-  },
-  {
-    title: 'Thông tin cá nhân',
-    icon: AccountCircleIcon,
-    to: '/',
-  },
-  {
-    title: 'Cài đặt',
-    icon: SettingsIcon,
-    to: '/',
-  },
-  {
-    title: 'Giúp đỡ',
-    icon: HelpIcon,
-    to: '/',
-  },
-  {
-    title: 'Đăng xuất',
-    icon: ExitToAppIcon,
-    to: ROUTES.LOGOUT,
-  },
-];
 
 function Navigation() {
   const classes = useStyle();
@@ -121,11 +88,7 @@ function Navigation() {
               </Link>
             )}
 
-            <SettingMenu
-              anchorEl={anchorMenu}
-              onClose={onCloseMenu}
-              menuList={MENU_LIST}
-            />
+            <SettingMenu anchorEl={anchorMenu} onClose={onCloseMenu} />
           </div>
         </div>
       </div>
