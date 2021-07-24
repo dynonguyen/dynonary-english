@@ -8,6 +8,7 @@ import defaultUserImg from 'assets/images/default-user.png';
 import logoUrl from 'assets/images/logo.png';
 import SearchInputCustom from 'components/UI/SearchInputCustom';
 import { ROUTES } from 'constant';
+import { cloudinaryImgOptimize } from 'helper';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -20,6 +21,9 @@ function Navigation() {
   const isXsDevice = useMediaQuery(theme.breakpoints.up('xs'));
 
   const { avt, isAuth } = useSelector((state) => state.userInfo);
+  const avtSrc = Boolean(avt)
+    ? cloudinaryImgOptimize(avt, 48, 48)
+    : defaultUserImg;
   const [showInput, setShowInput] = useState(isXsDevice);
   const [anchorMenu, setAnchorMenu] = useState(null);
 
@@ -70,7 +74,7 @@ function Navigation() {
                 onMouseEnter={onOpenMenu}
                 className={`${classes.imgSize} ${classes.avt} cur-pointer`}
                 alt="Username"
-                src={avt || defaultUserImg}
+                src={avtSrc}
               />
             ) : (
               <Link to={ROUTES.LOGIN}>

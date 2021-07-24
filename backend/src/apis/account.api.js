@@ -24,6 +24,16 @@ accountApi.put(
   passportConfig.jwtAuthentication,
   accountController.putUpdateUserCoin,
 );
+accountApi.put(
+  '/update-avt',
+  passportConfig.jwtAuthentication,
+  accountController.putUpdateAvt,
+);
+accountApi.put(
+  '/update-profile',
+  passportConfig.jwtAuthentication,
+  accountController.putUpdateProfile,
+);
 
 accountApi.get(
   '/user-info',

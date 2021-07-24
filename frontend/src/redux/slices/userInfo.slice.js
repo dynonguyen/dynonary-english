@@ -40,6 +40,10 @@ const userInfoSlice = createSlice({
     setUserCoin(state, action) {
       state.coin = action.payload;
     },
+
+    setUserAvt(state, action) {
+      state.avt = action.payload;
+    },
   },
   extraReducers: {
     [getUserInfo.fulfilled]: (state, action) => {
@@ -54,5 +58,5 @@ const userInfoSlice = createSlice({
 });
 
 const { reducer, actions } = userInfoSlice;
-export const { setAddFavorites, setUserCoin } = actions;
+export const { setAddFavorites, setUserCoin, setUserAvt } = actions;
 export default reducer;

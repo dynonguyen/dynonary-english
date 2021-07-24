@@ -2,6 +2,7 @@ const { ACCOUNT_TYPES, MAX } = require('../constant');
 const { hashPassword } = require('../helper');
 const AccountModel = require('../models/account.model/account.model');
 const UserModel = require('../models/account.model/user.model');
+const { uploadImage } = require('./common.service');
 
 exports.isExistAccount = async (email) => {
   try {
@@ -134,6 +135,45 @@ exports.updatePassword = async (email = '', newPassword = '') => {
     if (res.ok) {
       return true;
     }
+
+    return false;
+  } catch (error) {
+    throw error;
+  }
+};
+
+exports.updateAvt = async (username = '', avtSrc = '') => {
+  try {
+    const picture = await uploadImage(avtSrc, 'dynonary/user-avt');
+    const isUpdated = await UserModel.updateOne({ username }, { avt: picture });
+    if (isUpdated.n && isUpdated.ok) return picture;
+
+    return false;
+  } catch (error) {
+    throw error;
+  }
+};
+
+exports.updateProfile = async (
+  username = '',
+  newName = '',
+  newUsername = '',
+) => {
+  try {
+    if (username.toLowerCase() !== newUsername.toLowerCase()) {
+      const isExist = await UserModel.exists({ username: newUsername });
+      if (isExist) {
+        return { status: false, message: 'username đã được sử dụng' };
+      }
+    }
+
+    const isUpdated = await UserModel.updateOne(
+      { username },
+      { name: newName, username: newUsername },
+    );
+
+    if (isUpdated.n && isUpdated.ok)
+      return { status: true, message: 'success' };
 
     return false;
   } catch (error) {

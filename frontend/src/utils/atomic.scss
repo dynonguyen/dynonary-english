@@ -40,12 +40,13 @@
   }
 
   &-outlined-primary {
-    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    border: solid 1px var(--primary-color) !important;
   }
 
   &-outlined-accent {
     color: var(--accent-color) !important;
-    border-color: var(--accent-color) !important;
+    border: solid 1px var(--accent-color) !important;
   }
 }
 

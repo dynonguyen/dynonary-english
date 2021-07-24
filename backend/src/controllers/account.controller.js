@@ -11,6 +11,8 @@ const {
   updateUserCoin,
   updatePassword,
   getProfile,
+  updateAvt,
+  updateProfile,
 } = require('../services/account.service');
 const {
   COOKIE_EXPIRES_TIME,
@@ -249,6 +251,45 @@ exports.putUpdateUserCoin = async (req, res) => {
   } catch (error) {
     console.error('PUT UPDATE USER COIN ERROR: ', error);
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.putUpdateAvt = async (req, res, next) => {
+  try {
+    const { user } = req;
+    const { avtSrc } = req.body;
+    if (!Boolean(avtSrc) || !Boolean(user)) {
+      return res.status(400).json({ message: 'failed' });
+    }
+    const update = await updateAvt(user.username, avtSrc);
+    if (!update) {
+      return res.status(400).json({ message: 'failed' });
+    }
+
+    return res.status(200).json({ newSrc: update });
+  } catch (error) {
+    console.error('PUT UPDATE AVT ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};
+
+exports.putUpdateProfile = async (req, res, next) => {
+  try {
+    const { user } = req;
+    const { name, username } = req.body;
+    if (!Boolean(user)) {
+      return res.status(400).json({ message: 'Cập nhập thất bại' });
+    }
+
+    const update = await updateProfile(user.username, name, username);
+    if (!update.status) {
+      return res.status(400).json({ message: update.message });
+    }
+
+    return res.status(200).json({ message: 'success' });
+  } catch (error) {
+    console.error('PUT UPDATE PROFILE ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };
 

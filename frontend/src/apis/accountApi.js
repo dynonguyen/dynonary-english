@@ -39,6 +39,14 @@ const accountApi = {
     return axiosClient.put(`${URL}/update-coin`, { newCoin });
   },
 
+  putUpdateAvt: (avtSrc = '') => {
+    return axiosClient.put(`${URL}/update-avt`, { avtSrc });
+  },
+
+  putUpdateProfile: (name = '', username = '') => {
+    return axiosClient.put(`${URL}/update-profile`, { name, username });
+  },
+
   getUserInfo: () => {
     return axiosClient.get(`${URL}/user-info`);
   },
