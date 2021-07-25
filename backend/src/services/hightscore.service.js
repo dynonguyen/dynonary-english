@@ -3,7 +3,7 @@ const HighscoreModel = require('../models/highscore.model');
 
 exports.updateTop = async (accountId, name, score) => {
   try {
-    const tops = await HighscoreModel.findOne({ name });
+    let tops = await HighscoreModel.findOne({ name });
 
     let unit = '';
     for (let key in HIGHSCORE_NAME) {
@@ -22,13 +22,23 @@ exports.updateTop = async (accountId, name, score) => {
         top: newTops,
       });
     } else {
-      newTops = tops.top.filter(
-        (i) => i.accountId.toString() !== accountId.toString(),
+      const index = tops.top.findIndex(
+        (i) => i.accountId.toString() === accountId.toString(),
       );
-      newTops.push({ accountId, score: Number(score) });
+
+      if (index === -1) {
+        newTops = tops.top.push({ accountId, score: Number(score) });
+      } else {
+        const item = tops.top[index];
+        if (Number(item.score) < Number(score)) {
+          tops.top[index].score = score;
+        }
+        newTops = tops.top;
+      }
       newTops = newTops
         .sort((a, b) => Number(a.score) - Number(b.score))
         .slice(0, MAX_TOP);
+
       await HighscoreModel.updateOne({ name }, { top: newTops });
     }
   } catch (error) {

@@ -14,7 +14,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { setUserCoin } from 'redux/slices/userInfo.slice';
-import { cwResultStyle } from './style';
+import { cwResultStyle } from './CorrectWord/style';
 
 function convertQuesToCoin(nRight = 0, nWrong = 0, currentCoin = 0) {
   const newCoin =

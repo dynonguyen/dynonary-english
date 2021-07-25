@@ -6,7 +6,7 @@ import { playSoundAnswer } from 'helper/speaker.helper';
 import useSpeaker from 'hooks/useSpeaker';
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
-import CorrectWordResult from './Result';
+import CorrectWordResult from '../Result';
 import useStyle from './style';
 
 function shuffleAnswers(word, phonetic, wrongList) {
