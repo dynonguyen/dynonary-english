@@ -9,9 +9,16 @@ const gameApi = {
     level = '-1',
     specialty = '-1',
     topics = [],
+    nQuestion = 50,
   ) => {
     return axiosClient.get(`${URL}/correct-word/pack`, {
-      params: { type, level, specialty, topics: JSON.stringify(topics) },
+      params: {
+        type,
+        level,
+        specialty,
+        topics: JSON.stringify(topics),
+        nQuestion,
+      },
     });
   },
 
@@ -21,9 +28,16 @@ const gameApi = {
     level = '-1',
     specialty = '-1',
     topics = [],
+    nQuestion = 50,
   ) => {
     return axiosClient.get(`${URL}/word-match/pack`, {
-      params: { type, level, specialty, topics: JSON.stringify(topics) },
+      params: {
+        type,
+        level,
+        specialty,
+        topics: JSON.stringify(topics),
+        nQuestion,
+      },
     });
   },
 };

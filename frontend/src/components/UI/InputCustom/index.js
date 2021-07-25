@@ -4,7 +4,7 @@ import React from 'react';
 import useStyle from './style';
 
 function InputCustom(props) {
-  const { endAdornment, error, ...propRest } = props;
+  const { endAdornment, error, inputProps, ...propRest } = props;
   const classes = useStyle();
 
   return (
@@ -15,6 +15,7 @@ function InputCustom(props) {
         disableUnderline: true,
         endAdornment,
       }}
+      inputProps={inputProps}
       InputLabelProps={{
         shrink: true,
       }}
@@ -27,11 +28,13 @@ function InputCustom(props) {
 InputCustom.propTypes = {
   endAdornment: PropTypes.any,
   error: PropTypes.bool,
+  inputProps: PropTypes.any,
 };
 
 InputCustom.defaultProps = {
   endAdornment: null,
   error: false,
+  inputProps: {},
 };
 
 export default InputCustom;

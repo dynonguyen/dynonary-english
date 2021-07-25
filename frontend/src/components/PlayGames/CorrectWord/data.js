@@ -2,12 +2,15 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import PlayIcon from '@material-ui/icons/PlayCircleFilledWhite';
 import gameApi from 'apis/gameApi';
 import GlobalLoading from 'components/UI/GlobalLoading';
-import React, { useState } from 'react';
+import InputCustom from 'components/UI/InputCustom';
+import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { setMessage } from 'redux/slices/message.slice';
 import CorrectWord from '.';
 import WordPack from '../../UI/WordPack';
+
+const MAX_LEN_WORD_PACK = 500;
 
 function CorrectWordData() {
   // 0 - choose word pack, 1 - get pack, 2 - done
@@ -15,15 +18,23 @@ function CorrectWordData() {
   const [wordPack, setWordPack] = useState([]);
   const dispatch = useDispatch();
   const history = useHistory();
+  const nQuestion = useRef(50);
 
   const getWordPackage = async ({ type, topics, level, specialty }) => {
     try {
       setState(1);
+
+      const n =
+        nQuestion.current < 0 || nQuestion.current > MAX_LEN_WORD_PACK
+          ? 100
+          : nQuestion.current;
+
       const apiRes = await gameApi.getWordPackCWG(
         type,
         level,
         specialty,
         topics,
+        n,
       );
       if (apiRes.status === 200) {
         const { wordPack = [] } = apiRes.data;
@@ -72,8 +83,20 @@ function CorrectWordData() {
           okBtnText="Bắt đầu"
           cancelBtnText="Quay lại"
           cancelBtnProps={{ startIcon: <ArrowBackIcon /> }}
-          okBtnProps={{ startIcon: <PlayIcon /> }}
-        />
+          okBtnProps={{ startIcon: <PlayIcon /> }}>
+          <InputCustom
+            type="number"
+            inputProps={{
+              min: 5,
+              max: MAX_LEN_WORD_PACK,
+              defaultValue: 50,
+            }}
+            placeholder="Nhập số câu"
+            label="Số câu"
+            className="w-100"
+            onChange={(e) => (nQuestion.current = e.target.value)}
+          />
+        </WordPack>
       ) : state === 1 ? (
         <GlobalLoading title="Đang tải gói câu hỏi ..." />
       ) : (

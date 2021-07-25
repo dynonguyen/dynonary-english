@@ -18,17 +18,19 @@ function addAllOption(optionList = []) {
   return [{ value: '-1', label: 'Tất cả' }, ...optionList];
 }
 
-function WordPack({
-  onChoose,
-  onCancel,
-  open,
-  topicMultiples,
-  title,
-  okBtnText,
-  cancelBtnText,
-  okBtnProps,
-  cancelBtnProps,
-}) {
+function WordPack(props) {
+  const {
+    onChoose,
+    onCancel,
+    open,
+    topicMultiples,
+    title,
+    okBtnText,
+    cancelBtnText,
+    okBtnProps,
+    cancelBtnProps,
+  } = props;
+
   const classes = useStyle();
   const topics = useRef([]);
 
@@ -101,6 +103,12 @@ function WordPack({
                   options={addAllOption(TOPIC_OPTIONS)}
                   inputProps={{ name: 'topic' }}
                 />
+              </Grid>
+            )}
+
+            {Boolean(props.children) && (
+              <Grid item xs={12} md={6}>
+                {props.children}
               </Grid>
             )}
           </Grid>

@@ -5,7 +5,11 @@ const { getWordPack } = require('../services/common.service');
 // ======== CORRECT WORD GAME ========
 exports.getWordPackCWG = async (req, res, next) => {
   try {
-    const packInfo = req.query;
+    let { nQuestion = 50, ...packInfo } = req.query;
+
+    nQuestion = parseInt(nQuestion);
+    if (nQuestion > MAX.LEN_WORD_PACK) nQuestion = MAX.LEN_WORD_PACK;
+
     const packages = await getWordPack(
       packInfo,
       0,
@@ -13,8 +17,7 @@ exports.getWordPackCWG = async (req, res, next) => {
       '-_id word mean phonetic synonyms',
     );
 
-    const packLen =
-      packages.length > MAX.LEN_WORD_PACK ? MAX.LEN_WORD_PACK : packages.length;
+    const packLen = packages.length > nQuestion ? nQuestion : packages.length;
 
     if (packLen < 4) {
       return res.status(200).json({ wordPack: [] });
@@ -30,13 +33,14 @@ exports.getWordPackCWG = async (req, res, next) => {
 // ======== WORD MATCH GAME ========
 exports.getWordPackWMG = async (req, res, next) => {
   try {
-    const packInfo = req.query;
+    let { nQuestion = 50, ...packInfo } = req.query;
+    nQuestion = parseInt(nQuestion);
+    if (nQuestion > MAX.LEN_WORD_PACK) nQuestion = MAX.LEN_WORD_PACK;
+
     const seedList = await getWordPack(packInfo, 0, 1500, '-_id word mean');
     if (seedList) {
       return res.status(200).json({
-        wordPack: seedList
-          .sort((_) => Math.random() - 0.5)
-          .slice(0, MAX.LEN_WORD_PACK),
+        wordPack: seedList.sort((_) => Math.random() - 0.5).slice(0, nQuestion),
       });
     }
 
