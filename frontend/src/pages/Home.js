@@ -99,7 +99,7 @@ const FEATURE_LIST = [
     title: 'Bảng xếp hạng',
     imgUrl: medalIcon,
     subTitle: 'Cùng xem thành tích của bạn bè và những người khác nhé',
-    to: '/',
+    to: ROUTES.LEADERBOARD,
   },
   {
     title: 'Đóng góp',

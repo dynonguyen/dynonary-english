@@ -6,11 +6,6 @@ const highscoreSchema = new Schema({
     type: String,
     required: true,
   },
-  unit: {
-    type: String,
-    required: true,
-    trim: true,
-  },
   top: [
     {
       accountId: {

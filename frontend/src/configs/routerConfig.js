@@ -22,6 +22,7 @@ const FavoriteDictionaryPage = React.lazy(() =>
 const IrregularVerbPage = React.lazy(() => import('pages/IrregularVerb'));
 const ForgotPasswordPage = React.lazy(() => import('pages/ForgotPassword'));
 const UserAccountPage = React.lazy(() => import('pages/UserAccount'));
+const LeaderBoardPage = React.lazy(() => import('pages/LeaderBoard'));
 
 // routes for app
 const routes = [
@@ -132,6 +133,12 @@ const routes = [
     exact: false,
     isProtect: true,
     component: () => <UserAccountPage />,
+  },
+  {
+    path: ROUTES.LEADERBOARD,
+    exact: false,
+    isProtect: true,
+    component: () => <LeaderBoardPage />,
   },
 ];
 

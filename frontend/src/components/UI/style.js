@@ -61,6 +61,7 @@ export const dictionaryRoot = () => ({
     padding: '1.2rem 0.4rem',
     backgroundColor: 'var(--bg-color-accent)',
     borderRadius: 'var(--border-radius)',
+    border: 'solid 1px var(--border-color)',
   },
 
   list: {

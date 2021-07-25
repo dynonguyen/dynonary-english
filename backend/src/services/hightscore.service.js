@@ -1,4 +1,5 @@
 const { MAX_TOP, HIGHSCORE_NAME } = require('../constant/highscore');
+const UserModel = require('../models/account.model/user.model');
 const HighscoreModel = require('../models/highscore.model');
 
 exports.updateTop = async (accountId, name, score) => {
@@ -27,20 +28,49 @@ exports.updateTop = async (accountId, name, score) => {
       );
 
       if (index === -1) {
-        newTops = tops.top.push({ accountId, score: Number(score) });
+        tops.top.push({ accountId, score: Number(score) });
       } else {
         const item = tops.top[index];
         if (Number(item.score) < Number(score)) {
           tops.top[index].score = score;
         }
-        newTops = tops.top;
       }
+      newTops = tops.top;
+
       newTops = newTops
         .sort((a, b) => Number(a.score) - Number(b.score))
         .slice(0, MAX_TOP);
 
       await HighscoreModel.updateOne({ name }, { top: newTops });
     }
+  } catch (error) {
+    throw error;
+  }
+};
+
+exports.getLeaderboardWithName = async (name = '') => {
+  try {
+    const highscores = await HighscoreModel.findOne({ name });
+    if (!Boolean(highscores)) {
+      return [];
+    }
+    const { top } = highscores;
+    const l = top.length;
+    let topList = [];
+
+    for (let i = 0; i < l; ++i) {
+      const { name, avt } = await UserModel.findOne({
+        accountId: top[i].accountId,
+      }).select('name avt -_id');
+
+      topList.push({
+        name: name || 'Anonymous',
+        avt,
+        score: top[i].score,
+      });
+    }
+
+    return topList;
   } catch (error) {
     throw error;
   }

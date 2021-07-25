@@ -1,0 +1,36 @@
+.leaderboard {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+.leaderboard-icon {
+  margin-right: 1.2rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.leaderboard-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  color: var(--title-color);
+}
+
+.leaderboard-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+  padding: 1.8rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .leaderboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .leaderboard-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

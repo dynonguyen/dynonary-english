@@ -67,6 +67,7 @@ export const ROUTES = {
   FAVORITE: '/favorite-vocab',
   IRREGULAR: '/irregular-verbs',
   USER_ACCOUNT: '/profile',
+  LEADERBOARD: '/leaderboard',
   GAMES: {
     HOME: '/games',
     CORRECT_WORD: '/games/correct-word',

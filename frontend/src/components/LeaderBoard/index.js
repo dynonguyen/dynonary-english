@@ -1,5 +1,6 @@
 import Skeleton from '@material-ui/lab/Skeleton';
 import { DEFAULTS } from 'constant';
+import { cloudinaryImgOptimize } from 'helper';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useStyle from './style';
@@ -11,7 +12,9 @@ function LeaderBoardItem({ classes, nthTop, avt, name, score, unit }) {
     Boolean(name) && name.length >= MAX_LEN_NAME
       ? `${name.slice(0, 17)}...`
       : name;
-  const avtSrc = Boolean(avt) ? avt : DEFAULTS.IMAGE_SRC;
+  const avtSrc = Boolean(avt)
+    ? cloudinaryImgOptimize(avt, 50, 50)
+    : DEFAULTS.IMAGE_SRC;
   const color =
     nthTop === 1
       ? '#FFAA00'
@@ -43,10 +46,10 @@ function LeaderBoardItem({ classes, nthTop, avt, name, score, unit }) {
   );
 }
 
-function LeaderBoard({ title, list, color, loading }) {
+function LeaderBoard({ title, list, color, loading, unit }) {
   const classes = useStyle({ color });
   const sortedList =
-    list && list.sort((a, b) => Number(a.score) - Number(b.score));
+    list && list.sort((a, b) => Number(b.score) - Number(a.score));
 
   return (
     <div className={classes.root}>
@@ -58,7 +61,13 @@ function LeaderBoard({ title, list, color, loading }) {
         {!loading
           ? list &&
             sortedList.map((item, index) => (
-              <LeaderBoardItem key={index} nthTop={index + 1} />
+              <LeaderBoardItem
+                {...item}
+                unit={unit}
+                classes={classes}
+                key={index}
+                nthTop={index + 1}
+              />
             ))
           : new Array(10)
               .fill(0)
@@ -80,6 +89,7 @@ LeaderBoard.propTypes = {
   list: PropTypes.array,
   title: PropTypes.string,
   loading: PropTypes.bool,
+  unit: PropTypes.string,
 };
 
 export default LeaderBoard;
