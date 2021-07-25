@@ -9,7 +9,7 @@ exports.getWordPackCWG = async (req, res, next) => {
     const packages = await getWordPack(
       packInfo,
       0,
-      500,
+      1500,
       '-_id word mean phonetic synonyms',
     );
 
@@ -31,7 +31,7 @@ exports.getWordPackCWG = async (req, res, next) => {
 exports.getWordPackWMG = async (req, res, next) => {
   try {
     const packInfo = req.query;
-    const seedList = await getWordPack(packInfo, 0, 500, '-_id word mean');
+    const seedList = await getWordPack(packInfo, 0, 1500, '-_id word mean');
     if (seedList) {
       return res.status(200).json({
         wordPack: seedList

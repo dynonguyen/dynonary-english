@@ -10,6 +10,7 @@ import grammarIcon from 'assets/icons/grammar.png';
 import ipaIcon from 'assets/icons/ipa.png';
 import toeicIcon from 'assets/icons/toeic.png';
 import verbIcon from 'assets/icons/verb.png';
+import medalIcon from 'assets/icons/medal.png';
 import FeatureBox from 'components/FeatureBox';
 import { ROUTES } from 'constant';
 import useScrollTop from 'hooks/useScrollTop';
@@ -95,13 +96,19 @@ const FEATURE_LIST = [
     to: '/',
   },
   {
+    title: 'Bảng xếp hạng',
+    imgUrl: medalIcon,
+    subTitle: 'Cùng xem thành tích của bạn bè và những người khác nhé',
+    to: '/',
+  },
+  {
     title: 'Đóng góp',
     imgUrl: editIcon,
     subTitle:
       'Dyno rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
     to: ROUTES.CONTRIBUTION,
   },
-  /*   {
+  /* {
     title: 'Donate',
     imgUrl: donateIcon,
     subTitle:

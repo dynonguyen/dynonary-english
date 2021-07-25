@@ -181,15 +181,12 @@ exports.updateProfile = async (
   }
 };
 
-exports.getProfile = async (username = '') => {
+exports.getProfile = async (accountId = '') => {
   try {
-    const user = await UserModel.findOne({ username })
-      .select('_id name')
-      .populate({
-        path: 'accountId',
-        select: 'email createdDate',
-      });
-    return user?.accountId;
+    const account = await AccountModel.findById(accountId).select(
+      'email createdDate',
+    );
+    return account;
   } catch (error) {
     throw error;
   }

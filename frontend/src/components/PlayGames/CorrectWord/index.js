@@ -47,6 +47,7 @@ function CorrectWord({ list }) {
   const nQuestion = list.length;
   const { status, current, nRight, nWrong, answerList, answerIndex } = state;
   const { word, mean } = list[state.current];
+  const nRightConsecutive = useRef({ top: 0, n: 0 });
 
   // fix Can't perform a React state update on an unmounted component
   useEffect(() => {
@@ -62,6 +63,7 @@ function CorrectWord({ list }) {
         status: 1,
         answerIndex,
       });
+      nRightConsecutive.current.n++;
     } else {
       playSoundAnswer(word, false, voice, volume, speed);
       setState({
@@ -70,9 +72,11 @@ function CorrectWord({ list }) {
         status: 2,
         answerIndex,
       });
+      const { top, n } = nRightConsecutive.current;
+      if (top < n) nRightConsecutive.current.top = n;
     }
 
-    // wait to read word if not last question
+    // wait to speak the word if not last question
     if (current !== list.length - 1) {
       setTimeout(() => {
         const newAnswerList = shuffleAnswers(
@@ -112,6 +116,7 @@ function CorrectWord({ list }) {
       ),
       answerIndex: -1,
     });
+    nRightConsecutive.current = { top: 0, n: 0 };
   };
 
   return (
@@ -156,7 +161,7 @@ function CorrectWord({ list }) {
                   }`}>
                   {status === 1 ? 'Chính xác' : 'Sai rồi'}
                 </p>
-                <span className={classes.question}>{mean}</span>
+                <span className={`${classes.question} t-center`}>{mean}</span>
               </div>
 
               {/* answers */}
@@ -166,7 +171,7 @@ function CorrectWord({ list }) {
                     onClick={() => onAnswer(answer.word, index)}
                     className={`${
                       classes.answerItem
-                    } flex-center-col ${addClassAnswerItem(
+                    } flex-center-col p-5 ${addClassAnswerItem(
                       status,
                       answerIndex,
                       index,
@@ -174,8 +179,12 @@ function CorrectWord({ list }) {
                       answer.word,
                     )}`}
                     key={index}>
-                    <p className="mb-2">{answer.word}</p>
-                    <span className="phonetic">/{answer.phonetic}/</span>
+                    <p className="mb-2 t-center">{answer.word}</p>
+                    {answer.phonetic && (
+                      <span className="phonetic t-center">
+                        /{answer.phonetic}/
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -186,6 +195,7 @@ function CorrectWord({ list }) {
             onReplay={handleReplay}
             nRight={nRight}
             nWrong={nWrong}
+            nRightConsecutive={nRightConsecutive.current.top}
           />
         )}
       </div>

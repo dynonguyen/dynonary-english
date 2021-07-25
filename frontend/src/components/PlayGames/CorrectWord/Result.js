@@ -3,9 +3,11 @@ import WrongIcon from '@material-ui/icons/Cancel';
 import RightIcon from '@material-ui/icons/CheckCircle';
 import CoinIcon from '@material-ui/icons/MonetizationOn';
 import accountApi from 'apis/accountApi';
+import highscoreApi from 'apis/highscoreApi';
 import winAudioSrc from 'assets/audios/win.mp3';
 import cupIcon from 'assets/icons/others/cup.png';
 import { COINS, MAX, ROUTES } from 'constant';
+import { HIGHSCORE_NAME } from 'constant/game';
 import { onPlayAudio } from 'helper/speaker.helper';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
@@ -29,7 +31,7 @@ function convertQuesToCoin(nRight = 0, nWrong = 0, currentCoin = 0) {
   return newCoin;
 }
 
-function CorrectWordResult({ nRight, nWrong, onReplay }) {
+function CorrectWordResult({ nRight, nWrong, nRightConsecutive, onReplay }) {
   const classes = cwResultStyle();
   const history = useHistory();
   const dispatch = useDispatch();
@@ -40,13 +42,25 @@ function CorrectWordResult({ nRight, nWrong, onReplay }) {
     onPlayAudio(winAudioSrc);
   }, []);
 
-  // save coin
+  // save coin and update highscore
   useEffect(() => {
     if (!isAuth) return;
 
     (async function () {
       try {
         const newCoin = convertQuesToCoin(nRight, nWrong, coin);
+        highscoreApi.putUpdateHighscore(HIGHSCORE_NAME.TOP_COIN, newCoin);
+
+        highscoreApi.putUpdateHighscore(
+          HIGHSCORE_NAME.CORRECT_GAME_RIGHT,
+          nRight,
+        );
+
+        highscoreApi.putUpdateHighscore(
+          HIGHSCORE_NAME.CORRECT_GAME_RIGHT_CONSECUTIVE,
+          nRightConsecutive,
+        );
+
         const apiRes = await accountApi.putUpdateUserCoin(newCoin);
         if (apiRes.status === 200) {
           dispatch(setUserCoin(newCoin));
@@ -65,6 +79,9 @@ function CorrectWordResult({ nRight, nWrong, onReplay }) {
 
       <div className={`${classes.result} flex-center--ver`}>
         <b>{nRight}</b>&nbsp;Đúng
+        <RightIcon className={`${classes.icon} right`} />
+        &nbsp;-&nbsp;
+        <b>{nRightConsecutive}</b>&nbsp;Đúng liên tiếp
         <RightIcon className={`${classes.icon} right`} />
         &nbsp;-&nbsp;
         <b>{nWrong}</b>&nbsp;Sai
@@ -99,12 +116,14 @@ function CorrectWordResult({ nRight, nWrong, onReplay }) {
 CorrectWordResult.propTypes = {
   nRight: PropTypes.number,
   nWrong: PropTypes.number,
+  nRightConsecutive: PropTypes.number,
   onReplay: PropTypes.func,
 };
 
 CorrectWordResult.defaultProps = {
   nRight: 0,
   nWrong: 0,
+  nRightConsecutive: 0,
   onReplay: function () {},
 };
 

@@ -343,9 +343,9 @@ exports.getUserProfile = async (req, res, next) => {
     if (!req.user) {
       return res.status(403).json({ message: 'failed' });
     }
-    const { username } = req.user;
+    const { accountId } = req.user;
 
-    const userInfo = await getProfile(username);
+    const userInfo = await getProfile(accountId);
     if (!userInfo) {
       return res.status(403).json({ message: 'failed' });
     }

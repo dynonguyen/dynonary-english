@@ -194,7 +194,7 @@ function SplitWord({ word, mean, onCorrect, onWrong, resetFlag }) {
               }
             />
           </Tooltip>
-          <p className={classes.mean}>{mean}</p>
+          <p className={`${classes.mean} t-center px-4`}>{mean}</p>
           <Speaker className={classes.speaker} text={word} />
         </div>
         {isCheck && (
