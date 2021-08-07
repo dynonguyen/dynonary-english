@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import LeaderBoard from '.';
 
-function LeaderBoardData({ color, title, nameId, unit }) {
+function LeaderBoardData({ color, title, nameId, unit, tooltip }) {
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -31,6 +31,7 @@ function LeaderBoardData({ color, title, nameId, unit }) {
       color={color}
       title={title}
       unit={unit}
+      tooltip={tooltip}
     />
   );
 }
@@ -40,6 +41,7 @@ LeaderBoardData.propTypes = {
   title: PropTypes.string,
   nameId: PropTypes.string,
   unit: PropTypes.string,
+  tooltip: PropTypes.string,
 };
 
 export default LeaderBoardData;

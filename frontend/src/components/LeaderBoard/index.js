@@ -1,9 +1,11 @@
 import Skeleton from '@material-ui/lab/Skeleton';
+import TooltipCustom from 'components/UI/TooltipCustom';
 import { DEFAULTS } from 'constant';
 import { cloudinaryImgOptimize } from 'helper';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useStyle from './style';
+import InfoIcon from '@material-ui/icons/Info';
 
 const MAX_LEN_NAME = 20;
 
@@ -46,15 +48,20 @@ function LeaderBoardItem({ classes, nthTop, avt, name, score, unit }) {
   );
 }
 
-function LeaderBoard({ title, list, color, loading, unit }) {
+function LeaderBoard({ title, list, color, loading, unit, tooltip }) {
   const classes = useStyle({ color });
   const sortedList =
     list && list.sort((a, b) => Number(b.score) - Number(a.score));
 
   return (
     <div className={classes.root}>
-      <div className={classes.titleWrap}>
+      <div className={`${classes.titleWrap} flex-center-between`}>
         <h3 className={classes.title}>{title}</h3>
+        {tooltip && (
+          <TooltipCustom title={tooltip}>
+            <InfoIcon className={classes.infoIcon} />
+          </TooltipCustom>
+        )}
       </div>
 
       <div className={classes.boxWrap}>
@@ -90,6 +97,7 @@ LeaderBoard.propTypes = {
   title: PropTypes.string,
   loading: PropTypes.bool,
   unit: PropTypes.string,
+  tooltip: PropTypes.string,
 };
 
 export default LeaderBoard;

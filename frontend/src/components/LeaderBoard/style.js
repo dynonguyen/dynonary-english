@@ -39,7 +39,11 @@ export default makeStyles(() => ({
     fontSize: '1.8rem',
     fontWeight: 500,
     letterSpacing: '0.75px',
-    textAlign: 'center',
+  },
+
+  infoIcon: {
+    color: '#fff',
+    cursor: 'pointer',
   },
 
   boxWrap: {
