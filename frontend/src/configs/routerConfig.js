@@ -15,6 +15,7 @@ const CommunicationPhrasePage = React.lazy(() =>
 );
 const CorrectWordPage = React.lazy(() => import('pages/PlayGames/CorrectWord'));
 const WordMatchGamePage = React.lazy(() => import('pages/PlayGames/WordMatch'));
+const FastGamePage = React.lazy(() => import('pages/PlayGames/FastGame'));
 const GrammarPage = React.lazy(() => import('pages/Grammar'));
 const FavoriteDictionaryPage = React.lazy(() =>
   import('pages/FavoriteDictionary'),
@@ -139,6 +140,12 @@ const routes = [
     exact: false,
     isProtect: true,
     component: () => <LeaderBoardPage />,
+  },
+  {
+    path: ROUTES.GAMES.FAST_GAME,
+    exact: false,
+    isProtect: false,
+    component: () => <FastGamePage />,
   },
 ];
 

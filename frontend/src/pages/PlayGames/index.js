@@ -1,11 +1,9 @@
 import Grid from '@material-ui/core/Grid';
 import brainIcon from 'assets/icons/games/brain.png';
-import correctWordAdvIcon from 'assets/icons/games/correct-word-adv.png';
 import correctWordIcon from 'assets/icons/games/correct-word.png';
 import grammarlyIcon from 'assets/icons/games/grammarly.png';
 import jigsawIcon from 'assets/icons/games/jigsaw.png';
 import millionaireIcon from 'assets/icons/games/millionaire.png';
-import vipIcon from 'assets/icons/games/vip.png';
 import wordMatchingIcon from 'assets/icons/games/word-match.png';
 import FeatureBox from 'components/FeatureBox';
 import { ROUTES } from 'constant';
@@ -39,9 +37,9 @@ const GAME_LIST = [
   {
     title: 'Tay nhanh hơn não',
     subTitle:
-      'Cũng như trò chọn từ đúng nhưng chúng ta sẽ có thời gian để tăng độ nhạy bén hơn.',
+      'Chọn một hình ảnh đúng với từ đã cho trong thời gian nhanh nhất nhé.',
     imgUrl: brainIcon,
-    to: GAMES.QUIZ,
+    to: GAMES.FAST_GAME,
   },
   {
     title: 'Ai là triệu phú',

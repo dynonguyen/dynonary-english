@@ -74,7 +74,7 @@ export const ROUTES = {
     CORRECT_WORD_ADV: '/games/correct-word-advance',
     MILLIONAIRE: '/games/who-is-a-millionaire',
     JIGSAW: '/games/jigsaw-puzzle',
-    QUIZ: '/games/quiz',
+    FAST_GAME: '/games/fast-game',
     WORD_MATCHING: '/games/word-match',
     GRAMMARLY: '/games/grammarly',
     VIP: '/games/vip',
