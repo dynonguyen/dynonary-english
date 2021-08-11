@@ -28,6 +28,12 @@ export default makeStyles((theme) => ({
     overflow: 'hidden',
   },
 
+  nTotal: {
+    padding: '12px 0',
+    fontSize: '1.6rem',
+    letterSpacing: '1.5px',
+  },
+
   title: {
     padding: '1.6rem',
     textAlign: 'center',

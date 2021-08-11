@@ -28,12 +28,6 @@ const GAME_LIST = [
     imgUrl: wordMatchingIcon,
     to: GAMES.WORD_MATCHING,
   },
-  /* {
-    title: 'Hãy chọn từ đúng (nâng cao)',
-    subTitle: 'Chọn tất cả các từ đồng nghĩa (trái nghĩa) với từ đã cho.',
-    imgUrl: correctWordAdvIcon,
-    to: GAMES.CORRECT_WORD_ADV,
-  }, */
   {
     title: 'Tay nhanh hơn não',
     subTitle:
@@ -41,7 +35,14 @@ const GAME_LIST = [
     imgUrl: brainIcon,
     to: GAMES.FAST_GAME,
   },
-  {
+  /* {
+    title: 'Hãy chọn từ đúng (nâng cao)',
+    subTitle: 'Chọn tất cả các từ đồng nghĩa (trái nghĩa) với từ đã cho.',
+    imgUrl: correctWordAdvIcon,
+    to: GAMES.CORRECT_WORD_ADV,
+  }, */
+
+  /*  {
     title: 'Ai là triệu phú',
     subTitle:
       'Trải nghiệm game show truyền hình "Ai là triệu phú" phiên bản tiếng Anh ngay với Dynonary',
@@ -61,7 +62,7 @@ const GAME_LIST = [
       'Luyện tập ngữ pháp với câu trắc nghiệm điền vào chỗ trống sao cho phù hợp nhé.',
     imgUrl: grammarlyIcon,
     to: GAMES.GRAMMARLY,
-  },
+  }, */
   /*   {
     title: 'Game VIP',
     subTitle:

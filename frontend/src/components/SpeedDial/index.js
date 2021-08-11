@@ -33,9 +33,9 @@ const actions = [
   { icon: <SettingButton />, name: 'Cài đặt', to: null, isBlank: false },
   { icon: <FacebookIcon />, name: 'Liên hệ Dyno', to: LINKS.FB, isBlank: true },
   // { icon: <UpIcon />, name: 'Nâng cấp', to: '', isBlank: false },
-  { icon: <DollarIcon />, name: 'Donate', to: '', isBlank: false },
-  { icon: <ShareIcon />, name: 'Chia sẻ', to: '', isBlank: false },
-  { icon: <StarIcon />, name: 'Góp ý, đánh giá', to: '', isBlank: false },
+  // { icon: <DollarIcon />, name: 'Donate', to: '', isBlank: false },
+  // { icon: <ShareIcon />, name: 'Chia sẻ', to: '', isBlank: false },
+  // { icon: <StarIcon />, name: 'Góp ý, đánh giá', to: '', isBlank: false },
 ];
 
 function SpeedDials() {
