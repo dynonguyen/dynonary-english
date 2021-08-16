@@ -37,7 +37,7 @@ Dynonary English - Ứng dụng học tiếng Anh miễn phí cho người Việ
 
 ### 🎯 Mục tiêu
 
-Dynonary là ứng dụng học tiếng Anh hoàn toàn miễn phí cho người Việt Nam, được phát triển bởi [Dyno Nguyen](https://fb.com/TuanNguyen250400). Với mong muốn cải thiện tiếng Anh bản thân và mọi người nhưng không gây sự nhàm chán trong việc học, tôi đã xây dựng nên ứng dụng này.
+Dynonary là ứng dụng học tiếng Anh hoàn toàn miễn phí cho người Việt Nam, được phát triển bởi [Dyno Nguyen](https://dynonguyen.com). Với mong muốn cải thiện tiếng Anh bản thân và mọi người nhưng không gây sự nhàm chán trong việc học, tôi đã xây dựng nên ứng dụng này.
 
 Dynonary sẽ tổng hợp từ vựng, ngữ pháp và các bài viết từ nhiều nguồn đáng tin cậy, kết hợp với những tính năng rất hữu dụng của ứng dụng. Điều này sẽ giúp bạn tiết kiệm rất nhiều thời gian trong việc học tiếng Anh của mình.
 
@@ -60,7 +60,6 @@ Dynonary cũng là một `Pet Project` giúp tôi ôn luyện kỹ năng lập t
 - Bảng động từ bất quy tắc.
 - Nhúng Blog file html vào phần grammar.
 - Chơi game, ôn tập từ vựng.
-- Chơi game realtime với bạn bè.
 - Dịch văn bản (sử dụng Google Translate API).
 
 ### 💻 Công nghệ xây dựng
