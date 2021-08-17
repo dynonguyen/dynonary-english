@@ -1,0 +1,6801 @@
+[{
+  "_id": {
+    "$oid": "60efd31507c03f0015100fd1"
+  },
+  "topics": [
+    "0",
+    "1"
+  ],
+  "isChecked": false,
+  "sentence": "how's work going?",
+  "mean": "việc làm thế nào rồi?",
+  "note": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b501"
+  },
+  "sentence": "Be careful.",
+  "mean": "Hãy cẩn thận.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b502"
+  },
+  "sentence": "Be careful driving.",
+  "mean": "Lái xe cẩn thận.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b503"
+  },
+  "sentence": "Can you translate this for me?",
+  "mean": "Bạn có thể dịch cho tôi cái này được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b504"
+  },
+  "sentence": "Chicago is very different from Boston.",
+  "mean": "Chicago rất khác Boston.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b505"
+  },
+  "sentence": "Don't worry.",
+  "mean": "Đừng lo.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b506"
+  },
+  "sentence": "Everyone knows it.",
+  "mean": "Mọi người biết điều đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b507"
+  },
+  "sentence": "Everything is ready.",
+  "mean": "Mọi thứ đã sẵn sàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b508"
+  },
+  "sentence": "Excellent.",
+  "mean": "Xuất sắc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b509"
+  },
+  "sentence": "From time to time.",
+  "mean": "Thỉnh thoảng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b50a"
+  },
+  "sentence": "Good idea.",
+  "mean": "Ý kiến hay.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b50b"
+  },
+  "sentence": "He likes it very much.",
+  "mean": "Anh ta thích nó lắm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b50c"
+  },
+  "sentence": "Help!",
+  "mean": "Giúp tôi!",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b50d"
+  },
+  "sentence": "He's coming soon.",
+  "mean": "Anh ta sắp tới.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b50e"
+  },
+  "sentence": "He's right.",
+  "mean": "Anh ta đúng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b50f"
+  },
+  "sentence": "He's very annoying.",
+  "mean": "Anh ta quấy rối quá.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b510"
+  },
+  "sentence": "He's very famous.",
+  "mean": "Anh ta rất nổi tiếng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b511"
+  },
+  "sentence": "How are you?",
+  "mean": "Bạn khỏe không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b512"
+  },
+  "sentence": "How's work going?",
+  "mean": "Việc làm thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b513"
+  },
+  "sentence": "Hurry!",
+  "mean": "Nhanh lên!",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b514"
+  },
+  "sentence": "I ate already.",
+  "mean": "Tôi đã ăn rồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b515"
+  },
+  "sentence": "I can't hear you.",
+  "mean": "Tôi không thể nghe bạn nói.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b516"
+  },
+  "sentence": "I'd like to go for a walk.",
+  "mean": "Tôi muốn đi dạo.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b517"
+  },
+  "sentence": "I don't know how to use it.",
+  "mean": "Tôi không biết cách dùng nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b518"
+  },
+  "sentence": "I don't like him.",
+  "mean": "Tôi không thích anh ta.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b519"
+  },
+  "sentence": "I don't like it.",
+  "mean": "Tôi không thích nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b51a"
+  },
+  "sentence": "I don't speak very well.",
+  "mean": "Tôi không nói giỏi lắm",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b51b"
+  },
+  "sentence": "I don't understand.",
+  "mean": "Tôi không hiểu.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b51c"
+  },
+  "sentence": "I don't want it.",
+  "mean": "Tôi không muốn nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b51d"
+  },
+  "sentence": "I don't want that.",
+  "mean": "Tôi không muốn cái đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b51e"
+  },
+  "sentence": "I don't want to bother you.",
+  "mean": "Tôi không muốn làm phiền bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b51f"
+  },
+  "sentence": "I feel good.",
+  "mean": "Tôi cảm thấy khỏe.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b520"
+  },
+  "sentence": "If you need my help, please let me know.",
+  "mean": "Nếu bạn cần tôi giúp đỡ, làm ơn cho tôi biết.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b521"
+  },
+  "sentence": "I get off of work at 6.",
+  "mean": "Tôi xong việc lúc 6 giờ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b522"
+  },
+  "sentence": "I have a headache.",
+  "mean": "Tôi bị nhức đầu.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b523"
+  },
+  "sentence": "I hope you and your wife have a nice trip.",
+  "mean": "Tôi hy vọng bạn và vợ bạn có một chuyến đi thú vị.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b524"
+  },
+  "sentence": "I know.",
+  "mean": "Tôi biết.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b525"
+  },
+  "sentence": "I like her.",
+  "mean": "Tôi thích cô ta.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b526"
+  },
+  "sentence": "I'll call you when I leave.",
+  "mean": "Tôi sẽ gọi bạn khi tôi ra đi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b527"
+  },
+  "sentence": "I'll come back later.",
+  "mean": "Tôi sẽ trở lại sau.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b528"
+  },
+  "sentence": "I'll pay.",
+  "mean": "Tôi sẽ trả.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b529"
+  },
+  "sentence": "I'll take it.",
+  "mean": "Tôi sẽ mua nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b52a"
+  },
+  "sentence": "I'll take you to the bus stop.",
+  "mean": "Tôi sẽ đưa bạn tới trạm xe buýt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b52b"
+  },
+  "sentence": "I lost my watch.",
+  "mean": "Tôi bị mất đồng hồ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b52c"
+  },
+  "sentence": "I love you.",
+  "mean": "Tôi yêu bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b52d"
+  },
+  "sentence": "I'm an American.",
+  "mean": "Tôi là một người Mỹ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b52e"
+  },
+  "sentence": "I'm cleaning my room.",
+  "mean": "Tôi đang lau chùi phòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b52f"
+  },
+  "sentence": "I'm cold.",
+  "mean": "Tôi lạnh.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b530"
+  },
+  "sentence": "I'm coming to pick you up.",
+  "mean": "Tôi đang tới đón bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b531"
+  },
+  "sentence": "I'm going to leave.",
+  "mean": "Tôi sắp đi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b532"
+  },
+  "sentence": "I'm good, and you?",
+  "mean": "Tôi khỏe, còn bạn?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b533"
+  },
+  "sentence": "I'm happy.",
+  "mean": "Tôi vui.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b534"
+  },
+  "sentence": "I'm hungry.",
+  "mean": "Tôi đói.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b535"
+  },
+  "sentence": "I'm married.",
+  "mean": "Tôi có gia đình.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b536"
+  },
+  "sentence": "I'm not busy.",
+  "mean": "Tôi không bận.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b537"
+  },
+  "sentence": "I'm not married.",
+  "mean": "Tôi không có gia đình.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b538"
+  },
+  "sentence": "I'm not ready yet.",
+  "mean": "Tôi chưa sẵn sàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b539"
+  },
+  "sentence": "I'm not sure.",
+  "mean": "Tôi không chắc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b53a"
+  },
+  "sentence": "I'm sorry, we're sold out.",
+  "mean": "Tôi rất tiếc, chúng tôi hết hàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b53b"
+  },
+  "sentence": "I'm thirsty.",
+  "mean": "Tôi khát.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b53c"
+  },
+  "sentence": "I'm very busy. I don't have time now.",
+  "mean": "Tôi rất bận. Bây giờ tôi không có thời gian.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b53d"
+  },
+  "sentence": "I need to change clothes.",
+  "mean": "Tôi cần thay quần áo.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b53e"
+  },
+  "sentence": "I need to go home.",
+  "mean": "Tôi cần về nhà.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b53f"
+  },
+  "sentence": "I only want a snack.",
+  "mean": "Tôi chỉ cần món ăn nhẹ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b540"
+  },
+  "sentence": "Is Mr. Smith an American?",
+  "mean": "Ông Smith có phải là người Mỹ không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b541"
+  },
+  "sentence": "Is that enough?",
+  "mean": "Như vậy đủ không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b542"
+  },
+  "sentence": "I think it's very good.",
+  "mean": "Tôi nghĩ nó rất tốt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b543"
+  },
+  "sentence": "I think it tastes good.",
+  "mean": "Tôi nghĩ nó ngon.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b544"
+  },
+  "sentence": "I thought the clothes were cheaper.",
+  "mean": "Tôi nghĩ quần áo rẻ hơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b545"
+  },
+  "sentence": "It's longer than 2 miles.",
+  "mean": "Nó dài hơn 2 dặm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b546"
+  },
+  "sentence": "I've been here for two days.",
+  "mean": "Tôi đã ở đây 2 ngày.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b547"
+  },
+  "sentence": "I've heard Texas is a beautiful place.",
+  "mean": "Tôi đã nghe Texas là một nơi đẹp.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b548"
+  },
+  "sentence": "I've never seen that before.",
+  "mean": "Tôi chưa bao giờ thấy cái đó trước đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b549"
+  },
+  "sentence": "I was about to leave the restaurant when my friends arrived.",
+  "mean": "Tôi sắp rời nhà hàng khi những người bạn của tôi tới.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b54a"
+  },
+  "sentence": "Just a little.",
+  "mean": "Một ít thôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b54b"
+  },
+  "sentence": "Just a moment.",
+  "mean": "Chờ một chút.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b54c"
+  },
+  "sentence": "Let me check.",
+  "mean": "Để tôi kiểm tra.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b54d"
+  },
+  "sentence": "Let me think about it.",
+  "mean": "Để tôi suy nghĩ về việc đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b54e"
+  },
+  "sentence": "Let's go have a look.",
+  "mean": "Chúng ta hãy đi xem.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b54f"
+  },
+  "sentence": "Let's practice English.",
+  "mean": "Chúng ta hãy thực hành tiếng Anh.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b550"
+  },
+  "sentence": "May I speak to Mrs. Smith please?",
+  "mean": "Tôi có thể nói với bà Smith không, xin vui lòng?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b551"
+  },
+  "sentence": "More than that.",
+  "mean": "Hơn thế.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b552"
+  },
+  "sentence": "Never mind.",
+  "mean": "Đừng bận tâm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b553"
+  },
+  "sentence": "Next time.",
+  "mean": "Kỳ tới.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b554"
+  },
+  "sentence": "No.",
+  "mean": "Không.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b555"
+  },
+  "sentence": "Nonsense.",
+  "mean": "Vô lý.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b556"
+  },
+  "sentence": "No, thank you.",
+  "mean": "Không, cám ơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b557"
+  },
+  "sentence": "Nothing else.",
+  "mean": "Không còn gì khác.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b558"
+  },
+  "sentence": "Not recently.",
+  "mean": "Không phải lúc gần đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b559"
+  },
+  "sentence": "Not yet.",
+  "mean": "Chưa.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b55a"
+  },
+  "sentence": "Of course.",
+  "mean": "Dĩ nhiên.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b55b"
+  },
+  "sentence": "Okay.",
+  "mean": "Được.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b55c"
+  },
+  "sentence": "Please fill out this form.",
+  "mean": "Làm ơn điền vào đơn này.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b55d"
+  },
+  "sentence": "Please take me to this address.",
+  "mean": "Làm ơn đưa tôi tới địa chỉ này.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b55e"
+  },
+  "sentence": "Please write it down.",
+  "mean": "Làm ơn viết ra giấy.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b55f"
+  },
+  "sentence": "Really?",
+  "mean": "Thực sao?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b560"
+  },
+  "sentence": "Right here.",
+  "mean": "Ngay đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b561"
+  },
+  "sentence": "Right there.",
+  "mean": "Ngay đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b562"
+  },
+  "sentence": "See you later.",
+  "mean": "Gặp bạn sau.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b563"
+  },
+  "sentence": "See you tomorrow.",
+  "mean": "Gặp bạn ngày mai.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b564"
+  },
+  "sentence": "See you tonight.",
+  "mean": "Gặp bạn tối nay.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b565"
+  },
+  "sentence": "She's pretty.",
+  "mean": "Cô ta đẹp.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b566"
+  },
+  "sentence": "Sorry to bother you.",
+  "mean": "Xin lỗi làm phiền bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b567"
+  },
+  "sentence": "Stop!",
+  "mean": "Dừng lại!",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b568"
+  },
+  "sentence": "Take a chance.",
+  "mean": "Thử vận may.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b569"
+  },
+  "sentence": "Take it outside.",
+  "mean": "Mang nó ra ngoài.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b56a"
+  },
+  "sentence": "Tell me.",
+  "mean": "Nói với tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b56b"
+  },
+  "sentence": "Thanks for everything.",
+  "mean": "Cám ơn về mọi việc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b56c"
+  },
+  "sentence": "Thanks for your help.",
+  "mean": "Cám ơn về sự giúp đỡ của bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b56d"
+  },
+  "sentence": "Thank you.",
+  "mean": "Cám ơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b56e"
+  },
+  "sentence": "Thank you miss.",
+  "mean": "Cám ơn cô.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b56f"
+  },
+  "sentence": "Thank you sir.",
+  "mean": "Cám ơn ông.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b570"
+  },
+  "sentence": "Thank you very much.",
+  "mean": "Cám ơn rất nhiều.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b571"
+  },
+  "sentence": "That looks great.",
+  "mean": "Cái đó trông tuyệt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b572"
+  },
+  "sentence": "That's alright.",
+  "mean": "Được thôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b573"
+  },
+  "sentence": "That's enough.",
+  "mean": "Như vậy đủ rồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b574"
+  },
+  "sentence": "That's fine.",
+  "mean": "Như vậy tốt rồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b575"
+  },
+  "sentence": "That's it.",
+  "mean": "Như vậy đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b576"
+  },
+  "sentence": "That smells bad.",
+  "mean": "Cái đó ngửi hôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b577"
+  },
+  "sentence": "That's not fair.",
+  "mean": "Như vậy không công bằng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b578"
+  },
+  "sentence": "That's not right.",
+  "mean": "Như vậy không đúng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b579"
+  },
+  "sentence": "That's right.",
+  "mean": "Đúng rồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b57a"
+  },
+  "sentence": "That's too bad.",
+  "mean": "Như vậy quá tệ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b57b"
+  },
+  "sentence": "That's too many.",
+  "mean": "Như vậy nhiều quá.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b57c"
+  },
+  "sentence": "That's too much.",
+  "mean": "Như vậy nhiều quá.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b57d"
+  },
+  "sentence": "The book is under the table.",
+  "mean": "Quyển sách ở dưới cái bàn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b57e"
+  },
+  "sentence": "They'll be right back.",
+  "mean": "Họ sẽ trở lại ngay.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b57f"
+  },
+  "sentence": "They're the same.",
+  "mean": "Chúng giống nhau.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b580"
+  },
+  "sentence": "They're very busy.",
+  "mean": "Họ rất bận.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b581"
+  },
+  "sentence": "This doesn't work.",
+  "mean": "Cái này không hoạt động.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b582"
+  },
+  "sentence": "This is very difficult.",
+  "mean": "Cái này rất khó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b583"
+  },
+  "sentence": "This is very important.",
+  "mean": "Điều này rất quan trọng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b584"
+  },
+  "sentence": "Try it.",
+  "mean": "Thử nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b585"
+  },
+  "sentence": "Very good, thanks.",
+  "mean": "Rất tốt, cám ơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b586"
+  },
+  "sentence": "We like it very much.",
+  "mean": "Chúng tôi thích nó lắm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b587"
+  },
+  "sentence": "Would you take a message please?",
+  "mean": "Bạn nhận giùm một tin nhắn được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b588"
+  },
+  "sentence": "Yes, really.",
+  "mean": "Vâng, thực sự.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b589"
+  },
+  "sentence": "You're beautiful.",
+  "mean": "Bạn đẹp.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b58a"
+  },
+  "sentence": "You're very nice.",
+  "mean": "Bạn rất dễ thương.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b58b"
+  },
+  "sentence": "You're very smart.",
+  "mean": "Bạn rất thông minh.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b58c"
+  },
+  "sentence": "Your things are all here.",
+  "mean": "Tất cả đồ của bạn ở đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "0"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b58d"
+  },
+  "sentence": "Certainly!",
+  "mean": "Dĩ nhiên!",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b58e"
+  },
+  "sentence": "Good afternoon.",
+  "mean": "Chào (buổi chiều)",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b58f"
+  },
+  "sentence": "Good evening sir.",
+  "mean": "Chào ông (buổi tối)",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b590"
+  },
+  "sentence": "Good Luck.",
+  "mean": "Chúc may mắn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b591"
+  },
+  "sentence": "Good morning.",
+  "mean": "Chào (buổi sáng)",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b592"
+  },
+  "sentence": "Great.",
+  "mean": "Tuyệt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b593"
+  },
+  "sentence": "Happy Birthday.",
+  "mean": "Chúc mừng sinh nhật.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b594"
+  },
+  "sentence": "Have a good trip.",
+  "mean": "Chúc một chuyến đi tốt đẹp.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b595"
+  },
+  "sentence": "Hello.",
+  "mean": "Chào.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b596"
+  },
+  "sentence": "Nice to meet you",
+  "mean": "Rất vui được gặp bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b597"
+  },
+  "sentence": "Please call me.",
+  "mean": "Làm ơn gọi cho tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "1"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b598"
+  },
+  "sentence": "About 300 kilometers.",
+  "mean": "Khoảng 300 cây số.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b599"
+  },
+  "sentence": "A one way ticket.",
+  "mean": "Vé một chiều.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b59a"
+  },
+  "sentence": "Are you going to help her?",
+  "mean": "Bạn sẽ giúp cô ta không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b59b"
+  },
+  "sentence": "A round trip ticket.",
+  "mean": "Vé khứ hồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b59c"
+  },
+  "sentence": "At what time?",
+  "mean": "Lúc mấy giờ?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b59d"
+  },
+  "sentence": "Can I make an appointment for next Wednesday?",
+  "mean": "Tôi có thể xin hẹn vào thứ tư tới không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b59e"
+  },
+  "sentence": "Can you repeat that please?",
+  "mean": "Bạn có thể lập lại điều đó được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b59f"
+  },
+  "sentence": "Does this road go to New York?",
+  "mean": "Con đường này có tới New York không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a0"
+  },
+  "sentence": "Do you have enough money?",
+  "mean": "Bạn có đủ tiền không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a1"
+  },
+  "sentence": "Do you know how to cook?",
+  "mean": "Bạn có biết nấu ăn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a2"
+  },
+  "sentence": "Do you know what this says?",
+  "mean": "Bạn có biết cái này nói gì không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a3"
+  },
+  "sentence": "Do you want me to come and pick you up?",
+  "mean": "Bạn có muốn tôi tới đón bạn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a4"
+  },
+  "sentence": "Follow me.",
+  "mean": "Theo tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a5"
+  },
+  "sentence": "From here to there.",
+  "mean": "Từ đây đến đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a6"
+  },
+  "sentence": "Go straight ahead.",
+  "mean": "Đi thẳng trước mặt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a7"
+  },
+  "sentence": "Have you arrived?",
+  "mean": "Bạn tới chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a8"
+  },
+  "sentence": "Have you been to Boston?",
+  "mean": "Bạn từng tới Boston chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5a9"
+  },
+  "sentence": "How do I get there?",
+  "mean": "Làm sao tôi tới đó?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5aa"
+  },
+  "sentence": "How do I get to Daniel Street?",
+  "mean": "Làm sao tôi tới đường Daniel?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ab"
+  },
+  "sentence": "How do I get to the American Embassy?",
+  "mean": "Làm sao tôi tới tòa đại sứ Mỹ?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ac"
+  },
+  "sentence": "How long does it take by car?",
+  "mean": "Đi bằng xe mất bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ad"
+  },
+  "sentence": "How long does it take to get to Georgia?",
+  "mean": "Tới Georgia mất bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ae"
+  },
+  "sentence": "How long is the flight?",
+  "mean": "Chuyến bay bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5af"
+  },
+  "sentence": "How was the movie?",
+  "mean": "Bộ phim thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b0"
+  },
+  "sentence": "I'd like to make a phone call.",
+  "mean": "Tôi muốn gọi điện thoại.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b1"
+  },
+  "sentence": "I'd like to make a reservation.",
+  "mean": "Tôi muốn đặt trước.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b2"
+  },
+  "sentence": "I have a question I want to ask you./ I want to ask you a question.",
+  "mean": "Tôi có câu hỏi muốn hỏi bạn/ Tôi muốn hỏi bạn một câu hỏi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b3"
+  },
+  "sentence": "I'll take that one also.",
+  "mean": "Tôi cũng sẽ mua cái đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b4"
+  },
+  "sentence": "I'm coming right now.",
+  "mean": "Tôi tới ngay.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b5"
+  },
+  "sentence": "I'm going home in four days.",
+  "mean": "Tôi sẽ đi về nhà trong vòng 4 ngày.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b6"
+  },
+  "sentence": "I'm leaving Tomorrow.",
+  "mean": "Ngày mai tôi sẽ đi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b7"
+  },
+  "sentence": "I'm looking for the post office.",
+  "mean": "Tôi đang tìm bưu điện.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b8"
+  },
+  "sentence": "Is this pen yours?",
+  "mean": "Cái bút này có phải của bạn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5b9"
+  },
+  "sentence": "I wish I had one.",
+  "mean": "Tôi ước gì có một cái.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ba"
+  },
+  "sentence": "One ticket to New York please.",
+  "mean": "Một vé đi New York, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5bb"
+  },
+  "sentence": "One way or round trip?",
+  "mean": "Một chiều hay khứ hồi?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5bc"
+  },
+  "sentence": "Please speak slower.",
+  "mean": "Làm ơn nói chậm hơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5bd"
+  },
+  "sentence": "Please take me to the airport.",
+  "mean": "Làm ơn đưa tôi tới phi trường.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5be"
+  },
+  "sentence": "That way.",
+  "mean": "Lối đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5bf"
+  },
+  "sentence": "The plane departs at 5:30P.",
+  "mean": "Máy bay cất cánh lúc 5:30 chiều.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c0"
+  },
+  "sentence": "They arrived yesterday.",
+  "mean": "Họ tới ngày hôm qua.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c1"
+  },
+  "sentence": "Turn around.",
+  "mean": "Quay lại.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c2"
+  },
+  "sentence": "Turn left.",
+  "mean": "Rẽ trái.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c3"
+  },
+  "sentence": "Turn right.",
+  "mean": "Rẽ phải.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c4"
+  },
+  "sentence": "What time are you going to the bus station?",
+  "mean": "Mấy giờ bạn sẽ ra trạm xe buýt?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c5"
+  },
+  "sentence": "When did this happen?",
+  "mean": "Việc này xảy ra khi nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c6"
+  },
+  "sentence": "When did you arrive in Boston?",
+  "mean": "Bạn đã tới Boston khi nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c7"
+  },
+  "sentence": "When does he arrive?",
+  "mean": "Khi nào anh ta tới?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c8"
+  },
+  "sentence": "When does it arrive?",
+  "mean": "Khi nào nó tới?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5c9"
+  },
+  "sentence": "When does the bank open?",
+  "mean": "Khi nào ngân hàng mở cửa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ca"
+  },
+  "sentence": "When does the bus leave?",
+  "mean": "Khi nào xe buýt khởi hành?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5cb"
+  },
+  "sentence": "When do we arrive?",
+  "mean": "Khi nào chúng ta tới nơi?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5cc"
+  },
+  "sentence": "When do we leave?",
+  "mean": "Khi nào chúng ta ra đi?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5cd"
+  },
+  "sentence": "Where can I mail this?",
+  "mean": "Tôi có thể gửi bưu điện cái này ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ce"
+  },
+  "sentence": "Where is she from?",
+  "mean": "Cô ta từ đâu tới?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5cf"
+  },
+  "sentence": "Where is the bathroom?",
+  "mean": "Phòng tắm ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d0"
+  },
+  "sentence": "Why not?",
+  "mean": "Tại sao không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d1"
+  },
+  "sentence": "Will you remind me?",
+  "mean": "Làm ơn nhắc tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d2"
+  },
+  "sentence": "11 dollars.",
+  "mean": "11 đô.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d3"
+  },
+  "sentence": "52 cents.",
+  "mean": "52 xu.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d4"
+  },
+  "sentence": "A few.",
+  "mean": "Một vài.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d5"
+  },
+  "sentence": "A little.",
+  "mean": "Một ít.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d6"
+  },
+  "sentence": "Call the police.",
+  "mean": "Gọi cảnh sát.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d7"
+  },
+  "sentence": "Did your wife like California?",
+  "mean": "Vợ của bạn có thích California không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d8"
+  },
+  "sentence": "Do you have any coffee?",
+  "mean": "Bạn có cà phê không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5d9"
+  },
+  "sentence": "Do you have anything cheaper?",
+  "mean": "Bạn có thứ gì rẻ hơn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5da"
+  },
+  "sentence": "Do you take credit cards?",
+  "mean": "Bạn có nhận thẻ tín dụng không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5db"
+  },
+  "sentence": "How are you paying?",
+  "mean": "Bạn trả bằng gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5dc"
+  },
+  "sentence": "How many people are there in New York?",
+  "mean": "Ở New York có bao nhiêu người?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5dd"
+  },
+  "sentence": "How much are these earrings?",
+  "mean": "Đôi bông tai này giá bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5de"
+  },
+  "sentence": "How much does it cost per day?",
+  "mean": "Giá bao nhiêu một ngày?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5df"
+  },
+  "sentence": "How much does this cost?",
+  "mean": "Nó giá bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e0"
+  },
+  "sentence": "How much do I owe you?",
+  "mean": "Tôi nợ bạn bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e1"
+  },
+  "sentence": "How much is it to go to Miami?",
+  "mean": "Tới Miami giá bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e2"
+  },
+  "sentence": "How much money do you make?",
+  "mean": "Bạn kiếm bao nhiêu tiền?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e3"
+  },
+  "sentence": "I'd like to eat at 5th street restaurant.",
+  "mean": "Tôi muốn ăn ở nhà hàng trên đường số 5.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e4"
+  },
+  "sentence": "I don't have a girlfriend.",
+  "mean": "Tôi không có bạn gái.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e5"
+  },
+  "sentence": "I don't have any money.",
+  "mean": "Tôi không có tiền.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e6"
+  },
+  "sentence": "I have a reservation.",
+  "mean": "Tôi đã đặt trước.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e7"
+  },
+  "sentence": "I'll have the same thing.",
+  "mean": "Tôi sẽ có cùng món như vậy.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e8"
+  },
+  "sentence": "I'll pay for dinner.",
+  "mean": "Tôi sẽ trả tiền cho bữa tối.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5e9"
+  },
+  "sentence": "I'll pay for the tickets.",
+  "mean": "Tôi sẽ trả tiền vé.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ea"
+  },
+  "sentence": "I'm 26 years old.",
+  "mean": "Tôi 26 tuổi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5eb"
+  },
+  "sentence": "I need to practice my English.",
+  "mean": "Tôi cần thực hành tiếng Anh.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ec"
+  },
+  "sentence": "Isn't it?",
+  "mean": "Phải không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ed"
+  },
+  "sentence": "Is that ok?",
+  "mean": "Như vậy được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ee"
+  },
+  "sentence": "Is there any mail for me?",
+  "mean": "Có thư cho tôi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ef"
+  },
+  "sentence": "It's 11:30pm.",
+  "mean": "Bây giờ là 11:30 tối.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f0"
+  },
+  "sentence": "It's is a quarter past nine.",
+  "mean": "Bây giờ là 9 giờ 15.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f1"
+  },
+  "sentence": "Please come in.",
+  "mean": "Làm ơn vào đi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f2"
+  },
+  "sentence": "Sorry, we don't accept credit cards.",
+  "mean": "Xin lỗi, chúng tôi không nhận thẻ tín dụng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f3"
+  },
+  "sentence": "Sorry, we only accept Cash.",
+  "mean": "Xin lỗi, chúng tôi chỉ nhận tiền mặt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f4"
+  },
+  "sentence": "That restaurant is not expensive.",
+  "mean": "Nhà hàng đó không đắt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f5"
+  },
+  "sentence": "That's too expensive.",
+  "mean": "Như vậy đắt quá.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f6"
+  },
+  "sentence": "There are many people here.",
+  "mean": "Ở đây có nhiều người.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f7"
+  },
+  "sentence": "They charge 26 dollars per day.",
+  "mean": "Họ tính 26 đô một ngày.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f8"
+  },
+  "sentence": "What's the exchange rate for dollars?",
+  "mean": "Hối suất đô la là bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5f9"
+  },
+  "sentence": "What's the phone number?",
+  "mean": "Số điện thoại là gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5fa"
+  },
+  "sentence": "Where can I buy tickets?",
+  "mean": "Tôi có thể mua vé ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5fb"
+  },
+  "sentence": "Where would you like to meet?",
+  "mean": "Bạn muốn gặp nhau ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5fc"
+  },
+  "sentence": "Which one is better?",
+  "mean": "Cái nào tốt hơn?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5fd"
+  },
+  "sentence": "Across from the post office.",
+  "mean": "Đối diện bưu điện.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5fe"
+  },
+  "sentence": "At 3 o'clock.",
+  "mean": "Lúc 3 giờ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b5ff"
+  },
+  "sentence": "Be quiet.",
+  "mean": "Hãy yên lặng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b600"
+  },
+  "sentence": "Can you recommend a good restaurant?",
+  "mean": "Bạn có thể đề nghị một nhà hàng ngon không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b601"
+  },
+  "sentence": "Here it is.",
+  "mean": "Nó đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b602"
+  },
+  "sentence": "Here you are.",
+  "mean": "Đây nè.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b603"
+  },
+  "sentence": "He's in the kitchen.",
+  "mean": "Anh ta ở trong bếp.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b604"
+  },
+  "sentence": "He studies at Boston University.",
+  "mean": "Anh ta học ở đại học Boston.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b605"
+  },
+  "sentence": "How far is it?",
+  "mean": "Nó bao xa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b606"
+  },
+  "sentence": "How far is it to Chicago?",
+  "mean": "Tới Chicago bao xa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b607"
+  },
+  "sentence": "How many miles is it to Pennsylvania?",
+  "mean": "Tới Pennsylvania bao nhiêu dặm?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b608"
+  },
+  "sentence": "I'd like a single room.",
+  "mean": "Tôi muốn một phòng đơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b609"
+  },
+  "sentence": "I like to watch TV.",
+  "mean": "Tôi thích xem tivi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b60a"
+  },
+  "sentence": "It's delicious!",
+  "mean": "Món này ngon!",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b60b"
+  },
+  "sentence": "It's half past 11.",
+  "mean": "Bây giờ là 11 giờ rưỡi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b60c"
+  },
+  "sentence": "It's less than 5 dollars.",
+  "mean": "Nó ít hơn 5 đô.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b60d"
+  },
+  "sentence": "It's more than 5 dollars.",
+  "mean": "Nó hơn 5 đô.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b60e"
+  },
+  "sentence": "It's near the Supermarket.",
+  "mean": "Nó gần siêu thị.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b60f"
+  },
+  "sentence": "it's not suppose to rain today.",
+  "mean": "Hôm nay có lẽ không mưa.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b610"
+  },
+  "sentence": "It's ok.",
+  "mean": "Được rồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b611"
+  },
+  "sentence": "It's on 7th street.",
+  "mean": "Nó trên đường số 7.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b612"
+  },
+  "sentence": "It's really hot.",
+  "mean": "Thực là nóng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b613"
+  },
+  "sentence": "It's suppose to rain tomorrow.",
+  "mean": "Trời có thể mưa ngày mai.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b614"
+  },
+  "sentence": "I was going to the library.",
+  "mean": "Tôi sắp đi tới thư viện.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b615"
+  },
+  "sentence": "I was in the library.",
+  "mean": "Tôi ở trong thư viện.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b616"
+  },
+  "sentence": "Let's go.",
+  "mean": "Chúng ta đi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b617"
+  },
+  "sentence": "Maybe.",
+  "mean": "Có lẽ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b618"
+  },
+  "sentence": "More than 200 miles.",
+  "mean": "Hơn 200 dặm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b619"
+  },
+  "sentence": "My house is close to the bank.",
+  "mean": "Nhà tôi gần ngân hàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b61a"
+  },
+  "sentence": "Near the bank.",
+  "mean": "Gần ngân hàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b61b"
+  },
+  "sentence": "Can I see your passport please?",
+  "mean": "Làm ơn cho xem thông hành của bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b61c"
+  },
+  "sentence": "Can I take a message?",
+  "mean": "Tôi có thể nhận một lời nhắn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b61d"
+  },
+  "sentence": "Can I try it on?",
+  "mean": "Tôi có thể mặc thử không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b61e"
+  },
+  "sentence": "Can we sit over there?",
+  "mean": "Chúng tôi có thể ngồi ở đằng kia không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b61f"
+  },
+  "sentence": "Did you come with your family?",
+  "mean": "Bạn tới với gia đình hả?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b620"
+  },
+  "sentence": "Do you think it's possible?",
+  "mean": "Bạn có nghĩ điều đó có thể xảy ra không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b621"
+  },
+  "sentence": "Here's my number.",
+  "mean": "Đây là số của tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b622"
+  },
+  "sentence": "He's not in right now.",
+  "mean": "Ngay lúc này anh ta không có đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b623"
+  },
+  "sentence": "Hi, is Mrs. Smith there, please?",
+  "mean": "Chào, có phải bà Smith ở đằng kia không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b624"
+  },
+  "sentence": "I'd like some water too, please.",
+  "mean": "Tôi cũng muốn một ít nước, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b625"
+  },
+  "sentence": "I'd like to buy a bottle of water, please.",
+  "mean": "Tôi muốn mua một chai nước, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b626"
+  },
+  "sentence": "I'd like to buy something.",
+  "mean": "Tôi muốn mua một món đồ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b627"
+  },
+  "sentence": "I'd like to go to the store.",
+  "mean": "Tôi muốn đến cửa hàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b628"
+  },
+  "sentence": "I'd like to rent a car.",
+  "mean": "Tôi muốn thuê xe hơi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b629"
+  },
+  "sentence": "I'd like to send a fax.",
+  "mean": "Tôi muốn gửi phắc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b62a"
+  },
+  "sentence": "I'd like to send this to America.",
+  "mean": "Tôi muốn gửi cái này đi Mỹ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b62b"
+  },
+  "sentence": "I'd like to speak to Mr. Smith please.",
+  "mean": "Tôi muốn nói chuyện với ông Smith, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b62c"
+  },
+  "sentence": "I have three children, two girls and one boy.",
+  "mean": "Tôi có ba người con, hai gái một trai.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b62d"
+  },
+  "sentence": "I'll be right back.",
+  "mean": "Tôi sẽ trở lại ngay.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b62e"
+  },
+  "sentence": "I'll call back later.",
+  "mean": "Tôi sẽ gọi lại sau.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b62f"
+  },
+  "sentence": "I'll call you on Friday.",
+  "mean": "Tôi sẽ gọi bạn vào thứ sáu.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b630"
+  },
+  "sentence": "I'll teach you.",
+  "mean": "Tôi sẽ dạy bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b631"
+  },
+  "sentence": "I'm ok.",
+  "mean": "Tôi ổn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b632"
+  },
+  "sentence": "I need some tissues.",
+  "mean": "Tôi cần một ít khăn giấy.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b633"
+  },
+  "sentence": "Is there an English speaking guide?",
+  "mean": "Có hướng dẫn viên nói tiếng Anh không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b634"
+  },
+  "sentence": "I want to give you a gift.",
+  "mean": "Tôi muốn tặng bạn một món quà.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b635"
+  },
+  "sentence": "Male or female?",
+  "mean": "Nam hay nữ?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b636"
+  },
+  "sentence": "My cell phone doesn't have good reception.",
+  "mean": "Điện thoại di động của tôi không nhận tín hiệu tốt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b637"
+  },
+  "sentence": "My cell phone doesn't work.",
+  "mean": "Điện thoại di động của tôi bị hỏng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b638"
+  },
+  "sentence": "Please take off your shoes.",
+  "mean": "Làm ơn cởi giày ra.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b639"
+  },
+  "sentence": "11 days ago.",
+  "mean": "Cách đây 11 ngày.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b63a"
+  },
+  "sentence": "2 hours.",
+  "mean": "2 tiếng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b63b"
+  },
+  "sentence": "All day.",
+  "mean": "Suốt ngày.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b63c"
+  },
+  "sentence": "A long time ago.",
+  "mean": "Cách nay đã lâu.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b63d"
+  },
+  "sentence": "Are they coming this evening?",
+  "mean": "Tối nay họ có tới không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b63e"
+  },
+  "sentence": "Are you comfortable?",
+  "mean": "Bạn có thoải mái không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b63f"
+  },
+  "sentence": "Are your children with you?",
+  "mean": "Con của bạn có đi với bạn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b640"
+  },
+  "sentence": "As soon as possible.",
+  "mean": "Càng sớm càng tốt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b641"
+  },
+  "sentence": "At 3 o'clock in the afternoon.",
+  "mean": "Lúc 3 giờ chiều.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b642"
+  },
+  "sentence": "At 5th street.",
+  "mean": "Tại đường số 5.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b643"
+  },
+  "sentence": "At 7 o'clock at night. (evening)?",
+  "mean": "Lúc 7 giờ tối.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b644"
+  },
+  "sentence": "At 7 o'clock in the morning.",
+  "mean": "Lúc 7 giờ sáng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b645"
+  },
+  "sentence": "At what time did it happen?",
+  "mean": "Việc đó xảy ra lúc mấy giờ?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b646"
+  },
+  "sentence": "Can I help you?",
+  "mean": "Tôi có thể giúp gì bạn?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b647"
+  },
+  "sentence": "Do you have a swimming pool?",
+  "mean": "Bạn có hồ bơi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b648"
+  },
+  "sentence": "Do you have this in size 11?",
+  "mean": "Bạn có món này cỡ 11 không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b649"
+  },
+  "sentence": "Do you think you'll be back by 11:30?",
+  "mean": "Bạn có nghĩ là bạn sẽ trở lại lúc 11:30 không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b64a"
+  },
+  "sentence": "Everyday I get up at 6AM.",
+  "mean": "Hàng ngày tôi dạy lúc 6 giờ sáng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b64b"
+  },
+  "sentence": "Every week.",
+  "mean": "Hàng tuần.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b64c"
+  },
+  "sentence": "Expiration date.",
+  "mean": "Ngày hết hạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b64d"
+  },
+  "sentence": "Have you been waiting long?",
+  "mean": "Bạn đợi đã lâu chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b64e"
+  },
+  "sentence": "He'll be back in 20 minutes.",
+  "mean": "Anh ta sẽ trở lại trong vòng 20 phút nữa.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b64f"
+  },
+  "sentence": "His family is coming tomorrow.",
+  "mean": "Gia đình anh ta sẽ tới vào ngày mai.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b650"
+  },
+  "sentence": "How about Saturday?",
+  "mean": "Còn thứ bảy thì sao?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b651"
+  },
+  "sentence": "How long are you going to stay?",
+  "mean": "Bạn sẽ ở bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b652"
+  },
+  "sentence": "How long are you going to stay in California?",
+  "mean": "Bạn sẽ ở California bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b653"
+  },
+  "sentence": "How long will it take?",
+  "mean": "Sẽ mất bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b654"
+  },
+  "sentence": "How much altogether?",
+  "mean": "Tất cả bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b655"
+  },
+  "sentence": "How much will it cost?",
+  "mean": "Sẽ tốn bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b656"
+  },
+  "sentence": "I don't have enough money.",
+  "mean": "Tôi không có đủ tiền.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b657"
+  },
+  "sentence": "Are you busy?",
+  "mean": "Bạn có bận không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b658"
+  },
+  "sentence": "Can we have some more bread please?",
+  "mean": "Làm ơn cho thêm ít bánh mì.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b659"
+  },
+  "sentence": "Do you have any money?",
+  "mean": "Bạn có tiền không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b65a"
+  },
+  "sentence": "For how many nights?",
+  "mean": "Cho mấy đêm?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b65b"
+  },
+  "sentence": "How long will you be staying?",
+  "mean": "Bạn sẽ ở bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b65c"
+  },
+  "sentence": "I'd like a map of the city.",
+  "mean": "Tôi muốn một tấm bản đồ của thành phố.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b65d"
+  },
+  "sentence": "I'd like a non-smoking room.",
+  "mean": "Tôi muốn một phòng không hút thuốc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b65e"
+  },
+  "sentence": "I'd like a room.",
+  "mean": "Tôi muốn một phòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b65f"
+  },
+  "sentence": "I'd like a room with two beds please.",
+  "mean": "Tôi muốn một phòng với 2 giường, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b660"
+  },
+  "sentence": "I need a doctor.",
+  "mean": "Tôi cần một bác sĩ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b661"
+  },
+  "sentence": "Is there a nightclub in town?",
+  "mean": "Có hộp đêm trong thị xã không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b662"
+  },
+  "sentence": "Is there a restaurant in the hotel?",
+  "mean": "Trong khách sạn có nhà hàng không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b663"
+  },
+  "sentence": "Is there a store near here?",
+  "mean": "Có cửa hàng gần đây không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b664"
+  },
+  "sentence": "Sorry, we don't have any vacancies.",
+  "mean": "Xin lỗi, chúng tôi không còn phòng trống.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b665"
+  },
+  "sentence": "Take me to the Marriott Hotel.",
+  "mean": "Đưa tôi tới khách sạn Marriott.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b666"
+  },
+  "sentence": "What's the charge per night? (Hotel)",
+  "mean": "Giá bao nhiêu một đêm? (Khách sạn)",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b667"
+  },
+  "sentence": "What time is check out?",
+  "mean": "Mấy giờ trả phòng?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b668"
+  },
+  "sentence": "Where is the airport?",
+  "mean": "Phi trường ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b669"
+  },
+  "sentence": "Where's the mail box?",
+  "mean": "Hộp thư ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "7"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b66a"
+  },
+  "sentence": "Are you here alone?",
+  "mean": "Bạn ở đây một mình hả?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b66b"
+  },
+  "sentence": "Can I bring my friend?",
+  "mean": "Tôi có thể mang theo bạn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b66c"
+  },
+  "sentence": "Can I have a receipt please?",
+  "mean": "Làm ơn cho tôi hóa đơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b66d"
+  },
+  "sentence": "Can it be cheaper?",
+  "mean": "Có thể rẻ hơn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b66e"
+  },
+  "sentence": "Can we have a menu please.",
+  "mean": "Làm ơn đưa xem thực đơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b66f"
+  },
+  "sentence": "Can you hold this for me?",
+  "mean": "Bạn có thể giữ giùm tôi cái này được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b670"
+  },
+  "sentence": "Do you have any children?",
+  "mean": "Bạn có con không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b671"
+  },
+  "sentence": "Do you know how much it costs?",
+  "mean": "Bạn có biết nó giá bao nhiêu không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b672"
+  },
+  "sentence": "Have you eaten at that restaurant?",
+  "mean": "Bạn đã ăn ở nhà hàng này chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b673"
+  },
+  "sentence": "Have you eaten yet?",
+  "mean": "Bạn đã ăn chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b674"
+  },
+  "sentence": "Have you ever had Potato soup?",
+  "mean": "Bạn đã từng ăn xúp khoai chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b675"
+  },
+  "sentence": "He likes juice but he doesn't like milk",
+  "mean": "Anh ta thích nước trái cây nhưng anh ta không thích sữa.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b676"
+  },
+  "sentence": "Here is your salad.",
+  "mean": "Rau của bạn đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b677"
+  },
+  "sentence": "Here's your order.",
+  "mean": "Đây là món hàng bạn đặt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b678"
+  },
+  "sentence": "How does it taste?",
+  "mean": "Nó có vị ra sao?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b679"
+  },
+  "sentence": "How many people? (restaurant)",
+  "mean": "Bao nhiêu người? (nhà hàng)",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b67a"
+  },
+  "sentence": "I agree.",
+  "mean": "Tôi đồng ý.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b67b"
+  },
+  "sentence": "I'd like a table near the window.",
+  "mean": "Tôi muốn một phòng gần cửa sổ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b67c"
+  },
+  "sentence": "I'd like to call the United States.",
+  "mean": "Tôi muốn gọi sang Mỹ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b67d"
+  },
+  "sentence": "I haven't been there.",
+  "mean": "Tôi đã không ở đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b67e"
+  },
+  "sentence": "I haven't finished eating.",
+  "mean": "Tôi chưa ăn xong.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b67f"
+  },
+  "sentence": "I like it.",
+  "mean": "Tôi thích nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b680"
+  },
+  "sentence": "I'll give you a call.",
+  "mean": "Tôi sẽ gọi điện cho bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b681"
+  },
+  "sentence": "I'll have a cup of tea please.",
+  "mean": "Tôi sẽ uống một tách trà, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b682"
+  },
+  "sentence": "I'll have a glass of water please.",
+  "mean": "Tôi sẽ uống một ly nước, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b683"
+  },
+  "sentence": "I'm from America.",
+  "mean": "Tôi từ Mỹ tới.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b684"
+  },
+  "sentence": "I'm going to bed.",
+  "mean": "Tôi sẽ đi ngủ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b685"
+  },
+  "sentence": "I'm here on business.",
+  "mean": "Tôi ở đây để làm ăn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b686"
+  },
+  "sentence": "I'm sorry.",
+  "mean": "Tôi rất tiếc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b687"
+  },
+  "sentence": "I only have 5 dollars.",
+  "mean": "Tôi chỉ có 5 đô la.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "8"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b688"
+  },
+  "sentence": "Are you American?",
+  "mean": "Bạn có phải là người Mỹ không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b689"
+  },
+  "sentence": "Are you coming this evening?",
+  "mean": "Tối nay bạn tới không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b68a"
+  },
+  "sentence": "Are you free tonight?",
+  "mean": "Tối nay bạn rảnh không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b68b"
+  },
+  "sentence": "Are you going to take a plane or train?",
+  "mean": "Bạn sẽ đi máy bay hay tàu hỏa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b68c"
+  },
+  "sentence": "Are you hungry?",
+  "mean": "Bạn có đói không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b68d"
+  },
+  "sentence": "Are you sure?",
+  "mean": "Bạn chắc không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b68e"
+  },
+  "sentence": "Are you working Tomorrow?",
+  "mean": "Ngày mai bạn có làm việc không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b68f"
+  },
+  "sentence": "Business is good.",
+  "mean": "Việc làm ăn tốt.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b690"
+  },
+  "sentence": "Cheers!",
+  "mean": "Chúc sức khỏe!",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b691"
+  },
+  "sentence": "Did it snow yesterday?",
+  "mean": "Trời có tuyết hôm qua không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b692"
+  },
+  "sentence": "Did you get my email?",
+  "mean": "Bạn có nhận được email của tôi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b693"
+  },
+  "sentence": "Did you take your medicine?",
+  "mean": "Bạn đã uống thuốc chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b694"
+  },
+  "sentence": "Do you feel better?",
+  "mean": "Bạn có cảm thấy khỏe hơn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b695"
+  },
+  "sentence": "Do you go to Florida often?",
+  "mean": "Bạn có thường đi Florida không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b696"
+  },
+  "sentence": "Do you have another one?",
+  "mean": "Bạn có cái khác không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b697"
+  },
+  "sentence": "Do you know where there's a store that sells towels?",
+  "mean": "Bạn có biết ở đâu có cửa hàng bán khăn tắm không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b698"
+  },
+  "sentence": "Do you like it here?",
+  "mean": "Bạn có thích nơi đây không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b699"
+  },
+  "sentence": "Do you like the book?",
+  "mean": "Bạn có thích quyển sách này không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b69a"
+  },
+  "sentence": "Do you need anything?",
+  "mean": "Bạn có cần gì không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b69b"
+  },
+  "sentence": "Do you play any sports?",
+  "mean": "Bạn có chơi môn thể thao nào không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b69c"
+  },
+  "sentence": "Do you sell medicine? (store)",
+  "mean": "Bạn có bán dược phẩm không? (cửa hàng)",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b69d"
+  },
+  "sentence": "Do you study English?",
+  "mean": "Bạn có học tiếng Anh không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b69e"
+  },
+  "sentence": "Do you want to come with me?",
+  "mean": "Bạn có muốn đi với tôi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b69f"
+  },
+  "sentence": "Do you want to go with me?",
+  "mean": "Bạn có muốn đi với tôi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a0"
+  },
+  "sentence": "Excuse me.",
+  "mean": "Xin lỗi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a1"
+  },
+  "sentence": "Give me a call.",
+  "mean": "Gọi điện cho tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a2"
+  },
+  "sentence": "Has your brother been to California?",
+  "mean": "Anh (em trai) của bạn đã từng tới California chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a3"
+  },
+  "sentence": "Have they met her yet?",
+  "mean": "Họ gặp cô ta chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a4"
+  },
+  "sentence": "Have you done this before?",
+  "mean": "Bạn đã làm việc này trước đây chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a5"
+  },
+  "sentence": "How long have you been here?",
+  "mean": "Bạn đã ở đây bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a6"
+  },
+  "sentence": "Would you like to buy this?",
+  "mean": "Bạn muốn mua cái này không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a7"
+  },
+  "sentence": "Your children are very well behaved.",
+  "mean": "Các con của bạn rất ngoan.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a8"
+  },
+  "sentence": "Your daughter.",
+  "mean": "Con gái của bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6a9"
+  },
+  "sentence": "You're smarter than him.",
+  "mean": "Bạn thông minh hơn anh ta.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6aa"
+  },
+  "sentence": "You speak English very well.",
+  "mean": "Bạn nói tiếng Anh rất giỏi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ab"
+  },
+  "sentence": "Are there any concerts?",
+  "mean": "Có buổi hòa nhạc nào không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ac"
+  },
+  "sentence": "Do you want to go to the movies?",
+  "mean": "Bạn có muốn đi xem phim không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ad"
+  },
+  "sentence": "Have you seen this movie?",
+  "mean": "Bạn đã xem phim này chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ae"
+  },
+  "sentence": "He said you like to watch movies.",
+  "mean": "Anh ta nói bạn thích xem phim.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6af"
+  },
+  "sentence": "How tall are you?",
+  "mean": "Bạn cao bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b0"
+  },
+  "sentence": "Is the bank far?",
+  "mean": "Ngân hàng có xa không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b1"
+  },
+  "sentence": "Is there a movie theater nearby?",
+  "mean": "Có rạp chiếu phim gần đây không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b2"
+  },
+  "sentence": "What do people usually do in the summer in Los Angeles?",
+  "mean": "Người ta thường làm gì vào mùa hè ở Los Angeles?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b3"
+  },
+  "sentence": "What kind of music do you like?",
+  "mean": "Bạn thích loại nhạc gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b4"
+  },
+  "sentence": "What's your favorite food?",
+  "mean": "Thức ăn ưa thích của bạn là gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b5"
+  },
+  "sentence": "What time does the movie start?",
+  "mean": "Mấy giờ phim bắt đầu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b6"
+  },
+  "sentence": "Who was your teacher?",
+  "mean": "Ai đã là thày giáo của bạn?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b7"
+  },
+  "sentence": "Would you like to have dinner with me?",
+  "mean": "Bạn muốn ăn tối với tôi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b8"
+  },
+  "sentence": "Would you like to rent a movie?",
+  "mean": "Bạn muốn thuê phim không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "10"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6b9"
+  },
+  "sentence": "Can I have a glass of water please?",
+  "mean": "Làm ơn cho một ly nước.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ba"
+  },
+  "sentence": "Can I use your phone?",
+  "mean": "Tôi có thể sử dụng điện thoại của bạn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6bb"
+  },
+  "sentence": "Do you have any vacancies?",
+  "mean": "Bạn có chỗ trống không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6bc"
+  },
+  "sentence": "Do you have the number for a taxi?",
+  "mean": "Bạn có số điện thoại để gọi tắc xi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6bd"
+  },
+  "sentence": "Do you know her?",
+  "mean": "Bạn có biết cô ta không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6be"
+  },
+  "sentence": "Do you know where she is?",
+  "mean": "Bạn có biết cô ấy ở đâu không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6bf"
+  },
+  "sentence": "Do you play basketball?",
+  "mean": "Bạn có chơi bóng rổ không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c0"
+  },
+  "sentence": "Fill it up, please. (gas station)",
+  "mean": "Làm ơn đổ đầy. (cây xăng)",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c1"
+  },
+  "sentence": "He needs some new clothes.",
+  "mean": "Anh ta cần một ít quần áo mới.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c2"
+  },
+  "sentence": "How much is that?",
+  "mean": "Cái đó giá bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c3"
+  },
+  "sentence": "How much is this?",
+  "mean": "Cái này giá bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c4"
+  },
+  "sentence": "I believe you.",
+  "mean": "Tôi tin bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c5"
+  },
+  "sentence": "I'd like the number for the Hilton Hotel please.",
+  "mean": "Tôi muốn số điện thoại của khách sạn Hilton, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c6"
+  },
+  "sentence": "I'd like to buy a phone card please.",
+  "mean": "Tôi muốn mua một tấm thẻ điện thoại, xin vui lòng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c7"
+  },
+  "sentence": "I'd like to go home.",
+  "mean": "Tôi muốn về nhà.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c8"
+  },
+  "sentence": "I'd like to go shopping.",
+  "mean": "Tôi muốn đi mua sắm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6c9"
+  },
+  "sentence": "If you like it I can buy more.",
+  "mean": "Nếu bạn thích nó tôi có thể mua thêm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ca"
+  },
+  "sentence": "I'm a beginner.",
+  "mean": "Tôi mới bắt đầu.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6cb"
+  },
+  "sentence": "I'm full.",
+  "mean": "Tôi no rồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6cc"
+  },
+  "sentence": "I'm just kidding.",
+  "mean": "Tôi chỉ đùa thôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6cd"
+  },
+  "sentence": "I'm single.",
+  "mean": "Tôi độc thân.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ce"
+  },
+  "sentence": "I speak two languages.",
+  "mean": "Tôi nói 2 thứ tiếng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6cf"
+  },
+  "sentence": "I thought he said something else.",
+  "mean": "Tôi nghĩ anh ta đã nói một điều gì khác.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d0"
+  },
+  "sentence": "It's not too far.",
+  "mean": "Nó không xa lắm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d1"
+  },
+  "sentence": "I usually drink coffee at breakfast.",
+  "mean": "Tôi thường uống cà phê vào bữa điểm tâm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d2"
+  },
+  "sentence": "Sorry, we don't have any.",
+  "mean": "Xin lỗi, chúng tôi không có cái nào.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d3"
+  },
+  "sentence": "The books are expensive.",
+  "mean": "Những quyển sách đắt tiền.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d4"
+  },
+  "sentence": "Try it on.",
+  "mean": "Mặc thử nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d5"
+  },
+  "sentence": "What do you want to buy?",
+  "mean": "Bạn muốn mua gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d6"
+  },
+  "sentence": "What size?",
+  "mean": "Cỡ mấy?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d7"
+  },
+  "sentence": "What time does the store open?",
+  "mean": "Mấy giờ cửa hàng mở cửa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d8"
+  },
+  "sentence": "When does the plane arrive?",
+  "mean": "Khi nào máy bay tới?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6d9"
+  },
+  "sentence": "Where are you?",
+  "mean": "Bạn ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6da"
+  },
+  "sentence": "Would you like something to eat?",
+  "mean": "Bạn muốn ăn thứ gì không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6db"
+  },
+  "sentence": "Am I pronouncing it correctly?",
+  "mean": "Tôi phát âm nó đúng không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6dc"
+  },
+  "sentence": "Can you do me a favor?",
+  "mean": "Bạn có thể giúp tôi một việc được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6dd"
+  },
+  "sentence": "Can you help me?",
+  "mean": "Bạn có thể giúp tôi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6de"
+  },
+  "sentence": "Can you please say that again?",
+  "mean": "Bạn có thể nói lại điều đó được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6df"
+  },
+  "sentence": "Can you show me?",
+  "mean": "Bạn có thể chỉ cho tôi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e0"
+  },
+  "sentence": "Can you throw that away for me?",
+  "mean": "Bạn có thể quẳng cái đó đi giúp tôi được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e1"
+  },
+  "sentence": "Does anyone here speak English?",
+  "mean": "Có ai ở đây nói tiếng Anh không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e2"
+  },
+  "sentence": "Don't do that.",
+  "mean": "Đừng làm điều đó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e3"
+  },
+  "sentence": "Do you believe that?",
+  "mean": "Bạn có tin điều đó không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e4"
+  },
+  "sentence": "Do you have a pencil?",
+  "mean": "Bạn có bút chì không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e5"
+  },
+  "sentence": "Do you smoke?",
+  "mean": "Bạn có hút thuốc không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e6"
+  },
+  "sentence": "Do you speak English?",
+  "mean": "Bạn có nói tiếng Anh không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e7"
+  },
+  "sentence": "Excuse me, what did you say?",
+  "mean": "Xin lỗi, bạn nói gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e8"
+  },
+  "sentence": "Forget it.",
+  "mean": "Quên đi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6e9"
+  },
+  "sentence": "How do you pronounce that?",
+  "mean": "Bạn phát âm chữ đó như thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ea"
+  },
+  "sentence": "How do you say it in English?",
+  "mean": "Bạn nói điều đó bằng tiếng Anh như thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6eb"
+  },
+  "sentence": "How do you spell it?",
+  "mean": "Bạn đánh vần nó như thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ec"
+  },
+  "sentence": "How do you spell the word \"Seattle?\"",
+  "mean": "Bạn đánh vần chữ Seattle như thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ed"
+  },
+  "sentence": "I can swim.",
+  "mean": "Tôi có thể bơi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ee"
+  },
+  "sentence": "I can't hear you clearly.",
+  "mean": "Tôi nghe bạn không rõ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ef"
+  },
+  "sentence": "I don't mind.",
+  "mean": "Tôi không quan tâm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f0"
+  },
+  "sentence": "I don't speak English very well.",
+  "mean": "Tôi không nói tiếng Anh giỏi lắm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f1"
+  },
+  "sentence": "I don't think so.",
+  "mean": "Tôi không nghĩ vậy.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f2"
+  },
+  "sentence": "I don't understand what your saying.",
+  "mean": "Tôi không hiểu bạn nói gì.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f3"
+  },
+  "sentence": "Is there air conditioning in the room?",
+  "mean": "Trong phòng có điều hòa không khí không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f4"
+  },
+  "sentence": "I think you have too many clothes.",
+  "mean": "Tôi nghĩ bạn có nhiều quần áo quá.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f5"
+  },
+  "sentence": "I trust you.",
+  "mean": "Tôi tin bạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f6"
+  },
+  "sentence": "I understand now.",
+  "mean": "Bây giờ tôi hiểu.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f7"
+  },
+  "sentence": "Let's meet in front of the hotel.",
+  "mean": "Chúng ta hãy gặp nhau trước khách sạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f8"
+  },
+  "sentence": "Please sit down.",
+  "mean": "Xin mời ngồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6f9"
+  },
+  "sentence": "Are you allergic to anything?",
+  "mean": "Bạn có dị ứng với thứ gì không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6fa"
+  },
+  "sentence": "Are you ready?",
+  "mean": "Bạn sẵn sàng chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6fb"
+  },
+  "sentence": "Call me.",
+  "mean": "Gọi điện cho tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6fc"
+  },
+  "sentence": "Did you send me flowers?",
+  "mean": "Bạn đã gửi hoa cho tôi hả?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6fd"
+  },
+  "sentence": "Do you sell batteries?",
+  "mean": "Bạn có bán pin không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6fe"
+  },
+  "sentence": "I don't care.",
+  "mean": "Tôi không cần.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b6ff"
+  },
+  "sentence": "I give up.",
+  "mean": "Tôi bỏ cuộc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b700"
+  },
+  "sentence": "I got in an accident.",
+  "mean": "Tôi gặp tai nạn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b701"
+  },
+  "sentence": "I have a cold.",
+  "mean": "Tôi bị cảm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b702"
+  },
+  "sentence": "I have one in my car.",
+  "mean": "Tôi có một cái trong xe.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b703"
+  },
+  "sentence": "I made this cake.",
+  "mean": "Tôi làm cái bánh này.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b704"
+  },
+  "sentence": "I'm a teacher.",
+  "mean": "Tôi là giáo viên.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b705"
+  },
+  "sentence": "I'm self-employed.",
+  "mean": "Tôi tự làm chủ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b706"
+  },
+  "sentence": "I still have a lot to do.",
+  "mean": "Tôi còn nhiều thứ phải làm.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b707"
+  },
+  "sentence": "I still haven't decided.",
+  "mean": "Tôi vẫn chưa quyết định.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b708"
+  },
+  "sentence": "It depends on the weather.",
+  "mean": "Tùy vào thời tiết.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b709"
+  },
+  "sentence": "It's very cold today.",
+  "mean": "Hôm nay trời rất lạnh.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b70a"
+  },
+  "sentence": "My luggage is missing.",
+  "mean": "Hành lý của tôi bị thất lạc.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b70b"
+  },
+  "sentence": "My stomach hurts.",
+  "mean": "Tôi đau bụng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b70c"
+  },
+  "sentence": "My throat is sore.",
+  "mean": "Tôi đau họng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b70d"
+  },
+  "sentence": "My watch has been stolen.",
+  "mean": "Đồng hồ tôi đã bị đánh cắp.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b70e"
+  },
+  "sentence": "Take this medicine.",
+  "mean": "Dùng thuốc này.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b70f"
+  },
+  "sentence": "The accident happened at the intersection.",
+  "mean": "Tai nạn xảy ra tại giao lộ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b710"
+  },
+  "sentence": "There has been a car accident.",
+  "mean": "Đã có một tai nạn xe hơi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b711"
+  },
+  "sentence": "Where can I exchange U.S. dollars?",
+  "mean": "Tôi có thể đổi đô la Mỹ ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b712"
+  },
+  "sentence": "Where do you work?",
+  "mean": "Bạn làm việc ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b713"
+  },
+  "sentence": "Where's the nearest hospital?",
+  "mean": "Bệnh viện gần nhất ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b714"
+  },
+  "sentence": "Where's the post office?",
+  "mean": "Bưu điện ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "13"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b715"
+  },
+  "sentence": "And you?",
+  "mean": "Còn bạn?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b716"
+  },
+  "sentence": "Anything else?",
+  "mean": "Còn gì nữa không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b717"
+  },
+  "sentence": "Are they the same?",
+  "mean": "Chúng giống nhau không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b718"
+  },
+  "sentence": "Are you afraid?",
+  "mean": "Bạn sợ không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b719"
+  },
+  "sentence": "Are you going to attend their wedding?",
+  "mean": "Bạn sẽ dự đám cưới của họ không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b71a"
+  },
+  "sentence": "Are you married?",
+  "mean": "Bạn có gia đình không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b71b"
+  },
+  "sentence": "Are you okay?",
+  "mean": "Bạn có khỏe không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b71c"
+  },
+  "sentence": "Are you sick?",
+  "mean": "Bạn ốm hả?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b71d"
+  },
+  "sentence": "Behind the bank.",
+  "mean": "Sau ngân hàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b71e"
+  },
+  "sentence": "Can I borrow some money?",
+  "mean": "Tôi có thể mượn một ít tiền không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b71f"
+  },
+  "sentence": "Can I have the bill please?",
+  "mean": "Làm ơn đưa phiếu tính tiền.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b720"
+  },
+  "sentence": "Can you call back later?",
+  "mean": "Bạn có thể gọi lại sau được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b721"
+  },
+  "sentence": "Can you call me back later?",
+  "mean": "Bạn có thể gọi lại cho tôi sau được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b722"
+  },
+  "sentence": "Can you carry this for me?",
+  "mean": "Bạn có thể mang giúp tôi cái này được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b723"
+  },
+  "sentence": "Can you fix this?",
+  "mean": "Bạn có thể sửa cái này không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b724"
+  },
+  "sentence": "Can you give me an example?",
+  "mean": "Bạn có thể cho tôi một thí dụ được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b725"
+  },
+  "sentence": "Can you speak louder please?",
+  "mean": "Bạn có thể nói lớn hơn được không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b726"
+  },
+  "sentence": "Can you swim?",
+  "mean": "Bạn biết bơi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b727"
+  },
+  "sentence": "Does he like the school?",
+  "mean": "Anh ta có thích trường đó không/",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b728"
+  },
+  "sentence": "Do you accept U.S. Dollars?",
+  "mean": "Bạn có nhận đô Mỹ không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b729"
+  },
+  "sentence": "Do you have a girlfriend?",
+  "mean": "Bạn có bạn gái không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b72a"
+  },
+  "sentence": "Do you have an appointment?",
+  "mean": "Bạn có hẹn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b72b"
+  },
+  "sentence": "Do you have a problem?",
+  "mean": "Bạn có vấn đề à?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b72c"
+  },
+  "sentence": "Do you hear that?",
+  "mean": "Bạn có nghe cái đó không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b72d"
+  },
+  "sentence": "Do you know how to get to the Marriott Hotel?",
+  "mean": "Bạn có biết đường tới khách sạn Marriott không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b72e"
+  },
+  "sentence": "Do you know what this means?",
+  "mean": "Bạn có biết cái này nghĩa là gì không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b72f"
+  },
+  "sentence": "Do you know where I can get a taxi?",
+  "mean": "Bạn có biết tôi có thể gọi tắc xi ở đâu không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b730"
+  },
+  "sentence": "Do you know where my glasses are?",
+  "mean": "Bạn có biết cặp kính của tôi ở đâu không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b731"
+  },
+  "sentence": "Do you like your co-workers?",
+  "mean": "Bạn có thích bạn đồng nghiệp của bạn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b732"
+  },
+  "sentence": "Do you need anything else?",
+  "mean": "Bạn còn cần gì nữa không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b733"
+  },
+  "sentence": "Yes.",
+  "mean": "Vâng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b734"
+  },
+  "sentence": "You have a very nice car.",
+  "mean": "Bạn có một chiếc xe rất đẹp.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b735"
+  },
+  "sentence": "You look like my sister.",
+  "mean": "Bạn trông giống em gái (chị) của tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "15"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b736"
+  },
+  "sentence": "6 dollars per hour.",
+  "mean": "6 đô 1 giờ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b737"
+  },
+  "sentence": "Are you waiting for someone?",
+  "mean": "Bạn đang chờ ai đó hả?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b738"
+  },
+  "sentence": "Are you working today?",
+  "mean": "Hôm nay bạn có làm việc không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b739"
+  },
+  "sentence": "Bring me my shirt please.",
+  "mean": "Làm ơn đưa giùm cái áo sơ mi của tôi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b73a"
+  },
+  "sentence": "Do you like to watch TV?",
+  "mean": "Bạn có thích xem tivi không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b73b"
+  },
+  "sentence": "Do you like your boss?",
+  "mean": "Bạn có thích sếp của bạn không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b73c"
+  },
+  "sentence": "Have you finished studying?",
+  "mean": "Bạn đã học xong chưa?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b73d"
+  },
+  "sentence": "He's an Engineer.",
+  "mean": "Anh ta là kỹ sư.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b73e"
+  },
+  "sentence": "He's very hard working.",
+  "mean": "Anh ta rất chăm chỉ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b73f"
+  },
+  "sentence": "He works at a computer company in New York.",
+  "mean": "Anh ta làm việc tại một công ty máy tính ở New York.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b740"
+  },
+  "sentence": "How long have you worked here?",
+  "mean": "Bạn đã làm việc ở đây bao lâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b741"
+  },
+  "sentence": "How many hours a week do you work?",
+  "mean": "Bạn làm việc mấy giờ một tuần?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b742"
+  },
+  "sentence": "How much money do you have?",
+  "mean": "Bạn có bao nhiêu tiền?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b743"
+  },
+  "sentence": "How's the weather?",
+  "mean": "Thời tiết thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b744"
+  },
+  "sentence": "How was the trip?",
+  "mean": "Chuyến đi thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b745"
+  },
+  "sentence": "I forget.",
+  "mean": "Tôi quên.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b746"
+  },
+  "sentence": "I'm good.",
+  "mean": "Tôi khỏe.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b747"
+  },
+  "sentence": "I'm ready.",
+  "mean": "Tôi sẵn sàng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b748"
+  },
+  "sentence": "I still have a lot of things to buy.",
+  "mean": "Tôi còn nhiều thứ phải mua.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b749"
+  },
+  "sentence": "I've seen it.",
+  "mean": "Tôi đã thấy nó.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b74a"
+  },
+  "sentence": "What does he do for work?",
+  "mean": "Anh ta làm nghề gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b74b"
+  },
+  "sentence": "What does your father do for work?",
+  "mean": "Bố bạn làm nghề gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b74c"
+  },
+  "sentence": "What do you do for work?",
+  "mean": "Bạn làm nghề gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b74d"
+  },
+  "sentence": "What do your parents do for work?",
+  "mean": "Bố mẹ bạn làm nghề gì?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b74e"
+  },
+  "sentence": "What's the matter?",
+  "mean": "Có chuyện gì vậy?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b74f"
+  },
+  "sentence": "What time do you go to work everyday?",
+  "mean": "Mỗi ngày bạn đi làm lúc mấy giờ?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b750"
+  },
+  "sentence": "When do you arrive in the U.S.?",
+  "mean": "Khi nào bạn tới Mỹ?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b751"
+  },
+  "sentence": "When do you get off work?",
+  "mean": "Khi nào bạn xong việc?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b752"
+  },
+  "sentence": "Where did you put it?",
+  "mean": "Bạn đã đặt nó ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b753"
+  },
+  "sentence": "Where does it hurt?",
+  "mean": "Đau ở đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b754"
+  },
+  "sentence": "Where do you want to go?",
+  "mean": "Bạn muốn đi đâu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "16"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b755"
+  },
+  "sentence": "Come here.",
+  "mean": "Tới đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b756"
+  },
+  "sentence": "Does it often snow in the winter in Massachusetts?",
+  "mean": "Trời có thường mưa tuyết vào mùa đông ở Massachusetts không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b757"
+  },
+  "sentence": "Do you think it'll rain today?",
+  "mean": "Bạn có nghĩ ngày mai trời sẽ mưa không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b758"
+  },
+  "sentence": "Do you think it's going to rain tomorrow?",
+  "mean": "Bạn có nghĩ ngày mai trời sẽ mưa không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b759"
+  },
+  "sentence": "How's business?",
+  "mean": "Việc làm ăn thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b75a"
+  },
+  "sentence": "Is it close?",
+  "mean": "Nó gần không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b75b"
+  },
+  "sentence": "Is it possible?",
+  "mean": "Điều đó có thể không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b75c"
+  },
+  "sentence": "Is it ready?",
+  "mean": "Nó sẵn sàng không?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b75d"
+  },
+  "sentence": "It costs 20 dollars per hour.",
+  "mean": "Giá 20 đô một giờ.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b75e"
+  },
+  "sentence": "It hurts here.",
+  "mean": "Đau ở đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b75f"
+  },
+  "sentence": "It's far from here.",
+  "mean": "Nó cách xa đây.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b760"
+  },
+  "sentence": "It's going to be hot today.",
+  "mean": "Hôm nay trời sẽ nóng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b761"
+  },
+  "sentence": "It's north of here.",
+  "mean": "Nó ở phía bắc nơi này.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b762"
+  },
+  "sentence": "It's over there.",
+  "mean": "Nó ở đằng kia.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b763"
+  },
+  "sentence": "It's raining.",
+  "mean": "Trời đang mưa.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b764"
+  },
+  "sentence": "It's too late.",
+  "mean": "Muộn quá rồi.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b765"
+  },
+  "sentence": "It's very important.",
+  "mean": "Nó rất quan trọng.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b766"
+  },
+  "sentence": "It will arrive shortly.",
+  "mean": "Nó sẽ sớm tới.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b767"
+  },
+  "sentence": "The roads are slippery.",
+  "mean": "Đường trơn.",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b768"
+  },
+  "sentence": "What's the room rate?",
+  "mean": "Giá phòng bao nhiêu?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+},{
+  "_id": {
+    "$oid": "60f96a0b67c96a48b6e1b769"
+  },
+  "sentence": "What will the weather be like tomorrow?",
+  "mean": "Ngày mai thời tiết thế nào?",
+  "note": "",
+  "isChecked": false,
+  "topics": [
+    "17"
+  ]
+}]
