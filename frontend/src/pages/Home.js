@@ -25,13 +25,6 @@ const FEATURE_LIST = [
     imgUrl: ipaIcon,
     to: ROUTES.IPA,
   },
-  /*  {
-    title: 'Dịch văn bản',
-    subTitle:
-      'Dịch từ, văn bản (Việt-Anh và Anh-Việt) dễ dàng như với Google Translate',
-    imgUrl: translateIcon,
-    to: '/',
-  }, */
   {
     title: '1000+ câu giao tiếp',
     subTitle: 'Luyện nghe, nói câu tiếng Anh giao tiếp hàng ngày cùng Dyno',
@@ -75,25 +68,12 @@ const FEATURE_LIST = [
     subTitle: 'Danh sách tổng hợp những cấu trúc câu trong tiếng Anh',
     to: ROUTES.GRAMMAR,
   },
-  /*  {
-    title: 'Phát âm',
-    imgUrl: voiceIcon,
-    subTitle: 'Nghe và phân biệt cách phát âm es, s, z, t, d ed',
-    to: '/',
-  }, */
   {
     title: 'Play Games',
     imgUrl: gameIcon,
     subTitle:
       'Ôn luyện kiến thức hiệu quả và đỡ nhàm chán hơn qua việc chơi game cùng Dyno nhé',
     to: ROUTES.GAMES.HOME,
-  },
-  {
-    title: 'Học cùng bạn bè',
-    imgUrl: friendsIcon,
-    subTitle:
-      'Học và thi đầu cùng bạn bè của mình để cùng nhau tiến bộ hơn nhé',
-    to: '/',
   },
   {
     title: 'Bảng xếp hạng',
@@ -108,13 +88,6 @@ const FEATURE_LIST = [
       'Dyno rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
     to: ROUTES.CONTRIBUTION,
   },
-  /* {
-    title: 'Donate',
-    imgUrl: donateIcon,
-    subTitle:
-      'Ủng hộ cho Dyno để ứng dụng được duy trì, cải thiện và thêm nhiều tính năng hơn. Cảm ơn bạn ❤',
-    to: '/',
-  }, */
 ];
 
 function HomePage() {

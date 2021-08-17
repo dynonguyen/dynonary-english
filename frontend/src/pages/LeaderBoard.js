@@ -42,6 +42,13 @@ function LeaderBoardPage() {
             unit="câu"
             tooltip="Top những người dùng có số câu đúng liên tục nhiều nhất"
           />
+          <LeaderBoardData
+            title="Top tay nhanh hơn não"
+            color={COLORS[3]}
+            nameId={HIGHSCORE_NAME.FAST_GAME}
+            unit="điểm"
+            tooltip="Top những người dùng có điểm cao nhất trong game Tay nhanh hơn não"
+          />
         </div>
       </div>
     </div>

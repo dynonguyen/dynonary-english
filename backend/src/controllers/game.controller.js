@@ -50,3 +50,24 @@ exports.getWordPackWMG = async (req, res, next) => {
     return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });
   }
 };
+
+// ======== FAST GAME ========
+exports.getWordPackFS = async (req, res, next) => {
+  try {
+    const { topic } = req.query;
+    const packages = await getWordPack(
+      { topics: [topic] },
+      0,
+      1500,
+      '-_id word picture',
+    );
+
+    const nQuestion = 100;
+    const wordPack = packages.slice(0, nQuestion);
+
+    return res.status(200).json({ wordPack });
+  } catch (error) {
+    console.error('GET WORD PACK FAST GAME ERROR: ', error);
+    return res.status(500).json({ message: 'Lỗi dịch vụ, thử lại sau' });
+  }
+};

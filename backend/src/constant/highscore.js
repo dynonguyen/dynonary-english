@@ -11,6 +11,10 @@ exports.HIGHSCORE_NAME = {
     name: 'correct-right-consecutive',
     unit: 'câu',
   },
+  FAST_GAME: {
+    name: 'fast-game',
+    unit: 'điểm',
+  },
 };
 
 exports.MAX_TOP = 20;

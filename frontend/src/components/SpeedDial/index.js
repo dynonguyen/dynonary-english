@@ -1,9 +1,6 @@
 import ArrowUpIcon from '@material-ui/icons/ArrowDropUp';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 import HomeIcon from '@material-ui/icons/Home';
-import DollarIcon from '@material-ui/icons/MonetizationOn';
-import ShareIcon from '@material-ui/icons/Share';
-import StarIcon from '@material-ui/icons/Star';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
@@ -31,11 +28,12 @@ const actions = [
     isBlank: false,
   },
   { icon: <SettingButton />, name: 'Cài đặt', to: null, isBlank: false },
-  { icon: <FacebookIcon />, name: 'Liên hệ Dyno', to: LINKS.FB, isBlank: true },
-  // { icon: <UpIcon />, name: 'Nâng cấp', to: '', isBlank: false },
-  // { icon: <DollarIcon />, name: 'Donate', to: '', isBlank: false },
-  // { icon: <ShareIcon />, name: 'Chia sẻ', to: '', isBlank: false },
-  // { icon: <StarIcon />, name: 'Góp ý, đánh giá', to: '', isBlank: false },
+  {
+    icon: <ContactMailIcon />,
+    name: 'Liên hệ Dyno',
+    to: LINKS.WEBSITE,
+    isBlank: true,
+  },
 ];
 
 function SpeedDials() {

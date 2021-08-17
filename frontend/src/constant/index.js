@@ -25,6 +25,7 @@ export const DEFAULTS = {
 
 export const LINKS = {
   FB: 'https://fb.com/TuanNguyen250400',
+  WEBSITE: 'https://dynonguyen.com',
 };
 
 export const MAX = {
