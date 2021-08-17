@@ -40,6 +40,13 @@ const gameApi = {
       },
     });
   },
+
+  // fast game
+  getWordPackFG: (topic = 0) => {
+    return axiosClient.get(`${URL}/fast-game/pack`, {
+      params: { topic },
+    });
+  },
 };
 
 export default gameApi;

@@ -1,37 +1,62 @@
+import gameApi from 'apis/gameApi';
 import { TOPICS } from 'constant/topics';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setMessage } from 'redux/slices/message.slice';
 import FastGame from '.';
 import useStyle from './style';
-const list = [
-  {
-    word: 'Word',
-    picture: 'https://picsum.photos/150/150',
-  },
-  {
-    word: 'Word 2',
-    picture: 'https://picsum.photos/150/150',
-  },
-  {
-    word: 'Word 3',
-    picture: 'https://picsum.photos/150/150',
-  },
-  {
-    word: 'Word 4',
-    picture: 'https://picsum.photos/150/150',
-  },
-  {
-    word: 'Word 5',
-    picture: 'https://picsum.photos/150/150',
-  },
-];
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useHistory } from 'react-router-dom';
+import { ROUTES } from 'constant';
 
 function FastGameData() {
   const classes = useStyle();
   const [topicKey, setTopicKey] = useState(-1);
+  const [list, setList] = useState([]);
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  useEffect(() => {
+    let isSub = true;
+
+    if (topicKey < 0) {
+      return;
+    }
+
+    (async function () {
+      try {
+        const apiRes = await gameApi.getWordPackFG(topicKey);
+
+        if (apiRes.status === 200 && isSub) {
+          const { wordPack = [] } = apiRes.data;
+          if (wordPack.length === 0) {
+            const message =
+              'Xin lỗi! Danh sách từ cho chủ đề này hiện tại không đủ. Vui lòng chọn lại !';
+            dispatch(setMessage({ type: 'warning', message }));
+            setList([]);
+            return;
+          }
+          setList([...wordPack]);
+        }
+      } catch (error) {
+        const message =
+          'Xin lỗi! Danh sách từ cho chủ đề này hiện tại không đủ. Vui lòng chọn lại !';
+        dispatch(setMessage({ type: 'warning', message }));
+        setList([]);
+      }
+    })();
+
+    return () => (isSub = false);
+  }, [topicKey]);
+
+  const handleGoBack = () => {
+    history.push(ROUTES.GAMES.HOME);
+  };
 
   const renderTopic = () => (
     <>
       <div className={classes.title}>
+        <ArrowBackIcon className={classes.goBackIcon} onClick={handleGoBack} />
         <h1>Chọn một chủ đề</h1>
       </div>
       <div className={classes.topics}>
@@ -58,7 +83,7 @@ function FastGameData() {
 
       <div className="container">
         <div className={classes.root}>
-          {topicKey < 0 ? (
+          {list.length === 0 ? (
             renderTopic()
           ) : (
             <FastGame topic={topicKey} list={list} />

@@ -37,6 +37,7 @@ export default makeStyles((theme) => ({
   title: {
     padding: '1.6rem',
     textAlign: 'center',
+    position: 'relative',
 
     '& h1': {
       border: 'solid 5px rgba(127,127,127,0.5)',
@@ -48,6 +49,15 @@ export default makeStyles((theme) => ({
       color: 'var(--title-color)',
       fontSize: '2.4rem',
     },
+  },
+
+  goBackIcon: {
+    position: 'absolute',
+    left: '2.4rem',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    color: 'var(--label-color)',
+    cursor: 'pointer',
   },
 
   topics: {
@@ -162,5 +172,16 @@ export default makeStyles((theme) => ({
     color: '#fff',
     fontWeight: 500,
     letterSpacing: '1px',
+  },
+
+  doneTitle: {
+    fontSize: '5.2rem',
+    color: 'var(--title-color)',
+    marginBottom: '1.2rem',
+  },
+
+  doneResult: {
+    fontSize: '2.4rem',
+    color: 'var(--text-color)',
   },
 }));
