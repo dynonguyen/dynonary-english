@@ -60,7 +60,7 @@ Dynonary cũng là một `Pet Project` giúp tôi ôn luyện kỹ năng lập t
 - Bảng động từ bất quy tắc.
 - Nhúng Blog file html vào phần grammar.
 - Chơi game, ôn tập từ vựng.
-- Dịch văn bản (sử dụng Google Translate API).
+- Bảng xếp hạng, so sánh cùng kết quả cùng bạn bè.
 
 ### 💻 Công nghệ xây dựng
 
